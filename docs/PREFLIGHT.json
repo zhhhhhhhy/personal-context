@@ -1,0 +1,69 @@
+{
+  "preflight_id": "personal-context-skill-merge-2026-10-14",
+  "scope": "integration",
+  "status": "ready",
+  "checks": [
+    {
+      "id": "paths.repositories",
+      "owner": "script",
+      "status": "passed",
+      "evidence": "D:\\worker\\zhy-private-skill; D:\\worker\\personal-context",
+      "detail": "source skills: academic-write, deep-research, grill-me, grilling; source files: 64"
+    },
+    {
+      "id": "git.revisions",
+      "owner": "script",
+      "status": "passed",
+      "evidence": "source HEAD 756a116fd3553d6906932f6070f444a7a5faf44b; target HEAD c3c5f573b08e1c350d3fbf5a30201bb07b9e9f64",
+      "detail": "Both repositories are on main; source working-tree edits are intentionally in merge scope."
+    },
+    {
+      "id": "portrait.preserved",
+      "owner": "script",
+      "status": "passed",
+      "evidence": "D:\\worker\\personal-context\\references\\personal\\zhenghuiyu.md",
+      "detail": "target portrait SHA256: 7939BB250A901B96302D081026AC005BDA01338283C062A6F45F46DC99F16C2F"
+    },
+    {
+      "id": "git.diff_check",
+      "owner": "script",
+      "status": "passed",
+      "evidence": "git diff --check",
+      "detail": "git diff --check returned exit code 0 for both worktrees; only line-ending warnings were emitted."
+    },
+    {
+      "id": "remote.reachability",
+      "owner": "script",
+      "status": "passed",
+      "evidence": "git ls-remote through per-command proxy 127.0.0.1:7897",
+      "detail": "target: c3c5f573b08e1c350d3fbf5a30201bb07b9e9f64\trefs/heads/main; source: 756a116fd3553d6906932f6070f444a7a5faf44b\trefs/heads/main"
+    },
+    {
+      "id": "side_effect.boundary",
+      "owner": "human+agent",
+      "status": "passed",
+      "evidence": "merge plan",
+      "detail": "No deletion, reset, global Git configuration change, or global Skill installation is planned."
+    }
+  ],
+  "next_action": "Copy the current source skill packages and retained provenance documents into the target repository, then reconcile documentation and ignores.",
+  "source_worktree_entries": [
+    " M VALIDATION.md",
+    " M skill_sources.json",
+    " M skills/academic-write/SKILL.md",
+    " M skills/academic-write/agents/openai.yaml",
+    " M skills/deep-research/SKILL.md",
+    " M skills/grill-me/SKILL.md",
+    " M skills/grilling/SKILL.md",
+    "?? skills/academic-write/references/activation-routing.md",
+    "?? skills/deep-research/agents/openai.yaml",
+    "?? skills/deep-research/references/activation-routing.md",
+    "?? skills/grill-me/agents/",
+    "?? skills/grill-me/references/",
+    "?? skills/grilling/agents/",
+    "?? skills/grilling/references/"
+  ],
+  "target_worktree_entries_before_merge": [
+    "?? docs/"
+  ]
+}

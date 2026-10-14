@@ -1,0 +1,6 @@
+interface:
+  display_name: "Grill Me"
+  short_description: "逐问逐答压力测试计划与设计"
+  default_prompt: "使用 $grill-me，逐个问题压力测试这个计划或设计，先找出依赖和漏洞，确认共识后再执行。"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Deep Research"
+  short_description: "执行可观测的深度研究与证据综合"
+  default_prompt: "使用 $deep-research，先确定研究模式和证据边界，再执行可回放的检索、核验、综合与报告流程。"
+
+policy:
+  allow_implicit_invocation: true

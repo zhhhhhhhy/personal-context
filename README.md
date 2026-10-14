@@ -42,7 +42,14 @@ profile.md             # 当前个人画像草稿
 habits/                # 沟通偏好和长期判断 baseline
 skills/                # 可复用的 Context/工作流入口
 notes/                 # 观察记录和候选规则
-references/            # 对话索引、项目索引和外部资料
+references/            # 对话索引、项目索引、个人画像和导入资料
+scripts/               # 将仓库中的 Skill 同步到 Codex 运行时
 ```
 
 长期规则与候选规则分开维护：对话先进入 `notes/observations.md`，经过证据和人工确认后才进入 `habits/` 或 `skills/`。
+
+## Skill 库
+
+原 `zhy-private-skill` 仓库中的 `academic-write`、`deep-research`、`grill-me` 和 `grilling` 已迁入本仓库的 `skills/`。本仓库现在是个人 Context 和个人 Skill 的唯一维护入口；旧仓库保留为历史副本，不再继续维护。
+
+Skill 的完整说明仍按目录独立维护。需要让本机 Codex 使用最新版本时，运行 `scripts/sync-skills.ps1`；脚本只复制更新，不删除运行时已有内容。

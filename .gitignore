@@ -6,3 +6,10 @@ references/conversations/raw/
 *.token
 secrets/
 
+# Imported Python and local environment artifacts from Skill packages.
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.env.*
+!.env.example

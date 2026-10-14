@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-14",
+  "hash_algorithm": "sha256(relative_path + NUL + sha256(file_bytes), sorted by relative_path)",
+  "repository": "https://github.com/zhhhhhhhy/personal-context",
+  "migrated_from": {
+    "repository": "https://github.com/zhhhhhhhy/zhy-private-skill",
+    "local_path": "D:\\worker\\zhy-private-skill",
+    "source_head": "756a116fd3553d6906932f6070f444a7a5faf44b",
+    "source_worktree_scope": "current working tree, including uncommitted changes",
+    "maintenance_status": "deprecated after migration; source files were not modified or deleted"
+  },
+  "skills": [
+    {
+      "name": "academic-write",
+      "target_path": "skills/academic-write",
+      "source_path": "D:/worker/zhy-private-skill/skills/academic-write",
+      "source_kind": "migrated_from_zhy-private-skill_worktree",
+      "file_count": 4,
+      "source_tree_sha256": "4556fbe9425a9779d45ac78264790fcbba8f8554f002e8d8219230f388f626a2",
+      "caveat": "Copied from the former private Skill repository working tree on 2026-10-14; the source repository is retained only as a historical copy."
+    },
+    {
+      "name": "deep-research",
+      "target_path": "skills/deep-research",
+      "source_path": "D:/worker/zhy-private-skill/skills/deep-research",
+      "source_kind": "migrated_from_zhy-private-skill_worktree",
+      "file_count": 54,
+      "source_tree_sha256": "a21a24e252ab16d0a1b1befe5a1899e21d60b6723b105ba34d1af3463b89eda0",
+      "caveat": "Copied from the former private Skill repository working tree on 2026-10-14; the source repository is retained only as a historical copy."
+    },
+    {
+      "name": "grill-me",
+      "target_path": "skills/grill-me",
+      "source_path": "D:/worker/zhy-private-skill/skills/grill-me",
+      "source_kind": "migrated_from_zhy-private-skill_worktree",
+      "file_count": 3,
+      "source_tree_sha256": "2544eb0a15384ae430f8cf5dbfb255339f7e2af07b8de243c5050e72b25d681f",
+      "caveat": "Copied from the former private Skill repository working tree on 2026-10-14; the source repository is retained only as a historical copy."
+    },
+    {
+      "name": "grilling",
+      "target_path": "skills/grilling",
+      "source_path": "D:/worker/zhy-private-skill/skills/grilling",
+      "source_kind": "migrated_from_zhy-private-skill_worktree",
+      "file_count": 3,
+      "source_tree_sha256": "cf6ce24ffe444732738100577169f63831ed35ada667def1071bce273d10b364",
+      "caveat": "Copied from the former private Skill repository working tree on 2026-10-14; the source repository is retained only as a historical copy."
+    },
+    {
+      "name": "personal-context",
+      "target_path": "skills/personal-context",
+      "source_path": "skills/personal-context",
+      "source_kind": "native_personal_context",
+      "file_count": 1,
+      "source_tree_sha256": "be4c526e4f7c1275049042890398d1a32ab2185473151f4caf557441ce902119",
+      "caveat": "Native routing Skill for this repository; maintain with the Context files."
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Academic Write"
+  short_description: "Structure and revise academic benchmark papers"
+  default_prompt: "Use $academic-write to restructure this paper around its central research claim, then revise the prose with benchmark-first academic style."
+
+policy:
+  allow_implicit_invocation: true

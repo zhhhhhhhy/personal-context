@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "snapshot_date": "2026-10-06",
+  "hash_algorithm": "sha256(relative_path + NUL + sha256(file_bytes), sorted by relative_path)",
+  "skills": [
+    {
+      "name": "academic-write",
+      "target_path": "skills/academic-write",
+      "source_path": "$CODEX_HOME/skills/academic-write",
+      "source_kind": "global_user_skill",
+      "file_count": 4,
+      "source_tree_sha256": "4556fbe9425a9779d45ac78264790fcbba8f8554f002e8d8219230f388f626a2",
+      "label_source": "not_applicable",
+      "caveat": "Snapshot of the locally installed skill; upstream licensing and update authority are not inferred."
+    },
+    {
+      "name": "deep-research",
+      "target_path": "skills/deep-research",
+      "source_path": "$CODEX_HOME/skills/deep-research",
+      "source_kind": "global_user_skill",
+      "file_count": 54,
+      "source_tree_sha256": "a21a24e252ab16d0a1b1befe5a1899e21d60b6723b105ba34d1af3463b89eda0",
+      "label_source": "not_applicable",
+      "caveat": "Snapshot of the locally installed skill; upstream licensing and update authority are not inferred."
+    },
+    {
+      "name": "grill-me",
+      "target_path": "skills/grill-me",
+      "source_path": "$CODEX_HOME/skills/grill-me",
+      "source_kind": "global_user_skill",
+      "file_count": 3,
+      "source_tree_sha256": "2544eb0a15384ae430f8cf5dbfb255339f7e2af07b8de243c5050e72b25d681f",
+      "label_source": "not_applicable",
+      "caveat": "Delegates its interview protocol to grilling; both skills are included and triggerable."
+    },
+    {
+      "name": "grilling",
+      "target_path": "skills/grilling",
+      "source_path": "$CODEX_HOME/skills/grilling",
+      "source_kind": "global_user_skill",
+      "file_count": 3,
+      "source_tree_sha256": "cf6ce24ffe444732738100577169f63831ed35ada667def1071bce273d10b364",
+      "label_source": "not_applicable",
+      "caveat": "Interactive workflow; it intentionally requires multiple user turns."
+    }
+  ],
+  "excluded_managed_sources": [
+    {
+      "scope": "$CODEX_HOME/skills/.system",
+      "reason": "Codex-managed system skills; reinstall or update through Codex."
+    },
+    {
+      "scope": "$HOME/.agents/skills/lark-*",
+      "count": 28,
+      "reason": "Plugin-managed Lark skills; the plugin remains the authoritative installer and updater."
+    }
+  ]
+}

@@ -6,7 +6,8 @@
 | 价值观、自我理解、职业取舍、学习与执行方式 | `profile.md` 中的使用说明，按需加载 `references/personal/zhenghuiyu.md` |
 | 沟通、写作、汇报 | `habits/communication.md` |
 | 研究、论文、实验 | `habits/axioms/INDEX.md`、相关 `references/projects/` |
-| Skill 设计与维护 | `skills/personal-context/SKILL.md` |
+| 具体 Skill 工作流 | 按名称加载 `skills/<skill-name>/SKILL.md` |
+| Context/Skill 设计与维护 | `skills/personal-context/SKILL.md`、`references/skills/README.md` |
 | 历史决策、重复纠正 | `notes/observations.md`，必要时追溯 `references/conversations/` |
 
 ## 记忆状态
