@@ -237,3 +237,117 @@
 - overlap: reinforces C-20261014-005; conflicting evidence requires review
 - privacy: safe_to_sync
 - status: pending_review
+
+## Batch 003 — 2026-10-14
+
+以下候选来自第三批 20 个父级对话；原始证据包仍只保留在本机工作区。所有条目都需要人工批量审核后才能晋升。
+
+## C-20261014-026
+
+- claim: 简历中的项目、技术栈和贡献先基于真实项目材料核验，并为新增表述准备可追问的面试证据；未经核验的内容只能作为待审核草稿。
+- evidence: `019fc335-4f96-78e1-afc4-070dd9e47b5c#L9`; `019fc30c-a94e-7f50-971c-c4adcd1a2811#L9,125,265,289`
+- scope: 简历、项目经历和面试准备
+- confidence: high
+- overlap: reinforces C-20261014-025
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-027
+
+- claim: 可视化 Demo 的验收契约是唯一验收来源，应使用指定 testdata、精确选择器和真实浏览器可见结果；不能用模型自报或更弱的测试替代，并应保留已有通过行为。
+- evidence: `01a1128a-01ea-7ae1-9538-1a5e2443cdc1#L9`; `01a11a0d-7362-78f0-a885-ba87ee4f17cc#L9`; `01a117e5-c5be-7f00-95a7-db4bca838c6e#L9`
+- scope: DemoPilot、CLI Builder和浏览器验收
+- confidence: high
+- overlap: reinforces C-20261014-021
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-028
+
+- claim: 大题库或知识材料按约 20 题的小批次处理；按知识点去重，保留覆盖多个知识点的题目，并为每个代表题提供可复用解析，不一次性读取全量材料。
+- evidence: `01a116af-faaf-73b0-a7db-17c5e66eebc3#L12,1205`
+- scope: 刷题库、知识抽取和大规模材料整理
+- confidence: high
+- overlap: new
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-029
+
+- claim: 删除远程旧目录前先清理旧路径引用、核对迁移文件和哈希、完成提交或压缩归档，再执行删除；遇到删除风险先说明影响范围。
+- evidence: `01a12aaf-133a-7d63-977d-927f3b56711e#L334,384`
+- scope: 服务器迁移、旧目录清理和工程归档
+- confidence: high
+- overlap: new
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-030
+
+- claim: 研究主张先写成可检验假设并明确审核标准，再判断 benchmark 是否合理、独特和足够；结论范围必须服从已有证据，不能把初步结果写成普遍规律。
+- evidence: `01a09902-7e8e-7290-af3d-e24a15f69e60#L418,444,989,1943,2256,2559`
+- scope: Benchmark设计、论文审查和研究结论
+- confidence: high
+- overlap: reinforces C-20261014-019 and C-20261014-023
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-031
+
+- claim: 人工审核按小批次逐题进行，已审核题目不重复；用户看不懂原文时先提供中文翻译，同时保留每题判断、分歧和记录缺口。
+- evidence: `01a09902-7e8e-7290-af3d-e24a15f69e60#L373,444,1503,2580`
+- scope: Benchmark人工审核、标注和证据核验
+- confidence: high
+- overlap: new; complements C-20261014-023
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-032
+
+- claim: 论文整体逻辑稳定后只做定位明确的文字层小步修改；先确认待改位置和外部编辑 Prompt，再修改，避免无边界的大面积重写。
+- evidence: `01a116a5-96a5-7cb3-8150-3c62ba850e3f#L410,4353,4564`
+- scope: ICML论文和其他已有学术文稿
+- confidence: high
+- overlap: reinforces C-20261014-006 and C-20261014-018
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-033
+
+- claim: 固定人工审核评测集与开发集用途分离：固定评测集的人工 judgments 用作评测依据，模型选择和阈值学习使用开发集；论文应准确描述评测集用途和人工审核范围。
+- evidence: `01a116a5-96a5-7cb3-8150-3c62ba850e3f#L314,1178,258`; `01a111b0-3cc1-70e1-9f7c-7d22cae53bd3#L2297`
+- scope: Core200、Benchmark和模型评测
+- confidence: high
+- overlap: new; complements C-20261014-018 and C-20261014-023
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-034
+
+- claim: 模型对比使用同一数据划分和统一指标，并在需要时重复运行报告随机方差；至少同时呈现 Direct、候选方法和组合方法的可比结果。
+- evidence: `01a111b0-3cc1-70e1-9f7c-7d22cae53bd3#L2115,503,4800`
+- scope: JEV、模型路由和 Benchmark实验
+- confidence: high
+- overlap: new
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-035
+
+- claim: 解释复杂技术时先用直白、具体的语言说明核心行为，再从代码或前向过程补充机制，并明确它与一般模型的差异。
+- evidence: `01a0e149-edce-7c41-9ef4-34c4a27edfb8#L269,305,317`; `01a0ddd6-44b2-7a60-ada3-74bc62dbf566#L9`
+- scope: 模型、算法和科研代码解释
+- confidence: medium
+- overlap: reinforces profile.md communication guidance
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-036
+
+- claim: 论文或实验报告要把已验证材料、缺失归档和结论范围分开呈现；有人工审核汇总不等于每条模型输出都已人工核验，缺口应保留为缺口。
+- evidence: `01a111b0-3cc1-70e1-9f7c-7d22cae53bd3#L2297,1374`; `01a09902-7e8e-7290-af3d-e24a15f69e60#L2580,53`
+- scope: Benchmark证据、论文审计和结果汇报
+- confidence: high
+- overlap: reinforces C-20261014-023 and C-20261014-030
+- privacy: safe_to_sync
+- status: pending_review
