@@ -351,3 +351,107 @@
 - overlap: reinforces C-20261014-023 and C-20261014-030
 - privacy: safe_to_sync
 - status: pending_review
+
+## Batch 004 — 2026-10-14
+
+以下候选来自第四批 20 个父级对话；原始证据包仍只保留在本机工作区。所有条目都需要人工批量审核后才能晋升。
+
+## C-20261014-037
+
+- claim: AI任务可视化应按 Workspace→Run→Task Graph 保留每次运行的独立历史，并通过明确的 HTTP/JSON 协议接收状态；可自动验证的任务自动验收，无法自动验证的任务进入待验收。
+- evidence: `019f92c5-1c9c-78a3-acb0-c23a892d49c1#L9,61,104,126,147,221`
+- scope: AI任务图、工程执行可视化和长程任务追踪
+- confidence: high
+- overlap: new
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-038
+
+- claim: 复杂项目先形成需求文档、SDD/约定文档、任务拆解报告和评估方案，再按拆解执行并给出面向人的验收汇报。
+- evidence: `01a0f78f-e0ea-7a70-ab46-85f58a670924#L391,681,2174`
+- scope: 多步骤工程、科研工具和 Agent 项目
+- confidence: high
+- overlap: reinforces C-20261014-014 and C-20261014-020
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-039
+
+- claim: 工程或实验迭代形成问题发现→问题拆分与统计→失败归因→数据集实验→效果比较的循环，并只记录重要、可改进的失败，不把单纯环境未准备好当作核心问题。
+- evidence: `01a0f78f-e0ea-7a70-ab46-85f58a670924#L218,2174,3046`
+- scope: Agent工程、模型实验和持续改进
+- confidence: high
+- overlap: new; complements C-20261014-020 and C-20261014-022
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-040
+
+- claim: Goal Prompt 必须标明项目地址、目标、预期结果、约束、需要读取的文档、可修改范围和验收文档；在这些要素含糊时先反馈，不直接执行。
+- evidence: `01a0f78f-e0ea-7a70-ab46-85f58a670924#L18,3457,391,584`; `01a0de32-f9d8-7691-9871-af57b35b13fd#L237`
+- scope: Agent委托、远程项目和持续执行任务
+- confidence: high
+- overlap: reinforces C-20261014-015
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-041
+
+- claim: 开始任务前先确认工作目录、是否新建项目、模型和训练需求、输入材料与时间边界；如果任务目的尚未收敛，应先暂停讨论，不盲目运行。
+- evidence: `01a0de32-f9d8-7691-9871-af57b35b13fd#L237,41`; `01a0f78f-e0ea-7a70-ab46-85f58a670924#L3046`
+- scope: 科研实验、远程工程和新项目启动
+- confidence: high
+- overlap: reinforces C-20261014-016 and C-20261014-039
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-042
+
+- claim: 长程任务中主 Agent 尽量只负责规划、约束和分发，子 Agent 负责执行；项目文档和 Prompt 可用英文统一，向用户汇报使用中文。
+- evidence: `01a0f78f-e0ea-7a70-ab46-85f58a670924#L3457,140`; `01a0f78f-e0ea-7a70-ab46-85f58a670924#L18`
+- scope: L6 Agent编排、科研工程和跨环境执行
+- confidence: high
+- overlap: reinforces C-20261014-022 and existing L5/L6 guidance
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-043
+
+- claim: 自动填表系统的硬性安全目标是宁可降低可填写数量，也要避免证据不足时错误填写；应把错误填写率或安全阈值作为独立验收指标。
+- evidence: `01a0f78f-e0ea-7a70-ab46-85f58a670924#L140,218`; `01a0de32-f9d8-7691-9871-af57b35b13fd#L41`
+- scope: AutoFill、JEV和证据不足路由
+- confidence: high
+- overlap: reinforces C-20261014-019 and existing AutoFill guidance
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-044
+
+- claim: 跨环境项目要明确服务器、浏览器和本机的执行边界；例如服务器承担模型和工程任务，主机浏览器承担真实网页验收，完成后释放临时资源。
+- evidence: `01a0f78f-e0ea-7a70-ab46-85f58a670924#L1051,265`; `01a0f78f-e0ea-7a70-ab46-85f58a670924#L3457`
+- scope: 远程科研工程、浏览器验收和模型运行
+- confidence: high
+- overlap: reinforces C-20261014-009 and C-20261014-015
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-045
+
+- claim: 可以优先复用开源项目，但要根据已定位的错误原因决定是否修改，并在需求、约束、目的和结果中保留复用边界与来源。
+- evidence: `01a0f78f-e0ea-7a70-ab46-85f58a670924#L3457`
+- scope: Agent系统、工程集成和科研工具开发
+- confidence: medium
+- overlap: new
+- privacy: safe_to_sync
+- status: pending_review
+
+## C-20261014-046
+
+- claim: 面向用户的实验汇报先用最简洁的结构说明任务、流程、结果和差异；复杂执行细节保留在项目记录中，需要时再追溯。
+- evidence: `01a0f78f-e0ea-7a70-ab46-85f58a670924#L425,3046`; `01a0de32-f9d8-7691-9871-af57b35b13fd#L41`
+- scope: 科研实验、远程工程和阶段汇报
+- confidence: high
+- overlap: reinforces C-20261014-011 and C-20261014-024
+- privacy: safe_to_sync
+- status: pending_review
