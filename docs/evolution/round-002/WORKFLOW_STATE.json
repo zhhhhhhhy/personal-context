@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "state_version": 20,
+  "state_version": 25,
   "transaction_id": "TX-5c727fda77be",
   "objective": "Complete classified context evolution round 002 with non-overlapping evidence and fresh paired response assessment",
   "scope": "Research, documents, engineering and communication cohorts; explicit stratified selection support; local-only evidence; learned-rule application and user review",
-  "status": "verifying",
-  "phase": "verify",
+  "status": "completed",
+  "phase": "report",
   "owner": "agent",
-  "next_action": "Verify each acceptance condition against the recorded evidence.",
+  "next_action": "User evaluates the classified report. No further batch or automation has been started.",
   "constraints": [],
   "blockers": [],
   "acceptance": [
@@ -43,15 +43,17 @@
       "condition": "Apply only supported low-risk rules with validation and preserve local-only source material",
       "status": "passed",
       "evidence": [
-        "validation.json; apply.json; delivery-checks.json; seven targeted tests: zero promotions, original core and learned items preserved, private evidence excluded from Git, runtime Skill synchronized"
+        "Seven final targeted tests passed, including malformed decision-entry subcases; final reflection validation passed; 25 delivery integrity checks passed; no new learned item or changed core file"
       ],
       "note": ""
     },
     {
       "id": "AC-5",
       "condition": "Deliver reviewable categorized report and synchronized repository changes",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "Commit 9320a8d pushed to origin/main; notes/evolution/round-002-20261014-evaluation.md contains category outcomes, safe examples and limitations; runtime Skill synchronized; source evidence remains ignored locally"
+      ],
       "note": ""
     }
   ],
@@ -63,7 +65,9 @@
   },
   "gates": {
     "route": "2026-10-14T15:54:45+00:00",
-    "execute": "2026-10-14T15:54:45+00:00"
+    "execute": "2026-10-14T15:54:45+00:00",
+    "verify": "2026-10-14T16:13:04+00:00",
+    "report": "2026-10-14T16:13:04+00:00"
   },
   "attempts": [
     {
@@ -352,9 +356,67 @@
         "attempt_id": "A-005",
         "outcome": "passed"
       }
+    },
+    {
+      "event_id": "EV-9e3edb1d77da",
+      "time": "2026-10-14T16:13:04+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-1793d3591d64",
+      "time": "2026-10-14T16:13:04+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-4",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-c1a445030127",
+      "time": "2026-10-14T16:13:04+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-5",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-5be4c0dc6413",
+      "time": "2026-10-14T16:13:04+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
+    },
+    {
+      "event_id": "EV-8b135d2e97a1",
+      "time": "2026-10-14T16:13:04+00:00",
+      "type": "checkpoint",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "note": "Technical round complete; no additional behavioral benefit demonstrated. Human acceptance remains pending."
+      }
     }
   ],
   "artifacts": [],
   "created_at": "2026-10-14T15:54:44+00:00",
-  "updated_at": "2026-10-14T16:12:30+00:00"
+  "updated_at": "2026-10-14T16:13:04+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-14T16:13:04+00:00",
+      "note": "Technical round complete; no additional behavioral benefit demonstrated. Human acceptance remains pending."
+    }
+  ]
 }

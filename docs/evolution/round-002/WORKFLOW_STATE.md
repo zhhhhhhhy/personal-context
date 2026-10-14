@@ -1,16 +1,16 @@
 # Workflow Transaction State
 
 - Schema version: 1
-- State version: 20
+- State version: 25
 - Transaction ID: TX-5c727fda77be
 - Objective: Complete classified context evolution round 002 with non-overlapping evidence and fresh paired response assessment
 - Scope: Research, documents, engineering and communication cohorts; explicit stratified selection support; local-only evidence; learned-rule application and user review
-- Status: verifying
-- Current phase: verify
+- Status: completed
+- Current phase: report
 - Owner: agent
-- Next action: Verify each acceptance condition against the recorded evidence.
+- Next action: User evaluates the classified report. No further batch or automation has been started.
 - Created: 2026-10-14T15:54:44+00:00
-- Updated: 2026-10-14T16:12:30+00:00
+- Updated: 2026-10-14T16:13:04+00:00
 
 ## Acceptance conditions
 
@@ -19,8 +19,8 @@
 | AC-1 | Freeze classified unused parent cohorts and inspect only training evidence for candidate drafting | passed | cohort.json; input_hashes.json; reflection-freeze.json; delivery-checks.json: 20 unused roots, 16 train, 4 eval, 9 training families, prior 95 roots excluded, no family overlap |
 | AC-2 | Make evidence-based dispositions against current core, Skills and prior candidates | passed | observations.json; dispositions.json; independent-evidence-review.md: three reinforcements, four deferrals, one rejection, no new rule; existing core and Skills audited |
 | AC-3 | Run fresh paired responses on frozen held-out tasks and compare by category without claiming human acceptance | passed | evaluation/frozen-inputs.json; response-hashes.json; blind-judgment.json; evaluation.json: sixteen fresh answers, eight paired cases, two ties per category; human acceptance pending |
-| AC-4 | Apply only supported low-risk rules with validation and preserve local-only source material | passed | validation.json; apply.json; delivery-checks.json; seven targeted tests: zero promotions, original core and learned items preserved, private evidence excluded from Git, runtime Skill synchronized |
-| AC-5 | Deliver reviewable categorized report and synchronized repository changes | pending |  |
+| AC-4 | Apply only supported low-risk rules with validation and preserve local-only source material | passed | Seven final targeted tests passed, including malformed decision-entry subcases; final reflection validation passed; 25 delivery integrity checks passed; no new learned item or changed core file |
+| AC-5 | Deliver reviewable categorized report and synchronized repository changes | passed | Commit 9320a8d pushed to origin/main; notes/evolution/round-002-20261014-evaluation.md contains category outcomes, safe examples and limitations; runtime Skill synchronized; source evidence remains ignored locally |
 
 ## Preflight
 
@@ -37,12 +37,12 @@
 
 - route: 2026-10-14T15:54:45+00:00
 - execute: 2026-10-14T15:54:45+00:00
-- verify: not_run
-- report: not_run
+- verify: 2026-10-14T16:13:04+00:00
+- report: 2026-10-14T16:13:04+00:00
 
 ## Decisions
 
-- None recorded.
+- 2026-10-14T16:13:04+00:00: Technical round complete; no additional behavioral benefit demonstrated. Human acceptance remains pending.
 
 ## Attempt log
 
@@ -76,3 +76,8 @@
 - `EV-55b828490be0` 2026-10-14T16:11:48+00:00 `checkpoint` {"note": ""}
 - `EV-9fae851de899` 2026-10-14T16:12:17+00:00 `attempt_started` {"attempt_id": "A-005"}
 - `EV-01b7a1576765` 2026-10-14T16:12:30+00:00 `attempt_finished` {"attempt_id": "A-005", "outcome": "passed"}
+- `EV-9e3edb1d77da` 2026-10-14T16:13:04+00:00 `gate_passed` {"stage": "verify"}
+- `EV-1793d3591d64` 2026-10-14T16:13:04+00:00 `acceptance_verified` {"criterion": "AC-4", "result": "passed"}
+- `EV-c1a445030127` 2026-10-14T16:13:04+00:00 `acceptance_verified` {"criterion": "AC-5", "result": "passed"}
+- `EV-5be4c0dc6413` 2026-10-14T16:13:04+00:00 `gate_passed` {"stage": "report"}
+- `EV-8b135d2e97a1` 2026-10-14T16:13:04+00:00 `checkpoint` {"note": "Technical round complete; no additional behavioral benefit demonstrated. Human acceptance remains pending."}
