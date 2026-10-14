@@ -24,6 +24,12 @@ WRAPPER_PREFIXES = (
     "<send_user_message_question_reply>",
     "<turn_aborted>",
     "<system>",
+    "<in-app-browser-context",
+    "<subagent_notification>",
+    "<realtime_delegation>",
+    "<heartbeat>",
+    "<recommended_plugins>",
+    "<codex_internal_context",
 )
 
 REDACTION_PATTERNS = (
@@ -37,12 +43,21 @@ REDACTION_PATTERNS = (
         re.compile(r"(?i)(api[_ -]?key|access[_ -]?token|secret)\s*[:：=]?\s*[^\s,，;；。]+"),
         "[REDACTED_SECRET]",
     ),
-    (re.compile(r"(?i)\b(?:sk|ghp|github_pat)-[A-Za-z0-9_-]{10,}\b"), "[REDACTED_TOKEN]"),
+    (
+        re.compile(r"(?i)(?<![A-Za-z0-9_])(?:sk|ghp|github_pat)-[A-Za-z0-9_-]{10,}(?![A-Za-z0-9_])"),
+        "[REDACTED_TOKEN]",
+    ),
     # Some older prompts placed a credential directly after an SSH/API
     # connection line without a password label.  These prefixes are kept
     # deliberately narrow to avoid masking ordinary prose.
-    (re.compile(r"(?i)\bf3b_[^\s,，;；。]+"), "[REDACTED_CREDENTIAL]"),
-    (re.compile(r"(?i)\bsk-[^\s,，;；。]+"), "[REDACTED_TOKEN]"),
+    (
+        re.compile(r"(?i)(?<![A-Za-z0-9_])f3b_[^\s,，;；。]+"),
+        "[REDACTED_CREDENTIAL]",
+    ),
+    (
+        re.compile(r"(?i)(?<![A-Za-z0-9_])sk-[^\s,，;；。]+"),
+        "[REDACTED_TOKEN]",
+    ),
     (re.compile(r"(?i)\bBearer\s+[A-Za-z0-9._~+/=-]{12,}\b"), "Bearer [REDACTED_TOKEN]"),
     (
         re.compile(r"-----BEGIN [^-]+-----.*?-----END [^-]+-----", re.S),
