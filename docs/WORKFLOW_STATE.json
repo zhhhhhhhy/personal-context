@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "state_version": 17,
+  "state_version": 22,
   "transaction_id": "TX-b3101aad00c4",
   "objective": "Merge the current personal Skill repository into the personal-context repository without losing user changes or overwriting existing Context",
   "scope": "Copy current D:\\\\worker\\\\zhy-private-skill skill packages and provenance documents into D:\\\\worker\\\\personal-context; preserve existing Context; keep the source repository unchanged and deprecated",
@@ -43,7 +43,7 @@
       "condition": "Target structural and hash checks pass; no secrets or raw conversation exports are introduced",
       "status": "passed",
       "evidence": [
-        "quick_validate.py passed for five Skills; secret-pattern scan had no matches; no nested Git repositories or files over 10 MB; sync script parsed."
+        "After sync-script repair: PowerShell syntax parse passed, wildcard LiteralPath regression check passed, git diff --check passed; prior five-Skill quick_validate and secret/structure checks remain valid."
       ],
       "note": ""
     },
@@ -66,8 +66,8 @@
   "gates": {
     "route": "2026-10-14T05:55:59+00:00",
     "execute": "2026-10-14T06:04:04+00:00",
-    "verify": "2026-10-14T06:06:45+00:00",
-    "report": "2026-10-14T06:06:46+00:00"
+    "verify": "2026-10-14T06:10:38+00:00",
+    "report": "2026-10-14T06:10:38+00:00"
   },
   "attempts": [
     {
@@ -99,6 +99,21 @@
       ],
       "failure_cause": "",
       "finished_at": "2026-10-14T06:06:45+00:00"
+    },
+    {
+      "id": "A-003",
+      "time": "2026-10-14T06:10:00+00:00",
+      "phase": "execute",
+      "action": "Repair the Skill sync script to copy directory entries without relying on a LiteralPath wildcard",
+      "expected_effect": "The documented sync script is executable on Windows PowerShell and no longer contains the wildcard/LiteralPath mismatch.",
+      "owner": "agent",
+      "result": "Repaired the PowerShell sync script to enumerate each Skill entry before copying; parser and targeted regression passed.",
+      "outcome": "passed",
+      "evidence": [
+        "scripts/sync-skills.ps1; syntax parse; wildcard LiteralPath regression check; git diff --check"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-14T06:10:38+00:00"
     }
   ],
   "events": [
@@ -279,9 +294,61 @@
       "detail": {
         "stage": "report"
       }
+    },
+    {
+      "event_id": "EV-0014c83842c6",
+      "time": "2026-10-14T06:10:00+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-003"
+      }
+    },
+    {
+      "event_id": "EV-57acd1ed2317",
+      "time": "2026-10-14T06:10:38+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-003",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-4f26cfb8781b",
+      "time": "2026-10-14T06:10:38+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-bbe74537026d",
+      "time": "2026-10-14T06:10:38+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-4",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-5142eb5ae69a",
+      "time": "2026-10-14T06:10:38+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
     }
   ],
   "artifacts": [],
   "created_at": "2026-10-14T05:54:26+00:00",
-  "updated_at": "2026-10-14T06:06:46+00:00"
+  "updated_at": "2026-10-14T06:10:38+00:00"
 }

@@ -17,7 +17,9 @@ $copied = @()
 foreach ($skill in Get-ChildItem -LiteralPath $sourceRoot -Directory) {
     $destination = Join-Path $destinationRoot $skill.Name
     New-Item -ItemType Directory -Path $destination -Force | Out-Null
-    Copy-Item -LiteralPath (Join-Path $skill.FullName '*') -Destination $destination -Recurse -Force
+    foreach ($entry in Get-ChildItem -LiteralPath $skill.FullName -Force) {
+        Copy-Item -LiteralPath $entry.FullName -Destination $destination -Recurse -Force
+    }
     $copied += $skill.Name
 }
 
