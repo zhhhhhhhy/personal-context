@@ -19,6 +19,7 @@ from typing import Any, Iterable
 
 
 WRAPPER_PREFIXES = (
+    "# AGENTS.md instructions",
     "<environment_context>",
     "<external_codex_apps_open_page>",
     "<send_user_message_question_reply>",
@@ -139,6 +140,8 @@ def classify_message(payload: dict[str, Any], text: str) -> tuple[str, str | Non
     if item_type == "agent_message":
         return "agent", "agent_message"
     if role == "user":
+        if text.lstrip().startswith("PLEASE IMPLEMENT THIS PLAN:"):
+            return "user_plan_confirmation", item_type
         return ("runtime_wrapper" if is_wrapper(text) else "user_authored"), item_type
     if role == "assistant":
         return "assistant_summary", item_type
@@ -188,6 +191,12 @@ def collect_thread(
             text = extract_text(payload.get("content"))
             if not text:
                 continue
+            if payload.get("role") == "user" and text.lstrip().startswith("# Context from my IDE setup:"):
+                marker = "## My request for Codex:"
+                if marker in text:
+                    text = text.split(marker, 1)[1].strip()
+                else:
+                    continue
             kind, classified_type = classify_message(payload, text)
             role_counts[kind] += 1
             if kind == "developer_context" or kind == "runtime_wrapper":

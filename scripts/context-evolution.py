@@ -183,7 +183,6 @@ def run_extractor(index: pathlib.Path, selection: pathlib.Path, output: pathlib.
 def cmd_prepare(args: argparse.Namespace) -> None:
     index = args.index.resolve()
     output = args.output.resolve()
-    output.mkdir(parents=True, exist_ok=False)
     rows = load_index(index)
     excluded = selection_ids([path.resolve() for path in args.exclude_selection])
     start = dt.date.fromisoformat(args.start)
@@ -195,15 +194,42 @@ def cmd_prepare(args: argparse.Namespace) -> None:
         and start <= parse_date(row.get("created_at")) < end
     ]
     eligible.sort(key=lambda row: (str(row.get("created_at")), row["thread_id"]))
-    if len(eligible) <= args.eval_count:
-        die(f"need more than {args.eval_count} eligible roots, found {len(eligible)}")
-    eval_rows = eligible[-args.eval_count :]
-    train_rows = eligible[: -args.eval_count]
+    selection_meta: dict[str, dict[str, Any]] = {}
+    if args.partition_manifest:
+        manifest = load_json(args.partition_manifest)
+        if not isinstance(manifest, list) or not manifest:
+            die("partition manifest must be a nonempty list")
+        by_id = {row["thread_id"]: row for row in eligible}
+        families: dict[str, str] = {}
+        for item in manifest:
+            thread_id = item.get("thread_id")
+            if thread_id not in by_id or thread_id in selection_meta:
+                die("partition manifest contains an excluded, unknown or duplicate root")
+            if item.get("partition") not in {"train", "eval"} or not item.get("category"):
+                die("partition manifest requires category and train/eval partition")
+            family = item.get("family_id", thread_id)
+            if family in families and families[family] != item["partition"]:
+                die("related conversation family crosses train/eval partitions")
+            families[family] = item["partition"]
+            selection_meta[thread_id] = item
+        train_rows = [by_id[x["thread_id"]] for x in manifest if x["partition"] == "train"]
+        eval_rows = [by_id[x["thread_id"]] for x in manifest if x["partition"] == "eval"]
+        if not train_rows or not eval_rows:
+            die("both train and eval partitions must be nonempty")
+        if {selection_meta[x["thread_id"]]["category"] for x in train_rows} != {selection_meta[x["thread_id"]]["category"] for x in eval_rows}:
+            die("each selected category requires train and eval roots")
+    else:
+        if args.eval_count < 1 or len(eligible) <= args.eval_count:
+            die(f"need a positive evaluation count below eligible roots, found {len(eligible)}")
+        eval_rows = eligible[-args.eval_count :]
+        train_rows = eligible[: -args.eval_count]
+    output.mkdir(parents=True, exist_ok=False)
 
     def public_row(row: dict[str, Any], partition: str) -> dict[str, Any]:
         return {
             "thread_id": row["thread_id"],
-            "category": "context_evolution",
+            "category": selection_meta.get(row["thread_id"], {}).get("category", "context_evolution"),
+            "family_id": selection_meta.get(row["thread_id"], {}).get("family_id", row["thread_id"]),
             "reason": f"bounded historical cohort; partition={partition}",
             "created_at": row.get("created_at"),
             "archived": row.get("archived"),
@@ -224,6 +250,8 @@ def cmd_prepare(args: argparse.Namespace) -> None:
         "end_exclusive": args.end,
         "excluded_thread_count": len(excluded),
         "eligible_thread_count": len(eligible),
+        "selected_thread_count": len(train) + len(evaluation),
+        "selection_mode": "explicit_stratified" if selection_meta else "chronological",
         "train_thread_count": len(train),
         "eval_thread_count": len(evaluation),
         "train_thread_ids": [item["thread_id"] for item in train],
@@ -233,6 +261,15 @@ def cmd_prepare(args: argparse.Namespace) -> None:
     write_json(output / "base_snapshot.json", base_snapshot())
     run_extractor(index, output / "train.selection.json", output / "evidence.train.jsonl", args.codex_home.resolve(), args.max_message_chars)
     run_extractor(index, output / "eval.selection.json", output / "evidence.eval.jsonl", args.codex_home.resolve(), args.max_message_chars)
+    # Freeze only timestamped messages within the declared window. Missing
+    # timestamps cannot be used as preference evidence in this batch.
+    for name in ("evidence.train.jsonl", "evidence.eval.jsonl"):
+        records = jsonl(output / name)
+        for record in records:
+            record["messages"] = [message for message in record.get("messages", []) if message.get("timestamp") and start <= parse_date(message["timestamp"]) < end]
+        write_text(output / name, "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in records))
+    frozen = ("train.selection.json", "eval.selection.json", "cohort.json", "evidence.train.jsonl", "evidence.eval.jsonl")
+    write_json(output / "input_hashes.json", {name: sha256_file(output / name) for name in frozen})
     write_text(output / "README.md", f"""# Context evolution run {output.name}
 
 - Date window: {args.start} <= local date < {args.end}
@@ -257,11 +294,11 @@ def contains_secret(value: Any) -> bool:
     return any(pattern.search(text) for pattern in SECRET_PATTERNS)
 
 
-def evidence_locations(run_dir: pathlib.Path) -> dict[str, set[tuple[int, str]]]:
+def evidence_locations(run_dir: pathlib.Path) -> dict[str, dict[tuple[int, str], dict[str, str]]]:
     path = run_dir / "evidence.train.jsonl"
     if not path.exists():
         return {}
-    locations: dict[str, set[tuple[int, str]]] = {}
+    locations: dict[str, dict[tuple[int, str], dict[str, str]]] = {}
     for row in jsonl(path):
         thread_id = str(row.get("thread_id"))
         for message in row.get("messages", []):
@@ -269,13 +306,21 @@ def evidence_locations(run_dir: pathlib.Path) -> dict[str, set[tuple[int, str]]]
             line = evidence.get("line")
             kind = message.get("source_kind")
             if isinstance(line, int) and isinstance(kind, str) and message.get("text", "").strip():
-                locations.setdefault(thread_id, set()).add((line, kind))
+                locations.setdefault(thread_id, {})[(line, kind)] = {
+                    "file": pathlib.Path(evidence.get("file", "")).name,
+                    "text": " ".join(message["text"].split()),
+                }
     return locations
 
 
 def validate_reflection(run_dir: pathlib.Path) -> dict[str, Any]:
     cohort, reflection = read_reflection(run_dir)
     errors: list[str] = []
+    frozen_path = run_dir / "input_hashes.json"
+    if frozen_path.exists():
+        for name, expected in load_json(frozen_path).items():
+            if sha256_file(run_dir / name) != expected:
+                errors.append(f"prepared input changed: {name}")
     if reflection.get("schema_version") != SCHEMA_VERSION:
         errors.append("reflection schema_version must be 0.1")
     if reflection.get("run_id") != run_dir.name:
@@ -289,7 +334,11 @@ def validate_reflection(run_dir: pathlib.Path) -> dict[str, Any]:
         errors.append("reflection must record core, learned and candidate-ledger conflict checks")
     train_ids = set(cohort.get("train_thread_ids", []))
     eval_ids = set(cohort.get("eval_thread_ids", []))
+    if train_ids & eval_ids:
+        errors.append("training and evaluation roots overlap")
     locations = evidence_locations(run_dir)
+    selection_path = run_dir / "train.selection.json"
+    families = {x["thread_id"]: x.get("family_id", x["thread_id"]) for x in load_json(selection_path)} if selection_path.exists() else {}
     if not locations:
         errors.append("evidence.train.jsonl is missing or contains no readable messages")
     promotions = reflection.get("promotions", [])
@@ -343,6 +392,8 @@ def validate_reflection(run_dir: pathlib.Path) -> dict[str, Any]:
             errors.append(f"{prefix}: at least two evidence records are required")
             evidence = []
         evidence_threads: set[str] = set()
+        evidence_texts: set[str] = set()
+        evidence_families: set[str] = set()
         for ev in evidence:
             if not isinstance(ev, dict):
                 errors.append(f"{prefix}: evidence record is not an object")
@@ -363,15 +414,32 @@ def validate_reflection(run_dir: pathlib.Path) -> dict[str, Any]:
                 errors.append(f"{prefix}: evidence location must end with :L<line>")
             elif (int(location_match.group(1)), ev.get("source_kind")) not in locations.get(str(thread_id), set()):
                 errors.append(f"{prefix}: evidence location does not resolve to a direct user message: {thread_id} {ev.get('location')}")
+            else:
+                source = locations[str(thread_id)][(int(location_match.group(1)), ev.get("source_kind"))]
+                filename = pathlib.Path(ev["location"].rsplit(":L", 1)[0]).name
+                if filename != source["file"]:
+                    errors.append(f"{prefix}: evidence filename does not match prepared source")
+                evidence_texts.add(source["text"])
+                evidence_families.add(families.get(str(thread_id), str(thread_id)))
             evidence_threads.add(str(thread_id))
         if len(evidence_threads) < 2:
             errors.append(f"{prefix}: evidence must span two distinct parent conversations")
+        if len(evidence_texts) < 2 or len(evidence_families) < 2:
+            errors.append(f"{prefix}: evidence must contain distinct user expressions from independent conversation families")
         if any(fragment in str(item).lower() for fragment in ("permission", "password", "token", "private key", "health", "financial")):
             errors.append(f"{prefix}: possible permission or sensitive claim; manual review required")
     if contains_secret(reflection):
         errors.append("reflection contains a secret-like value")
-    if not isinstance(reflection.get("deferred", []), list) or not isinstance(reflection.get("rejected", []), list):
-        errors.append("deferred and rejected must be lists")
+    for field in ("deferred", "rejected", "reinforced"):
+        entries = reflection.get(field, [])
+        if not isinstance(entries, list):
+            errors.append(f"{field} must be a list")
+            continue
+        for index, entry in enumerate(entries, start=1):
+            if field != "reinforced" and isinstance(entry, str) and entry.strip():
+                continue  # Older runs may use plain-text deferred/rejected entries.
+            if not isinstance(entry, dict) or not all(isinstance(entry.get(key), str) and entry[key].strip() for key in ("claim", "reason")):
+                errors.append(f"{field}[{index}] must contain nonempty claim and reason")
     return {
         "schema_version": SCHEMA_VERSION,
         "run_id": run_dir.name,
@@ -430,6 +498,9 @@ def cmd_apply(args: argparse.Namespace) -> None:
     validation = load_json(run_dir / "validation.json")
     if validation.get("status") != "passed":
         die("apply requires validation.status=passed")
+    validation = validate_reflection(run_dir)
+    if validation["status"] != "passed":
+        die("reflection or input changed after validation: " + "; ".join(validation["errors"]))
     snapshot = load_json(run_dir / "base_snapshot.json")
     if current_base_hash() != snapshot.get("sha256"):
         die("repository base changed after prepare; re-run prepare and reflection")
@@ -476,9 +547,12 @@ def cmd_apply(args: argparse.Namespace) -> None:
         audit = item["candidate_audit"]
         related = ", ".join(audit.get("related_ids", [])) or "none"
         decision_lines.append(f"- `{item['key']}`: {item['claim']} (scope: {item['scope']}; confidence: {item['confidence']}; candidate audit: {audit['action']} [{related}])")
+    decision_lines.extend(["", "## Reinforced existing rules", ""])
+    for item in reflection.get("reinforced", []):
+        decision_lines.append(f"- {item['claim']} — {item['reason']}")
     decision_lines.extend(["", "## Deferred / rejected", ""])
     for item in reflection.get("deferred", []) + reflection.get("rejected", []):
-        decision_lines.append(f"- {item}")
+        decision_lines.append(f"- {item['claim']}: {item['reason']}" if isinstance(item, dict) else f"- {item}")
     write_text(decision_path, "\n".join(decision_lines) + "\n")
     observation_path = REPO_ROOT / "notes" / "observations.md"
     prior = observation_path.read_text(encoding="utf-8") if observation_path.exists() else "# Observations\n"
@@ -539,6 +613,7 @@ def parser() -> argparse.ArgumentParser:
     prepare.add_argument("--end", required=True, help="exclusive local date YYYY-MM-DD")
     prepare.add_argument("--output", type=pathlib.Path, required=True)
     prepare.add_argument("--exclude-selection", type=pathlib.Path, action="append", default=[])
+    prepare.add_argument("--partition-manifest", type=pathlib.Path, help="local list of thread_id/category/family_id/partition records frozen before semantic reading")
     prepare.add_argument("--eval-count", type=int, default=3)
     prepare.add_argument("--max-message-chars", type=int, default=6000)
     prepare.add_argument("--codex-home", type=pathlib.Path, default=pathlib.Path(os.environ.get("CODEX_HOME", pathlib.Path.home() / ".codex")))
