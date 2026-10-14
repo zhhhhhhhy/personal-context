@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "state_version": 11,
+  "transaction_id": "TX-2e3b4ec6831e",
+  "objective": "Implement evidence-grounded personal context evolution and evaluate one bounded historical trial for user review",
+  "scope": "Core session rules, observer/reflection/promotion tooling, local historical trial, independent assessment and Codex runtime bridge; no scheduled job, no raw data publication",
+  "status": "verifying",
+  "phase": "verify",
+  "owner": "agent",
+  "next_action": "Resolve or verify the remaining acceptance conditions.",
+  "constraints": [],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Core loading, autonomy and communication rules are implemented without losing existing context",
+      "status": "passed",
+      "evidence": [
+        "rules/SOUL.md; habits/communication.md; AGENTS.md; INDEX.md"
+      ],
+      "note": "Core files are session-resident; detailed Context remains routed by INDEX.md; existing profile and privacy boundaries retained."
+    },
+    {
+      "id": "AC-2",
+      "condition": "Executable evolution pipeline validates evidence, deduplicates, abstains on conflicts and supports rollback",
+      "status": "passed",
+      "evidence": [
+        "scripts/context-evolution.py; docs/evolution/POLICY.md; .local/context-evolution/negative-eval-leak-20261014-v2; .local/context-evolution/negative-sensitive-20261014-v1; .local/context-evolution/negative-base-20261014-v1"
+      ],
+      "note": "Validation rejects leakage, sensitive promotion and stale base; conflict/candidate/direct-message checks and rollback are implemented."
+    },
+    {
+      "id": "AC-3",
+      "condition": "One week of unused parent conversations is processed with a frozen evaluation split and local-only evidence",
+      "status": "passed",
+      "evidence": [
+        ".local/context-evolution/pilot-20261014-v1; references/conversations/README.md"
+      ],
+      "note": "2026-09-28 through 2026-10-04 selected 15 unused roots, split into 12 training and 3 frozen evaluation roots; raw evidence stayed local."
+    },
+    {
+      "id": "AC-4",
+      "condition": "Results include actual content changes, negative outcomes and independent quality assessment; human acceptance remains pending",
+      "status": "passed",
+      "evidence": [
+        "notes/evolution/pilot-20261014-v1.md; notes/evolution/pilot-20261014-v1-evaluation.md; .local/context-evolution/independent-review-20261014.md"
+      ],
+      "note": "Framework content changed; the pilot intentionally promoted zero rules, recorded three deferred observations and negative outcomes, and independent quality review is preserved; human acceptance remains pending."
+    },
+    {
+      "id": "AC-5",
+      "condition": "Relevant runtime entry and repository changes are verified and versioned with no raw or sensitive evidence published",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "Read-only preflight: clean 9ca24e4 worktree; Python 3.12.4 and stdlib; existing metadata index and extractor; 80 processed roots excluded; 15 unused roots in selected week; original logs read-only; source docs inspected; trial output local only; no external runtime required",
+    "detail": "Current Codex session supplies semantic Observer and Reflector; deterministic Python controls evidence and publication. Only nonsensitive bounded rules are eligible.",
+    "checked_at": "2026-10-14T11:05:30+00:00"
+  },
+  "gates": {
+    "route": "2026-10-14T11:05:30+00:00",
+    "execute": "2026-10-14T11:05:30+00:00",
+    "verify": "2026-10-14T11:39:45+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-14T11:05:30+00:00",
+      "phase": "execute",
+      "action": "Build core rules and evidence-grounded evolution runner and freeze trial inputs",
+      "expected_effect": "An executable, auditable evolution flow and a local split ready for semantic extraction",
+      "owner": "agent",
+      "result": "Implemented core loading, autonomy and communication rules; added deterministic prepare/validate/apply/rollback pipeline; completed a 12-train/3-eval local pilot with zero promotions and independent review.",
+      "outcome": "passed",
+      "evidence": [
+        "AGENTS.md; rules/SOUL.md; habits/communication.md; docs/evolution/POLICY.md; scripts/context-evolution.py; .local/context-evolution/pilot-20261014-v1; .local/context-evolution/independent-review-20261014.md"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-14T11:39:34+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-753d7de2321e",
+      "time": "2026-10-14T11:05:30+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-28237420cc50",
+      "time": "2026-10-14T11:05:30+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "Read-only preflight: clean 9ca24e4 worktree; Python 3.12.4 and stdlib; existing metadata index and extractor; 80 processed roots excluded; 15 unused roots in selected week; original logs read-only; source docs inspected; trial output local only; no external runtime required"
+      }
+    },
+    {
+      "event_id": "EV-ee62299d1a50",
+      "time": "2026-10-14T11:05:30+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-f25241c38872",
+      "time": "2026-10-14T11:05:30+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-1f8172562bde",
+      "time": "2026-10-14T11:05:30+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-0648d058414c",
+      "time": "2026-10-14T11:39:34+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-e62b00d63fba",
+      "time": "2026-10-14T11:39:45+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-6246d79c6fe3",
+      "time": "2026-10-14T11:40:05+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-ecbdc8ab1b98",
+      "time": "2026-10-14T11:40:06+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-38140e3063ba",
+      "time": "2026-10-14T11:40:07+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-c5c0323c26ac",
+      "time": "2026-10-14T11:40:08+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-4",
+        "result": "passed"
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-14T11:05:30+00:00",
+  "updated_at": "2026-10-14T11:40:08+00:00"
+}

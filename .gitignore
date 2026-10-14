@@ -13,3 +13,7 @@ __pycache__/
 .env
 .env.*
 !.env.example
+
+# Evolution evidence and runtime locks must stay local.
+.local/
+.context-evolution.lock

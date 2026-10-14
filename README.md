@@ -25,6 +25,7 @@ personal-context/
 - **渐进式披露**：不需要一次性把所有 context 塞给 AI，按任务需要按需取用。
 - **持续维护**：context 是活的，每次协作后有价值的沉淀都应该回流到这里。
 - **结构化优先**：每一份 context 都应该有明确的主题和用途，方便检索和引用。
+- **受控自进化**：用户授权后，可从限定时间窗的本地对话中提炼低风险经验；Observer 只记录，Reflector 只生成候选，脚本负责校验、应用和回滚。
 
 ## 关于我
 
@@ -46,6 +47,8 @@ references/            # 对话索引、项目索引、个人画像和导入资�
 scripts/               # 将仓库中的 Skill 同步到 Codex 运行时
 ```
 
+核心会话规则位于 `rules/SOUL.md`、`profile.md`、`habits/communication.md` 和 `INDEX.md`。如果希望它们在每个 Codex 会话进入路由，可运行 `scripts/install-context-router.ps1`；脚本会在覆盖已有全局入口前停止，使用 `-Force` 才会备份并替换。
+
 长期规则与候选规则分开维护：对话先进入 `notes/observations.md`，经过证据和人工确认后才进入 `habits/` 或 `skills/`。
 
 ## Skill 库
@@ -53,3 +56,7 @@ scripts/               # 将仓库中的 Skill 同步到 Codex 运行时
 原 `zhy-private-skill` 仓库中的 `academic-write`、`deep-research`、`grill-me` 和 `grilling` 已迁入本仓库的 `skills/`。本仓库现在是个人 Context 和个人 Skill 的唯一维护入口；旧仓库保留为历史副本，不再继续维护。
 
 Skill 的完整说明仍按目录独立维护。需要让本机 Codex 使用最新版本时，运行 `scripts/sync-skills.ps1`；脚本只复制更新，不删除运行时已有内容。
+
+## Context evolution
+
+`docs/evolution/POLICY.md` 定义 Observer → Reflector → validate → apply → evaluate → rollback。`scripts/context-evolution.py` 负责选择未处理父对话、冻结训练/评估分区、调用脱敏提取器、检查证据和敏感性、原子更新 `habits/learned.*`，并保留本地回滚快照。原始日志、完整证据和敏感主题不进入 GitHub。

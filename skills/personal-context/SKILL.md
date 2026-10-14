@@ -1,13 +1,24 @@
 ---
 name: personal-context
-description: Load the user's personal profile, habits, principles, or project history only when the task depends on them.
+description: Load personal Context and, when asked to evolve or distill it from conversations, run evidence-based observation, reflection, bounded promotion and evaluation. Do not turn an ordinary task into a history import.
 ---
 
 # Personal Context Skill
 
-1. Read the repository `INDEX.md` first.
-2. Classify the task and load only the matching `profile.md`, `habits/`, `skills/<skill-name>/`, or `references/` files.
-3. Do not load all conversation history by default.
-4. Record new reusable lessons in `notes/observations.md`.
-5. Keep candidate rules pending until their evidence and scope have been reviewed.
-6. Treat this repository as the source of truth for both personal Context and personal Skills; use `scripts/sync-skills.ps1` for runtime installation.
+Source of truth: `D:/worker/personal-context` (or the repository containing this source Skill). The installed Skill is a router, not a duplicate memory store.
+
+## Use Context
+
+Read the repository `AGENTS.md` and its four core files once per session. Use `INDEX.md` for relevant details. Read learned rules only in their stated scope; current user instructions outrank historical inferences. Do not load all conversation history.
+
+## Evolve Context when requested
+
+Read `docs/evolution/POLICY.md` and [the execution contract](../../references/skills/personal-context-evolution.md). Use the current Codex session as the semantic engine:
+
+1. Prepare an incremental, redacted local evidence pack with `scripts/context-evolution.py prepare`. Freeze dates and evaluation split before reading content.
+2. Observer reads only the training partition, writes local `observations.json`, and records sources, limits and rejected ideas. It does not modify active rules.
+3. Reflector compares observations with existing rules and historical candidates, writes local `reflection.json`, merges duplicates and tests conflicting interpretations. Produce zero promotions when evidence is insufficient.
+4. Run `validate` then `apply`. The script alone publishes eligible learned rules, a redacted decision log and evidence pointers. Core identity, permissions, sensitive material and raw quotes stay outside automatic publication.
+5. Assess evidence fidelity, scope, novelty and usefulness on the frozen evaluation partition. Report model judgment separately from human acceptance. Use `rollback` if the applied batch is unsound.
+
+The user authorized bounded low-risk evolution on 2026-10-14; do not ask again for each eligible rule. Ask only at the actual boundary described in the policy. No background scheduler is installed by invoking this Skill.

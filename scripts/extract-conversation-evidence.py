@@ -209,6 +209,7 @@ def collect_thread(
                     "source_kind": kind,
                     "item_type": classified_type,
                     "role": payload.get("role") or payload.get("author"),
+                    "timestamp": record.get("timestamp"),
                     "text": redacted,
                     "text_chars": len(text),
                     "truncated": truncated,
