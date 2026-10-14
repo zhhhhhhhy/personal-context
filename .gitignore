@@ -1,0 +1,8 @@
+# Raw conversation exports may contain private information.
+references/conversations/raw/
+*.env
+*.key
+*.pem
+*.token
+secrets/
+

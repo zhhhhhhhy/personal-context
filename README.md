@@ -32,3 +32,17 @@ personal-context/
 
 - 博客：https://zhhhhhhhy.github.io/homepage/
 - GitHub：https://github.com/zhhhhhhhy
+
+## 当前工作结构
+
+```text
+AGENTS.md              # 入口路由，只负责告诉 AI 去哪里找内容
+INDEX.md               # 任务类型到 Context 文件的映射
+profile.md             # 当前个人画像草稿
+habits/                # 沟通偏好和长期判断 baseline
+skills/                # 可复用的 Context/工作流入口
+notes/                 # 观察记录和候选规则
+references/            # 对话索引、项目索引和外部资料
+```
+
+长期规则与候选规则分开维护：对话先进入 `notes/observations.md`，经过证据和人工确认后才进入 `habits/` 或 `skills/`。
