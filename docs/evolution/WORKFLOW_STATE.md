@@ -1,16 +1,16 @@
 # Workflow Transaction State
 
 - Schema version: 1
-- State version: 11
+- State version: 13
 - Transaction ID: TX-2e3b4ec6831e
 - Objective: Implement evidence-grounded personal context evolution and evaluate one bounded historical trial for user review
 - Scope: Core session rules, observer/reflection/promotion tooling, local historical trial, independent assessment and Codex runtime bridge; no scheduled job, no raw data publication
-- Status: verifying
-- Current phase: verify
+- Status: completed
+- Current phase: report
 - Owner: agent
-- Next action: Resolve or verify the remaining acceptance conditions.
+- Next action: Report the verified result and link the evidence.
 - Created: 2026-10-14T11:05:30+00:00
-- Updated: 2026-10-14T11:40:08+00:00
+- Updated: 2026-10-14T11:42:52+00:00
 
 ## Acceptance conditions
 
@@ -20,7 +20,7 @@
 | AC-2 | Executable evolution pipeline validates evidence, deduplicates, abstains on conflicts and supports rollback | passed | scripts/context-evolution.py; docs/evolution/POLICY.md; .local/context-evolution/negative-eval-leak-20261014-v2; .local/context-evolution/negative-sensitive-20261014-v1; .local/context-evolution/negative-base-20261014-v1 |
 | AC-3 | One week of unused parent conversations is processed with a frozen evaluation split and local-only evidence | passed | .local/context-evolution/pilot-20261014-v1; references/conversations/README.md |
 | AC-4 | Results include actual content changes, negative outcomes and independent quality assessment; human acceptance remains pending | passed | notes/evolution/pilot-20261014-v1.md; notes/evolution/pilot-20261014-v1-evaluation.md; .local/context-evolution/independent-review-20261014.md |
-| AC-5 | Relevant runtime entry and repository changes are verified and versioned with no raw or sensitive evidence published | pending |  |
+| AC-5 | Relevant runtime entry and repository changes are verified and versioned with no raw or sensitive evidence published | passed | commit 5bbd92d pushed to origin/main; runtime Skill hash A16FCFFFB97C62E959436A9B89FA6E3B105582E0BFD93650D63CE84FADD14839; tracked raw evidence check passed; non-script secret scan passed |
 
 ## Preflight
 
@@ -38,7 +38,7 @@
 - route: 2026-10-14T11:05:30+00:00
 - execute: 2026-10-14T11:05:30+00:00
 - verify: 2026-10-14T11:39:45+00:00
-- report: not_run
+- report: 2026-10-14T11:42:52+00:00
 
 ## Decisions
 
@@ -63,3 +63,5 @@
 - `EV-ecbdc8ab1b98` 2026-10-14T11:40:06+00:00 `acceptance_verified` {"criterion": "AC-2", "result": "passed"}
 - `EV-38140e3063ba` 2026-10-14T11:40:07+00:00 `acceptance_verified` {"criterion": "AC-3", "result": "passed"}
 - `EV-c5c0323c26ac` 2026-10-14T11:40:08+00:00 `acceptance_verified` {"criterion": "AC-4", "result": "passed"}
+- `EV-3c7aca65cf88` 2026-10-14T11:42:52+00:00 `acceptance_verified` {"criterion": "AC-5", "result": "passed"}
+- `EV-d2959fcac151` 2026-10-14T11:42:52+00:00 `gate_passed` {"stage": "report"}
