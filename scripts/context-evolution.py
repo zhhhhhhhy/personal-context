@@ -13,6 +13,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import hashlib
+import importlib.util
 import json
 import os
 import pathlib
@@ -45,6 +46,10 @@ FORBIDDEN_TARGETS = {
     "AGENTS.md",
 }
 ALLOWED_SOURCE_KINDS = {"user_authored"}
+MESSAGE_DATE_COUNTS = (
+    "input_messages", "retained_messages", "retained_unknown_timestamp",
+    "filtered_messages", "filtered_missing_timestamp", "filtered_out_of_window",
+)
 
 
 def utc_now() -> str:
@@ -115,6 +120,41 @@ def parse_date(value: Any) -> dt.date:
     if parsed.tzinfo is None:
         parsed = parsed.replace(tzinfo=LOCAL_TZ)
     return parsed.astimezone(LOCAL_TZ).date()
+
+
+def thread_date_bounds(row: dict[str, Any], start: dt.date, end: dt.date) -> dict[str, Any]:
+    """Describe metadata bounds without substituting a date for any message."""
+    result = {"created_at": row.get("created_at"), "updated_at": row.get("updated_at")}
+    parsed = []
+    for field in ("created_at", "updated_at"):
+        value = row.get(field)
+        if value is None or (isinstance(value, str) and not value.strip()):
+            return {**result, "status": "missing", "invalid_field": field}
+        try:
+            if isinstance(value, bool):
+                raise ValueError("boolean is not a timestamp")
+            if isinstance(value, (int, float)):
+                timestamp = dt.datetime.fromtimestamp(value, LOCAL_TZ)
+            elif isinstance(value, str):
+                text = value.strip()
+                timestamp = dt.datetime.fromisoformat(text[:-1] + "+00:00" if text.endswith("Z") else text)
+                if timestamp.tzinfo is None:
+                    timestamp = timestamp.replace(tzinfo=LOCAL_TZ)
+                timestamp = timestamp.astimezone(LOCAL_TZ)
+            else:
+                raise ValueError("unsupported timestamp type")
+        except (ValueError, TypeError, OverflowError, OSError):
+            return {**result, "status": "invalid", "invalid_field": field}
+        parsed.append(timestamp)
+        result[field + "_local"] = timestamp.isoformat()
+    created, updated = parsed
+    if created > updated:
+        result["status"] = "reversed"
+    elif not (start <= created.date() <= updated.date() < end):
+        result["status"] = "out_of_window"
+    else:
+        result["status"] = "within_window"
+    return result
 
 
 def load_index(path: pathlib.Path) -> list[dict[str, Any]]:
@@ -214,6 +254,9 @@ def cmd_prepare(args: argparse.Namespace) -> None:
     excluded = selection_ids([path.resolve() for path in args.exclude_selection])
     start = dt.date.fromisoformat(args.start)
     end = dt.date.fromisoformat(args.end)
+    date_policy = getattr(args, "message_date_policy", "strict")
+    if date_policy not in {"strict", "thread-bounded"}:
+        die("message date policy must be strict or thread-bounded")
     eligible = [
         row
         for row in rows
@@ -259,6 +302,10 @@ def cmd_prepare(args: argparse.Namespace) -> None:
             "family_id": selection_meta.get(row["thread_id"], {}).get("family_id", row["thread_id"]),
             "reason": f"bounded historical cohort; partition={partition}",
             "created_at": row.get("created_at"),
+            "updated_at": row.get("updated_at"),
+            "message_date_policy": date_policy,
+            "thread_date_bounds": thread_date_bounds(row, start, end),
+            "message_date_counts": {field: 0 for field in MESSAGE_DATE_COUNTS},
             "archived": row.get("archived"),
             "title": row.get("title", ""),
             "source_kind": row.get("thread_source") or row.get("source"),
@@ -268,7 +315,7 @@ def cmd_prepare(args: argparse.Namespace) -> None:
     evaluation = [public_row(row, "eval") for row in eval_rows]
     write_json(output / "train.selection.json", train)
     write_json(output / "eval.selection.json", evaluation)
-    write_json(output / "cohort.json", {
+    cohort = {
         "schema_version": SCHEMA_VERSION,
         "run_id": output.name,
         "created_at": utc_now(),
@@ -284,28 +331,87 @@ def cmd_prepare(args: argparse.Namespace) -> None:
         "train_thread_ids": [item["thread_id"] for item in train],
         "eval_thread_ids": [item["thread_id"] for item in evaluation],
         "raw_evidence_policy": "local_only_redacted_extract",
-    })
+        "coverage_required": True,
+        "message_date_policy": date_policy,
+        "thread_date_bounds": {item["thread_id"]: item["thread_date_bounds"] for item in train + evaluation},
+    }
+    write_json(output / "cohort.json", cohort)
     write_json(output / "base_snapshot.json", base_snapshot())
     run_extractor(index, output / "train.selection.json", output / "evidence.train.jsonl", args.codex_home.resolve(), args.max_message_chars)
     run_extractor(index, output / "eval.selection.json", output / "evidence.eval.jsonl", args.codex_home.resolve(), args.max_message_chars)
-    # Freeze only timestamped messages within the declared window. Missing
-    # timestamps cannot be used as preference evidence in this batch.
-    for name in ("evidence.train.jsonl", "evidence.eval.jsonl"):
+    # Strict remains the default. The explicit fallback preserves null message
+    # timestamps only when the complete parent-thread interval is in-window.
+    partition_counts = {}
+    thread_audit = []
+    for partition, selected in (("train", train), ("eval", evaluation)):
+        name = f"evidence.{partition}.jsonl"
+        selected_by_id = {item["thread_id"]: item for item in selected}
         records = jsonl(output / name)
         for record in records:
-            record["messages"] = [message for message in record.get("messages", []) if message.get("timestamp") and start <= parse_date(message["timestamp"]) < end]
+            metadata = selected_by_id.get(record.get("thread_id"))
+            if metadata is None:
+                die(f"extracted {partition} evidence contains a thread outside its selection")
+            counts = metadata["message_date_counts"]
+            bounds = metadata["thread_date_bounds"]
+            kept = []
+            for message in record.get("messages", []):
+                counts["input_messages"] += 1
+                timestamp = message.get("timestamp")
+                missing = timestamp is None or (isinstance(timestamp, str) and not timestamp.strip())
+                if missing:
+                    if date_policy == "thread-bounded" and message.get("source_kind") == "user_authored":
+                        if bounds["status"] != "within_window":
+                            die(f"thread-bounded cannot retain untimed direct messages for thread {metadata['thread_id']}: {bounds['status']} thread date bounds")
+                        message["timestamp"] = None
+                        message["timestamp_precision"] = "thread_bounded"
+                        counts["retained_unknown_timestamp"] += 1
+                    else:
+                        counts["filtered_missing_timestamp"] += 1
+                        counts["filtered_messages"] += 1
+                        continue
+                elif not start <= parse_date(timestamp) < end:
+                    counts["filtered_out_of_window"] += 1
+                    counts["filtered_messages"] += 1
+                    continue
+                else:
+                    message["timestamp_precision"] = "message_timestamp"
+                counts["retained_messages"] += 1
+                kept.append(message)
+            record["messages"] = kept
+            record["message_date_policy"] = date_policy
+            record["thread_date_bounds"] = bounds
         write_text(output / name, "".join(json.dumps(row, ensure_ascii=False) + "\n" for row in records))
+        write_json(output / f"{partition}.selection.json", selected)
+        partition_counts[partition] = {field: sum(item["message_date_counts"][field] for item in selected) for field in MESSAGE_DATE_COUNTS}
+        for item in selected:
+            bounds = item["thread_date_bounds"]
+            counts = item["message_date_counts"]
+            thread_audit.append(f"- `{item['thread_id']}` ({partition}): created_at={bounds['created_at']}; updated_at={bounds['updated_at']}; bounds={bounds['status']}; retained_unknown_timestamp={counts['retained_unknown_timestamp']}; filtered_messages={counts['filtered_messages']}")
+    totals = {field: sum(counts[field] for counts in partition_counts.values()) for field in MESSAGE_DATE_COUNTS}
+    cohort["message_date_counts"] = {**partition_counts, "total": totals}
+    write_json(output / "cohort.json", cohort)
     frozen = ("train.selection.json", "eval.selection.json", "cohort.json", "evidence.train.jsonl", "evidence.eval.jsonl")
     write_json(output / "input_hashes.json", {name: sha256_file(output / name) for name in frozen})
     write_text(output / "README.md", f"""# Context evolution run {output.name}
 
 - Date window: {args.start} <= local date < {args.end}
+- Message date policy: {date_policy}
+- Retained messages with unknown timestamp: {totals['retained_unknown_timestamp']}
+- Filtered messages: {totals['filtered_messages']} (missing timestamp: {totals['filtered_missing_timestamp']}; outside message date window: {totals['filtered_out_of_window']})
 - Training roots: {len(train)}
 - Evaluation roots: {len(evaluation)}
 - Excluded previously processed roots: {len(excluded)}
 - Raw logs are read-only. Evidence packs are local and redacted.
 - `evidence.train.jsonl` is for Observer/Reflector only.
+- `observations.json` must use coverage/1 and map every direct training message to units.
+- Every observation must map to exactly one reflection outcome. Structural checks do not replace independent semantic review.
 - `evidence.eval.jsonl` must not be used to draft or tune promotions.
+- `thread-bounded` admits only untimed direct user messages whose complete parent-thread bounds are within the window; their timestamp remains null and timestamp_precision is thread_bounded.
+- Thread bounds and message counts are frozen in cohort/selection/evidence files; thread bounds do not establish an exact message date.
+
+## Thread date audit
+
+{chr(10).join(thread_audit)}
 """)
     print(json.dumps({"run_dir": str(output), "train": len(train), "eval": len(evaluation), "eligible": len(eligible)}, ensure_ascii=False))
 
@@ -348,6 +454,16 @@ def validate_reflection(run_dir: pathlib.Path) -> dict[str, Any]:
         for name, expected in load_json(frozen_path).items():
             if sha256_file(run_dir / name) != expected:
                 errors.append(f"prepared input changed: {name}")
+    coverage_result = None
+    if "coverage_required" in cohort:
+        if cohort["coverage_required"] is not True:
+            errors.append("cohort.coverage_required must be true when present")
+        else:
+            spec = importlib.util.spec_from_file_location("context_coverage", SCRIPT_DIR / "context-coverage.py")
+            coverage = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(coverage)
+            coverage_result = coverage.validate_coverage(run_dir, run_dir / "observations.json", reflection)
+            errors.extend(f"coverage: {error}" for error in coverage_result["errors"])
     if reflection.get("schema_version") != SCHEMA_VERSION:
         errors.append("reflection schema_version must be 0.1")
     if reflection.get("run_id") != run_dir.name:
@@ -467,7 +583,7 @@ def validate_reflection(run_dir: pathlib.Path) -> dict[str, Any]:
                 continue  # Older runs may use plain-text deferred/rejected entries.
             if not isinstance(entry, dict) or not all(isinstance(entry.get(key), str) and entry[key].strip() for key in ("claim", "reason")):
                 errors.append(f"{field}[{index}] must contain nonempty claim and reason")
-    return {
+    result = {
         "schema_version": SCHEMA_VERSION,
         "run_id": run_dir.name,
         "validated_at": utc_now(),
@@ -477,6 +593,9 @@ def validate_reflection(run_dir: pathlib.Path) -> dict[str, Any]:
         "train_thread_count": len(train_ids),
         "eval_thread_count": len(eval_ids),
     }
+    if coverage_result is not None:
+        result["coverage"] = coverage_result
+    return result
 
 
 def cmd_validate(args: argparse.Namespace) -> None:
@@ -646,6 +765,7 @@ def parser() -> argparse.ArgumentParser:
     prepare.add_argument("--partition-manifest", type=pathlib.Path, help="local list of thread_id/category/family_id/partition records frozen before semantic reading")
     prepare.add_argument("--eval-count", type=int, default=3)
     prepare.add_argument("--max-message-chars", type=int, default=6000)
+    prepare.add_argument("--message-date-policy", choices=("strict", "thread-bounded"), default="strict", help="strict requires message timestamps; thread-bounded explicitly admits untimed direct messages only inside complete parent-thread date bounds")
     prepare.add_argument("--codex-home", type=pathlib.Path, default=pathlib.Path(os.environ.get("CODEX_HOME", pathlib.Path.home() / ".codex")))
     prepare.set_defaults(func=cmd_prepare)
     for name, func in (("validate", cmd_validate), ("apply", cmd_apply), ("rollback", cmd_rollback), ("status", cmd_status)):

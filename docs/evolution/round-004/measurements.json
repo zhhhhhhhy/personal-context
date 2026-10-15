@@ -1,0 +1,184 @@
+{
+  "schema_version": 1,
+  "date": "2026-10-15",
+  "tokenizer": "o200k_base",
+  "measurement_scope": "Successful returned UTF-8/LF payloads with wrappers and repeats; not total platform context, billing or latency",
+  "sampling": {
+    "previously_excluded_roots": 127,
+    "qualified_unused_roots": 40,
+    "train_roots": 16,
+    "eval_roots": 4,
+    "train_messages": 112,
+    "eval_messages": 9,
+    "train_families": 9,
+    "archived_train_roots": 11,
+    "archived_eval_roots": 2,
+    "train_literal_body_tokens": 4149,
+    "train_request_marker_normalized_tokens": 3616,
+    "previous_train_literal_tokens": 899,
+    "initial_minimum_target_tokens": 4495,
+    "preferred_target_tokens": 8000,
+    "target_met": false,
+    "missing_timestamp_train_retained": 76,
+    "missing_timestamp_eval_retained": 3,
+    "sampling_is_random": false
+  },
+  "loading": {
+    "progressive": {
+      "calls": 19,
+      "context_tokens": 13661,
+      "history_tokens": 16812,
+      "total_tokens": 30473,
+      "by_command": {
+        "bootstrap": 6599,
+        "file": 1861,
+        "train": 16812,
+        "search": 3824,
+        "candidate": 1377
+      }
+    },
+    "whole": {
+      "calls": 8,
+      "context_tokens": 15379,
+      "history_tokens": 16812,
+      "total_tokens": 32191,
+      "by_command": {
+        "bootstrap": 6599,
+        "file": 1090,
+        "train": 16812,
+        "whole-candidates": 7690
+      }
+    }
+  },
+  "candidate_input_tokens": {
+    "progressive": 5634,
+    "whole": 7690
+  },
+  "savings_percent": {
+    "candidate": 26.73602080624187,
+    "context": 11.171077443266793,
+    "total_returned_input": 5.336895405548135,
+    "excluding_extra_catalog": 6.3868783200273365
+  },
+  "entry_core_tokens_before": 1823,
+  "entry_core_tokens_after": 1823,
+  "semantic_comparison": {
+    "reference_requirements": 194,
+    "progressive": {
+      "covered": 179,
+      "partial": 9,
+      "missing": 6,
+      "strict_coverage_rate": 0.9226804123711341,
+      "covered_or_partial_rate": 0.9690721649484536
+    },
+    "whole": {
+      "covered": 182,
+      "partial": 6,
+      "missing": 6,
+      "strict_coverage_rate": 0.9381443298969072,
+      "covered_or_partial_rate": 0.9690721649484536
+    },
+    "by_category": {
+      "engineering": {
+        "progressive": {
+          "covered": 65,
+          "partial": 6,
+          "missing": 2
+        },
+        "whole": {
+          "covered": 66,
+          "partial": 5,
+          "missing": 2
+        }
+      },
+      "documents": {
+        "progressive": {
+          "covered": 40,
+          "partial": 1,
+          "missing": 2
+        },
+        "whole": {
+          "covered": 41,
+          "partial": 0,
+          "missing": 2
+        }
+      },
+      "learning": {
+        "progressive": {
+          "covered": 36,
+          "partial": 2,
+          "missing": 2
+        },
+        "whole": {
+          "covered": 38,
+          "partial": 1,
+          "missing": 1
+        }
+      },
+      "collaboration": {
+        "progressive": {
+          "covered": 38,
+          "partial": 0,
+          "missing": 0
+        },
+        "whole": {
+          "covered": 37,
+          "partial": 0,
+          "missing": 1
+        }
+      }
+    },
+    "scope_distortion_counts": {
+      "progressive": 2,
+      "whole": 1
+    },
+    "unsupported_extension_counts": {
+      "progressive": 0,
+      "whole": 1
+    },
+    "reference_caveat_count": 8,
+    "human_ground_truth": false,
+    "replicates": 1,
+    "observers_frozen_before_candidate_loading": true,
+    "candidate_loading_cannot_explain_observer_difference": true
+  },
+  "separate_review_input_tokens": {
+    "reference_source_read": 24501,
+    "anonymous_comparison": 45851,
+    "focused_known_gap_repair": 7291,
+    "sum_of_these_reviews": 77643,
+    "parent_metered_subset": 18914,
+    "heldout_review": 618,
+    "whole_task_total_measured": false
+  },
+  "final_reconciliation": {
+    "source_messages": 112,
+    "source_units": 212,
+    "observations": 194,
+    "revised_observations": 8,
+    "added_observations": 6,
+    "known_reference_gaps_repaired": 15,
+    "focused_review_passed": 15,
+    "known_gap_repair_is_fresh_sample_accuracy": false,
+    "reinforced_groups": 4,
+    "deferred_groups": 14,
+    "promoted_rules": 0,
+    "human_acceptance": "pending"
+  },
+  "holdout": {
+    "read_after_final_freeze": true,
+    "tuned_final_outputs": false,
+    "new_rule_behavior_gain": "not applicable: zero promotions"
+  },
+  "validation": {
+    "source_integrity_checks": 92,
+    "load_integrity_checks": 58,
+    "delivery_integrity_checks": 44,
+    "delivery_passed": true,
+    "core_unchanged": true,
+    "learned_rules_unchanged": true,
+    "local_evidence_ignored": true,
+    "new_post_experiment_rule": "Audit unobserved units and exact constraints; not forward-tested by the original arms"
+  },
+  "troubleshooting_entries": 18
+}

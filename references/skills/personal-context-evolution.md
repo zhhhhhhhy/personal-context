@@ -25,11 +25,19 @@ python D:\worker\personal-context\scripts\context-evolution.py prepare `
 
 The command reads raw logs read-only through the existing redacting extractor. It writes no raw evidence into Git.
 
-For classified comparisons, supply `--partition-manifest` with a local JSON list containing `thread_id`, `category`, `family_id`, and `partition` (`train` or `eval`). Select by metadata before reading message bodies, exclude automated worker tasks even if the index calls them roots, and keep each related family in one partition. The date range still applies. Each category must have both train and evaluation roots. `input_hashes.json` freezes selection and evidence files; validation rejects later changes. Missing-timestamp and out-of-window messages are excluded.
+For classified comparisons, supply `--partition-manifest` with a local JSON list containing `thread_id`, `category`, `family_id`, and `partition` (`train` or `eval`). Select by metadata before reading message bodies, exclude automated worker tasks even if the index calls them roots, and keep each related family in one partition. The date range still applies. Each category must have both train and evaluation roots. `input_hashes.json` freezes selection and evidence files; validation rejects later changes. The default `--message-date-policy strict` excludes missing-timestamp and out-of-window messages.
+
+For a bounded historical import with complete native user messages but missing message dates, explicitly select `--message-date-policy thread-bounded`. An undated direct message is admitted only when its parent's valid creation/update interval lies wholly within the declared window. Keep its timestamp null and record thread-level precision; never manufacture a message date. Known dates still obey the message window. Missing or invalid thread bounds block this fallback. This does not establish which day the user made the statement. Inspect the frozen date-filter counts, and do not use this option to claim a precise weekly sample.
 
 For a fresh response comparison, freeze the candidate wording before opening the evaluation partition. Use identical sanitized case prompts and relevant current Skills in both conditions. Save the frozen baseline and the candidate supplement separately, and generate new responses in isolated evaluation sessions. Assess explicit current-request adherence, evidence grounding, useful next action, and unnecessary constraints. Report ties and regressions by category; do not call model judgments human acceptance or tune candidates using held-out answers.
 
 ## Observer and Reflector output
+
+Before candidate lookup, read [the source coverage contract](personal-context-observation.md).
+Write and validate the local message-to-unit-to-observation ledger first. New
+prepared cohorts require it, and every observation must receive a reflection
+disposition. This catches missing bookkeeping, while independent semantic
+review checks whether multi-part messages were interpreted completely.
 
 The current Codex session reads only `evidence.train.jsonl` and writes `reflection.json`. It must distinguish direct user-authored messages from assistant summaries, tool outputs, runtime wrappers and child-thread material. A promotion contains:
 
@@ -68,6 +76,10 @@ the explicit whole-ledger arm verifies that archived candidate bodies still
 match. Report Context and historical-evidence payloads separately from setup,
 platform prompts and tool schemas, which this reader does not observe. A reader
 log alone does not prove every later tool output was metered.
+
+For recovery from missing logs, API limits, coverage failures or metering
+errors, read only the relevant entry in
+[the troubleshooting record](../../docs/evolution/TROUBLESHOOTING.md).
 
 ## Apply, evaluate, rollback
 

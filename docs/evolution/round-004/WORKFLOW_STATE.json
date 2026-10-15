@@ -1,0 +1,240 @@
+{
+  "schema_version": 1,
+  "state_version": 11,
+  "transaction_id": "TX-5c94c2f64ad0",
+  "objective": "Repair missed useful evidence in progressive Context evolution, preserve troubleshooting knowledge, and compare loading and extraction completeness on a richer unused batch",
+  "scope": "Coverage-preserving observation and reflection, known-case regression, frozen richer parent cohort, isolated loading comparison and independent completeness review, bounded evolution and redacted incident/report delivery",
+  "status": "in_progress",
+  "phase": "execute",
+  "owner": "agent",
+  "next_action": "Finish attempt A-004 and record its evidence.",
+  "constraints": [
+    "Historical evidence does not grant new permissions; core identity and privacy remain outside automatic evolution"
+  ],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Record reusable execution problems and verified solutions with evidence and boundaries",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-2",
+      "condition": "Reject missing message or unit coverage and recover the known figure-handoff omission without unsupported promotion",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-3",
+      "condition": "Freeze an unused richer training and held-out cohort with local-only provenance and independent families",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-4",
+      "condition": "Compare matched progressive and whole returned payloads plus independent semantic completeness and overgeneralization review",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-5",
+      "condition": "Validate evolution decisions, preserve core and privacy boundaries, publish report and synchronize canonical repository",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "Clean 20d06f9 equals fetched origin/main; core and evolution contracts read; Python, tiktoken, local source pack and read-only index database available; archived/native read_thread tools available",
+    "detail": "Freeze a richer batch by structural length counts before semantic reading. Preserve local source evidence and use source coverage plus independent semantic review; observed file payload counts are not whole-session totals.",
+    "checked_at": "2026-10-15T05:39:31+00:00"
+  },
+  "gates": {
+    "route": "2026-10-15T05:39:31+00:00",
+    "execute": "2026-10-15T05:39:31+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-15T05:39:31+00:00",
+      "phase": "execute",
+      "action": "Implement source-to-observation-to-reflection coverage controls and preserve troubleshooting guidance",
+      "expected_effect": "Omitted direct messages and dropped observation units block new-batch validation; semantic omissions remain independently reviewed and measurable",
+      "owner": "agent",
+      "result": "Coverage implementation and integration complete. Delegated focused tests passed 10/10; existing provenance/privacy boundary tests passed 8/8. Skill validation, meter syntax and 26-message paging smoke passed. Source order preserved while IDs/digest remain order-independent. Troubleshooting guide records ten reusable issues.",
+      "outcome": "passed",
+      "evidence": [
+        "scripts/context-coverage.py; scripts/test-context-coverage.py; scripts/context-evolution.py; .local/context-evolution/round-004-regression/paging-check.json; docs/evolution/TROUBLESHOOTING.md"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T05:49:33+00:00"
+    },
+    {
+      "id": "A-002",
+      "time": "2026-10-15T05:49:34+00:00",
+      "phase": "execute",
+      "action": "Run isolated source-coverage regression and qualify richer unused conversation sources without semantic selection",
+      "expected_effect": "Recover concrete requirements in known source pack; preserve 127-root exclusion and freeze richer new input after structural qualification",
+      "owner": "agent",
+      "result": "Isolated regression retained all four known figure-handoff requirements; 26/26 source messages validated. Qualified 40 unused roots before semantic reading and froze 16 train plus 4 eval roots: 112 train messages, 4149 body tokens, 9 conservative families. Sample is 4.62x previous, below initial 5x minimum; no padding to hit count. Explicit bounded-date recovery is being completed before prepare.",
+      "outcome": "passed",
+      "evidence": [
+        ".local/context-evolution/round-004-regression/arms/observer-review.md; .local/context-evolution/round-004-20261015.meta/selection-freeze.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T06:05:59+00:00"
+    },
+    {
+      "id": "A-003",
+      "time": "2026-10-15T06:06:00+00:00",
+      "phase": "execute",
+      "action": "Finish explicit undated-source recovery and run frozen richer batch with isolated progressive and whole arms plus independent semantic reference",
+      "expected_effect": "Preserve complete qualified history without fabricated dates; measure matched returned payloads and useful requirement coverage separately",
+      "owner": "agent",
+      "result": "Matched inputs measured and 194-reference blinded review finished; P 179/9/6, W 182/6/6. Parent repaired 15 disclosed gaps in 14 explicit revisions and focused reviewer passed 15/15. Final reflection frozen before nine held-out messages; zero new rules, no claimed held-out behavioral gain.",
+      "outcome": "passed",
+      "evidence": [
+        "notes/evolution/round-004-20261015-evaluation.md; .local/context-evolution/round-004-20261015/final-freeze.json; .local/context-evolution/round-004-20261015/arms/reference/blind-scores.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T06:37:53+00:00"
+    },
+    {
+      "id": "A-004",
+      "time": "2026-10-15T06:37:53+00:00",
+      "phase": "execute",
+      "action": "Apply validated local reconciliation, finish sanitized metrics and incident guide, verify bounded delivery and synchronize repository",
+      "expected_effect": "Auditable observations preserved without new long-term rule bloat; complete reviewable report and clean synchronized source",
+      "owner": "agent",
+      "result": "",
+      "outcome": "running",
+      "evidence": [],
+      "failure_cause": ""
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-840904eab22a",
+      "time": "2026-10-15T05:38:17+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-fdc0f757dc40",
+      "time": "2026-10-15T05:39:31+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "Clean 20d06f9 equals fetched origin/main; core and evolution contracts read; Python, tiktoken, local source pack and read-only index database available; archived/native read_thread tools available"
+      }
+    },
+    {
+      "event_id": "EV-f0643bdc99e6",
+      "time": "2026-10-15T05:39:31+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-c49ffdf6f76d",
+      "time": "2026-10-15T05:39:31+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-d5a1778a1989",
+      "time": "2026-10-15T05:39:31+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-1091213ade94",
+      "time": "2026-10-15T05:49:33+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-cbb954bf2473",
+      "time": "2026-10-15T05:49:34+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-002"
+      }
+    },
+    {
+      "event_id": "EV-4b4e911ffc9a",
+      "time": "2026-10-15T06:05:59+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-002",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-2fa5650321f9",
+      "time": "2026-10-15T06:06:00+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-003"
+      }
+    },
+    {
+      "event_id": "EV-ebbf1d7eeb97",
+      "time": "2026-10-15T06:37:53+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-003",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-6d11aef6220d",
+      "time": "2026-10-15T06:37:53+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-004"
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-15T05:38:17+00:00",
+  "updated_at": "2026-10-15T06:37:53+00:00"
+}

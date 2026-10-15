@@ -32,6 +32,13 @@ def evolution():
     return module
 
 
+def coverage():
+    spec = importlib.util.spec_from_file_location('context_coverage', ROOT / 'scripts/context-coverage.py')
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
 def scrub(text: str) -> str:
     text = re.sub(r'(?:gh[pousr]_|github_pat_|sk-)[A-Za-z0-9_-]{12,}', '[REDACTED]', text)
     text = re.sub(r'(?i)((?:password|passwd|api[_-]?key|access[_-]?token|authorization)\s*[:=：]\s*)[^\s,;；]+', r'\1[REDACTED]', text)
@@ -56,13 +63,19 @@ def candidate_data(module):
 
 def main():
     import tiktoken
+    # Native Windows Python may inherit a legacy console encoding. Return the
+    # same UTF-8/LF bytes we persist and meter, even without python -X utf8.
+    if hasattr(sys.stdout, 'reconfigure'):
+        sys.stdout.reconfigure(encoding='utf-8', newline='\n')
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--run-dir', type=Path, required=True)
-    parser.add_argument('--arm', choices=['progressive', 'whole', 'parent'], required=True)
+    parser.add_argument('--arm', choices=['progressive', 'whole', 'parent', 'regression', 'reference'], required=True)
     parser.add_argument('--max-tokens', type=int, default=9000)
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('bootstrap')
-    sub.add_parser('train')
+    train = sub.add_parser('train')
+    train.add_argument('--offset', type=int, default=0)
+    train.add_argument('--limit', type=int, default=24)
     sub.add_parser('whole-candidates')
     file = sub.add_parser('file')
     file.add_argument('--path', required=True)
@@ -80,9 +93,17 @@ def main():
     if args.command == 'bootstrap':
         data = [{'file': name, 'text': (ROOT / name).read_text(encoding='utf-8-sig')} for name in BOOTSTRAP]
     elif args.command == 'train':
-        rows = [json.loads(line) for line in (run / 'evidence.train.jsonl').read_text(encoding='utf-8').splitlines() if line.strip()]
-        selected = {row['thread_id']: row for row in json.loads((run / 'train.selection.json').read_text(encoding='utf-8'))}
-        data = [{'thread_id': row['thread_id'], 'category': selected[row['thread_id']]['category'], 'family_id': selected[row['thread_id']]['family_id'], 'excluded_messages': sum(message['source_kind'] != 'user_authored' for message in row.get('messages', [])), 'messages': [{'source_kind': message['source_kind'], 'location': Path(message['evidence']['file']).name + ':L' + str(message['evidence']['line']), 'truncated': message['truncated'], 'text': message['text']} for message in row.get('messages', []) if message['source_kind'] == 'user_authored']} for row in rows]
+        if args.offset < 0 or args.limit < 1:
+            raise SystemExit('train requires a nonnegative offset and a positive limit')
+        inventory = coverage().source_inventory(run)
+        rows = inventory['messages']
+        selected = rows[args.offset:args.offset + args.limit]
+        threads = {}
+        for row in selected:
+            thread = threads.setdefault(row['thread_id'], {key: row[key] for key in ('thread_id', 'category', 'family_id')})
+            thread.setdefault('messages', []).append({key: row[key] for key in ('message_id', 'location', 'truncated', 'text')})
+        end = args.offset + len(selected)
+        data = {'source_digest': inventory['source_digest'], 'total_messages': len(rows), 'offset': args.offset, 'returned_messages': len(selected), 'next_offset': end if end < len(rows) else None, 'threads': list(threads.values())}
     elif args.command == 'candidate':
         data = module.lookup_candidate(args.id)
     elif args.command == 'search':
