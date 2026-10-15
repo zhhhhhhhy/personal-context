@@ -1,6 +1,6 @@
 # 文档与模板
 
-历史候选，不因拆分而晋升。
+历史候选原文；已逐条裁决。按 disposition 和目标记忆使用，不能把旧 claim 整条当成生效规则。
 
 ## C-20261014-004
 
@@ -8,7 +8,9 @@
 - evidence: `batch-001`: `01a0fde7-9236-78c1-9068-6867a4ce6d8e#L414,L1350,L6129,L10193,L13172,L13247`; `01a12dfc-1aab-7101-bf6d-c2758be02026#L903,L1173`
 - scope: 专利、论文、简历和其他参考模板驱动的文档任务
 - confidence: high
-- status: pending_review
+- status: resolved
+- disposition: skill / already_covered
+- destination: skill.patent-workflow
 
 ## C-20261014-005
 
@@ -17,7 +19,9 @@
 - scope: 简历、专利、开题报告、PDF/Word/HTML 等已有材料
 - confidence: high
 - overlap: partially covered by `habits/communication.md`
-- status: pending_review
+- status: resolved
+- disposition: rule / new
+- destination: documents.preserve-style
 
 ## C-20261014-012
 
@@ -25,7 +29,9 @@
 - evidence: `batch-001`: `01a0fde7-9236-78c1-9068-6867a4ce6d8e#L9638,L10193,L11136`
 - scope: 专利交底书和说明书
 - confidence: high
-- status: pending_review
+- status: resolved
+- disposition: skill / already_covered
+- destination: skill.patent-workflow
 
 ## C-20261014-013
 
@@ -34,7 +40,9 @@
 - scope: 专利、简历、PDF/Word 和图示材料
 - confidence: high
 - overlap: reinforces document and PDF render-validation guidance
-- status: pending_review
+- status: resolved
+- disposition: skill / already_covered
+- destination: skill.patent-workflow
 
 ## C-20261014-025
 
@@ -44,7 +52,9 @@
 - confidence: medium
 - overlap: reinforces C-20261014-005; conflicting evidence requires review
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: discard / discarded
+- destination: discarded
 
 ## C-20261014-026
 
@@ -54,4 +64,6 @@
 - confidence: high
 - overlap: reinforces C-20261014-025
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / local_only
+- destination: local.project-material-verification

@@ -1,0 +1,56 @@
+{
+  "tokenizer": "o200k_base",
+  "measurement": "Exact UTF-8 returned CLI bodies, LF normalized; excludes tools, platform, history, generation and setup. Each task loads only selected entries.",
+  "core_before": 1917,
+  "core_after": 1931,
+  "memory_router": 340,
+  "learned_router": 135,
+  "cases": [
+    {
+      "case": "style",
+      "query": "简历 风格",
+      "selected_entries": [
+        "documents.preserve-style"
+      ],
+      "retrieval_body_tokens": 371
+    },
+    {
+      "case": "human-review",
+      "query": "Core200 人工审核",
+      "selected_entries": [
+        "research.core200-status",
+        "research.human-review"
+      ],
+      "retrieval_body_tokens": 820
+    },
+    {
+      "case": "migration",
+      "query": "迁移 旧目录",
+      "selected_entries": [
+        "migration.old-directory-checklist"
+      ],
+      "retrieval_body_tokens": 575
+    },
+    {
+      "case": "taskgraph",
+      "query": "任务图 HTTP",
+      "selected_entries": [
+        "taskgraph.project-design"
+      ],
+      "retrieval_body_tokens": 762
+    },
+    {
+      "case": "paper-sync",
+      "query": "论文 同步",
+      "selected_entries": [
+        "research.paper-sync-current"
+      ],
+      "retrieval_body_tokens": 647
+    }
+  ],
+  "negative_case": {
+    "query": "行星 恒星 轨道",
+    "matches": 0,
+    "retrieval_body_tokens": 51
+  }
+}

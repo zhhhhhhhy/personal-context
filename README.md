@@ -49,7 +49,7 @@ scripts/               # 将仓库中的 Skill 同步到 Codex 运行时
 
 核心会话规则位于 `rules/SOUL.md`、`profile.md`、`habits/communication.md` 和 `INDEX.md`。如果希望它们在每个 Codex 会话进入路由，可运行 `scripts/install-context-router.ps1`；脚本会在覆盖已有全局入口前停止，使用 `-Force` 才会备份并替换。
 
-长期规则与候选规则分开维护：`notes/candidates.md` 是历史候选的主题入口。低风险经验按 `docs/evolution/POLICY.md` 校验后应用，核心规则与权限仍由用户决定。
+可用记忆从 `contexts/memory/INDEX.md` 按任务检索；长期规则见 `habits/learned.md`。46条历史候选的去向见 `notes/candidate-dispositions.md`，原文只供追溯。核心规则与权限仍由用户决定。
 
 ## Skill 库
 
@@ -65,4 +65,6 @@ Skill 的完整说明仍按目录独立维护。需要让本机 Codex 使用最�
 
 ## Context evolution
 
-`docs/evolution/POLICY.md` 定义 Observer → Reflector → validate → apply → evaluate → rollback。`scripts/context-evolution.py` 负责选择未处理父对话、冻结训练/评估分区、调用脱敏提取器、检查证据和敏感性、原子更新 `habits/learned.*`，并保留本地回滚快照。原始日志、完整证据和敏感主题不进入 GitHub。
+`docs/evolution/POLICY.md` 定义观察、反思、维护、校验应用和评估。`scripts/context-evolution.py prepare` 提供增量证据准备；`scripts/context-memory.py` 负责可用记忆、合并、替代、归档、舍弃和受保护回滚。单次明确的项目约定可以先使用，通用规则另需独立重复支持。原始日志、完整证据和敏感主题只留本地；没有后台定时任务。
+
+例如：`python -X utf8 scripts/context-memory.py search --query "论文 人工审核"`，再用 `show --id research.core200-status` 只读命中的具体内容。维护时先运行 `maintain` 查看复核提醒与明确到期的临时记忆。

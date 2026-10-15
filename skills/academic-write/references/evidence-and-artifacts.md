@@ -3,6 +3,7 @@
 - Report what the experiment measures, not what the system was intended to achieve.
 - If only a pre-generation gate was evaluated, attribute gains to action control or false-fill reduction; do not call them gains in the generator or the complete multi-module system.
 - If references or evaluators are model-assisted, state that limitation without presenting them as human gold.
+- A user-provided description or request to rewrite the paper records what was stated or requested; it does not establish that the annotation procedure occurred. Preserve concrete counts and conditions as attributed, pending claims until records support them. Human-review summaries do not establish that every model output was independently scored by humans.
 - If a benchmark is diagnostic or not independently held out, limit generalization claims accordingly.
 - Treat privacy as a motivation and deployment constraint unless a privacy evaluation was actually performed.
 - If a sentence mainly serves to preempt criticism but does not advance the research question, argument chain, evidence interpretation, or conclusion boundary, omit it from the main text; retain a qualifier only when it changes how readers should understand the conclusion or constitutes a necessary evidence boundary.

@@ -174,7 +174,7 @@ def selection_ids(paths: list[pathlib.Path]) -> set[str]:
 
 
 def snapshot_paths() -> list[pathlib.Path]:
-    return [
+    paths = [
         REPO_ROOT / "rules" / "SOUL.md",
         REPO_ROOT / "profile.md",
         REPO_ROOT / "habits" / "communication.md",
@@ -182,6 +182,11 @@ def snapshot_paths() -> list[pathlib.Path]:
         REPO_ROOT / "habits" / "learned.json",
         REPO_ROOT / "habits" / "learned.md",
     ]
+    for relative in ("contexts/memory/registry.json", ".local/context-memory/registry.json"):
+        path = REPO_ROOT / relative
+        if path.exists():
+            paths.append(path)
+    return paths
 
 
 def base_snapshot() -> dict[str, Any]:
@@ -640,6 +645,8 @@ def render_learned(items: list[dict[str, Any]]) -> str:
 
 
 def cmd_apply(args: argparse.Namespace) -> None:
+    if (REPO_ROOT / "contexts/memory/registry.json").exists():
+        die("memory store initialized; use context-memory.py validate/apply with a lifecycle plan")
     run_dir = args.run_dir.resolve()
     validation = load_json(run_dir / "validation.json")
     if validation.get("status") != "passed":
@@ -720,6 +727,8 @@ def cmd_apply(args: argparse.Namespace) -> None:
 
 
 def cmd_rollback(args: argparse.Namespace) -> None:
+    if (REPO_ROOT / "contexts/memory/registry.json").exists():
+        die("memory store initialized; use context-memory.py rollback to preserve the canonical store")
     run_dir = args.run_dir.resolve()
     applied = load_json(run_dir / "apply.json")
     if applied.get("status") != "applied":

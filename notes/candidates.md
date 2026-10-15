@@ -1,6 +1,6 @@
 # Candidate Rules Index
 
-46 条历史候选按主题保留原文、证据、范围和状态；它们不是已生效规则。当前晋升流程以 `docs/evolution/POLICY.md` 为准。
+46 条历史候选已逐条裁决；[最终去向](candidate-dispositions.md)区分可用记忆、Skill、长期规则和舍弃。下列主题只保留原文与证据供追溯，不能整条当作现行指令。实际任务从 `contexts/memory/INDEX.md` 检索。
 
 旧 overlap 位置是历史元信息；当前相近规则按 `INDEX.md` 和 `habits/communication.md` 核对。
 

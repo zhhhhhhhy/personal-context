@@ -324,7 +324,7 @@ def validate_coverage(
             errors.append("reflection must be an object")
         else:
             mapped: Counter[str] = Counter()
-            for field in ("promotions", "reinforced", "deferred", "rejected"):
+            for field in ("promotions", "memories", "covered", "reinforced", "deferred", "rejected"):
                 decisions = reflection.get(field, [])
                 if not isinstance(decisions, list):
                     errors.append(f"reflection {field} must be a list")

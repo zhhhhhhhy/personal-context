@@ -1,6 +1,6 @@
 # 实验与证据
 
-历史候选，不因拆分而晋升。
+历史候选原文；已逐条裁决。按 disposition 和目标记忆使用，不能把旧 claim 整条当成生效规则。
 
 ## C-20261014-016
 
@@ -10,7 +10,9 @@
 - confidence: high
 - overlap: new; partly reinforces C-20261014-008
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / merged_scoped
+- destination: research.startup-protocol
 
 ## C-20261014-020
 
@@ -20,7 +22,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-008 and C-20261014-011
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: rule / new
+- destination: validation.agreed-coverage
 
 ## C-20261014-023
 
@@ -30,7 +34,9 @@
 - confidence: high
 - overlap: new; complements C-20261014-019
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / narrowed
+- destination: research.data-audit-task
 
 ## C-20261014-031
 
@@ -40,7 +46,9 @@
 - confidence: high
 - overlap: new; complements C-20261014-023
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / new_scoped
+- destination: research.human-review
 
 ## C-20261014-033
 
@@ -50,7 +58,9 @@
 - confidence: high
 - overlap: new; complements C-20261014-018 and C-20261014-023
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / pending_facts_usable_scope
+- destination: research.core200-status
 
 ## C-20261014-034
 
@@ -60,7 +70,9 @@
 - confidence: high
 - overlap: new
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / narrowed
+- destination: research.comparison-protocol
 
 ## C-20261014-039
 
@@ -70,7 +82,9 @@
 - confidence: high
 - overlap: new; complements C-20261014-020 and C-20261014-022
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / merged_scoped
+- destination: autofill.execution-method
 
 ## C-20261014-043
 
@@ -80,4 +94,6 @@
 - confidence: high
 - overlap: reinforces C-20261014-019 and existing AutoFill guidance
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / new_scoped
+- destination: autofill.safety-target

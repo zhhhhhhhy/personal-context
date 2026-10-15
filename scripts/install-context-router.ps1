@@ -26,7 +26,7 @@ For every Codex session, read these four core Context files once before handling
 - $RepoRoot\habits\communication.md
 - $RepoRoot\INDEX.md
 
-Use $RepoRoot as the source of truth. Load detailed Context and Skills only by INDEX.md routing. Do not load all conversation history. When the user requests Context evolution, follow $RepoRoot\docs\evolution\POLICY.md and $RepoRoot\skills\personal-context\SKILL.md; raw conversation evidence stays local and automatic writes are limited to the learned-rule path with validation and rollback.
+Use $RepoRoot as the source of truth. Load detailed Context and Skills only by INDEX.md routing. Do not load all conversation history. When the user requests Context evolution, follow $RepoRoot\docs\evolution\POLICY.md and $RepoRoot\skills\personal-context\SKILL.md. Raw and sensitive evidence stays local. The validated memory lifecycle writer is limited to memory records, learned projections and candidate dispositions, with guarded rollback; it cannot automatically edit core rules, permissions or Skills.
 "@
 Set-Content -LiteralPath $target -Value $content -Encoding utf8
 Write-Output "Installed personal Context router at $target"

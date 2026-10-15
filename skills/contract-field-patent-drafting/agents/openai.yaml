@@ -1,0 +1,7 @@
+interface:
+  display_name: "Contract Field Patent Drafting"
+  short_description: "Draft evidence-bounded contract-field patent materials"
+  default_prompt: "使用 $contract-field-patent-drafting，把合同字段/RAG/LLM 研究材料转换为证据边界清晰、可验收的中文专利材料。"
+
+policy:
+  allow_implicit_invocation: true

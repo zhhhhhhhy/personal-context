@@ -1,6 +1,6 @@
 # 任务规划与 Skill
 
-历史候选，不因拆分而晋升。
+历史候选原文；已逐条裁决。按 disposition 和目标记忆使用，不能把旧 claim 整条当成生效规则。
 
 ## C-20261014-001
 
@@ -8,7 +8,9 @@
 - evidence: `01a0fde7-9236-78c1-9068-6867a4ce6d8e`
 - scope: 专利、论文、文档等多步骤材料任务
 - confidence: medium
-- status: pending_review
+- status: resolved
+- disposition: skill / already_covered
+- destination: skill.patent-workflow
 
 ## C-20261014-002
 
@@ -16,7 +18,9 @@
 - evidence: `01a110c5-38b5-7d41-9a42-b03f9872ab01`
 - scope: Skill 设计与维护
 - confidence: medium
-- status: pending_review
+- status: resolved
+- disposition: discard / discarded
+- destination: discarded
 
 ## C-20261014-003
 
@@ -25,7 +29,9 @@
 - scope: 专利、论文、开题报告、规格书等多步骤材料任务
 - confidence: high
 - overlap: reinforces C-20261014-001
-- status: pending_review
+- status: resolved
+- disposition: skill / already_covered
+- destination: skill.patent-workflow
 
 ## C-20261014-007
 
@@ -34,7 +40,9 @@
 - scope: 个人 Skill 路由、触发审计和长程重路由
 - confidence: high
 - overlap: reinforces `skills/personal-context/SKILL.md` and routing audit notes
-- status: pending_review
+- status: resolved
+- disposition: memory / new_scoped
+- destination: skills.passive-routing
 
 ## C-20261014-014
 
@@ -44,7 +52,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-001 and C-20261014-003
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / narrowed
+- destination: project.adjustable-plan
 
 ## C-20261014-015
 
@@ -54,7 +64,9 @@
 - confidence: high
 - overlap: new; complements C-20261014-009
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: rule / merged_existing
+- destination: core.delegation
 
 ## C-20261014-022
 
@@ -64,7 +76,9 @@
 - confidence: high
 - overlap: new; complements C-20261014-011
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: rule / already_covered
+- destination: core.autonomy
 
 ## C-20261014-038
 
@@ -74,7 +88,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-014 and C-20261014-020
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / merged_scoped
+- destination: autofill.execution-method
 
 ## C-20261014-040
 
@@ -84,7 +100,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-015
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: rule / merged_existing
+- destination: core.delegation
 
 ## C-20261014-041
 
@@ -94,7 +112,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-016 and C-20261014-039
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / merged_scoped
+- destination: research.startup-protocol
 
 ## C-20261014-042
 
@@ -104,7 +124,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-022 and existing L5/L6 guidance
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / merged_scoped
+- destination: autofill.execution-method
 
 ## C-20261014-045
 
@@ -114,4 +136,6 @@
 - confidence: medium
 - overlap: new
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / merged_scoped
+- destination: autofill.execution-method

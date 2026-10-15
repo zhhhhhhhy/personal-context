@@ -8,6 +8,7 @@
     {"name": "candidate-index", "paths": ["notes/candidates.md"], "max_tokens": 600},
     {"name": "candidate-topics", "glob": "notes/candidates/*.md", "max_tokens_per_file": 2500},
     {"name": "learned-entry", "paths": ["habits/learned.md"], "max_tokens": 1000},
+    {"name": "memory-index", "paths": ["contexts/memory/INDEX.md"], "max_tokens": 600},
     {"name": "loading-policy", "paths": ["rules/CONTEXT_LOADING.md"], "max_tokens": 900}
   ]
 }

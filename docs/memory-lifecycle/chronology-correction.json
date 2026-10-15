@@ -1,0 +1,11 @@
+{
+  "status": "applied",
+  "transaction_id": "20261015T135953-8a6e7871",
+  "superseded": "research.paper-sync-targets",
+  "active": "research.paper-sync-current",
+  "timestamps": {
+    "E068": "2026-10-06T09:55:09.534Z",
+    "E078": "2026-10-04T07:42:41.159Z"
+  },
+  "reason": "Correct reversed source-message chronology; source session creation dates and candidate order were insufficient."
+}

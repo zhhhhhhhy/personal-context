@@ -28,3 +28,11 @@ references. The former imported research package is preserved under
 `references/skills/legacy/deep-research/` for explicit historical inspection.
 Entry budgets are maintained in `rules/CONTEXT_LOADING.md` and checked before
 runtime synchronization.
+
+On 2026-10-15, resolving the historical Context candidates also reconciled the
+complete installed `contract-field-patent-drafting` and
+`minimal-validation-workflow` packages into this canonical library. The patent
+entry now routes to `references/patent-workflow.md`, which preserves its full
+previous body. The academic writing references received two narrow additions
+on causal claims and attributed human-review assertions. Existing Skill coverage
+is credited separately from new personal rules in `notes/candidate-dispositions.md`.

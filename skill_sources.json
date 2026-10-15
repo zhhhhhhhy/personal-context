@@ -17,8 +17,8 @@
       "source_path": "skills/academic-write",
       "source_kind": "runtime_reconciled_then_progressively_split",
       "file_count": 8,
-      "source_tree_sha256": "063e271b443b2ec749917a50fbcf9ec2d3ff0591ef9056d6ed9873f119dc73a0",
-      "caveat": "Current installed workflow and additions retained on 2026-10-15; detailed phase sections preserved and source is canonical.",
+      "source_tree_sha256": "c573ce2b408ba7fbedf2c064d713cf60f831a8759c155fe00645e4f93576a70f",
+      "caveat": "Runtime additions retained; historical candidate lessons on causal claims and attributed human-review assertions reconciled on 2026-10-15.",
       "import_snapshot": {
         "source_path": "D:/worker/zhy-private-skill/skills/academic-write",
         "source_kind": "migrated_from_zhy-private-skill_worktree",
@@ -66,8 +66,36 @@
       "source_path": "skills/personal-context",
       "source_kind": "native_personal_context",
       "file_count": 1,
-      "source_tree_sha256": "f1205b49cc2f10ecd263ab5d3f87ffb9cc6409b3bf11c7d0bdf9b5555448b8d1",
+      "source_tree_sha256": "748b0fe198e6bd73c944f4f0decd61a3a6c348dbf6633cb0d11357a07c7c8a2e",
       "caveat": "Native routing Skill for this repository; maintain with the Context files."
+    },
+    {
+      "name": "contract-field-patent-drafting",
+      "target_path": "skills/contract-field-patent-drafting",
+      "source_path": "skills/contract-field-patent-drafting",
+      "source_kind": "runtime_reconciled_then_progressively_split",
+      "import_snapshot": {
+        "source_kind": "complete_installed_package",
+        "file_count": 6,
+        "source_tree_sha256": "1e47d3f86b6908da23f522d28e84cc00a062a46af8305671db8eae071a4447eb"
+      },
+      "file_count": 7,
+      "source_tree_sha256": "4753c1344fd6ea1ba2e65dc76141db2257b44326d897b608387929f8e99368a0",
+      "caveat": "Complete installed package reconciled on 2026-10-15; the canonical repository is the maintenance source. Patent full workflow preserved in a supporting reference."
+    },
+    {
+      "name": "minimal-validation-workflow",
+      "target_path": "skills/minimal-validation-workflow",
+      "source_path": "skills/minimal-validation-workflow",
+      "source_kind": "runtime_reconciled",
+      "import_snapshot": {
+        "source_kind": "complete_installed_package",
+        "file_count": 2,
+        "source_tree_sha256": "a1eb500b0433f0fbfb5c7e411905b7f4a72cb1ec574d69a0b91ef0bf02c921bf"
+      },
+      "file_count": 2,
+      "source_tree_sha256": "a1eb500b0433f0fbfb5c7e411905b7f4a72cb1ec574d69a0b91ef0bf02c921bf",
+      "caveat": "Complete installed package reconciled on 2026-10-15; the canonical repository is the maintenance source. Patent full workflow preserved in a supporting reference."
     }
   ]
 }

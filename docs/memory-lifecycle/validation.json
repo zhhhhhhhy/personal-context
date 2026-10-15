@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "candidate_count": 46,
+  "buckets": {
+    "skill": 11,
+    "discard": 3,
+    "rule": 9,
+    "memory": 23
+  },
+  "active_by_kind": {
+    "rule": 2,
+    "core": 3,
+    "skill": 5,
+    "memory": 19
+  },
+  "states": {
+    "active": 29,
+    "merged": 2,
+    "superseded": 2
+  },
+  "public_active": 28,
+  "local_active": 1,
+  "source_records_checked_during_apply": 58,
+  "new_general_rules": 2,
+  "existing_core_candidate_coverage": 7,
+  "protected_user_edit": "unchanged",
+  "private_store": "ignored and excluded from default retrieval",
+  "runtime_packages": [
+    {
+      "name": "academic-write",
+      "file_count": 8,
+      "status": "identical"
+    },
+    {
+      "name": "personal-context",
+      "file_count": 1,
+      "status": "identical"
+    },
+    {
+      "name": "contract-field-patent-drafting",
+      "file_count": 7,
+      "status": "identical"
+    },
+    {
+      "name": "minimal-validation-workflow",
+      "file_count": 2,
+      "status": "identical"
+    }
+  ],
+  "global_router": "installed",
+  "no_background_scheduler_created": true,
+  "limits": [
+    "Model semantic judgments remain user-reviewable. Historical experimental or human-review claims were not revalidated as facts.",
+    "Retrieval probes are functional checks, not a general recall benchmark or a measured improvement over prior assistants."
+  ]
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Minimal Validation Workflow"
+  short_description: "Reduce redundant code verification and stop at sufficient evidence"
+  default_prompt: "Use $minimal-validation-workflow as a reduction-first policy for code and configuration work: avoid redundant, repeated, or full-suite verification by default, choose the smallest sufficient evidence, and stop when the changed path is proven."
+
+policy:
+  allow_implicit_invocation: true

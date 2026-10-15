@@ -1,5 +1,85 @@
 {
   "schema_version": "0.1",
-  "updated_at": "2026-10-15T12:07:38Z",
-  "items": []
+  "items": [
+    {
+      "key": "documents.preserve-style",
+      "claim": "编辑已有文档时，沿用用户认可的结构和风格；有参考模板时按约定的模板处理。改文字不自动授权更换整套布局。",
+      "scope": "修改已有简历、专利或其他已经确定风格的文档",
+      "exceptions": [
+        "用户当前明确要求重做结构或版式时按新要求执行。",
+        "渲染验收和目标目录的具体要求由对应文档 Skill 或项目约定处理。"
+      ],
+      "confidence": "high",
+      "sensitivity": "non_sensitive",
+      "status": "auto_applied",
+      "candidate_audit": {
+        "action": "refine",
+        "related_ids": [
+          "C-20261014-005"
+        ]
+      },
+      "evidence": [
+        {
+          "ref": "E015",
+          "thread_id": "01a1078a-5052-73a2-b38e-5624a193a91f",
+          "location": "rollout-2026-10-04T23-32-27-01a1078a-5052-73a2-b38e-5624a193a91f_01a1078b-8726-7e61-84d0-98deed6961bf.jsonl:L487",
+          "source_kind": "user_authored",
+          "family_id": "existing-resume",
+          "text_sha256": "2f9b10ac495c14c30c027b0666a0bdef727f62759e0dbbb2a86fbdb1e1029d9e",
+          "support": "用户直接纠正简历整体结构和风格被改变。"
+        },
+        {
+          "ref": "E017",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L3210",
+          "source_kind": "user_authored",
+          "family_id": "patent-package",
+          "text_sha256": "cf9d070db4fef9944837f22d62d534984c554c3f4ae81ead0d86801c20b02f99",
+          "support": "另一专利任务要求修复生成材料与指定参考格式的偏差。"
+        }
+      ],
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "source_run": "memory-lifecycle"
+    },
+    {
+      "key": "validation.agreed-coverage",
+      "claim": "用户已经约定最终验收集合时，使用该集合判断整体是否完成，并说明实际测试范围与未覆盖部分。单个样本通过只证明该样本；日常开发检查仍使用足够证明变更路径的最小范围。",
+      "scope": "存在用户指定验收集合的工程交付或实验验收",
+      "exceptions": [
+        "未约定完整集合时先说明实际证据范围，不擅自制造全量测试义务。",
+        "该规则不要求每次小改动重跑全部验收集。"
+      ],
+      "confidence": "high",
+      "sensitivity": "non_sensitive",
+      "status": "auto_applied",
+      "candidate_audit": {
+        "action": "refine",
+        "related_ids": [
+          "C-20261014-020"
+        ]
+      },
+      "evidence": [
+        {
+          "ref": "E086",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L2836",
+          "source_kind": "user_authored",
+          "family_id": "demopilot",
+          "text_sha256": "bd4934e4b68b0b4eaa522a2c625c7c3d6da714457349bf564a086a288a3dcaca",
+          "support": "Demo 项目明确拒绝用单个样本通过代表整体完成。"
+        },
+        {
+          "ref": "E088",
+          "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "location": "rollout-2026-10-03T02-46-13-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0fdf0-3692-7ad3-b962-7bb604fd5054.jsonl:L6347",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "93ceadef96dac462263b139c1c472125e1502715e7e3300defca18b75c1d112b",
+          "support": "另一科研任务指定200条核心集用于最终验收，一般测试使用开发集。"
+        }
+      ],
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "source_run": "memory-lifecycle"
+    }
+  ]
 }

@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "lifecycle_test_methods": 6,
+  "additional_integration_test_methods": 2,
+  "coverage_test_methods": 1,
+  "skill_frontmatter_packages": [
+    "personal-context",
+    "contract-field-patent-drafting",
+    "minimal-validation-workflow"
+  ],
+  "observed_results": "6 initial lifecycle checks, 2 integration checks and 1 coverage check passed; all three Skill validators passed.",
+  "commands": [
+    "python -X utf8 scripts/test-context-memory.py",
+    "python -X utf8 scripts/test-context-memory.py MemoryTests.test_legacy_writer_cannot_diverge_from_initialized_store MemoryTests.test_plain_windows_command_returns_utf8",
+    "python -X utf8 scripts/test-context-coverage.py CoverageTests.test_reflection_dropped_unknown_and_duplicate_mappings"
+  ],
+  "scope": "Focused changed paths; no full repository suite or new conversation cohort.",
+  "timestamp_guard_followup": "Passed test_sources_and_generalization_require_actual_support after adding forged timestamp rejection."
+}

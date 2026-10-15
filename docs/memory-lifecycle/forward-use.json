@@ -1,0 +1,15 @@
+{
+  "status": "passed_with_repaired_encoding_issue",
+  "mode": "One bounded independent read-only forward-use check; no independent full extraction audit.",
+  "searches": 4,
+  "exact_entry_reads": 4,
+  "cases": [
+    "Existing resume text-only edit preserved style.",
+    "Core200 human-review facts remained attributed and pending records.",
+    "Migration checklist did not convey current deletion authorization.",
+    "Unrelated planetary explanation needed no personal memory."
+  ],
+  "observed_issue": "Plain Windows Python output used a legacy code page.",
+  "repair": "CLI configures UTF-8 stdout/stderr; examples use python -X utf8; a forced cp936 regression passed.",
+  "limits": "Read-only usage simulation, not artifact execution, broad recall measurement or human acceptance."
+}

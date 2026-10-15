@@ -131,7 +131,7 @@ class CoverageTests(unittest.TestCase):
 
     def test_reflection_dropped_unknown_and_duplicate_mappings(self):
         original = copy.deepcopy(self.reflection)
-        for field in ("promotions", "reinforced", "deferred", "rejected"):
+        for field in ("promotions", "memories", "covered", "reinforced", "deferred", "rejected"):
             with self.subTest(outcome=field):
                 self.reflection = copy.deepcopy(original)
                 decisions = self.reflection.pop("deferred")

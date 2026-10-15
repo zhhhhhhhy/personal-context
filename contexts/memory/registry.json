@@ -1,0 +1,2328 @@
+{
+  "schema_version": 1,
+  "items": [
+    {
+      "id": "documents.preserve-style",
+      "title": "编辑已有材料时保留约定风格",
+      "kind": "rule",
+      "claim": "编辑已有文档时，沿用用户认可的结构和风格；有参考模板时按约定的模板处理。改文字不自动授权更换整套布局。",
+      "scope": "修改已有简历、专利或其他已经确定风格的文档",
+      "exceptions": [
+        "用户当前明确要求重做结构或版式时按新要求执行。",
+        "渲染验收和目标目录的具体要求由对应文档 Skill 或项目约定处理。"
+      ],
+      "tags": [
+        "文档",
+        "简历",
+        "专利",
+        "风格",
+        "版式",
+        "保留结构",
+        "修改"
+      ],
+      "source_candidates": [
+        "C-20261014-005"
+      ],
+      "evidence": [
+        {
+          "ref": "E015",
+          "thread_id": "01a1078a-5052-73a2-b38e-5624a193a91f",
+          "location": "rollout-2026-10-04T23-32-27-01a1078a-5052-73a2-b38e-5624a193a91f_01a1078b-8726-7e61-84d0-98deed6961bf.jsonl:L487",
+          "source_kind": "user_authored",
+          "family_id": "existing-resume",
+          "text_sha256": "2f9b10ac495c14c30c027b0666a0bdef727f62759e0dbbb2a86fbdb1e1029d9e",
+          "support": "用户直接纠正简历整体结构和风格被改变。"
+        },
+        {
+          "ref": "E017",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L3210",
+          "source_kind": "user_authored",
+          "family_id": "patent-package",
+          "text_sha256": "cf9d070db4fef9944837f22d62d534984c554c3f4ae81ead0d86801c20b02f99",
+          "support": "另一专利任务要求修复生成材料与指定参考格式的偏差。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "supported_preference",
+      "review_after": "2027-01-15",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "validation.agreed-coverage",
+      "title": "按约定范围说明验收结果",
+      "kind": "rule",
+      "claim": "用户已经约定最终验收集合时，使用该集合判断整体是否完成，并说明实际测试范围与未覆盖部分。单个样本通过只证明该样本；日常开发检查仍使用足够证明变更路径的最小范围。",
+      "scope": "存在用户指定验收集合的工程交付或实验验收",
+      "exceptions": [
+        "未约定完整集合时先说明实际证据范围，不擅自制造全量测试义务。",
+        "该规则不要求每次小改动重跑全部验收集。"
+      ],
+      "tags": [
+        "验收",
+        "覆盖",
+        "测试集",
+        "完成",
+        "实验",
+        "测试",
+        "验证"
+      ],
+      "source_candidates": [
+        "C-20261014-020"
+      ],
+      "evidence": [
+        {
+          "ref": "E086",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L2836",
+          "source_kind": "user_authored",
+          "family_id": "demopilot",
+          "text_sha256": "bd4934e4b68b0b4eaa522a2c625c7c3d6da714457349bf564a086a288a3dcaca",
+          "support": "Demo 项目明确拒绝用单个样本通过代表整体完成。"
+        },
+        {
+          "ref": "E088",
+          "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "location": "rollout-2026-10-03T02-46-13-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0fdf0-3692-7ad3-b962-7bb604fd5054.jsonl:L6347",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "93ceadef96dac462263b139c1c472125e1502715e7e3300defca18b75c1d112b",
+          "support": "另一科研任务指定200条核心集用于最终验收，一般测试使用开发集。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "supported_preference",
+      "review_after": "2027-01-15",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "core.communication",
+      "title": "已有沟通规则覆盖",
+      "kind": "core",
+      "claim": "先用直白语言说明目的、当前效果和结果；针对读者保留关键原因、机制和证据。工程细节需要时追溯，不强迫每次解释都展开全部代码。",
+      "scope": "技术解释、导师汇报和工程或实验结果说明",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "解释",
+        "汇报",
+        "沟通",
+        "导师",
+        "机制",
+        "通俗"
+      ],
+      "source_candidates": [
+        "C-20261014-011",
+        "C-20261014-024",
+        "C-20261014-035",
+        "C-20261014-046"
+      ],
+      "evidence": [
+        {
+          "ref": "E056",
+          "thread_id": "01a1102f-03ff-78d0-a2cb-0c548a5fc046",
+          "location": "rollout-2026-10-06T15-47-59-01a1102f-03ff-78d0-a2cb-0c548a5fc046.jsonl:L685",
+          "source_kind": "user_authored",
+          "family_id": "01a1102f-03ff-78d0-a2cb-0c548a5fc046",
+          "text_sha256": "456282b1570d0e4f69edbc845bd13ecbd94323ffd41f50391b018b488120a985",
+          "support": "用户对报告意图、行为、原因的直接纠正。"
+        },
+        {
+          "ref": "E097",
+          "thread_id": "01a12e11-c5c2-71f0-871f-a34737fc4f2a",
+          "location": "rollout-2026-10-12T11-04-39-01a12e11-c5c2-71f0-871f-a34737fc4f2a.jsonl:L12",
+          "source_kind": "user_authored",
+          "family_id": "01a12e11-c5c2-71f0-871f-a34737fc4f2a",
+          "text_sha256": "58dc073a04759d06764fd31e8bec8d4a1d58c5d58657fe79d5f69b8a7faa7d8d",
+          "support": "用户指定面向导师的产出汇报。"
+        },
+        {
+          "ref": "E141",
+          "thread_id": "01a0ddd6-44b2-7a60-ada3-74bc62dbf566",
+          "location": "rollout-2026-09-26T21-10-02-01a0ddd6-44b2-7a60-ada3-74bc62dbf566.jsonl:L9",
+          "source_kind": "user_authored",
+          "family_id": "01a0ddd6-44b2-7a60-ada3-74bc62dbf566",
+          "text_sha256": "9a37bd02c593ae2da3b18645de97c73d347b4389588b235c07481d1927561c72",
+          "support": "用户明确要求直白并说明差异。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "habits/communication.md",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "core.delegation-old",
+      "title": "委派任务上下文（旧记录）",
+      "kind": "core",
+      "claim": "该次委派明确目标、材料位置和验收方式。",
+      "scope": "工程或研究任务委派",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "委派",
+        "Goal Prompt"
+      ],
+      "source_candidates": [
+        "C-20261014-015"
+      ],
+      "evidence": [
+        {
+          "ref": "E067",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-07T14-04-46-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a114f6-e3d4-7ad1-9c6e-2c63ce7e1efa.jsonl:L6709",
+          "source_kind": "user_authored",
+          "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "text_sha256": "ade4bab5a19aed371d6e317b79016622e8073d081a357d68bcb2a44f3f09283b",
+          "support": "用户要求 Prompt 提供文件位置、目标和评估方式。"
+        },
+        {
+          "ref": "E069",
+          "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "location": "rollout-2026-10-06T13-32-05-01a10644-aeb3-74b3-abac-f511ead2e049_01a10fb2-9966-7a63-ba7b-7f18d50e2463.jsonl:L1718",
+          "source_kind": "user_authored",
+          "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "text_sha256": "73e7b7420ef0c04b25fcf15c9e590eb9fc3fa7c97a3c200f996ed29ad59d9fa3",
+          "support": "用户纠正项目文件夹和约束材料未明确。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "rules/SOUL.md",
+      "status": "merged",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "core.delegation-old",
+          "title": "委派任务上下文（旧记录）",
+          "kind": "core",
+          "claim": "该次委派明确目标、材料位置和验收方式。",
+          "scope": "工程或研究任务委派",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "委派",
+            "Goal Prompt"
+          ],
+          "source_candidates": [
+            "C-20261014-015"
+          ],
+          "evidence": [
+            {
+              "ref": "E067",
+              "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "location": "rollout-2026-10-07T14-04-46-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a114f6-e3d4-7ad1-9c6e-2c63ce7e1efa.jsonl:L6709",
+              "source_kind": "user_authored",
+              "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "text_sha256": "ade4bab5a19aed371d6e317b79016622e8073d081a357d68bcb2a44f3f09283b",
+              "support": "用户要求 Prompt 提供文件位置、目标和评估方式。"
+            },
+            {
+              "ref": "E069",
+              "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "location": "rollout-2026-10-06T13-32-05-01a10644-aeb3-74b3-abac-f511ead2e049_01a10fb2-9966-7a63-ba7b-7f18d50e2463.jsonl:L1718",
+              "source_kind": "user_authored",
+              "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "text_sha256": "73e7b7420ef0c04b25fcf15c9e590eb9fc3fa7c97a3c200f996ed29ad59d9fa3",
+              "support": "用户纠正项目文件夹和约束材料未明确。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "rules/SOUL.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "merged_into": "core.delegation",
+      "last_reason": "Candidates 015 and 040 describe overlapping delegation context; merge evidence and use the existing SOUL instruction."
+    },
+    {
+      "id": "core.goal-prompt-old",
+      "title": "Goal Prompt 要素（旧记录）",
+      "kind": "core",
+      "claim": "该次 Goal Prompt 指定目标、目录、约束和验收文档。",
+      "scope": "持续执行任务的 Goal Prompt",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "Goal Prompt",
+        "委派"
+      ],
+      "source_candidates": [
+        "C-20261014-040"
+      ],
+      "evidence": [
+        {
+          "ref": "E155",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-04T16-59-27-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a10623-bad2-76e0-8a73-67933330f954.jsonl:L18",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "dacb6179fbed75a656c61afd4e45616ddf875ee265091ac0b7125f600d723aab",
+          "support": "用户明确要求在 Goal Prompt 标注目标、目录、约束和验收文档。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "rules/SOUL.md",
+      "status": "merged",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "core.goal-prompt-old",
+          "title": "Goal Prompt 要素（旧记录）",
+          "kind": "core",
+          "claim": "该次 Goal Prompt 指定目标、目录、约束和验收文档。",
+          "scope": "持续执行任务的 Goal Prompt",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "Goal Prompt",
+            "委派"
+          ],
+          "source_candidates": [
+            "C-20261014-040"
+          ],
+          "evidence": [
+            {
+              "ref": "E155",
+              "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "location": "rollout-2026-10-04T16-59-27-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a10623-bad2-76e0-8a73-67933330f954.jsonl:L18",
+              "source_kind": "user_authored",
+              "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "text_sha256": "dacb6179fbed75a656c61afd4e45616ddf875ee265091ac0b7125f600d723aab",
+              "support": "用户明确要求在 Goal Prompt 标注目标、目录、约束和验收文档。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "rules/SOUL.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "merged_into": "core.delegation",
+      "last_reason": "Candidates 015 and 040 describe overlapping delegation context; merge evidence and use the existing SOUL instruction."
+    },
+    {
+      "id": "core.delegation",
+      "title": "已有委派规则与任务 Prompt",
+      "kind": "core",
+      "claim": "委派时提供当前目标、权威目录、必要材料、约束和验收方式。已有的信息直接复用；按实际任务补足缺口，不强制无关字段或固定模板。",
+      "scope": "把一个有边界的工程或研究任务交给另一个 Agent",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "Goal Prompt",
+        "委派",
+        "上下文",
+        "目录",
+        "验收"
+      ],
+      "source_candidates": [
+        "C-20261014-015",
+        "C-20261014-040"
+      ],
+      "evidence": [
+        {
+          "ref": "E067",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-07T14-04-46-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a114f6-e3d4-7ad1-9c6e-2c63ce7e1efa.jsonl:L6709",
+          "source_kind": "user_authored",
+          "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "text_sha256": "ade4bab5a19aed371d6e317b79016622e8073d081a357d68bcb2a44f3f09283b",
+          "support": "用户指定上下文、目标和验收。"
+        },
+        {
+          "ref": "E155",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-04T16-59-27-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a10623-bad2-76e0-8a73-67933330f954.jsonl:L18",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "dacb6179fbed75a656c61afd4e45616ddf875ee265091ac0b7125f600d723aab",
+          "support": "用户指定目录及目的、约束、验收文档。"
+        },
+        {
+          "ref": "E067",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-07T14-04-46-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a114f6-e3d4-7ad1-9c6e-2c63ce7e1efa.jsonl:L6709",
+          "source_kind": "user_authored",
+          "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "text_sha256": "ade4bab5a19aed371d6e317b79016622e8073d081a357d68bcb2a44f3f09283b",
+          "support": "用户要求 Prompt 提供文件位置、目标和评估方式。"
+        },
+        {
+          "ref": "E069",
+          "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "location": "rollout-2026-10-06T13-32-05-01a10644-aeb3-74b3-abac-f511ead2e049_01a10fb2-9966-7a63-ba7b-7f18d50e2463.jsonl:L1718",
+          "source_kind": "user_authored",
+          "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "text_sha256": "73e7b7420ef0c04b25fcf15c9e590eb9fc3fa7c97a3c200f996ed29ad59d9fa3",
+          "support": "用户纠正项目文件夹和约束材料未明确。"
+        },
+        {
+          "ref": "E155",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-04T16-59-27-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a10623-bad2-76e0-8a73-67933330f954.jsonl:L18",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "dacb6179fbed75a656c61afd4e45616ddf875ee265091ac0b7125f600d723aab",
+          "support": "用户明确要求在 Goal Prompt 标注目标、目录、约束和验收文档。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "rules/SOUL.md",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "core.delegation",
+          "title": "已有委派规则与任务 Prompt",
+          "kind": "core",
+          "claim": "委派时提供当前目标、权威目录、必要材料、约束和验收方式。已有的信息直接复用；按实际任务补足缺口，不强制无关字段或固定模板。",
+          "scope": "把一个有边界的工程或研究任务交给另一个 Agent",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "Goal Prompt",
+            "委派",
+            "上下文",
+            "目录",
+            "验收"
+          ],
+          "source_candidates": [
+            "C-20261014-015",
+            "C-20261014-040"
+          ],
+          "evidence": [
+            {
+              "ref": "E067",
+              "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "location": "rollout-2026-10-07T14-04-46-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a114f6-e3d4-7ad1-9c6e-2c63ce7e1efa.jsonl:L6709",
+              "source_kind": "user_authored",
+              "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "text_sha256": "ade4bab5a19aed371d6e317b79016622e8073d081a357d68bcb2a44f3f09283b",
+              "support": "用户指定上下文、目标和验收。"
+            },
+            {
+              "ref": "E155",
+              "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "location": "rollout-2026-10-04T16-59-27-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a10623-bad2-76e0-8a73-67933330f954.jsonl:L18",
+              "source_kind": "user_authored",
+              "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "text_sha256": "dacb6179fbed75a656c61afd4e45616ddf875ee265091ac0b7125f600d723aab",
+              "support": "用户指定目录及目的、约束、验收文档。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "rules/SOUL.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "last_reason": "Candidates 015 and 040 describe overlapping delegation context; merge evidence and use the existing SOUL instruction."
+    },
+    {
+      "id": "core.autonomy",
+      "title": "已有授权内自主执行规则",
+      "kind": "core",
+      "claim": "在当前已经授权的任务范围内自主推进常规工作，按约定交付结果和证据；历史研究授权不会自动授予当前额外权限。",
+      "scope": "当前授权已经清楚的研究或工程任务",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "自主执行",
+        "授权",
+        "迭代",
+        "持续工作"
+      ],
+      "source_candidates": [
+        "C-20261014-022"
+      ],
+      "evidence": [
+        {
+          "ref": "E093",
+          "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "location": "rollout-2026-10-04T17-35-26-01a10644-aeb3-74b3-abac-f511ead2e049.jsonl:L3497",
+          "source_kind": "user_authored",
+          "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "text_sha256": "2f158f4ebd51e94ed2dce363a3dbec429c960f6469ea444b3add6a31766cbf4c",
+          "support": "用户要求常规步骤自主完成，并按已有工程 Skill 汇报。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "rules/SOUL.md",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "skill.patent-workflow",
+      "title": "专利材料工作流已吸收",
+      "kind": "skill",
+      "claim": "专利任务先盘点本人材料与参考模板，建立步骤.md 的输入、输出和验收；模板只提供结构和格式。具体实施方式逐步写输入、动作、条件和输出；交付时检查文稿与渲染结果。",
+      "scope": "合同字段研究转专利交底书、说明书及配套文档",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "专利",
+        "步骤.md",
+        "参考模板",
+        "实施方式",
+        "公式",
+        "渲染"
+      ],
+      "source_candidates": [
+        "C-20261014-001",
+        "C-20261014-003",
+        "C-20261014-004",
+        "C-20261014-012",
+        "C-20261014-013"
+      ],
+      "evidence": [
+        {
+          "ref": "E001",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-36-47-01a0fde7-9236-78c1-9068-6867a4ce6d8e.jsonl:L12",
+          "source_kind": "user_authored",
+          "family_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "text_sha256": "56d9de250298c43547220c0f8312a685211de52b7ffad0f726ef8b01fb104ba0",
+          "support": "直接要求专利任务拆解并产出步骤.md。"
+        },
+        {
+          "ref": "E059",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L9638",
+          "source_kind": "user_authored",
+          "family_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "text_sha256": "c697109f0fd873705710ec138e95e03e01d13659b7a867ed07a30256ed4130ce",
+          "support": "直接要求实施步骤逐项对应并写实际动作。"
+        },
+        {
+          "ref": "E017",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L3210",
+          "source_kind": "user_authored",
+          "family_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "text_sha256": "cf9d070db4fef9944837f22d62d534984c554c3f4ae81ead0d86801c20b02f99",
+          "support": "直接纠正参考模板与生成材料的格式差异。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "skills/contract-field-patent-drafting/SKILL.md",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "skill.minimal-validation",
+      "title": "最小充分验证已吸收",
+      "kind": "skill",
+      "claim": "默认选择能够证明变更路径的最小检查，避免无关扩测和无变化时重复已经通过的检查；用户指定的验收范围仍须完成。",
+      "scope": "代码、配置、Skill 和工程变更",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "验证",
+        "测试",
+        "检查",
+        "开销",
+        "成本"
+      ],
+      "source_candidates": [
+        "C-20261014-008"
+      ],
+      "evidence": [
+        {
+          "ref": "E036",
+          "thread_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+          "location": "rollout-2026-10-08T03-22-25-01a117d1-2764-72e2-ad04-6d9436d6ce3e.jsonl:L315",
+          "source_kind": "user_authored",
+          "family_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+          "text_sha256": "4b08da777d92f50d183a615341535314e01f4b73456a8ed79239bcf737326cf8",
+          "support": "用户明确指出验证过多、耗时。"
+        },
+        {
+          "ref": "E041",
+          "thread_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+          "location": "rollout-2026-10-08T03-22-25-01a117d1-2764-72e2-ad04-6d9436d6ce3e.jsonl:L594",
+          "source_kind": "user_authored",
+          "family_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+          "text_sha256": "65c70924976ded998213b6ff30d1c3eb94a3ada0bb4b54e8e804f1d9f4e64b07",
+          "support": "用户要求减少重复和无关验证。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "skills/minimal-validation-workflow/SKILL.md",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "skill.paper-hierarchy",
+      "title": "论文类型与贡献层级已吸收",
+      "kind": "skill",
+      "claim": "先锁定论文类型和中心逻辑，再改具体段落。Benchmark 论文围绕任务、评测和发现组织，方法作为被评测对象；工程日志不进入科学叙事。历史章节冻结只在当次稿件约定内使用。",
+      "scope": "论文结构修改、Benchmark 写作和方法层级检查",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "论文",
+        "benchmark",
+        "Introduction",
+        "ICML",
+        "贡献",
+        "结构"
+      ],
+      "source_candidates": [
+        "C-20261014-006",
+        "C-20261014-018"
+      ],
+      "evidence": [
+        {
+          "ref": "E024",
+          "thread_id": "01a129b0-b99c-7f42-96c0-a0f4b948f786",
+          "location": "rollout-2026-10-11T14-40-10-01a129b0-b99c-7f42-96c0-a0f4b948f786.jsonl:L31",
+          "source_kind": "user_authored",
+          "family_id": "01a129b0-b99c-7f42-96c0-a0f4b948f786",
+          "text_sha256": "c4496482c5ec8b689b587fb649e6264d6d48a6ebc0dab9c323da792a128e3b7c",
+          "support": "用户对当前论文逻辑和贡献层级提出要求。"
+        },
+        {
+          "ref": "E079",
+          "thread_id": "01a0fe11-bb1e-7611-afc3-6a939e318c78",
+          "location": "rollout-2026-10-03T05-34-38-01a0fe11-bb1e-7611-afc3-6a939e318c78_01a0fe8a-6932-7a43-9823-4e5d3522f69f.jsonl:L36",
+          "source_kind": "user_authored",
+          "family_id": "01a0fe11-bb1e-7611-afc3-6a939e318c78",
+          "text_sha256": "d911efaeb373336db78d7e9aba7260d95ef89a2681bac5667f9174bfb5e54cc7",
+          "support": "用户明确要求 benchmark-first。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "skills/academic-write/SKILL.md",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "skill.research-causality",
+      "title": "研究因果链与证据边界",
+      "kind": "skill",
+      "claim": "从实际任务难点和可观测失败建立问题、假设、机制与实验的联系。区分一个决策节点和已经得到证据支持的机制，结论不能超过实验能检验的范围。",
+      "scope": "研究论证、论文逻辑检查和方法解释",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "论文",
+        "研究",
+        "因果链",
+        "机制",
+        "假设",
+        "实验"
+      ],
+      "source_candidates": [
+        "C-20261014-019",
+        "C-20261014-030"
+      ],
+      "evidence": [
+        {
+          "ref": "E082",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-07T14-02-01-01a11266-18ff-7b92-bdec-81772b1c0b18_01a114f4-5f69-7071-9452-011db73195e6.jsonl:L691",
+          "source_kind": "user_authored",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "text_sha256": "033648dbf669d40a08b1bc283ed7e492d29b6d3ea5190065f3a3e492da09c57d",
+          "support": "用户直接批评判定节点尚不足以构成机制，并要求回到合同任务问题。"
+        },
+        {
+          "ref": "E120",
+          "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L444",
+          "source_kind": "user_authored",
+          "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "text_sha256": "7a064c3c4f9dd44cd19a593cda67d9caaa956a232c4def75baf07f00cf584ef8",
+          "support": "用户要求将核心主张改成可检验假设。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "skills/academic-write/references/paper-workflow.md",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "skill.research-evidence",
+      "title": "学术证据核验已吸收",
+      "kind": "skill",
+      "claim": "把用户陈述、论文写作请求、已核验记录和缺失归档分开。人工审核汇总不证明所有模型输出逐题人工评分；模型辅助参考不能直接叫人工金标准。",
+      "scope": "论文或实验结果的来源、人工审核与结论范围检查",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "论文",
+        "证据",
+        "人工审核",
+        "金标准",
+        "标注",
+        "结果"
+      ],
+      "source_candidates": [
+        "C-20261014-036"
+      ],
+      "evidence": [
+        {
+          "ref": "E134",
+          "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "location": "rollout-2026-10-08T23-13-42-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3_01a11c13-cd58-7681-8a0a-437158e937cb.jsonl:L2297",
+          "source_kind": "user_authored",
+          "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "text_sha256": "31ea2f5d628ae202c11054bcd8b524f0878bdea88c92c66bdd1521482c8b0e80",
+          "support": "用户明确列出逐题人审归档和模型评分依据仍待对应的缺口。"
+        },
+        {
+          "ref": "E143",
+          "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L53",
+          "source_kind": "user_authored",
+          "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "text_sha256": "fca6739944d273e901456b71ae96679f9416a087fadce5536623b30f9284d920",
+          "support": "用户要求核查材料和结果边界。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "target": "skills/academic-write/references/evidence-and-artifacts.md",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "skills.passive-routing",
+      "title": "个人 Skill 的触发期望",
+      "kind": "memory",
+      "claim": "用户曾明确希望合适的个人 Skill 能被动匹配，并改进长程重路由和触发状态的可观测性。检查时区分已读 Skill、执行了流程和上游选择器是否可观测；不能只凭最终回答声称自动触发成功。",
+      "scope": "维护个人 Skill 的触发和路由机制",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "Skill",
+        "触发",
+        "路由",
+        "被动",
+        "可观测性"
+      ],
+      "source_candidates": [
+        "C-20261014-007"
+      ],
+      "evidence": [
+        {
+          "ref": "E030",
+          "thread_id": "01a110ab-dbb0-7f10-9f7d-a31f4ce0e75c",
+          "location": "rollout-2026-10-06T18-04-20-01a110ab-dbb0-7f10-9f7d-a31f4ce0e75c.jsonl:L12",
+          "source_kind": "user_authored",
+          "family_id": "01a110ab-dbb0-7f10-9f7d-a31f4ce0e75c",
+          "text_sha256": "57596143786897337a528809f09235c6a5d6598939ccd5cb6cd422f81a0359c9",
+          "support": "用户明确要求修复被动路由、长程重路由和可观测性。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "project": "personal-context",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "remote.rag-execution-contract",
+      "title": "RAGSystem 的历史执行契约",
+      "kind": "memory",
+      "claim": "该次 AutoFill 执行 Prompt 指定权威根目录为 /workspace/zhy/RAGSystem，先读取 docs/autofill_contract 下的目标、计划、约束、评估、失败记录和对话上下文文件。项目材料和 Prompt 用英文，向用户简洁中文汇报。它是当时提供的任务契约，不能由多次登录地址推导出所有远程任务都遵守同一套协议。",
+      "scope": "继续该 RAGSystem/AutoFill 历史工程任务时先定位当前契约",
+      "exceptions": [
+        "重用前验证当前权威目录和协议文件；历史路径可能已迁移。",
+        "该 Prompt 的提供不等于跨任务个人偏好或新的服务器访问权限。"
+      ],
+      "tags": [
+        "RAGSystem",
+        "AutoFill",
+        "远程",
+        "目录",
+        "执行契约"
+      ],
+      "source_candidates": [
+        "C-20261014-009"
+      ],
+      "evidence": [
+        {
+          "ref": "E042",
+          "thread_id": "01a1065a-38b3-74f0-b70a-b05d3e7c9c9c",
+          "location": "rollout-2026-10-04T17-58-58-01a1065a-38b3-74f0-b70a-b05d3e7c9c9c.jsonl:L12",
+          "source_kind": "user_authored",
+          "family_id": "01a1065a-38b3-74f0-b70a-b05d3e7c9c9c",
+          "text_sha256": "ed8ff904c7815d31986f0f2a3645e5ce598ec1e6bce02887db4e43b97c6c9ff9",
+          "support": "该父对话提供了明确项目目录和执行契约的 Prompt。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "rag-system",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "learning.plugin-guidance",
+      "title": "陌生插件的逐步引导",
+      "kind": "memory",
+      "claim": "第一次使用插件、尚不清楚界面和修改效果时，用户要求一步一步指导，并能实时看到修改。先说明当前操作和下一步，再根据用户熟悉程度调整。",
+      "scope": "初次使用且用户需要指导的插件或浏览器工具",
+      "exceptions": [
+        "已有熟练操作经验或当前直接授权执行时，不机械退回教学流程。",
+        "不从这段历史推断完成授权后必须自动接管。"
+      ],
+      "tags": [
+        "插件",
+        "新工具",
+        "引导",
+        "一步一步",
+        "浏览器"
+      ],
+      "source_candidates": [
+        "C-20261014-010"
+      ],
+      "evidence": [
+        {
+          "ref": "E049",
+          "thread_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+          "location": "rollout-2026-08-12T03-29-48-019ff24d-6d48-7321-80f0-e96c1cedbeda.jsonl:L433",
+          "source_kind": "user_authored",
+          "family_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+          "text_sha256": "caa95362a036b4ad815c5f6524533bc2842383440b61ee0bd7b0c0614fc2a01d",
+          "support": "用户明确要求一步一步教使用。"
+        },
+        {
+          "ref": "E055",
+          "thread_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+          "location": "rollout-2026-08-12T03-29-48-019ff24d-6d48-7321-80f0-e96c1cedbeda.jsonl:L1261",
+          "source_kind": "user_authored",
+          "family_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+          "text_sha256": "eed98d4a6b6aca32b05473f1776cf05ae5bf00727d99b23a3fff0f14413ae800",
+          "support": "用户说明第一次做插件并询问如何实时看修改。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "project.adjustable-plan",
+      "title": "新产品原型的可调整计划",
+      "kind": "memory",
+      "claim": "该次新产品原型任务要求先创建项目文件夹和可调整的 PLAN.md，规划架构与验收标准。可作为相似原型项目的起点；文件名和文档数量不构成所有任务的强制模板。",
+      "scope": "恢复该原型规划或明确需要架构和验收计划的新产品任务",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "新项目",
+        "PLAN.md",
+        "原型",
+        "架构",
+        "规划"
+      ],
+      "source_candidates": [
+        "C-20261014-014"
+      ],
+      "evidence": [
+        {
+          "ref": "E063",
+          "thread_id": "019ff1d6-4550-7441-a14c-a7e4d1695d48",
+          "location": "rollout-2026-08-12T01-19-39-019ff1d6-4550-7441-a14c-a7e4d1695d48.jsonl:L9",
+          "source_kind": "user_authored",
+          "family_id": "019ff1d6-4550-7441-a14c-a7e4d1695d48",
+          "text_sha256": "8d1461b1c5f90f07ccea4c2c07cce2c2a93d146a20683dd79aca79376736d9cc",
+          "support": "用户直接要求创建可调整的 PLAN.md，规划架构和验收标准。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "product-prototype",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "research.startup-protocol",
+      "title": "科研启动与小批实验约定",
+      "kind": "memory",
+      "claim": "历史科研任务要求完整实验前先用少量数据测试，测试通过再跑约定全量；按当时要求顺序执行，GPU 不可用或规划的主实验结束时停止，API 需求可先跳过，错误归因单独简洁记录。另一次新方案启动时，用户明确要求先说明目录、新建或复用、是否下载模型、是否训练、模型规模、预计时间及所需材料，再开始。",
+      "scope": "恢复对应科研实验或再次讨论同类启动方案",
+      "exceptions": [
+        "历史暂停与 GPU 授权只适用于当时任务，不能自动延续到当前任务。",
+        "原任务主生成模型为 Qwen3-4B，模型路径和当前模型需重新核查。",
+        "不要把这条记忆变成所有任务每次启动都必须请示。"
+      ],
+      "tags": [
+        "科研",
+        "实验",
+        "启动",
+        "预检",
+        "小样本",
+        "GPU",
+        "模型",
+        "训练"
+      ],
+      "source_candidates": [
+        "C-20261014-016",
+        "C-20261014-041"
+      ],
+      "evidence": [
+        {
+          "ref": "E077",
+          "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "location": "rollout-2026-10-02T00-39-00-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0f855-628d-7821-8637-f119a9631540.jsonl:L621",
+          "source_kind": "user_authored",
+          "family_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "text_sha256": "a8a66f8504c5f9eb5e6acaa211734b7f52e7cac156bf224f59245e61db4c86a4",
+          "support": "用户指定小批测试、顺序、GPU 条件、主模型4B和可跳过 API。"
+        },
+        {
+          "ref": "E158",
+          "thread_id": "01a0de32-f9d8-7691-9871-af57b35b13fd",
+          "location": "rollout-2026-09-26T22-55-31-01a0de32-f9d8-7691-9871-af57b35b13fd_01a0de36-d864-72e0-a4f3-4b7459b976c1.jsonl:L237",
+          "source_kind": "user_authored",
+          "family_id": "01a0de32-f9d8-7691-9871-af57b35b13fd",
+          "text_sha256": "9d7d7e4071c8048482d10c5a0499e82d9d617ec13ed0fe51228188cfd1db373f",
+          "support": "该次方案明确不要立刻开始，先说明六项启动条件。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "contract-research",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "research.paper-sync-old",
+      "title": "早期项目与论文分离约定",
+      "kind": "memory",
+      "claim": "当时用户要求项目工作和论文工作分开放置，并停止自动同步更新文章。",
+      "scope": "该次合同研究工程推进阶段",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "论文",
+        "同步",
+        "项目"
+      ],
+      "source_candidates": [
+        "C-20261014-017"
+      ],
+      "evidence": [
+        {
+          "ref": "E068",
+          "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "location": "rollout-2026-10-06T13-32-05-01a10644-aeb3-74b3-abac-f511ead2e049_01a10fb2-9966-7a63-ba7b-7f18d50e2463.jsonl:L1577",
+          "source_kind": "user_authored",
+          "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "text_sha256": "4f4bc51623cb53af5b6bab05236f13138f965b68b06eeed393fd234042591262",
+          "support": "用户当时要求只做项目相关内容，不同步更新文章。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "contract-research",
+      "status": "superseded",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "research.paper-sync-old",
+          "title": "早期项目与论文分离约定",
+          "kind": "memory",
+          "claim": "当时用户要求项目工作和论文工作分开放置，并停止自动同步更新文章。",
+          "scope": "该次合同研究工程推进阶段",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "论文",
+            "同步",
+            "项目"
+          ],
+          "source_candidates": [
+            "C-20261014-017"
+          ],
+          "evidence": [
+            {
+              "ref": "E068",
+              "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "location": "rollout-2026-10-06T13-32-05-01a10644-aeb3-74b3-abac-f511ead2e049_01a10fb2-9966-7a63-ba7b-7f18d50e2463.jsonl:L1577",
+              "source_kind": "user_authored",
+              "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "text_sha256": "4f4bc51623cb53af5b6bab05236f13138f965b68b06eeed393fd234042591262",
+              "support": "用户当时要求只做项目相关内容，不同步更新文章。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "project",
+          "verification": "historical_user_instruction",
+          "review_after": "2026-10-15",
+          "project": "contract-research",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "research.paper-sync-targets",
+      "last_reason": "Later explicit manuscript targeting replaces an overbroad reading of the earlier no-sync instruction."
+    },
+    {
+      "id": "research.paper-sync-targets",
+      "title": "论文同步按目标稿件限定",
+      "kind": "memory",
+      "claim": "早期用户要求工程规划和论文材料分开，不随项目变化自动更新文章；后来明确转向第三章对应的独立 ICML 稿，并要求复制到服务器后按约束更新这份稿件。继续时先确认当前目标稿和已有约定，不能继续沿用“所有论文都不更新”的旧解释。",
+      "scope": "合同研究工程与指定 ICML 稿件之间的同步",
+      "exceptions": [
+        "历史“暂停正文”不是当前长期禁令。",
+        "这条记忆不证明历史同步已经完成；实际文稿和服务器状态需核验。"
+      ],
+      "tags": [
+        "论文",
+        "ICML",
+        "同步",
+        "正文",
+        "目标稿"
+      ],
+      "source_candidates": [
+        "C-20261014-017"
+      ],
+      "evidence": [
+        {
+          "ref": "E068",
+          "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "location": "rollout-2026-10-06T13-32-05-01a10644-aeb3-74b3-abac-f511ead2e049_01a10fb2-9966-7a63-ba7b-7f18d50e2463.jsonl:L1577",
+          "source_kind": "user_authored",
+          "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "text_sha256": "4f4bc51623cb53af5b6bab05236f13138f965b68b06eeed393fd234042591262",
+          "support": "早期明确项目与论文分离。"
+        },
+        {
+          "ref": "E078",
+          "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "location": "rollout-2026-10-03T02-46-13-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0fdf0-3692-7ad3-b962-7bb604fd5054.jsonl:L5837",
+          "source_kind": "user_authored",
+          "family_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "text_sha256": "6b580b831f1c6ad6f773f25c3256dd0d11ab441593b4b268767d5a145e9ef263",
+          "support": "后续明确指定独立 ICML 稿件，暂停主论文正文并更新指定稿。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "contract-research",
+      "status": "superseded",
+      "updated_at": "2026-10-15T13:59:53+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "research.paper-sync-targets",
+          "title": "论文同步按目标稿件限定",
+          "kind": "memory",
+          "claim": "早期用户要求工程规划和论文材料分开，不随项目变化自动更新文章；后来明确转向第三章对应的独立 ICML 稿，并要求复制到服务器后按约束更新这份稿件。继续时先确认当前目标稿和已有约定，不能继续沿用“所有论文都不更新”的旧解释。",
+          "scope": "合同研究工程与指定 ICML 稿件之间的同步",
+          "exceptions": [
+            "历史“暂停正文”不是当前长期禁令。",
+            "这条记忆不证明历史同步已经完成；实际文稿和服务器状态需核验。"
+          ],
+          "tags": [
+            "论文",
+            "ICML",
+            "同步",
+            "正文",
+            "目标稿"
+          ],
+          "source_candidates": [
+            "C-20261014-017"
+          ],
+          "evidence": [
+            {
+              "ref": "E068",
+              "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "location": "rollout-2026-10-06T13-32-05-01a10644-aeb3-74b3-abac-f511ead2e049_01a10fb2-9966-7a63-ba7b-7f18d50e2463.jsonl:L1577",
+              "source_kind": "user_authored",
+              "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "text_sha256": "4f4bc51623cb53af5b6bab05236f13138f965b68b06eeed393fd234042591262",
+              "support": "早期明确项目与论文分离。"
+            },
+            {
+              "ref": "E078",
+              "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+              "location": "rollout-2026-10-03T02-46-13-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0fdf0-3692-7ad3-b962-7bb604fd5054.jsonl:L5837",
+              "source_kind": "user_authored",
+              "family_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+              "text_sha256": "6b580b831f1c6ad6f773f25c3256dd0d11ab441593b4b268767d5a145e9ef263",
+              "support": "后续明确指定独立 ICML 稿件，暂停主论文正文并更新指定稿。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "project",
+          "verification": "historical_user_instruction",
+          "review_after": "2026-10-15",
+          "project": "contract-research",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "research.paper-sync-current",
+      "last_reason": "E078 was on 2026-10-04 and E068 was on 2026-10-06. Correct the interpretation rather than inventing a later manuscript-update instruction."
+    },
+    {
+      "id": "demopilot.acceptance",
+      "title": "DemoPilot 的数据与失败记录",
+      "kind": "memory",
+      "claim": "该 DemoPilot 项目要求按 demo ID 管理 testdata，使用项目的可执行验收约定，并看真实浏览器可见结果。用户追问20个数据集、其中5个失败的说法，并要求记录失败、采取的修复和前后效果；这些数字是历史提问内容，不是本轮核实的成绩。",
+      "scope": "继续 DemoPilot 的构建、测试和可视化交付",
+      "exceptions": [
+        "自动 Builder 模板不作为个人偏好的独立支持。",
+        "该目录和契约方案不推广到所有项目；历史覆盖数和失败数须查当前记录。"
+      ],
+      "tags": [
+        "DemoPilot",
+        "demo",
+        "testdata",
+        "浏览器",
+        "失败记录",
+        "验收"
+      ],
+      "source_candidates": [
+        "C-20261014-021"
+      ],
+      "evidence": [
+        {
+          "ref": "E090",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L125",
+          "source_kind": "user_authored",
+          "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "text_sha256": "6c9aa508c91baec12e3f69e7209a59cc6faaf399cb301afc8adb5947e13fe002",
+          "support": "用户对 DemoPilot 的测试数据与工作流提出明确需求。"
+        },
+        {
+          "ref": "E091",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L4038",
+          "source_kind": "user_authored",
+          "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "text_sha256": "64a8422e31a403d22ad03fbfd76a22c55ae46a1f0ecf8ae00af9f9faf3ffba7f",
+          "support": "用户明确要求可见结果与项目验收。"
+        },
+        {
+          "ref": "E085",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-06T19-38-59-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a11102-837d-7ef1-b47d-f7857b62d170.jsonl:L658",
+          "source_kind": "user_authored",
+          "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "text_sha256": "2325e8c1f87b7874378bcd85ed1b2a98a35e12e9b2db284e5e83750ea7975f9d",
+          "support": "用户要求失败记录及修复前后效果，并追问历史20/5数量。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "demopilot",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "research.data-audit-task",
+      "title": "研究材料与标签缺口核对",
+      "kind": "memory",
+      "claim": "该次研究诊断要求到实际项目查找缺失实验材料，核对现有评分与证据、标签或参考答案的差异。未找到就报告缺口及补齐难度；不能从最后成绩推定原始标注过程已经完整。",
+      "scope": "继续合同 Benchmark 的材料补缺与评分诊断",
+      "exceptions": [
+        "这里保存任务要求；引用的审稿意见不能直接当作用户的长期信念。",
+        "不强迫所有模型改进都先执行这套完整审计。"
+      ],
+      "tags": [
+        "研究",
+        "数据",
+        "标签",
+        "材料",
+        "缺口",
+        "证据"
+      ],
+      "source_candidates": [
+        "C-20261014-023"
+      ],
+      "evidence": [
+        {
+          "ref": "E094",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-07T14-02-01-01a11266-18ff-7b92-bdec-81772b1c0b18_01a114f4-5f69-7071-9452-011db73195e6.jsonl:L1268",
+          "source_kind": "user_authored",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "text_sha256": "d2e3d284ee467bece1c91f45bc335ae20a621ba8bdcf7df0b3de6c6d852a0e5c",
+          "support": "用户要求到实际项目查找论文证据缺口。"
+        },
+        {
+          "ref": "E095",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-09T17-47-15-01a11266-18ff-7b92-bdec-81772b1c0b18_01a1200f-4915-7602-9658-c9f6fa81d259.jsonl:L3853",
+          "source_kind": "user_authored",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "text_sha256": "13ce3698a831897a1f330493d65c1317d81de8bbfd181a8f5b80cfba336debb4",
+          "support": "用户提出实际评分与数据诊断问题。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "contract-research",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "learning.question-dedup",
+      "title": "大题库按知识点去重",
+      "kind": "memory",
+      "claim": "该次约2000题的整理任务按考查知识点去重，为代表题提供解析；一道题覆盖不同知识点时可以保留。用户建议分批处理，大概20题一批，避免一次读取全量；20是当时建议规模，不是固定标准。",
+      "scope": "恢复该题库整理，或用户明确要求相似的知识点去重",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "题库",
+        "刷题",
+        "知识点",
+        "去重",
+        "解析",
+        "分批"
+      ],
+      "source_candidates": [
+        "C-20261014-028"
+      ],
+      "evidence": [
+        {
+          "ref": "E116",
+          "thread_id": "01a116af-faaf-73b0-a7db-17c5e66eebc3",
+          "location": "rollout-2026-10-07T22-06-34-01a116af-faaf-73b0-a7db-17c5e66eebc3.jsonl:L1205",
+          "source_kind": "user_authored",
+          "family_id": "01a116af-faaf-73b0-a7db-17c5e66eebc3",
+          "text_sha256": "8de9322bcfcd8b162d07e2665ae03c1bf3a7eb29f4fbebde277e76c7c00c3e69",
+          "support": "用户明确知识点去重、保留多知识点、配解析及约20题分批。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "question-bank",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "migration.old-directory-checklist",
+      "title": "迁移后清理旧目录的检查清单",
+      "kind": "memory",
+      "claim": "该次迁移清理的顺序是：更新旧路径引用；核对迁移文件与哈希；提交迁移内容或完整压缩归档；最后才处理旧目录。复用时先确认当前目标、影响范围和本次删除授权。",
+      "scope": "迁移完成后讨论旧目录清理",
+      "exceptions": [
+        "保留检查方法不等于保留未来删除权限。",
+        "每次操作按当前系统核对真实路径、目标和备份，不沿用旧目录名。"
+      ],
+      "tags": [
+        "迁移",
+        "旧目录",
+        "删除",
+        "清理",
+        "哈希",
+        "归档"
+      ],
+      "source_candidates": [
+        "C-20261014-029"
+      ],
+      "evidence": [
+        {
+          "ref": "E118",
+          "thread_id": "01a12aaf-133a-7d63-977d-927f3b56711e",
+          "location": "rollout-2026-10-11T19-17-59-01a12aaf-133a-7d63-977d-927f3b56711e.jsonl:L384",
+          "source_kind": "user_authored",
+          "family_id": "01a12aaf-133a-7d63-977d-927f3b56711e",
+          "text_sha256": "4bbb1da13d6461a5407702cb74237710a7d18408591bc353566353cb05abed71",
+          "support": "用户直接给出引用、文件哈希、提交或归档、最后删除的四步顺序。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "migration",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "research.human-review",
+      "title": "Benchmark 逐题人工审核约定",
+      "kind": "memory",
+      "claim": "该研究审核曾要求逐题给用户判别，先提供中文翻译；已审核题目不重复。一次要求先10题，另一次用户称此前审过10题并要求再20题。继续时先读审核台账确认真实进度、样本ID与分歧，不能把这些历史数量当作当前审核完成数。",
+      "scope": "继续合同 Benchmark 的人工逐题审核",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "人工审核",
+        "逐题",
+        "翻译",
+        "中文",
+        "标注",
+        "台账"
+      ],
+      "source_candidates": [
+        "C-20261014-031"
+      ],
+      "evidence": [
+        {
+          "ref": "E125",
+          "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "location": "rollout-2026-09-13T12-24-32-01a09902-7e8e-7290-af3d-e24a15f69e60.jsonl:L373",
+          "source_kind": "user_authored",
+          "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "text_sha256": "635c86d1a9d685bee8aa536bb8f31387f727222c8521bafc83068751d0306d26",
+          "support": "用户要求中文翻译、逐题审核，先10题。"
+        },
+        {
+          "ref": "E120",
+          "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L444",
+          "source_kind": "user_authored",
+          "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "text_sha256": "7a064c3c4f9dd44cd19a593cda67d9caaa956a232c4def75baf07f00cf584ef8",
+          "support": "另一次要求再20题并说明此前10题不要重复。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "contract-research",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "research.localized-paper-edits",
+      "title": "特定论文的局部修改约定",
+      "kind": "memory",
+      "claim": "该次 ICML 稿件逻辑已基本稳定，用户要求只改定位明确的问题位置，使用当时指定的 Claude Code；另一轮要求发送外部编辑 Prompt 前先供用户审核。恢复同一任务时先查当前编辑约定。",
+      "scope": "恢复该次已有 ICML 稿件的外部编辑任务",
+      "exceptions": [
+        "这是特定稿件和委托的约定，不是所有未来修改都先审批。",
+        "当前用户直接指定的新工具或更大修改范围优先。"
+      ],
+      "tags": [
+        "论文",
+        "局部修改",
+        "Claude Code",
+        "prompt",
+        "ICML"
+      ],
+      "source_candidates": [
+        "C-20261014-032"
+      ],
+      "evidence": [
+        {
+          "ref": "E128",
+          "thread_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+          "location": "rollout-2026-10-08T18-23-02-01a116a5-96a5-7cb3-8150-3c62ba850e3f_01a11b09-b103-74e1-8e5d-763c1027e4e7.jsonl:L410",
+          "source_kind": "user_authored",
+          "family_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+          "text_sha256": "be0be57a8fd2bd2a68ceed25b248058edde1fe6d23542747b123830d95a15776",
+          "support": "用户明确限定局部位置并指定当时的编辑工具。"
+        },
+        {
+          "ref": "E129",
+          "thread_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+          "location": "rollout-2026-10-07T21-57-14-01a116a5-96a5-7cb3-8150-3c62ba850e3f_01a116a7-71b9-7f30-abcf-7d02d42fc46f.jsonl:L4353",
+          "source_kind": "user_authored",
+          "family_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+          "text_sha256": "4babc8e727875b43bfe9ef542b4dacc4f3d07a881c000bdbc5b40b763dbcf098",
+          "support": "用户要求当次外部编辑 Prompt 先审核。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "contract-research",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "research.core200-status",
+      "title": "Core200 用途与人审事实的待核边界",
+      "kind": "memory",
+      "claim": "用户要求将 Core200 作为固定200题评测集表述，模型选择与阈值拟合使用开发集。用户提供的写作要求包含200题全部人审、两名独立审核者、第三人裁决分歧且未看模型建议；后续材料缺口明确逐题审核记录与样本ID尚未对应齐全，部分答案评分仍有模型评审记录。因此这些审核过程细节必须保留为用户陈述或待核事实，不能仅凭修改论文的请求当作已证实。",
+      "scope": "核对该合同研究的 Core200 协议、人审归档和论文表述",
+      "exceptions": [
+        "不得推断 Core200 从未用于诊断或开发；历史使用需查记录。",
+        "审核汇总不证明每个模型输出都经过独立人工评分。",
+        "重用前核对最新台账；本轮没有重新验证历史实验数值。"
+      ],
+      "tags": [
+        "Core200",
+        "200",
+        "人工审核",
+        "开发集",
+        "评测集",
+        "协议",
+        "待核"
+      ],
+      "source_candidates": [
+        "C-20261014-033"
+      ],
+      "evidence": [
+        {
+          "ref": "E131",
+          "thread_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+          "location": "rollout-2026-10-08T18-23-02-01a116a5-96a5-7cb3-8150-3c62ba850e3f_01a11b09-b103-74e1-8e5d-763c1027e4e7.jsonl:L314",
+          "source_kind": "user_authored",
+          "family_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+          "text_sha256": "e74a1e3ce2f8ea9630b0aac5f36e0e33cb4e57e95a23e31b269e59c7d6b78510",
+          "support": "用户给出的200题与两人加第三人审核流程是论文写作要求。"
+        },
+        {
+          "ref": "E134",
+          "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "location": "rollout-2026-10-08T23-13-42-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3_01a11c13-cd58-7681-8a0a-437158e937cb.jsonl:L2297",
+          "source_kind": "user_authored",
+          "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "text_sha256": "31ea2f5d628ae202c11054bcd8b524f0878bdea88c92c66bdd1521482c8b0e80",
+          "support": "用户同时列出逐题原始记录和人工评分依据尚待对应的缺口。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "claims_pending_source_verification",
+      "review_after": "2026-10-15",
+      "project": "contract-research",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "research.comparison-protocol",
+      "title": "JEV 对照组与输入协议",
+      "kind": "memory",
+      "claim": "该次比较要求区分 Direct、JEV-A、JEV-B 0.6B 及组合，并直观呈现可比结果。用户曾提议首轮使用同一83条开发集，比较答案盲前置判别与看到候选答案/字段值/引用证据的支持性判断；这属于待确认的实验提议。用户还问过135/200与136/200的差异，以及164/200来自单次还是多次、方差多少，不能据此声称已经重复运行或得到均值。",
+      "scope": "恢复该次 JEV 对照实验设计或解释已有比较表",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "JEV",
+        "Direct",
+        "对照",
+        "83",
+        "协议",
+        "方差",
+        "实验",
+        "模型"
+      ],
+      "source_candidates": [
+        "C-20261014-034"
+      ],
+      "evidence": [
+        {
+          "ref": "E137",
+          "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "location": "rollout-2026-10-08T03-18-55-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3_01a117cd-f29c-7961-8372-b70266b160b1.jsonl:L4800",
+          "source_kind": "user_authored",
+          "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "text_sha256": "8c1ee02c3d020b69bcc1859859133a9c26be5284f39605879d476469b01c69f0",
+          "support": "用户要求明确JEV-B 0.6B，并与Direct、JEV-A和组合比较。"
+        },
+        {
+          "ref": "E136",
+          "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "location": "rollout-2026-10-06T22-48-45-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3.jsonl:L503",
+          "source_kind": "user_authored",
+          "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "text_sha256": "c4fb5c08b837a5598ac6169cda8c582a4eee4ee7b3f57635a64c0b19230f4f75",
+          "support": "用户提议同83条开发集及两类输入协议。"
+        },
+        {
+          "ref": "E135",
+          "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "location": "rollout-2026-10-08T23-13-42-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3_01a11c13-cd58-7681-8a0a-437158e937cb.jsonl:L2115",
+          "source_kind": "user_authored",
+          "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "text_sha256": "148476e039565563967bc37a1d28a7a78dd66f857ffc7511fa79513af3712798",
+          "support": "用户询问单次、多次和方差，未提供已完成重复实验结论。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "contract-research",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "taskgraph.project-design",
+      "title": "任务图产品的设计选择",
+      "kind": "memory",
+      "claim": "该任务可视化项目选择 Workspace → Run → Task Graph，每次运行独立留存；先定义 HTTP/JSON 协议。采用混合验收：后端可验证的任务自动检查，其他进入待验收，由现有AI应用提供人工确认后上报 complete_task/reject_task。观察子 Agent 通过 Skill 更新任务图是用户期望的后续交互，不代表已实现。",
+      "scope": "恢复该任务完成可视化产品的架构与验收设计",
+      "exceptions": [
+        "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+      ],
+      "tags": [
+        "任务图",
+        "Task Graph",
+        "Workspace",
+        "Run",
+        "HTTP",
+        "JSON",
+        "可视化"
+      ],
+      "source_candidates": [
+        "C-20261014-037"
+      ],
+      "evidence": [
+        {
+          "ref": "E145",
+          "thread_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "location": "rollout-2026-07-24T14-16-59-019f92c5-1c9c-78a3-acb0-c23a892d49c1.jsonl:L61",
+          "source_kind": "user_authored",
+          "family_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "text_sha256": "f063b084b71b82252dbc1db36b8bce26597d48db62da5e41b4e69088e32f927e",
+          "support": "用户选择混合验证。"
+        },
+        {
+          "ref": "E146",
+          "thread_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "location": "rollout-2026-07-24T14-16-59-019f92c5-1c9c-78a3-acb0-c23a892d49c1.jsonl:L104",
+          "source_kind": "user_authored",
+          "family_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "text_sha256": "a0187ab82b0d72afc53c54833cb894e12dbfea8247edc9a2d9ffbaaf66eaada3",
+          "support": "用户选择HTTP/JSON协议。"
+        },
+        {
+          "ref": "E147",
+          "thread_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "location": "rollout-2026-07-24T14-16-59-019f92c5-1c9c-78a3-acb0-c23a892d49c1.jsonl:L126",
+          "source_kind": "user_authored",
+          "family_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "text_sha256": "366b8756adc866efb609f80a975fac776c2f6fae983e40f140504b932f7cfda0",
+          "support": "用户选择按运行保留Workspace/Run/Task Graph历史。"
+        },
+        {
+          "ref": "E148",
+          "thread_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "location": "rollout-2026-07-24T14-16-59-019f92c5-1c9c-78a3-acb0-c23a892d49c1.jsonl:L147",
+          "source_kind": "user_authored",
+          "family_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "text_sha256": "5ac658c1ca5030b0b6b20626bbcfa396d3a5e093123d1a87bd50231ad655fea2",
+          "support": "用户选择现有AI应用提供验收入口。"
+        },
+        {
+          "ref": "E149",
+          "thread_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "location": "rollout-2026-07-24T14-16-59-019f92c5-1c9c-78a3-acb0-c23a892d49c1.jsonl:L221",
+          "source_kind": "user_authored",
+          "family_id": "019f92c5-1c9c-78a3-acb0-c23a892d49c1",
+          "text_sha256": "0db006713932d5813fc0845ae3e3cfb3dd94489dd12138a7dd511c8b45eb480d",
+          "support": "用户描述观察Agent通过Skill更新任务图的期望。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "taskgraph",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "autofill.execution-method",
+      "title": "浏览器填表项目的执行与迭代约定",
+      "kind": "memory",
+      "claim": "该浏览器填表项目要求在项目中维护需求、SDD、逐步输入输出、评估及给人的验收说明。通过失败样例拆分统计、归因、实验和效果比较迭代；优先记录影响改进的失败分析。用户希望主 Agent 尽可能规划和分发、子 Agent 执行，并尽可能复用开源方案，按真实失败原因决定是否在授权范围内修改。项目技术材料和Prompt用英文，向用户中文汇报。",
+      "scope": "恢复该 AutoFill/Agent 填表产品的工程迭代",
+      "exceptions": [
+        "该项目分工偏好受平台、预算、当前任务和权限限制，不强迫普通任务使用子 Agent。",
+        "不从历史推导修改其他仓库或外部系统的权限。",
+        "环境阻塞若影响本次交付仍须报告；该分析文档的记录取舍不能用于隐藏阻塞。",
+        "历史九项检查问题不是所有任务固定九份文档的要求。"
+      ],
+      "tags": [
+        "AutoFill",
+        "浏览器",
+        "工程",
+        "SDD",
+        "迭代",
+        "失败归因",
+        "开源",
+        "子Agent"
+      ],
+      "source_candidates": [
+        "C-20261014-038",
+        "C-20261014-039",
+        "C-20261014-042",
+        "C-20261014-045"
+      ],
+      "evidence": [
+        {
+          "ref": "E150",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-03T04-23-37-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a0fe49-6364-77a3-a7c5-7977bfb6fa15.jsonl:L391",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "2f01f736b2f2f44902ddec3116747cae83a43fe959edd25ebd2b735c00a7a58e",
+          "support": "用户指定需求、SDD、任务拆解、评估和面向人的验收汇报。"
+        },
+        {
+          "ref": "E152",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L2174",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "58f0a2c5d5b627b24c487e397467b41d7f0140a0a28e1230372de09986a0eb61",
+          "support": "用户明确失败归因、实验和效果比较循环。"
+        },
+        {
+          "ref": "E153",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L218",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "0be529ca4fee29b0b3ebc64eeb765d3224a921c87de6c11cbc882fb6d38d279d",
+          "support": "用户要求记录重要失败分析，不在该分析文档堆环境准备流水。"
+        },
+        {
+          "ref": "E156",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L3457",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "c4f054e5e685280e176843738f7ecdc3ca1d54d520fe42c8e0e6dc6baeef06a9",
+          "support": "用户要求尽可能规划分发、复用开源、英文项目材料和中文汇报。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "browser-autofill",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "autofill.safety-target",
+      "title": "自动填表的错误填写指标",
+      "kind": "memory",
+      "claim": "该次浏览器填表设计中，用户要求不该填时不填，并把避免错误填写作为独立硬指标；可接受整体准确率下降以减少错误填写，测试集先以95%以上为暂定目标。用户还限定材料类型为 HTML、Word、Excel、Markdown。95%是当时提出的验收目标，不是已测成绩；具体分母、错误填写指标和阈值还需当前协议明确。",
+      "scope": "恢复该浏览器 AutoFill 产品的评测指标和支持范围",
+      "exceptions": [
+        "不把该权衡推广到所有研究，也不声称已实现零错误。",
+        "新验收协议与用户当前取舍优先。"
+      ],
+      "tags": [
+        "AutoFill",
+        "错误填写",
+        "拒填",
+        "95%",
+        "安全",
+        "指标",
+        "HTML",
+        "Word",
+        "Excel",
+        "Markdown"
+      ],
+      "source_candidates": [
+        "C-20261014-043"
+      ],
+      "evidence": [
+        {
+          "ref": "E160",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-04T16-00-43-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a105ed-f661-77b2-a888-f716d849d828.jsonl:L140",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "deb092f0b5e0cb0c600bc454b8fbf1ed36dc6ec33d34965c5f04dd485f94aa01",
+          "support": "用户明确避免错误填写、95%以上暂定目标与四种材料类型。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "browser-autofill",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "remote.server-browser-topology",
+      "title": "一次服务器与本机浏览器分工",
+      "kind": "memory",
+      "claim": "该次实现方案明确服务器可使用 Qwen32B，其他工程工作放服务器，浏览器使用用户主机的浏览器，测试后释放模型资源。这是指定任务的部署选择；重用前确认当前模型、GPU、服务器和真实浏览器通道。",
+      "scope": "恢复该次远程模型与主机浏览器联合测试",
+      "exceptions": [
+        "不是所有项目的固定部署拓扑。",
+        "不含登录凭据，也不授予新的远程或浏览器操作权限。"
+      ],
+      "tags": [
+        "服务器",
+        "本机",
+        "浏览器",
+        "Qwen32B",
+        "32B",
+        "GPU",
+        "远程"
+      ],
+      "source_candidates": [
+        "C-20261014-044"
+      ],
+      "evidence": [
+        {
+          "ref": "E161",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L1051",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "710fbcac8acf8e1b1dd4a221d6dc51ce11ca30c63f32f276cc7232a176069554",
+          "support": "用户明确服务器Qwen32B、主机浏览器和测试后释放资源。"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "browser-autofill",
+      "status": "active",
+      "updated_at": "2026-10-15T13:49:28+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "research.paper-sync-current",
+      "title": "论文同步要求的实际时间线",
+      "kind": "memory",
+      "claim": "2026-10-04，用户曾指定第三章对应的独立 ICML 稿，要求复制到服务器后按约束更新这份稿件。2026-10-06，用户随后要求当前工程推进阶段将项目与论文分开，只做项目相关内容，不自动同步文章。恢复工程任务时沿用这个项目范围；若当前另有更新论文的明确指令，再确认目标稿件和修改范围。两段话不构成所有未来论文永久不更新的规则。",
+      "scope": "合同研究工程与指定 ICML 稿件之间的同步",
+      "exceptions": [
+        "这条记忆保留历史任务的时间和范围；当前用户明确的新要求优先。",
+        "不能把10月4日对指定稿件的授权自动延续到10月6日后的工程任务。",
+        "不证明历史同步已经完成，实际文件与服务器状态仍需核查。"
+      ],
+      "tags": [
+        "论文",
+        "ICML",
+        "同步",
+        "正文",
+        "目标稿"
+      ],
+      "source_candidates": [
+        "C-20261014-017"
+      ],
+      "evidence": [
+        {
+          "ref": "E068",
+          "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "location": "rollout-2026-10-06T13-32-05-01a10644-aeb3-74b3-abac-f511ead2e049_01a10fb2-9966-7a63-ba7b-7f18d50e2463.jsonl:L1577",
+          "source_kind": "user_authored",
+          "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+          "text_sha256": "4f4bc51623cb53af5b6bab05236f13138f965b68b06eeed393fd234042591262",
+          "support": "早期明确项目与论文分离。",
+          "message_timestamp": "2026-10-06T09:55:09.534Z"
+        },
+        {
+          "ref": "E078",
+          "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "location": "rollout-2026-10-03T02-46-13-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0fdf0-3692-7ad3-b962-7bb604fd5054.jsonl:L5837",
+          "source_kind": "user_authored",
+          "family_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "text_sha256": "6b580b831f1c6ad6f773f25c3256dd0d11ab441593b4b268767d5a145e9ef263",
+          "support": "后续明确指定独立 ICML 稿件，暂停主论文正文并更新指定稿。",
+          "message_timestamp": "2026-10-04T07:42:41.159Z"
+        }
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2026-10-15",
+      "project": "contract-research",
+      "status": "active",
+      "updated_at": "2026-10-15T13:59:53+00:00",
+      "revision": 1,
+      "history": []
+    }
+  ],
+  "decisions": [
+    {
+      "candidate_id": "C-20261014-001",
+      "bucket": "skill",
+      "targets": [
+        "skill.patent-workflow"
+      ],
+      "action": "already_covered",
+      "reason": "与003合并；专利Skill已经要求步骤.md，不把同一任务重复计数。"
+    },
+    {
+      "candidate_id": "C-20261014-002",
+      "bucket": "discard",
+      "targets": [],
+      "action": "discarded",
+      "reason": "原线程未定位，且不能把一次先讨论要求变成所有Skill修改都要审批。"
+    },
+    {
+      "candidate_id": "C-20261014-003",
+      "bucket": "skill",
+      "targets": [
+        "skill.patent-workflow"
+      ],
+      "action": "already_covered",
+      "reason": "保留专利场景的输入输出与步骤要求；其他材料未逐项支持的泛化不采纳。"
+    },
+    {
+      "candidate_id": "C-20261014-004",
+      "bucket": "skill",
+      "targets": [
+        "skill.patent-workflow"
+      ],
+      "action": "already_covered",
+      "reason": "模板与本人事实隔离已由专利Skill明确承载。"
+    },
+    {
+      "candidate_id": "C-20261014-005",
+      "bucket": "rule",
+      "targets": [
+        "documents.preserve-style"
+      ],
+      "action": "new",
+      "reason": "不同材料任务均直接纠正风格偏移；仅晋升风格保持，视觉验收仍由对应Skill承载。"
+    },
+    {
+      "candidate_id": "C-20261014-006",
+      "bucket": "skill",
+      "targets": [
+        "skill.paper-hierarchy"
+      ],
+      "action": "already_covered",
+      "reason": "论文类型和贡献层级已被academic-write覆盖；历史章节冻结不作永久规则。"
+    },
+    {
+      "candidate_id": "C-20261014-007",
+      "bucket": "memory",
+      "targets": [
+        "skills.passive-routing"
+      ],
+      "action": "new_scoped",
+      "reason": "保存明确的个人Skill路由期望，不冒充已经验证自动触发。"
+    },
+    {
+      "candidate_id": "C-20261014-008",
+      "bucket": "skill",
+      "targets": [
+        "skill.minimal-validation"
+      ],
+      "action": "already_covered",
+      "reason": "最小验证Skill已有完整约束，本次纳入统一维护源。"
+    },
+    {
+      "candidate_id": "C-20261014-009",
+      "bucket": "memory",
+      "targets": [
+        "remote.rag-execution-contract"
+      ],
+      "action": "narrowed",
+      "reason": "只保存一份明确RAGSystem执行契约；多个登录地址不算泛化证据。"
+    },
+    {
+      "candidate_id": "C-20261014-010",
+      "bucket": "memory",
+      "targets": [
+        "learning.plugin-guidance"
+      ],
+      "action": "narrowed",
+      "reason": "保留陌生插件逐步引导；移除没有证据的自动接管推断。"
+    },
+    {
+      "candidate_id": "C-20261014-011",
+      "bucket": "rule",
+      "targets": [
+        "core.communication"
+      ],
+      "action": "already_covered",
+      "reason": "已有沟通核心覆盖，去掉固定意图审计格式的泛化。"
+    },
+    {
+      "candidate_id": "C-20261014-012",
+      "bucket": "skill",
+      "targets": [
+        "skill.patent-workflow"
+      ],
+      "action": "already_covered",
+      "reason": "专利实施步骤直接动作与逐项对应已在Skill中。"
+    },
+    {
+      "candidate_id": "C-20261014-013",
+      "bucket": "skill",
+      "targets": [
+        "skill.patent-workflow"
+      ],
+      "action": "already_covered",
+      "reason": "文稿与渲染检查由专利Skill承载，具体图形格式保持项目范围。"
+    },
+    {
+      "candidate_id": "C-20261014-014",
+      "bucket": "memory",
+      "targets": [
+        "project.adjustable-plan"
+      ],
+      "action": "narrowed",
+      "reason": "保留该原型项目可调整计划，不把重复任务Prompt当三次独立偏好。"
+    },
+    {
+      "candidate_id": "C-20261014-015",
+      "bucket": "rule",
+      "targets": [
+        "core.delegation"
+      ],
+      "action": "merged_existing",
+      "reason": "与040合并，主行为已在SOUL委派规则中，不算新增长期规则。"
+    },
+    {
+      "candidate_id": "C-20261014-016",
+      "bucket": "memory",
+      "targets": [
+        "research.startup-protocol"
+      ],
+      "action": "merged_scoped",
+      "reason": "保留明确小批实验和条件；与041的特定启动边界合并。"
+    },
+    {
+      "candidate_id": "C-20261014-017",
+      "bucket": "memory",
+      "targets": [
+        "research.paper-sync-current"
+      ],
+      "action": "corrected_and_replaced",
+      "reason": "按原消息日期限定：10月4日曾指定更新ICML稿，10月6日随后要求当前阶段只做工程、不自动同步；旧摘要时间线已纠正。"
+    },
+    {
+      "candidate_id": "C-20261014-018",
+      "bucket": "skill",
+      "targets": [
+        "skill.paper-hierarchy"
+      ],
+      "action": "already_covered",
+      "reason": "合并到benchmark写作层级，不把所有论文固定为benchmark。"
+    },
+    {
+      "candidate_id": "C-20261014-019",
+      "bucket": "skill",
+      "targets": [
+        "skill.research-causality"
+      ],
+      "action": "refined",
+      "reason": "只吸收直接表达的任务难点与机制区分，引用意见不作个人偏好。"
+    },
+    {
+      "candidate_id": "C-20261014-020",
+      "bucket": "rule",
+      "targets": [
+        "validation.agreed-coverage"
+      ],
+      "action": "new",
+      "reason": "Demo与科研均明确指定验收范围；与日常最小验证保持兼容。"
+    },
+    {
+      "candidate_id": "C-20261014-021",
+      "bucket": "memory",
+      "targets": [
+        "demopilot.acceptance"
+      ],
+      "action": "narrowed",
+      "reason": "保存DemoPilot工作流；剔除自动Builder作为个人偏好证据。"
+    },
+    {
+      "candidate_id": "C-20261014-022",
+      "bucket": "rule",
+      "targets": [
+        "core.autonomy"
+      ],
+      "action": "already_covered",
+      "reason": "已授权内自主推进由SOUL覆盖；不从历史扩大当前权限。"
+    },
+    {
+      "candidate_id": "C-20261014-023",
+      "bucket": "memory",
+      "targets": [
+        "research.data-audit-task"
+      ],
+      "action": "narrowed",
+      "reason": "保存该研究材料补缺任务，不把混合反馈拼成所有研究的强制流程。"
+    },
+    {
+      "candidate_id": "C-20261014-024",
+      "bucket": "rule",
+      "targets": [
+        "core.communication"
+      ],
+      "action": "merged_existing",
+      "reason": "与011/035/046合并到已有沟通规则。"
+    },
+    {
+      "candidate_id": "C-20261014-025",
+      "bucket": "discard",
+      "targets": [],
+      "action": "discarded",
+      "reason": "原候选含矛盾和敏感来源，不选择性拼成稳定偏好；原始证据保留本地。"
+    },
+    {
+      "candidate_id": "C-20261014-026",
+      "bucket": "memory",
+      "targets": [
+        "local.project-material-verification"
+      ],
+      "action": "local_only",
+      "reason": "收窄为明确的材料核验任务；敏感主题仅本地，不确认未经证实的个人事实。",
+      "local_only": true
+    },
+    {
+      "candidate_id": "C-20261014-027",
+      "bucket": "discard",
+      "targets": [],
+      "action": "discarded",
+      "reason": "三个来源均为自动exec模板，不能作为三次独立个人偏好；项目要求由021的直接来源保留。"
+    },
+    {
+      "candidate_id": "C-20261014-028",
+      "bucket": "memory",
+      "targets": [
+        "learning.question-dedup"
+      ],
+      "action": "new_scoped",
+      "reason": "保留约2000题、知识点去重与约20题分批的具体任务范围。"
+    },
+    {
+      "candidate_id": "C-20261014-029",
+      "bucket": "memory",
+      "targets": [
+        "migration.old-directory-checklist"
+      ],
+      "action": "new_scoped",
+      "reason": "保存一次明确迁移清单；方法不等于未来删除权限。"
+    },
+    {
+      "candidate_id": "C-20261014-030",
+      "bucket": "skill",
+      "targets": [
+        "skill.research-causality"
+      ],
+      "action": "already_covered",
+      "reason": "与019合并为可检验假设和证据范围，不重复新增同义规则。"
+    },
+    {
+      "candidate_id": "C-20261014-031",
+      "bucket": "memory",
+      "targets": [
+        "research.human-review"
+      ],
+      "action": "new_scoped",
+      "reason": "保存逐题中文审核约定和历史10/20数量，当前进度待台账确认。"
+    },
+    {
+      "candidate_id": "C-20261014-032",
+      "bucket": "memory",
+      "targets": [
+        "research.localized-paper-edits"
+      ],
+      "action": "narrowed",
+      "reason": "只保留指定稿件与当次外部编辑Prompt审核要求。"
+    },
+    {
+      "candidate_id": "C-20261014-033",
+      "bucket": "memory",
+      "targets": [
+        "research.core200-status"
+      ],
+      "action": "pending_facts_usable_scope",
+      "reason": "用途约定可调用；200题及2人/第三人流程保留出处和待核状态。"
+    },
+    {
+      "candidate_id": "C-20261014-034",
+      "bucket": "memory",
+      "targets": [
+        "research.comparison-protocol"
+      ],
+      "action": "narrowed",
+      "reason": "保存对照组、83条提议和方差追问，不把提议或疑问写成已完成实验。"
+    },
+    {
+      "candidate_id": "C-20261014-035",
+      "bucket": "rule",
+      "targets": [
+        "core.communication"
+      ],
+      "action": "already_covered",
+      "reason": "直白说明机制由已有沟通规则覆盖，不强制每次都读全部代码。"
+    },
+    {
+      "candidate_id": "C-20261014-036",
+      "bucket": "skill",
+      "targets": [
+        "skill.research-evidence"
+      ],
+      "action": "refined",
+      "reason": "已有证据规则补足陈述、写作要求和可核验记录的区分。"
+    },
+    {
+      "candidate_id": "C-20261014-037",
+      "bucket": "memory",
+      "targets": [
+        "taskgraph.project-design"
+      ],
+      "action": "new_scoped",
+      "reason": "保存特定任务图设计和未实现期望，不约束其他产品架构。"
+    },
+    {
+      "candidate_id": "C-20261014-038",
+      "bucket": "memory",
+      "targets": [
+        "autofill.execution-method"
+      ],
+      "action": "merged_scoped",
+      "reason": "与039/042/045合并成该项目执行约定，不要求所有项目固定文档清单。"
+    },
+    {
+      "candidate_id": "C-20261014-039",
+      "bucket": "memory",
+      "targets": [
+        "autofill.execution-method"
+      ],
+      "action": "merged_scoped",
+      "reason": "保留失败归因循环；重要环境阻塞仍须报告。"
+    },
+    {
+      "candidate_id": "C-20261014-040",
+      "bucket": "rule",
+      "targets": [
+        "core.delegation"
+      ],
+      "action": "merged_existing",
+      "reason": "与015合并到已有委派规则，按任务补缺，不机械扩大Prompt。"
+    },
+    {
+      "candidate_id": "C-20261014-041",
+      "bucket": "memory",
+      "targets": [
+        "research.startup-protocol"
+      ],
+      "action": "merged_scoped",
+      "reason": "保留当次六项启动询问，历史暂停不延续成当前执行禁令。"
+    },
+    {
+      "candidate_id": "C-20261014-042",
+      "bucket": "memory",
+      "targets": [
+        "autofill.execution-method"
+      ],
+      "action": "merged_scoped",
+      "reason": "限定该长程项目，保留尽可能和资源/权限限制；不是两个独立父对话。"
+    },
+    {
+      "candidate_id": "C-20261014-043",
+      "bucket": "memory",
+      "targets": [
+        "autofill.safety-target"
+      ],
+      "action": "new_scoped",
+      "reason": "保存错误填写硬指标及95%暂定目标，不伪造已测成绩或零错误。"
+    },
+    {
+      "candidate_id": "C-20261014-044",
+      "bucket": "memory",
+      "targets": [
+        "remote.server-browser-topology"
+      ],
+      "action": "new_scoped",
+      "reason": "保留32B、主机浏览器和释放资源的当次选择；重用前复核环境。"
+    },
+    {
+      "candidate_id": "C-20261014-045",
+      "bucket": "memory",
+      "targets": [
+        "autofill.execution-method"
+      ],
+      "action": "merged_scoped",
+      "reason": "保留该项目按错误原因复用开源的选择，不授予额外外部修改权限。"
+    },
+    {
+      "candidate_id": "C-20261014-046",
+      "bucket": "rule",
+      "targets": [
+        "core.communication"
+      ],
+      "action": "merged_existing",
+      "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。"
+    }
+  ],
+  "updated_at": "2026-10-15T14:17:52+00:00"
+}

@@ -1,6 +1,6 @@
 # 工程与环境
 
-历史候选，不因拆分而晋升。
+历史候选原文；已逐条裁决。按 disposition 和目标记忆使用，不能把旧 claim 整条当成生效规则。
 
 ## C-20261014-008
 
@@ -9,7 +9,9 @@
 - scope: 代码、Skill 和工程任务
 - confidence: high
 - overlap: evidence-only candidate; already covered by `minimal-validation-workflow`
-- status: pending_review
+- status: resolved
+- disposition: skill / already_covered
+- destination: skill.minimal-validation
 
 ## C-20261014-009
 
@@ -18,7 +20,9 @@
 - scope: SSH、远程服务器、AutoFill、浏览器和科研项目同步
 - confidence: high
 - overlap: reinforces existing RAGSystem and browser-channel guidance
-- status: pending_review
+- status: resolved
+- disposition: memory / narrowed
+- destination: remote.rag-execution-contract
 
 ## C-20261014-021
 
@@ -28,7 +32,9 @@
 - confidence: high
 - overlap: new
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / narrowed
+- destination: demopilot.acceptance
 
 ## C-20261014-027
 
@@ -38,7 +44,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-021
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: discard / discarded
+- destination: discarded
 
 ## C-20261014-029
 
@@ -48,7 +56,9 @@
 - confidence: high
 - overlap: new
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / new_scoped
+- destination: migration.old-directory-checklist
 
 ## C-20261014-037
 
@@ -58,7 +68,9 @@
 - confidence: high
 - overlap: new
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / new_scoped
+- destination: taskgraph.project-design
 
 ## C-20261014-044
 
@@ -68,4 +80,6 @@
 - confidence: high
 - overlap: reinforces C-20261014-009 and C-20261014-015
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / new_scoped
+- destination: remote.server-browser-topology

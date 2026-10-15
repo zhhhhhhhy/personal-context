@@ -17,4 +17,5 @@ Do not let the strongest available experiment silently redefine the paper. If th
 5. **Write methods and experiments in the same hierarchy.** Define the benchmark before describing systems that are evaluated on it. Place a system-specific section after the task and protocol sections unless the method itself is the paper's contribution.
 6. **Run a compression pass.** Give each paragraph one job. Remove repeated explanations, implementation inventories, conversational transitions, and sentences that do not change the reader's interpretation.
 7. **Run a claim-evidence pass.** Do not generalize a result from one module, split, evaluator, or fixed-evidence setting to the whole method or deployment scenario. Distinguish model-assisted evaluation from independent human gold.
+   For a proposed mechanism, connect an observed task failure to a testable hypothesis and the comparison that could support it. A routing or decision point alone does not establish the causal mechanism; distinguish the proposed explanation from measured outcomes.
 8. **Run a reviewer pass.** Apply the checklist in the reference file and report material limitations separately from project status.

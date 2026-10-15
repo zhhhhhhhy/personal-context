@@ -1,6 +1,6 @@
 # 研究与论文
 
-历史候选，不因拆分而晋升。
+历史候选原文；已逐条裁决。按 disposition 和目标记忆使用，不能把旧 claim 整条当成生效规则。
 
 ## C-20261014-006
 
@@ -9,7 +9,9 @@
 - scope: Benchmark、ICML 论文、Intro、方法与实验写作
 - confidence: high
 - overlap: reinforces existing academic-write guidance
-- status: pending_review
+- status: resolved
+- disposition: skill / already_covered
+- destination: skill.paper-hierarchy
 
 ## C-20261014-017
 
@@ -19,7 +21,9 @@
 - confidence: high
 - overlap: new
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / corrected_and_replaced
+- destination: research.paper-sync-current
 
 ## C-20261014-018
 
@@ -29,7 +33,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-006 and existing academic-write guidance
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: skill / already_covered
+- destination: skill.paper-hierarchy
 
 ## C-20261014-019
 
@@ -39,7 +45,9 @@
 - confidence: high
 - overlap: new; complements C-20261014-018
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: skill / refined
+- destination: skill.research-causality
 
 ## C-20261014-030
 
@@ -49,7 +57,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-019 and C-20261014-023
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: skill / already_covered
+- destination: skill.research-causality
 
 ## C-20261014-032
 
@@ -59,7 +69,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-006 and C-20261014-018
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / narrowed
+- destination: research.localized-paper-edits
 
 ## C-20261014-036
 
@@ -69,4 +81,6 @@
 - confidence: high
 - overlap: reinforces C-20261014-023 and C-20261014-030
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: skill / refined
+- destination: skill.research-evidence

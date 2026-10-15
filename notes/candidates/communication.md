@@ -1,6 +1,6 @@
 # 沟通与学习
 
-历史候选，不因拆分而晋升。
+历史候选原文；已逐条裁决。按 disposition 和目标记忆使用，不能把旧 claim 整条当成生效规则。
 
 ## C-20261014-010
 
@@ -8,7 +8,9 @@
 - evidence: `batch-001`: `019ff24d-6d48-7321-80f0-e96c1cedbeda#L190,L421,L433,L444,L454,L464,L474,L485,L1261`
 - scope: 插件安装、浏览器和不熟悉的工具
 - confidence: medium
-- status: pending_review
+- status: resolved
+- disposition: memory / narrowed
+- destination: learning.plugin-guidance
 
 ## C-20261014-011
 
@@ -17,7 +19,9 @@
 - scope: 重复意图分析、工程进展和对外汇报
 - confidence: high
 - overlap: reinforces `habits/communication.md`
-- status: pending_review
+- status: resolved
+- disposition: rule / already_covered
+- destination: core.communication
 
 ## C-20261014-024
 
@@ -27,7 +31,9 @@
 - confidence: high
 - overlap: reinforces C-20261014-011
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: rule / merged_existing
+- destination: core.communication
 
 ## C-20261014-028
 
@@ -37,7 +43,9 @@
 - confidence: high
 - overlap: new
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: memory / new_scoped
+- destination: learning.question-dedup
 
 ## C-20261014-035
 
@@ -47,7 +55,9 @@
 - confidence: medium
 - overlap: reinforces profile.md communication guidance
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: rule / already_covered
+- destination: core.communication
 
 ## C-20261014-046
 
@@ -57,4 +67,6 @@
 - confidence: high
 - overlap: reinforces C-20261014-011 and C-20261014-024
 - privacy: safe_to_sync
-- status: pending_review
+- status: resolved
+- disposition: rule / merged_existing
+- destination: core.communication

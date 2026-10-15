@@ -1,0 +1,450 @@
+{
+  "schema_version": 1,
+  "state_version": 27,
+  "transaction_id": "memory-lifecycle-46-20261015",
+  "objective": "Make existing personal Context memories usable and maintainable, and resolve all 46 historical candidates.",
+  "scope": "Memory lifecycle CLI, sparse routing, evidence-bounded candidate dispositions, relevant Skill reconciliation, focused validation and delivery.",
+  "status": "in_progress",
+  "phase": "execute",
+  "owner": "codex",
+  "next_action": "Finish attempt A-006 and record its evidence.",
+  "constraints": [
+    "Raw and sensitive evidence stays local. No new history cohort or default full independent review. Preserve the existing communication.md edit."
+  ],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Executable merge, replace, archive, discard and rollback with stale-write and privacy protection.",
+      "status": "passed",
+      "evidence": [
+        "docs/memory-lifecycle/checks.json"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-2",
+      "condition": "Exactly 46 candidates have evidence-grounded final dispositions and retrievable targets.",
+      "status": "passed",
+      "evidence": [
+        "docs/memory-lifecycle/validation.json",
+        "notes/candidate-dispositions.md"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-3",
+      "condition": "Relevant task retrieval returns scoped memories, rules and Skill pointers without retired or unrelated content.",
+      "status": "passed",
+      "evidence": [
+        "docs/memory-lifecycle/loading.json",
+        "docs/memory-lifecycle/forward-use.json"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-4",
+      "condition": "Entry budgets pass, runtime Skills match canonical packages, and pre-existing user changes remain intact.",
+      "status": "passed",
+      "evidence": [
+        "docs/memory-lifecycle/budget-final.json",
+        "docs/memory-lifecycle/validation.json"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-5",
+      "condition": "Chinese delivery shows all outcomes, examples, loading behavior and limitations; repository changes are reviewable and synchronized.",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "docs/memory-lifecycle/validation.json",
+    "detail": "Final local state, source provenance, private isolation and installed Skill packages verified; no external runtime required.",
+    "checked_at": "2026-10-15T14:19:49+00:00"
+  },
+  "gates": {
+    "route": "2026-10-15T14:19:50+00:00",
+    "execute": "2026-10-15T14:19:50+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-15T13:28:43+00:00",
+      "phase": "execute",
+      "action": "Implement bounded memory lifecycle and resolve the 46 candidates with scoped retrieval.",
+      "expected_effect": "Usable memory and explicit dispositions replace the static pending backlog.",
+      "owner": "codex",
+      "result": "Implemented guarded lifecycle, applied 46 dispositions with 58 checked source pointers, and passed focused regression checks.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/memory-lifecycle/checks.json",
+        "notes/candidate-dispositions.md"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T13:56:21+00:00"
+    },
+    {
+      "id": "A-002",
+      "time": "2026-10-15T13:56:22+00:00",
+      "phase": "execute",
+      "action": "Install canonical memory routing and synchronize the four affected complete Skill packages.",
+      "expected_effect": "Future sessions and installed Skills use the new source and write boundary.",
+      "owner": "codex",
+      "result": "Four canonical complete Skill packages and the global memory router installed; actual package bytes and protected user edit verified.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/memory-lifecycle/validation.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T13:59:52+00:00"
+    },
+    {
+      "id": "A-003",
+      "time": "2026-10-15T13:59:53+00:00",
+      "phase": "execute",
+      "action": "Correct the reversed manuscript instruction chronology using native message timestamps, then close validation and delivery.",
+      "expected_effect": "Active retrieval reflects the later project-only instruction and explicitly retains both historical dates.",
+      "owner": "codex",
+      "result": "Corrected the actual source chronology and disposition reason, preserved old records, verified retrieval and wrote the Chinese delivery report.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/memory-lifecycle/chronology-correction.json",
+        "notes/evolution/memory-resolution-20261015.md"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T14:16:56+00:00"
+    },
+    {
+      "id": "A-004",
+      "time": "2026-10-15T14:16:59+00:00",
+      "phase": "execute",
+      "action": "Commit and synchronize the reviewed implementation and delivery artifacts without the pre-existing communication edit.",
+      "expected_effect": "The canonical GitHub repository contains the usable memory implementation and full disposition report.",
+      "owner": "codex",
+      "result": "Pre-commit diff check found trailing blank lines in six generated candidate topic pages; no commit or push was attempted.",
+      "outcome": "failed",
+      "evidence": [
+        ".local/context-memory/execution-issues.json"
+      ],
+      "failure_cause": "Topic renderer emitted two final newlines.",
+      "finished_at": "2026-10-15T14:17:51+00:00"
+    },
+    {
+      "id": "A-005",
+      "time": "2026-10-15T14:17:52+00:00",
+      "phase": "execute",
+      "action": "Normalize generated topic endings, rerun the failed diff check, and synchronize the reviewed change.",
+      "expected_effect": "Clean patch formatting and published implementation without unrelated user edits.",
+      "owner": "codex",
+      "result": "The topic renderer fix passed; staged diff check found a separate empty Detail line in the controller-generated mirror. No commit or push occurred.",
+      "outcome": "failed",
+      "evidence": [
+        ".local/context-memory/execution-issues.json"
+      ],
+      "failure_cause": "Controller mirror rendered an empty preflight detail with a trailing space.",
+      "finished_at": "2026-10-15T14:19:48+00:00"
+    },
+    {
+      "id": "A-006",
+      "time": "2026-10-15T14:19:51+00:00",
+      "phase": "execute",
+      "action": "Publish the reviewed content after correcting generated formatting and recording final preflight detail.",
+      "expected_effect": "GitHub main contains the bounded memory implementation; user communication changes remain uncommitted.",
+      "owner": "codex",
+      "result": "",
+      "outcome": "running",
+      "evidence": [],
+      "failure_cause": ""
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-df0dec59f28c",
+      "time": "2026-10-15T13:28:02+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "codex"
+      }
+    },
+    {
+      "event_id": "EV-95d27c40e055",
+      "time": "2026-10-15T13:28:43+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "docs/memory-lifecycle/PREFLIGHT.json"
+      }
+    },
+    {
+      "event_id": "EV-16b21164448c",
+      "time": "2026-10-15T13:28:43+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-c30626964605",
+      "time": "2026-10-15T13:28:43+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-a70cd71ea638",
+      "time": "2026-10-15T13:28:43+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-171b511e4ee9",
+      "time": "2026-10-15T13:56:21+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-b54268879ac8",
+      "time": "2026-10-15T13:56:21+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-b30aae81927c",
+      "time": "2026-10-15T13:56:22+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-002"
+      }
+    },
+    {
+      "event_id": "EV-c95d4a5ba56b",
+      "time": "2026-10-15T13:59:52+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-002",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-b1593ad158dd",
+      "time": "2026-10-15T13:59:53+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-0b5c37acc2bb",
+      "time": "2026-10-15T13:59:53+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-003"
+      }
+    },
+    {
+      "event_id": "EV-eeddce64e3ba",
+      "time": "2026-10-15T14:16:56+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-003",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-2e50458e1f05",
+      "time": "2026-10-15T14:16:57+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-0864a3ea9354",
+      "time": "2026-10-15T14:16:57+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-06e923323e98",
+      "time": "2026-10-15T14:16:57+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-f47ebe5d1639",
+      "time": "2026-10-15T14:16:58+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-2368fb86e888",
+      "time": "2026-10-15T14:16:58+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-4",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-62ca9bb720a4",
+      "time": "2026-10-15T14:16:59+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-2df82faa1436",
+      "time": "2026-10-15T14:16:59+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-004"
+      }
+    },
+    {
+      "event_id": "EV-60ade54c1df5",
+      "time": "2026-10-15T14:17:51+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "reduced",
+      "detail": {
+        "attempt_id": "A-004",
+        "outcome": "failed"
+      }
+    },
+    {
+      "event_id": "EV-5c8eaa0df6f3",
+      "time": "2026-10-15T14:17:51+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "reduced",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-a312d086de45",
+      "time": "2026-10-15T14:17:52+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-005"
+      }
+    },
+    {
+      "event_id": "EV-cc55e965f5cd",
+      "time": "2026-10-15T14:19:48+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "reduced",
+      "detail": {
+        "attempt_id": "A-005",
+        "outcome": "failed"
+      }
+    },
+    {
+      "event_id": "EV-e6757618f57d",
+      "time": "2026-10-15T14:19:49+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "docs/memory-lifecycle/validation.json"
+      }
+    },
+    {
+      "event_id": "EV-20bcb63aee88",
+      "time": "2026-10-15T14:19:50+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-17e88bea6844",
+      "time": "2026-10-15T14:19:50+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-240f4d1f4b8f",
+      "time": "2026-10-15T14:19:51+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-006"
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-15T13:28:02+00:00",
+  "updated_at": "2026-10-15T14:19:51+00:00"
+}
