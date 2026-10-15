@@ -1,43 +1,51 @@
 {
   "schema_version": 1,
-  "state_version": 9,
+  "state_version": 17,
   "transaction_id": "TX-4b91e6447823",
   "objective": "Reduce repeated evolution inputs and restrict follow-up review to matching risk classes, then validate on a separately frozen batch",
   "scope": "Review adapter, routing policy, focused checks, historical coverage supplement, measured comparison, bounded Context update",
-  "status": "in_progress",
-  "phase": "execute",
-  "owner": "agent",
-  "next_action": "Finish attempt A-003 and record its evidence.",
+  "status": "completed",
+  "phase": "report",
+  "owner": "user",
+  "next_action": "Deliver the report for user assessment; final router generalization remains unproven, not a claim of zero omissions.",
   "constraints": [],
   "blockers": [],
   "acceptance": [
     {
       "id": "AC-1",
       "condition": "Compact packets preserve full source and scope with strict validation and selective escalation",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-007/review-adapter-checks-correction.json"
+      ],
+      "note": "10 final focused checks pass; v1 checks and old frozen behavior retained; full source and scopes preserved."
     },
     {
       "id": "AC-2",
       "condition": "Freeze a different substantive source batch and extract every message before lookup",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "notes/evolution/round-007-20261015-evaluation.md"
+      ],
+      "note": "106 messages frozen and extracted before candidate lookup; historical coverage supplement and one metadata exposure explicitly recorded."
     },
     {
       "id": "AC-3",
       "condition": "Run targeted review, matching-class follow-up and bounded outside-class audit; repair known gaps and report unknown coverage",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-007/routing-replay.json"
+      ],
+      "note": "Actual original route checked all 106 due overbroad tags; accepted 14 findings repaired. Final corrected route only retrospectively validated at 88 messages, 14 known findings; unknown recall not established."
     },
     {
       "id": "AC-4",
       "condition": "Report comparable measured input and Context changes; preserve privacy, budgets and repository sync",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-007/content-sync.json"
+      ],
+      "note": "Measured payloads, reconstructed inputs, code-development exclusions, core budget and live remote content equality recorded; raw evidence remains ignored."
     }
   ],
   "preflight": {
@@ -48,7 +56,9 @@
   },
   "gates": {
     "route": "2026-10-15T08:37:56+00:00",
-    "execute": "2026-10-15T08:37:56+00:00"
+    "execute": "2026-10-15T08:37:56+00:00",
+    "verify": "2026-10-15T10:37:17+00:00",
+    "report": "2026-10-15T10:37:59+00:00"
   },
   "attempts": [
     {
@@ -89,10 +99,15 @@
       "action": "Audit actual input and separately replay corrected routing, publish redacted findings and verify repository synchronization",
       "expected_effect": "Show real savings and remaining limitations without treating a replay as blind evidence or actual saved input",
       "owner": "agent",
-      "result": "",
-      "outcome": "running",
-      "evidence": [],
-      "failure_cause": ""
+      "result": "Published actual and reconstructed input separately; preserved failing 13/14 replay and final 14/14 known-finding replay, with no new-blind-cohort claim. Content commit pushed and confirmed against live remote; final transaction metadata follows.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/evolution/round-007/measurements.json",
+        "docs/evolution/round-007/content-sync.json",
+        "notes/evolution/round-007-20261015-evaluation.md"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T10:37:17+00:00"
     }
   ],
   "events": [
@@ -188,9 +203,100 @@
       "detail": {
         "attempt_id": "A-003"
       }
+    },
+    {
+      "event_id": "EV-e3049fac1269",
+      "time": "2026-10-15T10:37:17+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-003",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-057761153d67",
+      "time": "2026-10-15T10:37:17+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-36e695328101",
+      "time": "2026-10-15T10:37:58+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-fe9a73d0665f",
+      "time": "2026-10-15T10:37:58+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-a40147ec0abd",
+      "time": "2026-10-15T10:37:59+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-765fb8cc36d5",
+      "time": "2026-10-15T10:37:59+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-4",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-ad789e713c7f",
+      "time": "2026-10-15T10:37:59+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
+    },
+    {
+      "event_id": "EV-4db95a6dff4e",
+      "time": "2026-10-15T10:37:59+00:00",
+      "type": "checkpoint",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "note": "Implementation and requested batch evaluation complete. Human quality assessment pending; final metadata is pushed separately."
+      }
     }
   ],
   "artifacts": [],
   "created_at": "2026-10-15T08:37:56+00:00",
-  "updated_at": "2026-10-15T10:23:16+00:00"
+  "updated_at": "2026-10-15T10:37:59+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-15T10:37:59+00:00",
+      "note": "Implementation and requested batch evaluation complete. Human quality assessment pending; final metadata is pushed separately."
+    }
+  ]
 }

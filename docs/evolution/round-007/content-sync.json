@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-10-15T10:37:17.678002+00:00",
+  "content_commit": "481f791705952c62eecee7f7cce470e418a1bb62",
+  "remote_main": "481f791705952c62eecee7f7cce470e418a1bb62",
+  "tracked_worktree_clean_at_check": true,
+  "raw_evidence_ignored": true,
+  "next_metadata_commit": "Final controller acceptance and this receipt are committed separately; final HEAD is verified again after that push."
+}
