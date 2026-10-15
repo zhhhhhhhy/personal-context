@@ -77,6 +77,30 @@ historical permission only as scoped history, never as current authority.
 Referenced material may define the object of analysis without becoming the
 user's belief. Keep its task-relevant constraints with that attribution.
 
+### Preserve details before judging certainty
+
+Unverified material is still evidence of what must be investigated. For each
+task-relevant claim, retain its concrete quantities (including units, ranges
+and inclusive/exclusive operators), named objects or reference identifiers,
+conditions, alternatives and exceptions. Split independently actionable checks
+into separate units. Do not compress a multi-part critique to "verify the
+experiment" or drop a proposed branch because it has not been confirmed.
+
+State who said or supplied it and its status in the observation claim:
+direct user request, user-reported fact pending verification, quoted feedback,
+or unconfirmed proposal. Keep source message/quote links; retain a URL, document
+name or output identifier locally when it identifies the object to check.
+Missing antecedents and unknown implementation status remain explicit unknowns.
+Do not infer that a named baseline was run or that quoted advice was adopted.
+
+Before freezing the first pass, compare each substantive source unit with its
+claim for four facets: quantities/objects, conditions/branches, attribution/
+source, and verification status. These details must survive in the claim that
+the reviewer receives, not only in hidden notes or a generic scope. This is the
+Observer's bounded self-check, not a new full independent review. Preserve
+applicable detail once and link repeated statements instead of duplicating
+whole sources. Private facts and raw quotations still stay local.
+
 Compare retained observations against the source for exact thresholds, required
 output sections, mandatory versus optional wording, exceptions and who performs
 each step. Do not replace an inclusive threshold with an exclusive one, or a

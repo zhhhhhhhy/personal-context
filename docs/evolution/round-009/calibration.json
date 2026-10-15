@@ -1,0 +1,20 @@
+{
+  "case": "Known round-008 multi-source feedback case",
+  "facets_checked": {
+    "dataset_counts": true,
+    "annotation_protocol": true,
+    "matrix_and_conditional_reference": true,
+    "direct_generator_output": true,
+    "training_excludes_gate": true,
+    "gate_definition_and_matched_comparison": true,
+    "evaluation_questions_and_core_protocol": true,
+    "both_error_branches": true,
+    "result_and_contribution_boundary": true,
+    "reference_identity": true,
+    "attribution_uncertainty_and_execution_boundary": true
+  },
+  "passed": 11,
+  "total": 11,
+  "local_output_sha256": "e6f91516011f1000c8d0f76c65b98db42ec0a44509883f1b1273294866e6445d",
+  "boundary": "Parent-authored observation with deterministic facet-presence checks; not an independent semantic score."
+}

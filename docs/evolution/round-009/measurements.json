@@ -1,0 +1,155 @@
+{
+  "schema_version": "evolution-measurements/2",
+  "round": "009",
+  "tokenizer": "o200k_base",
+  "source": {
+    "parents": 5,
+    "actual_families": 2,
+    "mixed_family_parent": true,
+    "messages": 208,
+    "source_tokens": 7115,
+    "historical_cited_excluded": 16,
+    "long_messages_ge150": 6,
+    "longest_tokens": 1251,
+    "prior_exact_substantive_matches": 1,
+    "prior_long_overlap": 1,
+    "boundary": "Historical coverage supplement, not virgin content. Script-only comparison against available round001-008 short-ID source maps, not all history. Shared templates/quoted feedback are not independent support. Source and selection remain frozen."
+  },
+  "frozen_protocol": {
+    "unchanged": true,
+    "first_pass_contract_changed_before_freeze": true,
+    "review_code_unchanged": true,
+    "base_commit": "0974ba4a829251952e213b7970eeef21d09fbc29",
+    "sha256": "64c84a341a463e278495d7e2c278ec9cc26a4870b868a9f6f6e1ec606c696fbf",
+    "initial_whole_fallback": false,
+    "calibration": "11 known-case facet presence checks; not independent semantic accuracy"
+  },
+  "review_actual": {
+    "initial_risk": 55,
+    "initial_sentinel": 31,
+    "initial_messages": 86,
+    "stages": [
+      {
+        "manifest": "review/routes/route-002/manifest.json",
+        "kind": "outside_audit",
+        "messages": 4,
+        "accepted": 0,
+        "tokens": 267
+      },
+      {
+        "manifest": "review/routes/route-001/manifest.json",
+        "kind": "class_followup",
+        "messages": 76,
+        "accepted": 5,
+        "tokens": 7234
+      },
+      {
+        "manifest": "review/initial/manifest.json",
+        "kind": "initial",
+        "messages": 86,
+        "accepted": 9,
+        "tokens": 14428
+      }
+    ],
+    "checked": 166,
+    "not_independently_checked": 42,
+    "raw_findings": 16,
+    "accepted_findings": 14,
+    "accepted_messages": 14,
+    "rejected_findings": 2,
+    "accepted_kinds": {
+      "scope": 1,
+      "unsupported": 4,
+      "partial": 9
+    },
+    "known_repaired": 14,
+    "tokens": 22422,
+    "unmatched_issue_clues": 8,
+    "unknown_semantic_recall": true
+  },
+  "same_data_comparison": {
+    "page_limit": 6500,
+    "whole_compact_mechanical": 25577,
+    "actual_selective": 22422,
+    "saving_tokens": 3155,
+    "saving_percent": 12.34,
+    "legacy_initial_mechanical": 17205,
+    "legacy_remaining_mechanical": 13732,
+    "legacy_sentinel_trigger_count": 1,
+    "legacy_policy_given_same_initial_findings": 30937,
+    "legacy_whole_one_pass": 30796,
+    "saving_vs_legacy_policy_percent": 27.52,
+    "boundary": "Identical frozen initial observations and sources, including additional first-pass detail. Whole/legacy are mechanically reconstructed payloads, not full model review or known semantic outcomes. A smaller old-policy bill may leave more omissions unknown."
+  },
+  "input_metered": {
+    "parent_source": 8478,
+    "reviewer_core_and_pages": 24361,
+    "parent_adjudication_and_eval": 5458,
+    "candidate_lookup": 3013,
+    "total": 41310,
+    "events": 29,
+    "explicit_review_rereads": 0,
+    "full_reflector_ledger_reloads": 0,
+    "missing_source_log_events": 0
+  },
+  "input_reconstructed": {
+    "parent_context_file_bodies": 9589,
+    "dispatch_and_feedback": 1180,
+    "total": 10769
+  },
+  "recorded_input_estimate": 52079,
+  "cost_boundary": "Metered delivered source/review/adjudication/eval/candidate payloads plus reconstructed canonical Context bodies and dispatch. Engineering skill setup, helper/protocol inspection and development, calibration, metadata ranking, status/controller outputs, platform/history/tool schemas and generated outputs are not fully metered. Not total task usage or billing; do not extrapolate review savings to overall savings.",
+  "content": {
+    "units": 228,
+    "observations": 226,
+    "initial_observation_claim_tokens": 6755,
+    "reinforced_groups": 3,
+    "deferred_groups": 5,
+    "concrete_refinements": 4,
+    "new_learned_rules": 0,
+    "core_tokens": 1823,
+    "core_hashes_unchanged": true
+  },
+  "evaluation": {
+    "reflection_frozen_before_eval": true,
+    "eval_messages": 36,
+    "eval_source_tokens": 1334,
+    "cases": [
+      {
+        "id": "E1",
+        "family": "personal-image-editing",
+        "independent_from_training": true,
+        "privacy": "local_only",
+        "usefulness": "The four research/diagnostic refinements do not directly serve this image-editing task. Existing artifact/image workflow applies. No raw personal or visual details published."
+      },
+      {
+        "id": "E2",
+        "family": "contract-research-and-remote-migration",
+        "overlaps_training": true,
+        "usefulness": "Quarantined from independent generalization. Repeats dataset/role/metric comparison needs; cannot provide independent support for a permanent rule."
+      }
+    ],
+    "new_learned_rules": 0,
+    "fresh_response_comparison": false,
+    "response_quality_gain": "not_established",
+    "protocol_test": "Frozen before source qualification and body reading; 166/208 messages independently checked with targeted routing and one outside sample. Two substantive source overlaps are excluded from novelty claims.",
+    "outside_sample": 4,
+    "outside_pool": 46,
+    "outside_findings": 0,
+    "not_independently_checked": 42,
+    "known_findings": 14,
+    "known_repairs": 14,
+    "semantic_recall": "unknown_without_full_reference",
+    "human_acceptance": "pending"
+  },
+  "prior_round_reference": {
+    "round": "008",
+    "source_messages": 147,
+    "source_tokens": 5944,
+    "initial_findings": 16,
+    "final_findings": 19,
+    "actual_review_tokens": 16379,
+    "recorded_input_estimate": 44362,
+    "boundary": "Different cohort and content mix; repeated feedback/old template cases are quarantined from novelty claims. Counts cannot establish causal recall or whole-workflow efficiency gain."
+  }
+}

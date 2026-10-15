@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-10-15T12:12:07.091779+00:00",
+  "evolution": {
+    "schema_version": "0.1",
+    "run_id": "round-009-20261015",
+    "validated_at": "2026-10-15T12:06:43Z",
+    "status": "passed",
+    "promotion_count": 0,
+    "errors": [],
+    "train_thread_count": 5,
+    "eval_thread_count": 2,
+    "coverage": {
+      "schema_version": "coverage/1",
+      "run_id": "round-009-20261015",
+      "status": "passed",
+      "structural_only": true,
+      "message_count": 208,
+      "reviewed_messages": 208,
+      "unit_count": 228,
+      "observation_count": 226,
+      "errors": []
+    }
+  },
+  "budget": {
+    "command": "python -X utf8 scripts/context-budget.py",
+    "status": "passed",
+    "core_tokens": 1823,
+    "learned_entry_tokens": 31,
+    "rerun": false
+  },
+  "privacy": {
+    "approved_public_paths_checked": 12,
+    "known_private_identifiers_absent": true,
+    "raw_run_ignored": true,
+    "manual_scope": "Public documents contain redacted mechanisms and scoped decisions only; full evidence/quotes/sensitive source maps remain local."
+  },
+  "minimal_validation": "Known-case calibration; source/observation/reflection validation and actual targeted-review chain; no production code change or repeated broad test suite."
+}

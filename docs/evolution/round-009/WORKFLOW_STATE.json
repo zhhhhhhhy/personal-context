@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "state_version": 9,
+  "transaction_id": "TX-ace8a5a1136f",
+  "objective": "Preserve concrete unverified evidence in first-pass extraction, freeze the contract, and evaluate a rich uncovered cohort with bounded semantic review.",
+  "scope": "Observer contract, historical supplemental cohort, local evidence, redacted metrics, context decisions and repository synchronization.",
+  "status": "in_progress",
+  "phase": "execute",
+  "owner": "parent",
+  "next_action": "Finish attempt A-003 and record its evidence.",
+  "constraints": [
+    "Raw evidence stays local; historical uncertainty gives no authority; no new-cohort tuning; sequential shared-ledger reads."
+  ],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC1",
+      "condition": "Explicit uncertainty retention contract calibrated and frozen before new source reading.",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC2",
+      "condition": "Unused covered-source messages observed before candidate lookup and checked with frozen targeted review, without a default full reference scan.",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC3",
+      "condition": "Same-cohort loading and known omissions measured with unreviewed scope and new-context decisions stated.",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC4",
+      "condition": "Privacy, validation, reproducibility and clean repository synchronization verified.",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "2026-10-15: clean main at 0974ba4; origin/main matches via verified local proxy; Python and tiktoken available from previous run; canonical policy and local source packs present.",
+    "detail": "",
+    "checked_at": "2026-10-15T11:47:26+00:00"
+  },
+  "gates": {
+    "route": "2026-10-15T11:47:26+00:00",
+    "execute": "2026-10-15T11:47:27+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-15T11:47:27+00:00",
+      "phase": "execute",
+      "action": "Improve and calibrate the Observer detail-retention contract, then freeze protocol and allocate work.",
+      "expected_effect": "Unverified statements retain quantities, conditions, source attribution and pending status before any new cohort is selected.",
+      "owner": "parent",
+      "result": "",
+      "outcome": "passed",
+      "evidence": [
+        "Observer contract and policy updated; 11 known-case facet checks pass (calibration only); 11 protocol files frozen before selection."
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T11:48:57+00:00"
+    },
+    {
+      "id": "A-002",
+      "time": "2026-10-15T11:48:57+00:00",
+      "phase": "execute",
+      "action": "Select uncovered rich sources by metadata, create frozen evidence, observe before lookup and run bounded targeted review.",
+      "expected_effect": "First-pass retention and remaining omissions measured without tuning frozen rules or full independent review.",
+      "owner": "parent",
+      "result": "",
+      "outcome": "passed",
+      "evidence": [
+        "208 messages/228 units/226 observations validated; isolated review 86+76+4, 16 raw findings/14 accepted/2 locally rejected; all 14 repaired; 42 independently unchecked; reflection and apply passed with zero promotions; evaluation frozen before held-out reads."
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T12:07:38+00:00"
+    },
+    {
+      "id": "A-003",
+      "time": "2026-10-15T12:07:39+00:00",
+      "phase": "execute",
+      "action": "Measure full recorded payloads, publish redacted assessment and execution issues, validate privacy/budgets, commit and synchronize.",
+      "expected_effect": "Review savings and unknown recall are reported honestly; scoped useful context remains discoverable without core growth; local/remote state verified.",
+      "owner": "parent",
+      "result": "",
+      "outcome": "running",
+      "evidence": [],
+      "failure_cause": ""
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-f1fd1c4965b9",
+      "time": "2026-10-15T11:47:25+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "parent"
+      }
+    },
+    {
+      "event_id": "EV-199caacb01f8",
+      "time": "2026-10-15T11:47:26+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "2026-10-15: clean main at 0974ba4; origin/main matches via verified local proxy; Python and tiktoken available from previous run; canonical policy and local source packs present."
+      }
+    },
+    {
+      "event_id": "EV-c8863f63b40c",
+      "time": "2026-10-15T11:47:26+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-a6fa23d4c55f",
+      "time": "2026-10-15T11:47:27+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-ddbe9161303f",
+      "time": "2026-10-15T11:47:27+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-73e2ab384571",
+      "time": "2026-10-15T11:48:57+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-82a8e43990e8",
+      "time": "2026-10-15T11:48:57+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-002"
+      }
+    },
+    {
+      "event_id": "EV-fc0a8979e442",
+      "time": "2026-10-15T12:07:38+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-002",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-9b2964a900df",
+      "time": "2026-10-15T12:07:39+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-003"
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-15T11:47:25+00:00",
+  "updated_at": "2026-10-15T12:07:39+00:00"
+}
