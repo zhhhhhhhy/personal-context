@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "tokenizer": "o200k_base",
+  "measurement": "UTF-8 text with LF line endings; file bodies only, not live session usage",
+  "status": "passed",
+  "rules": [
+    {
+      "name": "session-core",
+      "mode": "group",
+      "limit": 2000,
+      "tokens": 1823,
+      "files": [
+        {
+          "path": "rules/SOUL.md",
+          "tokens": 542,
+          "chars": 907
+        },
+        {
+          "path": "profile.md",
+          "tokens": 339,
+          "chars": 575
+        },
+        {
+          "path": "habits/communication.md",
+          "tokens": 447,
+          "chars": 702
+        },
+        {
+          "path": "INDEX.md",
+          "tokens": 495,
+          "chars": 1069
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "repository-router",
+      "mode": "group",
+      "limit": 400,
+      "tokens": 361,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "tokens": 361,
+          "chars": 759
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "skill-entry",
+      "mode": "per_file",
+      "limit": 1000,
+      "tokens": 2077,
+      "files": [
+        {
+          "path": "skills/academic-write/SKILL.md",
+          "tokens": 369,
+          "chars": 1933
+        },
+        {
+          "path": "skills/deep-research/SKILL.md",
+          "tokens": 435,
+          "chars": 2195
+        },
+        {
+          "path": "skills/grill-me/SKILL.md",
+          "tokens": 311,
+          "chars": 925
+        },
+        {
+          "path": "skills/grilling/SKILL.md",
+          "tokens": 399,
+          "chars": 1352
+        },
+        {
+          "path": "skills/personal-context/SKILL.md",
+          "tokens": 563,
+          "chars": 3026
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "candidate-index",
+      "mode": "group",
+      "limit": 600,
+      "tokens": 395,
+      "files": [
+        {
+          "path": "notes/candidates.md",
+          "tokens": 395,
+          "chars": 810
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "candidate-topics",
+      "mode": "per_file",
+      "limit": 2500,
+      "tokens": 7384,
+      "files": [
+        {
+          "path": "notes/candidates/communication.md",
+          "tokens": 891,
+          "chars": 1814
+        },
+        {
+          "path": "notes/candidates/documents.md",
+          "tokens": 967,
+          "chars": 1981
+        },
+        {
+          "path": "notes/candidates/engineering.md",
+          "tokens": 1189,
+          "chars": 2432
+        },
+        {
+          "path": "notes/candidates/experiments.md",
+          "tokens": 1304,
+          "chars": 2712
+        },
+        {
+          "path": "notes/candidates/planning-and-skills.md",
+          "tokens": 1879,
+          "chars": 3891
+        },
+        {
+          "path": "notes/candidates/research-writing.md",
+          "tokens": 1154,
+          "chars": 2437
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "learned-entry",
+      "mode": "group",
+      "limit": 1000,
+      "tokens": 31,
+      "files": [
+        {
+          "path": "habits/learned.md",
+          "tokens": 31,
+          "chars": 71
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "loading-policy",
+      "mode": "group",
+      "limit": 900,
+      "tokens": 634,
+      "files": [
+        {
+          "path": "rules/CONTEXT_LOADING.md",
+          "tokens": 634,
+          "chars": 1065
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    }
+  ]
+}

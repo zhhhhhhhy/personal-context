@@ -1,0 +1,39 @@
+{
+  "schema_version": "review-adapter-checks/1",
+  "revision": "v2.1",
+  "checked_at": "2026-10-15T10:19:12.058478+00:00",
+  "status": "passed",
+  "reason": "Fresh cohort exposed shared-scope risk pollution; add one focused regression and first-person knowledge-state coverage. This is a post-cohort repair, not the original frozen experiment.",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "-m",
+        "py_compile",
+        "scripts/context_review_v2.py",
+        "scripts/test-context-review-v2.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "-X",
+        "utf8",
+        "scripts/test-context-review-v2.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "........\n----------------------------------------------------------------------\nRan 8 tests in 2.065s\n\nOK\n"
+    }
+  ],
+  "file_sha256": {
+    "scripts/context_review_v2.py": "9fe48bb2c9d1e6c0957bf0502fb761f7f4f816a56b8ad0338bb0ed5871717f85",
+    "scripts/test-context-review-v2.py": "c11053da5e654f2ee69dbfa02329a7b88d414cdddd5e42fbb70978e8df9e13ff",
+    "references/skills/personal-context-review.md": "ec5fe0a9fa8abd86cb4b95f51338c6ef95910f174688d66db46e6f08148942e0"
+  }
+}

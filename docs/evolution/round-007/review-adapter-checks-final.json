@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-15T10:22:15.926758+00:00",
+  "command": [
+    "python",
+    "-X",
+    "utf8",
+    "scripts/test-context-review-v2.py"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ".........\n----------------------------------------------------------------------\nRan 9 tests in 2.091s\n\nOK\n",
+  "reason": "Final scope-pollution and semantic-class repair; includes CLI legacy compatibility, source/hash validation and routing tests.",
+  "file_sha256": {
+    "scripts/context-review.py": "1a2c97f34322d6a11d8fc25afdfd3d52d191c237e53f26248c8307dc080b9ff3",
+    "scripts/context_review_v2.py": "843f3d2a8e26404374ccbc03fee1e2156d01314bfd4fb57fd10df4bef3bd1c31",
+    "scripts/test-context-review-v2.py": "32a316d7b46ebad074fa38a5ff5b2b8a5e43af4e821c7f74530fa52d123411a4",
+    "references/skills/personal-context-review.md": "7bd0bf721738d76971c2c7f5d4cf4f6e11be88a5df157e408ddfe4a0d6e85c16"
+  }
+}

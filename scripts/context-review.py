@@ -13,8 +13,20 @@ from pathlib import Path
 import re
 import sys
 import time
+from types import SimpleNamespace
 
 ROOT = Path(__file__).resolve().parent.parent
+_V2 = None
+
+def v2():
+    global _V2
+    if _V2 is None:
+        spec = importlib.util.spec_from_file_location('context_review_v2', ROOT/'scripts/context_review_v2.py')
+        _V2 = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(_V2)
+        _V2.api = SimpleNamespace(**{name: globals()[name] for name in
+            ('read', 'sha', 'module', 'compact_sources', 'risk_reasons', 'select', 'token_count', 'REVIEW_TASK')})
+    return _V2
 
 def module():
     spec = importlib.util.spec_from_file_location('coverage', ROOT/'scripts/context-coverage.py')
@@ -105,7 +117,8 @@ def token_count(data):
     import tiktoken
     return len(tiktoken.get_encoding('o200k_base').encode(json.dumps(data,ensure_ascii=False,separators=(',',':'))+'\n',disallowed_special=()))
 
-def prepare_review(run):
+def prepare_review_v1(run):
+    if (run/'review/plan.json').exists():raise ValueError('review plan already exists; use a new run')
     cc=module();validation=cc.validate_coverage(run,run/'observations.json')
     if validation['status']!='passed':raise ValueError(validation['errors'])
     inv,mapping=compact_sources(run);ledger=read(run/'observations.json')
@@ -133,9 +146,22 @@ def prepare_review(run):
     save(run/'review/remaining.json',packet(remaining))
     print(json.dumps({k:v for k,v in plan.items() if k not in {'risk_reasons','source_digest','observations_sha256'}},ensure_ascii=False))
 
-def deliver(run, file, reader, limit):
+def prepare_review(run, protocol='v2', page_tokens=9000):
+    if protocol == 'v1':return prepare_review_v1(run)
+    result=v2().prepare(run,page_tokens)
+    print(json.dumps(result,ensure_ascii=False))
+    return result
+
+def deliver(run, file, reader, limit, reread_reason=None):
     path=(run/file).resolve()
     if not path.is_relative_to(run.resolve()):raise ValueError('packet must stay within run directory')
+    file=path.relative_to(run.resolve()).as_posix()
+    plan_path=run/'review/plan.json'
+    if plan_path.exists() and read(plan_path).get('version') == 'risk-review/2' and file not in {'review/source.json','review/source-map.json','review/core.json'}:
+        text=v2().deliver(run,file,reader,limit,reread_reason)
+        if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
+        sys.stdout.write(text)
+        return
     text=path.read_text(encoding='utf-8');json.loads(text)
     import tiktoken
     tokens=len(tiktoken.get_encoding('o200k_base').encode(text,disallowed_special=()))
@@ -144,10 +170,9 @@ def deliver(run, file, reader, limit):
         plan=read(run/'review/plan.json')
         if sha(run/'observations.json')!=plan['observations_sha256']:raise ValueError('frozen observation changed')
         if module().source_inventory(run)['source_digest']!=plan['source_digest']:raise ValueError('frozen source changed')
-    folder=run/'review/reads';folder.mkdir(parents=True,exist_ok=True)
-    event={'time_ns':time.time_ns(),'reader':reader,'file':file,'tokens':tokens,'chars':len(text),'sha256':sha(path)}
-    with (folder/'reads.jsonl').open('a',encoding='utf-8') as handle:handle.write(json.dumps(event)+'\n')
-    sys.stdout.reconfigure(encoding='utf-8',newline='\n');sys.stdout.write(text)
+    v2().log_read(run,file,reader,text,tokens,reread_reason)
+    if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
+    sys.stdout.write(text)
 
 def escalation(plan, findings):
     expected=set(plan['targeted_ids'])
@@ -166,21 +191,31 @@ def escalation(plan, findings):
             'trigger_messages':triggers,'remaining_ids':plan['remaining'] if triggers and not plan['whole_fallback'] else [],
             'meaning':'Conservative escalation on any sentinel issue; ambiguous issues may cost extra review rather than hide risk.'}
 
-def check_review(run, report):
-    plan=read(run/'review/plan.json');result=escalation(plan,read(report))
+def check_review(run, report, validate_only=False):
+    plan=read(run/'review/plan.json')
+    if plan.get('version') == 'risk-review/2':
+        result=v2().validate_report(run,report,record=not validate_only)
+        summary={k:v for k,v in result.items() if k not in {'issues','checked_ids'}}
+        summary.update(checked_count=len(result['checked_ids']),issue_count=len(result['issues']))
+        print(json.dumps(summary,ensure_ascii=False))
+        return result
+    result=escalation(plan,read(report))
     save(run/'review/escalation.json',result);print(json.dumps(result))
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--run-dir',type=Path,required=True)
-    sub=p.add_subparsers(dest='command',required=True);sub.add_parser('build-source');sub.add_parser('plan')
+    sub=p.add_subparsers(dest='command',required=True);sub.add_parser('build-source')
+    plan=sub.add_parser('plan');plan.add_argument('--protocol',choices=['v1','v2'],default='v2');plan.add_argument('--page-tokens',type=int,default=9000)
     e=sub.add_parser('expand');e.add_argument('--draft',type=Path,required=True)
-    c=sub.add_parser('check-review');c.add_argument('--report',type=Path,required=True)
-    d=sub.add_parser('read');d.add_argument('--file',required=True);d.add_argument('--reader',required=True);d.add_argument('--max-tokens',type=int,default=9000)
+    c=sub.add_parser('check-review');c.add_argument('--report',type=Path,required=True);c.add_argument('--validate-only',action='store_true')
+    d=sub.add_parser('read');d.add_argument('--file',required=True);d.add_argument('--reader',required=True);d.add_argument('--max-tokens',type=int,default=9000);d.add_argument('--reread-reason')
+    r=sub.add_parser('route');r.add_argument('--report',type=Path,action='append',default=[]);r.add_argument('--outside-audit',action='store_true')
     a=p.parse_args();run=a.run_dir.resolve()
     if a.command=='build-source':build_source(run)
     elif a.command=='expand':expand(run,a.draft)
-    elif a.command=='plan':prepare_review(run)
-    elif a.command=='check-review':check_review(run,a.report)
-    elif a.command=='read':deliver(run,a.file,a.reader,a.max_tokens)
+    elif a.command=='plan':prepare_review(run,a.protocol,a.page_tokens)
+    elif a.command=='check-review':check_review(run,a.report,a.validate_only)
+    elif a.command=='read':deliver(run,a.file,a.reader,a.max_tokens,a.reread_reason)
+    elif a.command=='route':print(json.dumps(v2().route(run,a.report,a.outside_audit),ensure_ascii=False))
 
 if __name__=='__main__':main()

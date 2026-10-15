@@ -40,9 +40,13 @@ disposition. This catches missing bookkeeping, while independent semantic
 review checks whether multi-part messages were interpreted completely.
 
 After freezing observations, use [concentrated semantic review](personal-context-review.md)
-for risk-directed checking with a low-risk sample and explicit escalation.
-Full independent inventories are reserved for a requested comparison or a
-discovered coverage failure; do not repeat them by default on every batch.
+for risk-directed checking with a low-risk sample. Reuse shared scope and already
+read inputs; the Observer may continue as Reflector without replaying its ledger.
+Accepted omissions first trigger unchecked messages with the same frozen risk
+classes, followed by one bounded outside-class audit. Do not convert a local
+finding into an all-remaining scan. A full independent inventory needs an explicit
+comparison request or a documented broad failure that this bounded route cannot
+resolve; report that exception and its cost separately.
 
 The current Codex session reads only `evidence.train.jsonl` and writes `reflection.json`. It must distinguish direct user-authored messages from assistant summaries, tool outputs, runtime wrappers and child-thread material. A promotion contains:
 

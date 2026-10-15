@@ -1,0 +1,19 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-15T10:27:37.391188+00:00",
+  "command": [
+    "python",
+    "-X",
+    "utf8",
+    "scripts/test-context-review-v2.py"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 1.585s\n\nOK\n",
+  "reason": "Retrospective replay missed one known target-correction finding; add focused target-reference clues and preserve the failing replay. This correction is tuned on the cohort.",
+  "file_sha256": {
+    "scripts/context_review_v2.py": "fd282cce8014d136a121a83168cc47a765e4c3a5075592af36bc416882882b1f",
+    "scripts/test-context-review-v2.py": "cc2b1dd384fc9986f155a6634943c0783a4ce8a23c7fe6543dc612d396964b75",
+    "references/skills/personal-context-review.md": "7e1b01ac8332059694bf93ecdca7f4769d238812a7b4c919e6fe385c55e8cca8"
+  }
+}

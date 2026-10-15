@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "state_version": 9,
+  "transaction_id": "TX-4b91e6447823",
+  "objective": "Reduce repeated evolution inputs and restrict follow-up review to matching risk classes, then validate on a separately frozen batch",
+  "scope": "Review adapter, routing policy, focused checks, historical coverage supplement, measured comparison, bounded Context update",
+  "status": "in_progress",
+  "phase": "execute",
+  "owner": "agent",
+  "next_action": "Finish attempt A-003 and record its evidence.",
+  "constraints": [],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Compact packets preserve full source and scope with strict validation and selective escalation",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-2",
+      "condition": "Freeze a different substantive source batch and extract every message before lookup",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-3",
+      "condition": "Run targeted review, matching-class follow-up and bounded outside-class audit; repair known gaps and report unknown coverage",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-4",
+      "condition": "Report comparable measured input and Context changes; preserve privacy, budgets and repository sync",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "Clean 836727a equals live remote; Python 3.12.4 and tiktoken 0.9.0 available; frozen historical packs and coverage/apply validators present; new run path unused",
+    "detail": "",
+    "checked_at": "2026-10-15T08:37:56+00:00"
+  },
+  "gates": {
+    "route": "2026-10-15T08:37:56+00:00",
+    "execute": "2026-10-15T08:37:56+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-15T08:37:56+00:00",
+      "phase": "execute",
+      "action": "Implement compact review and typed escalation; independently prepare new evidence cohort",
+      "expected_effect": "Remove repeated scope and zero-result rows; expand by failure class while retaining escape audit and provenance checks",
+      "owner": "agent",
+      "result": "Resumed after user interruption; compact adapter and selective routing completed; focused 4 legacy plus 7 v2 checks passed before source read",
+      "outcome": "passed",
+      "evidence": [
+        "docs/evolution/round-007/review-adapter-checks.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T09:59:16+00:00"
+    },
+    {
+      "id": "A-002",
+      "time": "2026-10-15T09:59:16+00:00",
+      "phase": "execute",
+      "action": "Extract frozen 106-message cohort and review selected sources with class-limited follow-up and bounded outside audit",
+      "expected_effect": "Measure omitted details and actual input without full-source reflector reload or all-remaining escalation",
+      "owner": "agent",
+      "result": "Reviewed 106 messages, accepted and repaired 14 findings. Original frozen tags expanded all remaining 55 due shared-scope pollution; preserved actual audit and fixed source-only tags plus semantic-class routing with 9 focused checks. No promotions; holdout weak and explicitly bounded.",
+      "outcome": "passed",
+      "evidence": [
+        ".local/context-evolution/round-007-20261015/review/routing-closed.json",
+        "docs/evolution/round-007/review-adapter-checks-final.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T10:23:16+00:00"
+    },
+    {
+      "id": "A-003",
+      "time": "2026-10-15T10:23:16+00:00",
+      "phase": "execute",
+      "action": "Audit actual input and separately replay corrected routing, publish redacted findings and verify repository synchronization",
+      "expected_effect": "Show real savings and remaining limitations without treating a replay as blind evidence or actual saved input",
+      "owner": "agent",
+      "result": "",
+      "outcome": "running",
+      "evidence": [],
+      "failure_cause": ""
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-a045b6ac1ec3",
+      "time": "2026-10-15T08:37:56+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-33a0430ae513",
+      "time": "2026-10-15T08:37:56+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "Clean 836727a equals live remote; Python 3.12.4 and tiktoken 0.9.0 available; frozen historical packs and coverage/apply validators present; new run path unused"
+      }
+    },
+    {
+      "event_id": "EV-83f8b7f489af",
+      "time": "2026-10-15T08:37:56+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-940726ecac4d",
+      "time": "2026-10-15T08:37:56+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-3d1954dfccc5",
+      "time": "2026-10-15T08:37:56+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-02596402ca1f",
+      "time": "2026-10-15T09:59:16+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-5e2731e2ce9d",
+      "time": "2026-10-15T09:59:16+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-002"
+      }
+    },
+    {
+      "event_id": "EV-fba0cb7ef5c8",
+      "time": "2026-10-15T10:23:16+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-002",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-a34910421339",
+      "time": "2026-10-15T10:23:16+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-003"
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-15T08:37:56+00:00",
+  "updated_at": "2026-10-15T10:23:16+00:00"
+}

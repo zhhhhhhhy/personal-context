@@ -1,0 +1,60 @@
+{
+  "schema_version": "routing-replay/1",
+  "boundary": "Retrospective on already-reviewed initial observations; oracle is accepted findings from the actual full-coverage run, not a complete gold inventory. No new model source reads and no actual savings credited.",
+  "same_data_format": {
+    "message_count": 106,
+    "page_limit": 6500,
+    "legacy_initial": 15322,
+    "legacy_remaining": 8006,
+    "legacy_whole_one_pass": 23187,
+    "legacy_policy_review_total": 23328,
+    "actual_v2_review_total": 18482,
+    "legacy_sentinel_trigger_count": 2
+  },
+  "corrected_replay": {
+    "stages": [
+      {
+        "kind": "initial",
+        "count": 51,
+        "tokens": 11921,
+        "known_findings": 10
+      },
+      {
+        "kind": "class_followup",
+        "count": 33,
+        "tokens": 3895,
+        "known_findings": 3,
+        "active_classes": [
+          "actor",
+          "constraint",
+          "fidelity",
+          "format_reference",
+          "quantity"
+        ]
+      },
+      {
+        "kind": "outside_audit",
+        "count": 3,
+        "tokens": 250,
+        "known_findings": 0,
+        "active_classes": [
+          "actor",
+          "constraint",
+          "fidelity",
+          "format_reference",
+          "quantity"
+        ]
+      }
+    ],
+    "shared_tokens": 392,
+    "review_tokens": 16458,
+    "checked_messages": 87,
+    "unchecked_messages": 19,
+    "known_findings_total": 14,
+    "known_findings_reached": 13,
+    "risk_tag_policy": "message-source-and-claims-v2.1",
+    "code_sha256": "843f3d2a8e26404374ccbc03fee1e2156d01314bfd4fb57fd10df4bef3bd1c31",
+    "semantic_relabel_count": 3,
+    "known_findings_missed_count": 1
+  }
+}

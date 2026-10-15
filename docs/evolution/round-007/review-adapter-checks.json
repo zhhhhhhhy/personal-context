@@ -1,0 +1,85 @@
+{
+  "schema_version": "review-adapter-checks/1",
+  "transaction_id": "TX-4b91e6447823",
+  "attempt_id": "A-001",
+  "checked_at": "2026-10-15T10:00:17.711490+00:00",
+  "status": "passed",
+  "scope": "Review v2 adapter and legacy compatibility; synthetic fixtures only; no fresh history or evaluation content read.",
+  "checks": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "py_compile",
+        "scripts/context-review.py",
+        "scripts/context_review_v2.py",
+        "scripts/test-context-review.py",
+        "scripts/test-context-review-v2.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-context-review.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "....\n----------------------------------------------------------------------\nRan 4 tests in 0.002s\n\nOK\n",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/test-context-review-v2.py"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".......\n----------------------------------------------------------------------\nRan 7 tests in 1.953s\n\nOK\n",
+      "status": "passed"
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "scripts/context-review.py",
+        "scripts/context_review_v2.py",
+        "scripts/test-context-review.py",
+        "scripts/test-context-review-v2.py",
+        "references/skills/personal-context-review.md"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "warning: in the working copy of 'references/skills/personal-context-review.md', LF will be replaced by CRLF the next time Git touches it\nwarning: in the working copy of 'scripts/context-review.py', LF will be replaced by CRLF the next time Git touches it\n",
+      "status": "passed"
+    }
+  ],
+  "file_sha256": {
+    "scripts/context-review.py": "1a2c97f34322d6a11d8fc25afdfd3d52d191c237e53f26248c8307dc080b9ff3",
+    "scripts/context_review_v2.py": "56d76a8bb282a2513092be780f25aa242ac685668eb4b408db23845cc0eab361",
+    "scripts/test-context-review.py": "1bf0c4ca44dffa6af417806308b3a9a2ae6b77e47ed05449293812ad28e2a560",
+    "scripts/test-context-review-v2.py": "fcf5340424c8dec0066d71f7681e831306cbd5802087a28dcf37d82fdd1b2043",
+    "references/skills/personal-context-review.md": "0b83372dc3403810e2a32adc17201135712dc931d3e1f22e51ab02197a302c73"
+  },
+  "files_unchanged_during_checks": true,
+  "earlier_check_outcomes": [
+    {
+      "command": "python -m unittest discover -s scripts -p 'test-context-review*.py' -v",
+      "result": "No tests ran because hyphenated filenames are not discovery module names; switched to direct script execution."
+    },
+    {
+      "check": "test_exact_source_scope_roundtrip_and_shared_once",
+      "result": "Fixture incorrectly assumed 393 selected input tokens would exceed 900, then 600. Measured shared task 292 tokens and set the fixture page limit to 350; actual multi-page path now passes."
+    }
+  ],
+  "limitations": [
+    "Tags are frozen heuristic clues, not semantic completeness proof.",
+    "SHA anchors detect local drift, not adversarial replacement of all anchors.",
+    "New-batch review, end-to-end input savings and user acceptance are owned by the parent and not established by these synthetic checks."
+  ]
+}
