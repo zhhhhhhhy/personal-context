@@ -1,0 +1,8 @@
+{
+  "checked_at": "2026-10-15T11:38:12.537464+00:00",
+  "content_commit": "c354ba34dba5255bd3cddf4ce8f189afd3c650c1",
+  "remote_main": "c354ba34dba5255bd3cddf4ce8f189afd3c650c1",
+  "worktree_clean_at_check": true,
+  "raw_evidence_ignored": true,
+  "next_metadata_commit": "Final transaction acceptance follows; final HEAD checked again after push."
+}
