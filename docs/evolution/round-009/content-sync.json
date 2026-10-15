@@ -1,0 +1,8 @@
+{
+  "verified_at": "2026-10-15T12:12:50.691312+00:00",
+  "content_commit": "f20b445dc03d380299207268060376dee2180dd8",
+  "origin_main_at_verification": "f20b445dc03d380299207268060376dee2180dd8",
+  "clean_worktree_before_metadata": true,
+  "remaining": "Only controller completion/evaluation metadata; final live HEAD verification follows metadata push.",
+  "human_acceptance": "pending"
+}

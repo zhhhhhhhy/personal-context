@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "state_version": 9,
+  "state_version": 17,
   "transaction_id": "TX-ace8a5a1136f",
   "objective": "Preserve concrete unverified evidence in first-pass extraction, freeze the contract, and evaluate a rich uncovered cohort with bounded semantic review.",
   "scope": "Observer contract, historical supplemental cohort, local evidence, redacted metrics, context decisions and repository synchronization.",
-  "status": "in_progress",
-  "phase": "execute",
-  "owner": "parent",
-  "next_action": "Finish attempt A-003 and record its evidence.",
+  "status": "completed",
+  "phase": "report",
+  "owner": "user",
+  "next_action": "User assesses usefulness, remaining uncertainty and measured cost/completeness tradeoff.",
   "constraints": [
     "Raw evidence stays local; historical uncertainty gives no authority; no new-cohort tuning; sequential shared-ledger reads."
   ],
@@ -16,29 +16,37 @@
     {
       "id": "AC1",
       "condition": "Explicit uncertainty retention contract calibrated and frozen before new source reading.",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "calibration.json and protocol-freeze.json: 11 known-case facets checked; 11 files frozen before cohort selection; end hashes unchanged."
+      ],
       "note": ""
     },
     {
       "id": "AC2",
       "condition": "Unused covered-source messages observed before candidate lookup and checked with frozen targeted review, without a default full reference scan.",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "Source coverage validated before candidate lookup; review receipts show 86 initial +76 same-class +4 outside; no full independent inventory; raw/accepted/rejected and repairs preserved."
+      ],
       "note": ""
     },
     {
       "id": "AC3",
       "condition": "Same-cohort loading and known omissions measured with unreviewed scope and new-context decisions stated.",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "measurements.json: actual 22422 review tokens vs 25577 same-format mechanical whole; 14 repaired, 42 unreviewed; 4 scoped refinements, 0 promotions; utility/general recall unknown."
+      ],
+      "note": "Evaluation procedure completed; quality target only partly achieved and user assessment pending."
     },
     {
       "id": "AC4",
       "condition": "Privacy, validation, reproducibility and clean repository synchronization verified.",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "validation.json, freeze-verification.json and content-sync.json: coverage/apply/budget/privacy pass; raw sources ignored; content pushed with matching live remote."
+      ],
       "note": ""
     }
   ],
@@ -50,7 +58,9 @@
   },
   "gates": {
     "route": "2026-10-15T11:47:26+00:00",
-    "execute": "2026-10-15T11:47:27+00:00"
+    "execute": "2026-10-15T11:47:27+00:00",
+    "verify": "2026-10-15T12:12:51+00:00",
+    "report": "2026-10-15T12:12:51+00:00"
   },
   "attempts": [
     {
@@ -91,9 +101,12 @@
       "expected_effect": "Review savings and unknown recall are reported honestly; scoped useful context remains discoverable without core growth; local/remote state verified.",
       "owner": "parent",
       "result": "",
-      "outcome": "running",
-      "evidence": [],
-      "failure_cause": ""
+      "outcome": "passed",
+      "evidence": [
+        "Measurements/report/T34-T35 published; context budget and privacy checks passed; content commit f20b445 pushed and live origin/main matches with clean tree before final controller metadata."
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T12:12:50+00:00"
     }
   ],
   "events": [
@@ -189,9 +202,100 @@
       "detail": {
         "attempt_id": "A-003"
       }
+    },
+    {
+      "event_id": "EV-ad0c413c44ca",
+      "time": "2026-10-15T12:12:50+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-003",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-578b4d94d49e",
+      "time": "2026-10-15T12:12:51+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-896edcab9723",
+      "time": "2026-10-15T12:12:51+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-1355ec5dcf3c",
+      "time": "2026-10-15T12:12:51+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-2ac11ce98155",
+      "time": "2026-10-15T12:12:51+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-e9942c3aa2ce",
+      "time": "2026-10-15T12:12:51+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC4",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-cd5aaf22ae25",
+      "time": "2026-10-15T12:12:51+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
+    },
+    {
+      "event_id": "EV-80b27badf971",
+      "time": "2026-10-15T12:12:51+00:00",
+      "type": "checkpoint",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "note": "Requested implementation and evaluation delivered. No claim of full semantic recall or human acceptance; metadata commit follows."
+      }
     }
   ],
   "artifacts": [],
   "created_at": "2026-10-15T11:47:25+00:00",
-  "updated_at": "2026-10-15T12:07:39+00:00"
+  "updated_at": "2026-10-15T12:12:51+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-15T12:12:51+00:00",
+      "note": "Requested implementation and evaluation delivered. No claim of full semantic recall or human acceptance; metadata commit follows."
+    }
+  ]
 }
