@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "run": "round-006-20261015",
+  "human_acceptance": "pending",
+  "tokenizer": "o200k_base",
+  "sample": {
+    "source_mode": "user_authorized_historical_coverage_supplement",
+    "new_source_messages": 0,
+    "train_roots": 4,
+    "train_messages": 124,
+    "train_body_tokens": 7900,
+    "previous_body_tokens": 947,
+    "source_size_ratio": 8.342133051742344,
+    "previously_cited_messages_excluded": 33,
+    "prior_message_coverage": "unknown beyond coarse candidate import",
+    "fresh_roots_qualified": 69,
+    "source_mappings_verified": 124,
+    "truncated_train_messages": 0
+  },
+  "method": {
+    "risk_code_changed": false,
+    "risk_messages": 39,
+    "sentinel_messages": 17,
+    "initial_review_messages": 56,
+    "remaining_review_messages": 68,
+    "escalation_used": true,
+    "escalation_trigger": "accepted unsupported cause inference in low-risk sentinel",
+    "whole_fallback_before_review": false,
+    "additional_independent_whole_group": false,
+    "eventual_review_coverage_messages": 124
+  },
+  "input_accounting": {
+    "reader_by_role": {
+      "observer": 14701,
+      "targeted": 18672,
+      "reflector": 16275,
+      "parent-adjudication": 4538,
+      "remaining-review": 8782,
+      "parent-repair": 2002,
+      "parent-repair-check": 413,
+      "parent-eval": 286
+    },
+    "metered_candidate_context": 5227,
+    "reader_payload_total": 70896,
+    "parent_context_file_bodies": 8048,
+    "unmetered_candidate_index_body": 395,
+    "explicit_agent_message_tokens": 4344,
+    "accounted_pipeline_lower_bound": 83683,
+    "review_packets": {
+      "initial_targeted_paged": 16453,
+      "escalated_remaining_paged": 8782,
+      "actual_total_paged": 25235,
+      "whole_unpaged_mechanical": 24672,
+      "whole_same_limit_paged_mechanical": 25095,
+      "whole_same_limit_pages": 4,
+      "actual_pages": 5
+    },
+    "scope": "Exact returned payload logs + reconstructed file-body and explicit agent message counts. Lower bound excludes a truncated duplicated tool preview and mapping debug preview, mechanical selection/setup, code/help reads, transport/status outputs, framework Skill input, platform injection, prior chat and generated output. Not provider billing. Hypothetical full packets were counted only, never given to an additional full reviewer.",
+    "closed_at": "2026-10-15T08:05:49.613982+00:00"
+  },
+  "quality": {
+    "initial": {
+      "targeted": {
+        "useful_requirements": 183,
+        "covered": 179,
+        "partial": 3,
+        "missing": 1,
+        "messages": 56,
+        "issues": 4
+      },
+      "remaining": {
+        "useful_requirements": 107,
+        "covered": 104,
+        "partial": 2,
+        "missing": 1,
+        "messages": 68,
+        "issues": 3
+      }
+    },
+    "accepted_issue_count": 7,
+    "message_level_missing": 2,
+    "message_level_partial_or_inaccurate": 5,
+    "known_issues_repaired": 7,
+    "initial_observations": 250,
+    "final_observations": 251,
+    "final_units": 255,
+    "is_human_ground_truth": false,
+    "recall": "not established",
+    "replicates": 1,
+    "repair_check": "parent checked exact original source and final revised claims; original scores retained"
+  },
+  "evolution": {
+    "promotions": 0,
+    "reinforced_groups": 4,
+    "deferred_groups": 7,
+    "worthwhile_project_observations": 3,
+    "rejected_groups": 1,
+    "core_tokens_before": 1823,
+    "core_tokens_after": 1823,
+    "learned_entry_tokens_before": 31,
+    "learned_entry_tokens_after": 31,
+    "behavior_gain": "not measured"
+  },
+  "holdout": {
+    "protocol_amended_before_read": true,
+    "original_document_root_quarantined": true,
+    "actual_roots": 2,
+    "actual_messages": 3,
+    "actual_body_tokens": 147,
+    "new_ideas_applicable_cases": 0,
+    "evaluation_kind": "parent applicability and boundary check; no response trial",
+    "reflection_changed_after_read": false
+  },
+  "validation": {
+    "source_and_page_integrity_checks": 23,
+    "coverage_and_disposition_passed": true,
+    "validate_apply_completed": true,
+    "rollback_backups_present": true,
+    "context_budget_passed": true,
+    "code_or_skill_changes": false,
+    "delivery_integrity_privacy_checks": 29
+  },
+  "assessment": {
+    "known_gap_recovery": "supported",
+    "overall_load_reduction": "not achieved",
+    "new_stable_rule_evidence": "insufficient",
+    "user_evaluation": "pending"
+  },
+  "troubleshooting_entries_added": [
+    "T21",
+    "T22",
+    "T23",
+    "T24",
+    "T25",
+    "T26"
+  ]
+}

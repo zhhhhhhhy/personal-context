@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "state_version": 11,
+  "transaction_id": "TX-c09aac719d5c",
+  "objective": "Distill longer unused conversations with targeted review, compare measured load and observed omissions, and apply eligible new Context",
+  "scope": "Metadata and mechanical length qualification; frozen train and holdout; extraction; risk and sentinel review only; bounded promotion; measured report and repository sync",
+  "status": "in_progress",
+  "phase": "execute",
+  "owner": "agent",
+  "next_action": "Finish attempt A-003 and record its evidence.",
+  "constraints": [],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Freeze an unused materially longer and more substantial source batch before semantic extraction",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-2",
+      "condition": "Preserve source requirements with targeted review and triggered escalation only",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-3",
+      "condition": "Assess novelty and independent support; validate any applied learned rules against frozen holdout",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-4",
+      "condition": "Report comparable measured inputs and observed omissions, protect raw history, preserve entry budgets and sync artifacts",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "Clean 28fc0dc equals live origin/main; Python 3.12.4 and tiktoken 0.9.0; existing local metadata, redacting extractor, review and native thread tools available",
+    "detail": "Raw sources local-only; new round directory; frozen risk policy retained; no default full independent review; no external model service required",
+    "checked_at": "2026-10-15T07:26:40+00:00"
+  },
+  "gates": {
+    "route": "2026-10-15T07:26:41+00:00",
+    "execute": "2026-10-15T07:26:42+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-15T07:26:43+00:00",
+      "phase": "execute",
+      "action": "Qualify unused parents by source length and multi-turn density; freeze longer train and held-out cohort",
+      "expected_effect": "Obtain a substantively larger batch than round five without selecting by extraction outcomes",
+      "owner": "agent",
+      "result": "69 fresh roots mechanically qualified and one empty local root checked; available fresh inputs were too short. User authorized incremental coverage. Four legacy parents yield 124 uncited messages and 7900 tokens after excluding 33 earlier candidate-cited messages; 2 fresh holdouts frozen. These are historical coverage-unknown messages, not new messages. Missing legacy timestamps preserved null under bounded-parent policy.",
+      "outcome": "passed",
+      "evidence": [
+        ".local/context-evolution/round-006-20261015.meta/selection-freeze.json; .local/context-evolution/round-006-20261015.meta/incremental-source-map.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T07:37:09+00:00"
+    },
+    {
+      "id": "A-002",
+      "time": "2026-10-15T07:37:10+00:00",
+      "phase": "execute",
+      "action": "Extract all frozen incremental messages in bounded pages, freeze observations, and review risk-selected messages plus sentinel sample",
+      "expected_effect": "Preserve useful requirements while metering exact extraction and targeted review inputs; escalate only on policy trigger",
+      "owner": "agent",
+      "result": "All 124 sources extracted; 56 targeted then 68 triggered remaining reviewed. Seven accepted message-level gaps corrected; 251 final observations across 255 units; frozen source and original review preserved. No independent whole reference group.",
+      "outcome": "passed",
+      "evidence": [
+        ".local/context-evolution/round-006-20261015/review-integrity.json",
+        ".local/context-evolution/round-006-20261015/repairs.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T08:01:46+00:00"
+    },
+    {
+      "id": "A-003",
+      "time": "2026-10-15T08:01:46+00:00",
+      "phase": "execute",
+      "action": "Freeze scoped reflection, check uncontaminated holdout, apply validated decisions and publish measured results",
+      "expected_effect": "Retain useful project observations without unsupported permanent rules; report complete costs and known quality limits",
+      "owner": "agent",
+      "result": "",
+      "outcome": "running",
+      "evidence": [],
+      "failure_cause": ""
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-f01c5ea61371",
+      "time": "2026-10-15T07:26:39+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-7ff6d37300f4",
+      "time": "2026-10-15T07:26:40+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "Clean 28fc0dc equals live origin/main; Python 3.12.4 and tiktoken 0.9.0; existing local metadata, redacting extractor, review and native thread tools available"
+      }
+    },
+    {
+      "event_id": "EV-1df702fb9e9c",
+      "time": "2026-10-15T07:26:41+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-df73d7e12d03",
+      "time": "2026-10-15T07:26:42+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-b05af49397ac",
+      "time": "2026-10-15T07:26:43+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-83be9e3f3908",
+      "time": "2026-10-15T07:34:14+00:00",
+      "type": "checkpoint",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "note": "User explicitly permits补提未覆盖部分 after fresh-candidate qualification failed the intended long-input scale. Earlier source selection does not prove complete processing; label unknown historical coverage and exclude already cited messages rather than count rereads as new."
+      }
+    },
+    {
+      "event_id": "EV-75f61562e862",
+      "time": "2026-10-15T07:37:09+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-7c80e1ab06f9",
+      "time": "2026-10-15T07:37:10+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-002"
+      }
+    },
+    {
+      "event_id": "EV-37f273c2c588",
+      "time": "2026-10-15T07:58:53+00:00",
+      "type": "checkpoint",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "note": "Training semantic read revealed T02 is resume editing, overlapping original document holdout. Quarantined before eval read; supplemental file-organization root frozen separately. Original cohort hashes preserved. Sentinel M071 issue accepted and remaining 68-message review triggered under unchanged policy."
+      }
+    },
+    {
+      "event_id": "EV-c7793aa0ff07",
+      "time": "2026-10-15T08:01:46+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-002",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-18a61a729312",
+      "time": "2026-10-15T08:01:46+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-003"
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-15T07:26:39+00:00",
+  "updated_at": "2026-10-15T08:01:46+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-15T07:34:14+00:00",
+      "note": "User explicitly permits补提未覆盖部分 after fresh-candidate qualification failed the intended long-input scale. Earlier source selection does not prove complete processing; label unknown historical coverage and exclude already cited messages rather than count rereads as new."
+    },
+    {
+      "time": "2026-10-15T07:58:53+00:00",
+      "note": "Training semantic read revealed T02 is resume editing, overlapping original document holdout. Quarantined before eval read; supplemental file-organization root frozen separately. Original cohort hashes preserved. Sentinel M071 issue accepted and remaining 68-message review triggered under unchanged policy."
+    }
+  ]
+}
