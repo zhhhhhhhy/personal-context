@@ -39,6 +39,11 @@ prepared cohorts require it, and every observation must receive a reflection
 disposition. This catches missing bookkeeping, while independent semantic
 review checks whether multi-part messages were interpreted completely.
 
+After freezing observations, use [concentrated semantic review](personal-context-review.md)
+for risk-directed checking with a low-risk sample and explicit escalation.
+Full independent inventories are reserved for a requested comparison or a
+discovered coverage failure; do not repeat them by default on every batch.
+
 The current Codex session reads only `evidence.train.jsonl` and writes `reflection.json`. It must distinguish direct user-authored messages from assistant summaries, tool outputs, runtime wrappers and child-thread material. A promotion contains:
 
 ```json
