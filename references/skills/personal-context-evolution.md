@@ -52,7 +52,7 @@ The current Codex session reads only `evidence.train.jsonl` and writes `reflecti
 }
 ```
 
-The reflection must include `schema_version`, `run_id`, `base_snapshot_sha256`, `conflict_check`, `promotions`, `deferred` and `rejected`. Set `conflict_check.core_checked`, `.learned_checked` and `.candidate_ledger_checked` to true only after actually reading those sources. Do not include raw quotes, secrets, private topics or evaluation-thread evidence.
+The reflection must include `schema_version`, `run_id`, `base_snapshot_sha256`, `conflict_check`, `promotions`, `deferred` and `rejected`. Set `conflict_check.core_checked`, `.learned_checked` and `.candidate_ledger_checked` to true only after inspecting those sources. For candidates, start with `notes/candidates.md`; use `show-candidate --id` for a known ID, otherwise inspect relevant topic pages and search across topics for overlaps. Expand only when needed. The script resolves all candidate IDs without putting every record into the model prompt. Do not include raw quotes, secrets, private topics or evaluation-thread evidence.
 
 Each promotion must also include `candidate_audit`: use `new` with no related IDs only when the candidate ledger has no overlapping rule; use `refine` with one or more existing candidate IDs when the wording narrows, extends or operationalizes an existing candidate. The validator resolves each cited ID and resolves every evidence location to a direct user-authored message in `evidence.train.jsonl`.
 

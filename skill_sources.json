@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-14",
-  "hash_algorithm": "sha256(relative_path + NUL + sha256(file_bytes), sorted by relative_path)",
+  "snapshot_date": "2026-10-15",
+  "hash_algorithm": "sha256(concat(sorted(relative_path UTF-8 + NUL + sha256(file_bytes).hexdigest() ASCII + LF)))",
   "repository": "https://github.com/zhhhhhhhy/personal-context",
   "migrated_from": {
     "repository": "https://github.com/zhhhhhhhy/zhy-private-skill",
@@ -14,20 +14,33 @@
     {
       "name": "academic-write",
       "target_path": "skills/academic-write",
-      "source_path": "D:/worker/zhy-private-skill/skills/academic-write",
-      "source_kind": "migrated_from_zhy-private-skill_worktree",
-      "file_count": 4,
-      "source_tree_sha256": "4556fbe9425a9779d45ac78264790fcbba8f8554f002e8d8219230f388f626a2",
-      "caveat": "Copied from the former private Skill repository working tree on 2026-10-14; the source repository is retained only as a historical copy."
+      "source_path": "skills/academic-write",
+      "source_kind": "runtime_reconciled_then_progressively_split",
+      "file_count": 8,
+      "source_tree_sha256": "063e271b443b2ec749917a50fbcf9ec2d3ff0591ef9056d6ed9873f119dc73a0",
+      "caveat": "Current installed workflow and additions retained on 2026-10-15; detailed phase sections preserved and source is canonical.",
+      "import_snapshot": {
+        "source_path": "D:/worker/zhy-private-skill/skills/academic-write",
+        "source_kind": "migrated_from_zhy-private-skill_worktree",
+        "source_tree_sha256": "4556fbe9425a9779d45ac78264790fcbba8f8554f002e8d8219230f388f626a2",
+        "file_count": 4
+      }
     },
     {
       "name": "deep-research",
       "target_path": "skills/deep-research",
-      "source_path": "D:/worker/zhy-private-skill/skills/deep-research",
-      "source_kind": "migrated_from_zhy-private-skill_worktree",
-      "file_count": 54,
-      "source_tree_sha256": "a21a24e252ab16d0a1b1befe5a1899e21d60b6723b105ba34d1af3463b89eda0",
-      "caveat": "Copied from the former private Skill repository working tree on 2026-10-14; the source repository is retained only as a historical copy."
+      "source_path": "skills/deep-research",
+      "source_kind": "runtime_reconciled_then_progressively_split",
+      "file_count": 11,
+      "source_tree_sha256": "5a4df09b5e097af1cbfb8a21a8a27f890c33f3adeb6134d7b6962aab6c127dd9",
+      "caveat": "Current installed workflow and additions retained on 2026-10-15; detailed phase sections preserved and source is canonical.",
+      "import_snapshot": {
+        "source_path": "D:/worker/zhy-private-skill/skills/deep-research",
+        "source_kind": "migrated_from_zhy-private-skill_worktree",
+        "source_tree_sha256": "a21a24e252ab16d0a1b1befe5a1899e21d60b6723b105ba34d1af3463b89eda0",
+        "file_count": 54
+      },
+      "legacy_archive": "references/skills/legacy/deep-research"
     },
     {
       "name": "grill-me",
@@ -35,7 +48,7 @@
       "source_path": "D:/worker/zhy-private-skill/skills/grill-me",
       "source_kind": "migrated_from_zhy-private-skill_worktree",
       "file_count": 3,
-      "source_tree_sha256": "2544eb0a15384ae430f8cf5dbfb255339f7e2af07b8de243c5050e72b25d681f",
+      "source_tree_sha256": "71ea1c1c8ebd5201310e62e7e34b319522e80d85b0b071498ee49b00846cf7c7",
       "caveat": "Copied from the former private Skill repository working tree on 2026-10-14; the source repository is retained only as a historical copy."
     },
     {
@@ -44,7 +57,7 @@
       "source_path": "D:/worker/zhy-private-skill/skills/grilling",
       "source_kind": "migrated_from_zhy-private-skill_worktree",
       "file_count": 3,
-      "source_tree_sha256": "cf6ce24ffe444732738100577169f63831ed35ada667def1071bce273d10b364",
+      "source_tree_sha256": "308a6c1c94f6a0342920deaafa5cb1691bb4a01d1aa390909c982700b9432704",
       "caveat": "Copied from the former private Skill repository working tree on 2026-10-14; the source repository is retained only as a historical copy."
     },
     {
@@ -53,7 +66,7 @@
       "source_path": "skills/personal-context",
       "source_kind": "native_personal_context",
       "file_count": 1,
-      "source_tree_sha256": "be4c526e4f7c1275049042890398d1a32ab2185473151f4caf557441ce902119",
+      "source_tree_sha256": "f1205b49cc2f10ecd263ab5d3f87ffb9cc6409b3bf11c7d0bdf9b5555448b8d1",
       "caveat": "Native routing Skill for this repository; maintain with the Context files."
     }
   ]

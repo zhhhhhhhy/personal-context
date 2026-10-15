@@ -54,6 +54,21 @@ class BoundaryTests(unittest.TestCase):
     def write_reflection(self):
         evolution.write_json(self.run/'reflection.json', self.reflection)
 
+    def test_candidate_topic_reference_and_legacy_ids(self):
+        evolution.write_text(self.root/'notes/candidates.md', '# Index\n\n## C-20261014-001\nLegacy entry\n')
+        evolution.write_text(self.root/'notes/candidates/research.md', '# Research\n\n## C-20261014-002\nTopic entry\n\n## C-20261014-003\nAdjacent entry\n')
+        self.assertEqual(evolution.candidate_ids(), {'C-20261014-001', 'C-20261014-002', 'C-20261014-003'})
+        record = evolution.lookup_candidate('C-20261014-002')
+        self.assertEqual(record['text'], '## C-20261014-002\nTopic entry')
+        self.assertEqual(record['file'], 'notes/candidates/research.md')
+        audit = self.reflection['promotions'][0]['candidate_audit']
+        audit.update(action='refine', related_ids=['C-20261014-002'])
+        self.write_reflection()
+        self.assertEqual(evolution.validate_reflection(self.run)['status'], 'passed')
+        audit['related_ids'] = ['C-20261014-099']
+        self.write_reflection()
+        self.assertIn('unknown related candidate', ' '.join(evolution.validate_reflection(self.run)['errors']))
+
     def test_wrappers_plans_and_ide_duplicates(self):
         texts = ['# AGENTS.md instructions for /example', 'PLEASE IMPLEMENT THIS PLAN:\nAn assistant plan', 'A direct request', '# Context from my IDE setup:\n## My request for Codex:\nA direct request']
         path = self.root/'source.jsonl'

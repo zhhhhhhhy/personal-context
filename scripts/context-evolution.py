@@ -153,11 +153,38 @@ def current_base_hash() -> str:
     return sha256_json({str(path.relative_to(REPO_ROOT)): sha256_file(path) for path in snapshot_paths()})
 
 
+def candidate_paths() -> list[pathlib.Path]:
+    paths = [REPO_ROOT / "notes" / "candidates.md"]
+    paths.extend(sorted((REPO_ROOT / "notes" / "candidates").glob("*.md")))
+    return [path for path in paths if path.is_file()]
+
+
 def candidate_ids() -> set[str]:
-    path = REPO_ROOT / "notes" / "candidates.md"
-    if not path.exists():
-        return set()
-    return set(re.findall(r"^## (C-[0-9-]+)\s*$", path.read_text(encoding="utf-8"), re.MULTILINE))
+    # Scan IDs mechanically; the model reads only the relevant topic pages.
+    ids: set[str] = set()
+    for path in candidate_paths():
+        ids.update(re.findall(r"^## (C-[0-9-]+)\s*$", path.read_text(encoding="utf-8"), re.MULTILINE))
+    return ids
+
+
+def lookup_candidate(candidate_id: str) -> dict[str, Any]:
+    if not re.fullmatch(r"C-\d{8}-\d{3}", candidate_id):
+        die("candidate ID must use C-YYYYMMDD-NNN")
+    matches: list[dict[str, Any]] = []
+    for path in candidate_paths():
+        lines = path.read_text(encoding="utf-8").splitlines()
+        for start, line in enumerate(lines):
+            if line.strip() != f"## {candidate_id}":
+                continue
+            end = next((index for index in range(start + 1, len(lines)) if lines[index].startswith("## ")), len(lines))
+            matches.append({"id": candidate_id, "file": path.relative_to(REPO_ROOT).as_posix(), "start_line": start + 1, "end_line": end, "text": "\n".join(lines[start:end]).rstrip()})
+    if len(matches) != 1:
+        die(f"expected one candidate record, found {len(matches)} for {candidate_id}")
+    return matches[0]
+
+
+def cmd_show_candidate(args: argparse.Namespace) -> None:
+    print(json.dumps(lookup_candidate(args.candidate_id), ensure_ascii=False, indent=2))
 
 
 def run_extractor(index: pathlib.Path, selection: pathlib.Path, output: pathlib.Path, codex_home: pathlib.Path, max_chars: int) -> None:
@@ -607,6 +634,9 @@ def cmd_status(args: argparse.Namespace) -> None:
 def parser() -> argparse.ArgumentParser:
     root = argparse.ArgumentParser(description=__doc__)
     sub = root.add_subparsers(dest="command", required=True)
+    candidate = sub.add_parser("show-candidate", help="read exactly one historical candidate; no rule changes")
+    candidate.add_argument("--id", dest="candidate_id", required=True)
+    candidate.set_defaults(func=cmd_show_candidate)
     prepare = sub.add_parser("prepare")
     prepare.add_argument("--index", type=pathlib.Path, required=True)
     prepare.add_argument("--start", required=True, help="inclusive local date YYYY-MM-DD")

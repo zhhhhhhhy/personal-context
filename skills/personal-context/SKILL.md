@@ -11,6 +11,8 @@ Source of truth: `D:/worker/personal-context` (or the repository containing this
 
 Read the repository `AGENTS.md` and its four core files once per session. Use `INDEX.md` for relevant details. Read learned rules only in their stated scope; current user instructions outrank historical inferences. Do not load all conversation history.
 
+When maintaining entries, follow `rules/CONTEXT_LOADING.md` and run `scripts/context-budget.py`. Historical candidates start at `notes/candidates.md`; inspect relevant topic pages and search across topics for duplicates before opening more detail.
+
 ## Evolve Context when requested
 
 Read `docs/evolution/POLICY.md` and the execution contract at `D:/worker/personal-context/references/skills/personal-context-evolution.md`. The absolute canonical path also works from the installed runtime copy. Use the current Codex session as the semantic engine:

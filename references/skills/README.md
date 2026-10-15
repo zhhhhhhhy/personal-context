@@ -20,3 +20,11 @@ as general personal Context.
 
 Use `scripts/sync-skills.ps1` to copy all repository Skills into the local Codex
 runtime directory. The script does not delete unrelated runtime Skills.
+
+On 2026-10-15 the active installed survey workflow was reconciled into canonical
+`skills/deep-research/`, and the installed writing additions were retained in
+`academic-write`. Their short entries now route by phase or task to supporting
+references. The former imported research package is preserved under
+`references/skills/legacy/deep-research/` for explicit historical inspection.
+Entry budgets are maintained in `rules/CONTEXT_LOADING.md` and checked before
+runtime synchronization.

@@ -1,0 +1,281 @@
+{
+  "measured_date": "2026-10-15",
+  "tokenizer": "o200k_base",
+  "scope": "File bodies only, not live prompt tokens; sums of individual file measurements",
+  "upstream": {
+    "repository": "https://github.com/grapeot/context-infrastructure",
+    "commit": "bb5bebe49efac066a6eeda684e127aa69468d0ce",
+    "files": {
+      "AGENTS.md": {
+        "bytes": 4517,
+        "chars": 3195,
+        "tokens": 1190
+      },
+      "rules/SOUL.md": {
+        "bytes": 6131,
+        "chars": 2559,
+        "tokens": 1572
+      },
+      "rules/USER.md": {
+        "bytes": 3182,
+        "chars": 1458,
+        "tokens": 1001
+      },
+      "rules/WORKSPACE.md": {
+        "bytes": 1451,
+        "chars": 945,
+        "tokens": 427
+      },
+      "rules/COMMUNICATION.md": {
+        "bytes": 4009,
+        "chars": 1891,
+        "tokens": 1117
+      },
+      "rules/skills/INDEX.md": {
+        "bytes": 11534,
+        "chars": 7558,
+        "tokens": 3164
+      }
+    },
+    "explicit_session_tokens": 8471
+  },
+  "local_before": {
+    "commit": "ed1af97f37abbc29e1a6a7c8048af24b678185a3",
+    "runtime_entries": {
+      "academic-write": {
+        "bytes": 9395,
+        "chars": 8365,
+        "tokens": 1914
+      },
+      "deep-research": {
+        "bytes": 9428,
+        "chars": 9428,
+        "tokens": 2032
+      }
+    }
+  },
+  "comparison": [
+    {
+      "path": "skills/academic-write/SKILL.md",
+      "before_repo_tokens": 1740,
+      "after_tokens": 369
+    },
+    {
+      "path": "skills/deep-research/SKILL.md",
+      "before_repo_tokens": 7064,
+      "after_tokens": 435
+    },
+    {
+      "path": "notes/candidates.md",
+      "before_repo_tokens": 7468,
+      "after_tokens": 395
+    }
+  ],
+  "local_after": {
+    "core_tokens": 1823,
+    "repository_router_tokens": 361,
+    "global_router_tokens": 165,
+    "core_plus_repository_router": 2184,
+    "budget_checks": [
+      {
+        "name": "session-core",
+        "mode": "group",
+        "limit": 2000,
+        "tokens": 1823,
+        "files": [
+          {
+            "path": "rules/SOUL.md",
+            "tokens": 542,
+            "chars": 907
+          },
+          {
+            "path": "profile.md",
+            "tokens": 339,
+            "chars": 575
+          },
+          {
+            "path": "habits/communication.md",
+            "tokens": 447,
+            "chars": 702
+          },
+          {
+            "path": "INDEX.md",
+            "tokens": 495,
+            "chars": 1069
+          }
+        ],
+        "errors": [],
+        "status": "passed"
+      },
+      {
+        "name": "repository-router",
+        "mode": "group",
+        "limit": 400,
+        "tokens": 361,
+        "files": [
+          {
+            "path": "AGENTS.md",
+            "tokens": 361,
+            "chars": 759
+          }
+        ],
+        "errors": [],
+        "status": "passed"
+      },
+      {
+        "name": "skill-entry",
+        "mode": "per_file",
+        "limit": 1000,
+        "tokens": 2049,
+        "files": [
+          {
+            "path": "skills/academic-write/SKILL.md",
+            "tokens": 369,
+            "chars": 1933
+          },
+          {
+            "path": "skills/deep-research/SKILL.md",
+            "tokens": 435,
+            "chars": 2195
+          },
+          {
+            "path": "skills/grill-me/SKILL.md",
+            "tokens": 311,
+            "chars": 925
+          },
+          {
+            "path": "skills/grilling/SKILL.md",
+            "tokens": 399,
+            "chars": 1352
+          },
+          {
+            "path": "skills/personal-context/SKILL.md",
+            "tokens": 535,
+            "chars": 2830
+          }
+        ],
+        "errors": [],
+        "status": "passed"
+      },
+      {
+        "name": "candidate-index",
+        "mode": "group",
+        "limit": 600,
+        "tokens": 395,
+        "files": [
+          {
+            "path": "notes/candidates.md",
+            "tokens": 395,
+            "chars": 810
+          }
+        ],
+        "errors": [],
+        "status": "passed"
+      },
+      {
+        "name": "candidate-topics",
+        "mode": "per_file",
+        "limit": 2500,
+        "tokens": 7384,
+        "files": [
+          {
+            "path": "notes/candidates/communication.md",
+            "tokens": 891,
+            "chars": 1814
+          },
+          {
+            "path": "notes/candidates/documents.md",
+            "tokens": 967,
+            "chars": 1981
+          },
+          {
+            "path": "notes/candidates/engineering.md",
+            "tokens": 1189,
+            "chars": 2432
+          },
+          {
+            "path": "notes/candidates/experiments.md",
+            "tokens": 1304,
+            "chars": 2712
+          },
+          {
+            "path": "notes/candidates/planning-and-skills.md",
+            "tokens": 1879,
+            "chars": 3891
+          },
+          {
+            "path": "notes/candidates/research-writing.md",
+            "tokens": 1154,
+            "chars": 2437
+          }
+        ],
+        "errors": [],
+        "status": "passed"
+      },
+      {
+        "name": "learned-entry",
+        "mode": "group",
+        "limit": 1000,
+        "tokens": 31,
+        "files": [
+          {
+            "path": "habits/learned.md",
+            "tokens": 31,
+            "chars": 71
+          }
+        ],
+        "errors": [],
+        "status": "passed"
+      },
+      {
+        "name": "loading-policy",
+        "mode": "group",
+        "limit": 900,
+        "tokens": 544,
+        "files": [
+          {
+            "path": "rules/CONTEXT_LOADING.md",
+            "tokens": 544,
+            "chars": 915
+          }
+        ],
+        "errors": [],
+        "status": "passed"
+      }
+    ]
+  },
+  "preservation": {
+    "candidate_records": 46,
+    "runtime_sections": {
+      "academic-write": 7,
+      "deep-research": 14
+    },
+    "legacy_archive": "references/skills/legacy/deep-research"
+  },
+  "runtime_sync": {
+    "academic-write": {
+      "files": 8,
+      "equal": true
+    },
+    "deep-research": {
+      "files": 11,
+      "equal": true
+    },
+    "personal-context": {
+      "files": 1,
+      "equal": true
+    }
+  },
+  "limitations": [
+    "No model-accuracy or user-acceptance improvement is claimed",
+    "A full long-running workflow may eventually load multiple phases; entry reduction does not imply proportional total-token reduction",
+    "Upstream total uses only its explicit Every Session list, not inferred runtime injection"
+  ],
+  "validation": {
+    "targeted_tests_passed": 8,
+    "skill_formats_validated": 3,
+    "independent_response_cases": 3,
+    "candidate_exact_lookup_observed": true,
+    "oversize_blocks_before_copy": true
+  }
+}

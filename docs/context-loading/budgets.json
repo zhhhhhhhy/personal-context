@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "tokenizer": "o200k_base",
+  "rules": [
+    {"name": "session-core", "paths": ["rules/SOUL.md", "profile.md", "habits/communication.md", "INDEX.md"], "max_tokens": 2000},
+    {"name": "repository-router", "paths": ["AGENTS.md"], "max_tokens": 400},
+    {"name": "skill-entry", "glob": "skills/*/SKILL.md", "max_tokens_per_file": 1000},
+    {"name": "candidate-index", "paths": ["notes/candidates.md"], "max_tokens": 600},
+    {"name": "candidate-topics", "glob": "notes/candidates/*.md", "max_tokens_per_file": 2500},
+    {"name": "learned-entry", "paths": ["habits/learned.md"], "max_tokens": 1000},
+    {"name": "loading-policy", "paths": ["rules/CONTEXT_LOADING.md"], "max_tokens": 900}
+  ]
+}

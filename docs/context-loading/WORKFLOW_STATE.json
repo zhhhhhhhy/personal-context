@@ -1,0 +1,280 @@
+{
+  "schema_version": 1,
+  "state_version": 15,
+  "transaction_id": "TX-e8effa3a7328",
+  "objective": "Reduce progressive Context entry size, preserve current workflows and evidence, and record measurable loading rules",
+  "scope": "Measure upstream reference; compact research and writing Skill entrypoints; shard historical candidate ledger; preserve current runtime additions; budget validation and synchronization",
+  "status": "in_progress",
+  "phase": "execute",
+  "owner": "agent",
+  "next_action": "Finish attempt A-004 and record its evidence.",
+  "constraints": [],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Measure pinned upstream entry and explicit session core with the same tokenizer",
+      "status": "passed",
+      "evidence": [
+        ".local/context-loading/20261015/baseline.json; docs/context-loading/measurements.json: pinned upstream bb5bebe, entry 1190 tokens and explicit session list total 8471, o200k_base protocol"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-2",
+      "condition": "Compact entrypoints and candidate routing while preserving all 46 candidate records and current workflow details",
+      "status": "passed",
+      "evidence": [
+        "Canonical entries: research 435, writing 369, candidate index 395 tokens; six candidate pages retain all 46 record bodies; legacy source files and 21 installed-workflow sections preserved exactly"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-3",
+      "condition": "Record scoped Context loading budgets and demonstrate positive and oversize rejection paths",
+      "status": "passed",
+      "evidence": [
+        "rules/CONTEXT_LOADING.md; budgets.json; passing seven budget groups; oversized synthetic entry rejected before runtime destination creation; core 1823 tokens, every Skill entry below 1000"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-4",
+      "condition": "Validate modified Skill routing, evidence resolution, runtime synchronization and Git delivery",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "Clean ed1af97 checkout equals origin/main; Python and tiktoken available; canonical/global router read; current runtime Skill variants inspected; upstream origin/main fetched at bb5bebe49efac066a6eeda684e127aa69468d0ce; existing evidence regression script available",
+    "detail": "User directly authorized framework changes and persistent loading rules. Preserve current runtime details and all historical candidates; no history import or new rule promotion. Source changes and runtime copies reversible with local backups.",
+    "checked_at": "2026-10-15T01:59:17+00:00"
+  },
+  "gates": {
+    "route": "2026-10-15T01:59:17+00:00",
+    "execute": "2026-10-15T01:59:17+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-15T01:59:17+00:00",
+      "phase": "execute",
+      "action": "Freeze entry-size baseline and upstream comparison; preserve source/runtime variants before refactoring",
+      "expected_effect": "Comparable o200k_base measurements and reversible source snapshots; no original evidence or current workflow lost",
+      "owner": "agent",
+      "result": "Pinned upstream bb5bebe measured with o200k_base; original source and installed variants backed up locally; all 46 candidate bodies frozen for exact preservation checks",
+      "outcome": "passed",
+      "evidence": [
+        ".local/context-loading/20261015/baseline.json; .local/context-loading/20261015/candidate-records.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T02:00:32+00:00"
+    },
+    {
+      "id": "A-002",
+      "time": "2026-10-15T02:00:33+00:00",
+      "phase": "execute",
+      "action": "Split oversized Skill and candidate entries, reconcile active runtime details and write loading budget policy",
+      "expected_effect": "Entry files remain short, detailed phase guidance and exact candidate evidence remain accessible by conditional links, and a measurable budget becomes the maintenance rule",
+      "owner": "agent",
+      "result": "Five Skill entries within 1000 tokens; candidate index 344 tokens with six topic pages; all 46 candidate bodies and 21 current-runtime workflow sections preserved; imported research package archived unchanged; loading rules and pre-sync budget gate implemented",
+      "outcome": "passed",
+      "evidence": [
+        "rules/CONTEXT_LOADING.md; docs/context-loading/budgets.json; scripts/context-budget.py; .local/context-loading/20261015/migration.json; .local/context-loading/20261015/budgets-after.json; skill_sources.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T02:08:13+00:00"
+    },
+    {
+      "id": "A-003",
+      "time": "2026-10-15T02:08:14+00:00",
+      "phase": "execute",
+      "action": "Verify preservation, budget rejection and routing, then synchronize canonical Skill packages",
+      "expected_effect": "Budgets and reference paths pass; oversize blocks before any runtime copy; candidate refinements resolve topic IDs; installed source matches the canonical compact packages",
+      "owner": "agent",
+      "result": "Eight targeted boundary tests and three Skill format checks passed. Exact preservation and link checks passed, oversize rejected before runtime copy, three realistic independent responses succeeded. Review findings addressed with exact-ID retrieval and conditional axiom routing. Three updated Skill packages synchronized byte-for-byte.",
+      "outcome": "passed",
+      "evidence": [
+        ".local/context-loading/20261015/structural-checks.json; .local/context-loading/20261015/runtime-sync.json; .local/context-loading/20261015/forward-review.md; scripts/test-context-evolution-boundaries.py; docs/context-loading/measurements.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T02:12:30+00:00"
+    },
+    {
+      "id": "A-004",
+      "time": "2026-10-15T02:14:09+00:00",
+      "phase": "execute",
+      "action": "Write final comparison and integrity evidence, commit and synchronize repository",
+      "expected_effect": "Reviewable upstream/local measurements and honest validation limits; no local evidence included in Git; final runtime packages and origin/main verified",
+      "owner": "agent",
+      "result": "",
+      "outcome": "running",
+      "evidence": [],
+      "failure_cause": ""
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-39db56c1cee4",
+      "time": "2026-10-15T01:58:17+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-32daa0602e25",
+      "time": "2026-10-15T01:59:17+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "Clean ed1af97 checkout equals origin/main; Python and tiktoken available; canonical/global router read; current runtime Skill variants inspected; upstream origin/main fetched at bb5bebe49efac066a6eeda684e127aa69468d0ce; existing evidence regression script available"
+      }
+    },
+    {
+      "event_id": "EV-fddf7755cc71",
+      "time": "2026-10-15T01:59:17+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-7521cb207e6f",
+      "time": "2026-10-15T01:59:17+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-872641ddbb64",
+      "time": "2026-10-15T01:59:17+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-8a10f7d7cef7",
+      "time": "2026-10-15T02:00:32+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-2d1a4f3d0079",
+      "time": "2026-10-15T02:00:33+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-002"
+      }
+    },
+    {
+      "event_id": "EV-57e75452d11d",
+      "time": "2026-10-15T02:08:13+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-002",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-5d583b2272a9",
+      "time": "2026-10-15T02:08:14+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-003"
+      }
+    },
+    {
+      "event_id": "EV-a6aad75aa132",
+      "time": "2026-10-15T02:12:30+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-003",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-85ff8fbdd972",
+      "time": "2026-10-15T02:12:30+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-4bfdf993d8fe",
+      "time": "2026-10-15T02:14:09+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-b4ce372fa717",
+      "time": "2026-10-15T02:14:09+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-ffef2b328dab",
+      "time": "2026-10-15T02:14:09+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-c69dc18c6884",
+      "time": "2026-10-15T02:14:09+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-004"
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-15T01:58:17+00:00",
+  "updated_at": "2026-10-15T02:14:09+00:00"
+}

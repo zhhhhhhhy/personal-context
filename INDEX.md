@@ -11,9 +11,9 @@
 | 用户背景、长期目标 | `profile.md` |
 | 价值观、自我理解、职业取舍、学习与执行方式 | `profile.md` 中的使用说明，按需加载 `references/personal/zhenghuiyu.md` |
 | 沟通、写作、汇报 | `habits/communication.md` |
-| 研究、论文、实验 | `habits/axioms/INDEX.md`、相关 `references/projects/` |
+| 研究、论文、实验 | 匹配的 Skill；研究取舍和长期判断再读 `habits/axioms/INDEX.md`，项目事实再查 `references/projects/` |
 | 具体 Skill 工作流 | 按名称加载 `skills/<skill-name>/SKILL.md` |
-| Context/Skill 设计与维护 | `skills/personal-context/SKILL.md`、`references/skills/README.md` |
+| Context/Skill 设计与维护 | `rules/CONTEXT_LOADING.md`、`skills/personal-context/SKILL.md`；Skill 来源再查 `references/skills/README.md` |
 | 历史决策、重复纠正 | `notes/observations.md`，必要时追溯 `references/conversations/` |
 | 个性化工作习惯、曾经反复纠正的问题 | `habits/learned.md`；按条目的 scope 和例外应用 |
 | 从对话进化 Context、周复盘、更新记忆 | `skills/personal-context/SKILL.md` → `docs/evolution/POLICY.md` |

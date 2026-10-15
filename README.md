@@ -49,13 +49,19 @@ scripts/               # 将仓库中的 Skill 同步到 Codex 运行时
 
 核心会话规则位于 `rules/SOUL.md`、`profile.md`、`habits/communication.md` 和 `INDEX.md`。如果希望它们在每个 Codex 会话进入路由，可运行 `scripts/install-context-router.ps1`；脚本会在覆盖已有全局入口前停止，使用 `-Force` 才会备份并替换。
 
-长期规则与候选规则分开维护：对话先进入 `notes/observations.md`，经过证据和人工确认后才进入 `habits/` 或 `skills/`。
+长期规则与候选规则分开维护：`notes/candidates.md` 是历史候选的主题入口。低风险经验按 `docs/evolution/POLICY.md` 校验后应用，核心规则与权限仍由用户决定。
 
 ## Skill 库
 
 原 `zhy-private-skill` 仓库中的 `academic-write`、`deep-research`、`grill-me` 和 `grilling` 已迁入本仓库的 `skills/`。本仓库现在是个人 Context 和个人 Skill 的唯一维护入口；旧仓库保留为历史副本，不再继续维护。
 
 Skill 的完整说明仍按目录独立维护。需要让本机 Codex 使用最新版本时，运行 `scripts/sync-skills.ps1`；脚本只复制更新，不删除运行时已有内容。
+
+## 加载预算
+
+`rules/CONTEXT_LOADING.md` 规定“短入口 → 当前主题或阶段 → 必要证据”的读取方式。四份核心合计不超过 2,000 tokens，每份 Skill 入口不超过 1,000；历史候选按主题展开。维护后运行 `python scripts/context-budget.py`，同步 Skill 前也会检查预算。详细流程和历史归档只在当前任务需要时读取。
+
+预算计量需要当前 Python 环境安装 `tiktoken`；缺少该依赖时检查会失败，不用字符数代替 token 数。测量口径和变更结果见 `docs/context-loading/REPORT.md`。
 
 ## Context evolution
 

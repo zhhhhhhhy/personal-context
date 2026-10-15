@@ -12,6 +12,12 @@ if (-not (Test-Path -LiteralPath $sourceRoot)) {
     throw "Skill source directory does not exist: $sourceRoot"
 }
 
+$budgetScript = Join-Path $repoRoot 'scripts/context-budget.py'
+& python -X utf8 $budgetScript --root $repoRoot
+if ($LASTEXITCODE -ne 0) {
+    throw 'Context entry budget check failed; runtime Skills were not copied.'
+}
+
 New-Item -ItemType Directory -Path $destinationRoot -Force | Out-Null
 $copied = @()
 
