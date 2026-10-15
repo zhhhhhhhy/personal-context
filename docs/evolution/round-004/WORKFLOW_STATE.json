@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "state_version": 11,
+  "state_version": 20,
   "transaction_id": "TX-5c94c2f64ad0",
   "objective": "Repair missed useful evidence in progressive Context evolution, preserve troubleshooting knowledge, and compare loading and extraction completeness on a richer unused batch",
   "scope": "Coverage-preserving observation and reflection, known-case regression, frozen richer parent cohort, isolated loading comparison and independent completeness review, bounded evolution and redacted incident/report delivery",
-  "status": "in_progress",
-  "phase": "execute",
+  "status": "completed",
+  "phase": "report",
   "owner": "agent",
-  "next_action": "Finish attempt A-004 and record its evidence.",
+  "next_action": "User evaluates this round; future fresh-sample work requires a new request.",
   "constraints": [
     "Historical evidence does not grant new permissions; core identity and privacy remain outside automatic evolution"
   ],
@@ -16,37 +16,47 @@
     {
       "id": "AC-1",
       "condition": "Record reusable execution problems and verified solutions with evidence and boundaries",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/TROUBLESHOOTING.md"
+      ],
+      "note": "18 observed problems, treatments, evidence and limits; routed on demand."
     },
     {
       "id": "AC-2",
       "condition": "Reject missing message or unit coverage and recover the known figure-handoff omission without unsupported promotion",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "scripts/test-context-coverage.py; notes/evolution/round-004-20261015-evaluation.md"
+      ],
+      "note": "Known four-part omission recovered; coverage boundaries reject loss. Additional semantic defects openly scored and 15 known gaps repaired, not a claim of universal recall."
     },
     {
       "id": "AC-3",
       "condition": "Freeze an unused richer training and held-out cohort with local-only provenance and independent families",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-004/measurements.json"
+      ],
+      "note": "16 unused train roots / 112 messages / 9 families and 4 heldout roots; rich sample lower than numeric target, adjustment disclosed before semantic reading."
     },
     {
       "id": "AC-4",
       "condition": "Compare matched progressive and whole returned payloads plus independent semantic completeness and overgeneralization review",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-004/measurements.json; notes/evolution/round-004-20261015-evaluation.md"
+      ],
+      "note": "Matched payloads and 194-item independent anonymous reference; P 179/9/6 vs W 182/6/6; extra review input separate; candidate reads occur after observation freeze."
     },
     {
       "id": "AC-5",
       "condition": "Validate evolution decisions, preserve core and privacy boundaries, publish report and synchronize canonical repository",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "notes/evolution/round-004-20261015.md; .local/context-evolution/round-004-20261015/final-audit.json"
+      ],
+      "note": "Validated application with backups, no learned rule growth, core unchanged, privacy scan passed, origin/main verified at 3636657955025024f99ca5d2683b55a9c22ae788; user acceptance remains pending."
     }
   ],
   "preflight": {
@@ -57,7 +67,9 @@
   },
   "gates": {
     "route": "2026-10-15T05:39:31+00:00",
-    "execute": "2026-10-15T05:39:31+00:00"
+    "execute": "2026-10-15T05:39:31+00:00",
+    "verify": "2026-10-15T06:41:18+00:00",
+    "report": "2026-10-15T06:41:19+00:00"
   },
   "attempts": [
     {
@@ -112,10 +124,13 @@
       "action": "Apply validated local reconciliation, finish sanitized metrics and incident guide, verify bounded delivery and synchronize repository",
       "expected_effect": "Auditable observations preserved without new long-term rule bloat; complete reviewable report and clean synchronized source",
       "owner": "agent",
-      "result": "",
-      "outcome": "running",
-      "evidence": [],
-      "failure_cause": ""
+      "result": "Applied zero-rule reconciliation with backups; source/coverage/date/legacy checks passed; 44 final integrity checks passed; core remains 1823 tokens. Sanitized report, 18 incidents and framework published at 3636657955025024f99ca5d2683b55a9c22ae788. Raw and sensitive evidence stayed local.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/evolution/round-004/measurements.json; notes/evolution/round-004-20261015-evaluation.md; .local/context-evolution/round-004-20261015/final-audit.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T06:41:18+00:00"
     }
   ],
   "events": [
@@ -232,9 +247,111 @@
       "detail": {
         "attempt_id": "A-004"
       }
+    },
+    {
+      "event_id": "EV-c33f2a92037b",
+      "time": "2026-10-15T06:41:18+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-004",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-4b60e993a7ef",
+      "time": "2026-10-15T06:41:18+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-056d8c3fda0f",
+      "time": "2026-10-15T06:41:18+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-e2abae2e7fad",
+      "time": "2026-10-15T06:41:19+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-fbde567c61d2",
+      "time": "2026-10-15T06:41:19+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-7c0df5d149c7",
+      "time": "2026-10-15T06:41:19+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-4",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-48b7d2c8baa0",
+      "time": "2026-10-15T06:41:19+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-5",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-54bf5e060b6f",
+      "time": "2026-10-15T06:41:19+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
+    },
+    {
+      "event_id": "EV-fd53a8f93320",
+      "time": "2026-10-15T06:41:19+00:00",
+      "type": "checkpoint",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "note": "Engineering delivery complete; no claim of human acceptance or new-rule behavioral benefit. Acceptance metadata will be committed and synchronized next."
+      }
     }
   ],
   "artifacts": [],
   "created_at": "2026-10-15T05:38:17+00:00",
-  "updated_at": "2026-10-15T06:37:53+00:00"
+  "updated_at": "2026-10-15T06:41:19+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-15T06:41:19+00:00",
+      "note": "Engineering delivery complete; no claim of human acceptance or new-rule behavioral benefit. Acceptance metadata will be committed and synchronized next."
+    }
+  ]
 }
