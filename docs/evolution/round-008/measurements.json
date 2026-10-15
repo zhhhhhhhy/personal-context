@@ -1,0 +1,125 @@
+{
+  "schema_version": "evolution-measurements/2",
+  "round": "008",
+  "tokenizer": "o200k_base",
+  "source": {
+    "parents": 2,
+    "independent_training_families": 1,
+    "messages": 147,
+    "frozen_source_tokens": 5944,
+    "manual_user_intent_token_estimate": 5552,
+    "editor_wrapper_tokens_included": 392,
+    "historical_cited_excluded": 8,
+    "mode": "Uncovered historical supplement, protocol frozen before bodies or titles displayed."
+  },
+  "frozen_protocol": {
+    "unchanged": true,
+    "base_commit": "b48ee37fe1ef23a3c707892456ec86a67f5df128",
+    "protocol_sha256": "99d9a0d9b4fbddd1db9d1fc7227b0e1869ea44dadcdd46c1d6e4a6c31153f874",
+    "initial_whole_fallback": false,
+    "no_new_code_tests": "Existing 10-check code hash verified; no code changed or test suite rerun."
+  },
+  "review_actual": {
+    "initial_risk": 41,
+    "initial_sentinel": 22,
+    "initial_messages": 63,
+    "followup_messages": [
+      42,
+      7
+    ],
+    "outside_sample": 4,
+    "outside_pool": 35,
+    "checked": 116,
+    "not_independently_checked": 31,
+    "raw_findings": 20,
+    "accepted_findings": 19,
+    "accepted_messages": 9,
+    "rejected_findings": 1,
+    "accepted_kinds": {
+      "partial": 18,
+      "unsupported": 1
+    },
+    "findings_by_stage": {
+      "initial": 16,
+      "followup_1": 3,
+      "followup_2": 0,
+      "outside": 0
+    },
+    "unmatched_issue_clue_count": 3,
+    "unmatched_clue_classes": {
+      "constraint": 1,
+      "delivery_stage": 2
+    },
+    "tokens": 16379,
+    "shared_and_initial_tokens": 10885,
+    "followup_tokens": [
+      4543,
+      645
+    ],
+    "outside_tokens": 306,
+    "known_repaired": 19,
+    "unknown_semantic_recall": true
+  },
+  "same_data_comparison": {
+    "page_limit": 6500,
+    "v2_whole_mechanical": 18682,
+    "actual_selective": 16379,
+    "selective_saving_tokens": 2303,
+    "selective_saving_percent": 12.33,
+    "legacy_initial_mechanical": 13329,
+    "legacy_remaining_mechanical": 10744,
+    "legacy_sentinel_trigger_count": 1,
+    "legacy_policy_given_same_initial_findings": 24073,
+    "legacy_whole_one_pass": 23932,
+    "saving_vs_legacy_policy_percent": 31.96,
+    "boundary": "No full model comparison run. Whole/legacy inputs mechanically reconstructed from identical initial observations and sources; semantic omission count for those hypothetical models is unknown."
+  },
+  "input_metered": {
+    "parent_source": 6989,
+    "reviewer_core_and_pages": 18318,
+    "parent_adjudication_and_eval": 5730,
+    "candidate_lookup": 2992,
+    "total": 34029,
+    "events": 23,
+    "explicit_review_rereads": 0,
+    "full_reflector_ledger_reloads": 0,
+    "reader_log_only_total": 33019,
+    "recovered_delivered_payload": 1010,
+    "boundary": "One source page delivery was absent from concurrent JSONL append. Frozen-hash recovery receipt adds its exact 1010 tokens once; original log preserved and no model reread."
+  },
+  "input_reconstructed": {
+    "parent_context_file_bodies": 9211,
+    "dispatch_and_feedback": 1122,
+    "total": 10333
+  },
+  "recorded_input_estimate": 44362,
+  "cost_boundary": "Returned source/review/report/eval/candidate payloads metered; Context file bodies and dispatch reconstructed. Engineering-Skill setup, metadata ranking, controller/status outputs, platform/history/tools and generated output are not fully metered; this is not complete task usage or billing. Do not infer total-workflow savings from review payload savings.",
+  "content": {
+    "units": 176,
+    "observations": 175,
+    "reinforced_groups": 3,
+    "deferred_groups": 5,
+    "concrete_refinements": 4,
+    "new_learned_rules": 0,
+    "core_tokens": 1823,
+    "learned_entry_tokens": 31,
+    "core_hashes_unchanged": true
+  },
+  "evaluation": {
+    "eval_messages": 21,
+    "eval_source_tokens": 1463,
+    "one_related_family_quarantined": true,
+    "other_case_private_local_only": true,
+    "fresh_response_comparison": false,
+    "response_quality_gain": "not established",
+    "human_acceptance": "pending"
+  },
+  "prior_round_reference": {
+    "round": "007",
+    "messages": 106,
+    "source_tokens": 7085,
+    "actual_review_tokens": 18482,
+    "recorded_input_estimate": 48715,
+    "boundary": "Different source and unit mix, partly retrospective last round. No causal whole-run efficiency claim."
+  }
+}

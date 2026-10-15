@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-10-15T11:32:08.161798+00:00",
+  "all_frozen_files_unchanged": true,
+  "file_count": 11,
+  "initial_observations_preserved": true,
+  "source_digest": "6847dd08289119731e92fac2d30fa8fa60ae707dfc3b304e43cc16b304ce19f7",
+  "reflection_unchanged_since_eval_freeze": true,
+  "human_acceptance": "pending",
+  "source_digest_verified": true,
+  "source_message_count": 147,
+  "final_source_check_at": "2026-10-15T11:36:45.080207+00:00"
+}

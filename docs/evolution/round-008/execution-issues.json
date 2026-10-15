@@ -1,0 +1,6 @@
+{
+ "issues":[
+  {"id":"qualification-normalization","symptom":"Legacy qualification estimated 148 messages and 8312 tokens; canonical preparation retained 147 messages and 5944 tokens.","cause":"Legacy counts precede canonical runtime-wrapper normalization. The final frozen source, not raw-log or title size, defines semantic input.","resolution":"Kept the prospectively selected sample because 5944 still exceeds the planned 5500-token minimum; recorded both values without reselecting after body reading.","status":"resolved"},
+  {"id":"powershell-nested-quotes","symptom":"A one-off Python-script generation command failed in PowerShell before execution with ParserError: An expression was expected after '('.","cause":"Nested shell/string quotes were not preserved.","resolution":"Created the local compiler directly with apply_patch; validated all 147 IDs and exact source quotes. No observation file existed at failure; frozen source and protocol were unaffected.","status":"resolved"}
+ ]
+}

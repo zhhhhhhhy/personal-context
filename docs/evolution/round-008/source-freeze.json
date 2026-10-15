@@ -1,0 +1,16 @@
+{
+  "frozen_at": "2026-10-15T11:07:29.592231+00:00",
+  "train_roots": 2,
+  "eval_roots": 2,
+  "messages": 147,
+  "body_tokens": 5944,
+  "excluded_train_cited": 8,
+  "new_source_messages": 0,
+  "source_digest": "6847dd08289119731e92fac2d30fa8fa60ae707dfc3b304e43cc16b304ce19f7",
+  "semantic_read_before_freeze": false,
+  "metadata_titles_displayed": false,
+  "whole_reference_group": false,
+  "prior_full_coverage_roots_excluded": true,
+  "family_labels": "Provisional metadata labels; independently audit after reading, without silently changing frozen partitions.",
+  "protocol_sha256": "99d9a0d9b4fbddd1db9d1fc7227b0e1869ea44dadcdd46c1d6e4a6c31153f874"
+}

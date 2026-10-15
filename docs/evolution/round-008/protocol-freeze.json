@@ -1,0 +1,25 @@
+{
+  "frozen_at": "2026-10-15T11:04:45.859570+00:00",
+  "base_commit": "b48ee37fe1ef23a3c707892456ec86a67f5df128",
+  "files": {
+    "scripts/context-review.py": "1a2c97f34322d6a11d8fc25afdfd3d52d191c237e53f26248c8307dc080b9ff3",
+    "scripts/context_review_v2.py": "fd282cce8014d136a121a83168cc47a765e4c3a5075592af36bc416882882b1f",
+    "scripts/context-coverage.py": "cc1bcbb9025a143cc00468934d4952b1326d9cbceecdbcb1b92200889ee3a5b8",
+    "scripts/context-evolution.py": "84340fd9fefaa66c72a59ad890546c7cf715643c53c1a54de754738fad988b1b",
+    "scripts/context-meter.py": "3bc5233f3ba8e9cc8b351a6fb8faf4854bb6a0f63d7dc33b875ee0612da0b702",
+    "references/skills/personal-context-review.md": "7e1b01ac8332059694bf93ecdca7f4769d238812a7b4c919e6fe385c55e8cca8",
+    "references/skills/personal-context-observation.md": "a34a7228064f0fc511d4ec4d39d701545a7655459aa939d7c48ad83ec78209d7",
+    "references/skills/personal-context-evolution.md": "a470a9a61d7f9a501c2b6d3bbdb6dc375ee59d65c8e1d721167dddb3b1102b59",
+    "docs/evolution/POLICY.md": "04fac1bb19f5d3c738ea50657f4b678a7563cdb71b26107e2bd6c69d4934b973",
+    "rules/CONTEXT_LOADING.md": "cd92f5c86ba1c47db9411eb719cc84075e855d14b357074e0f0b81d3a135da9a",
+    "skills/personal-context/SKILL.md": "2c1082f2e311e9ff0facd3126096ffe6cd4dc6ee360e3296e5070ea3b6daaedb"
+  },
+  "review_page_tokens": 6500,
+  "initial_low_risk_rate": 0.2,
+  "outside_rate": 0.1,
+  "outside_min": 2,
+  "outside_max": 4,
+  "new_body_read": false,
+  "no_adaptive_tuning": true,
+  "prior_passing_check_artifact": "docs/evolution/round-007/review-adapter-checks-correction.json"
+}

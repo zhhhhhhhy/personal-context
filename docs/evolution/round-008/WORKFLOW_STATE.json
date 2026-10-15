@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "state_version": 9,
+  "transaction_id": "TX-7ceae3b64fd6",
+  "objective": "Blind-test frozen corrected Context review rules on a rich uncovered conversation cohort; compare actual input, found omissions and useful Context content",
+  "scope": "Freeze existing rules, select incremental evidence, extract, selective independent review, class follow-up and bounded outside audit, reflect and validate, measured report and repository sync",
+  "status": "in_progress",
+  "phase": "execute",
+  "owner": "agent",
+  "next_action": "Finish attempt A-003 and record its evidence.",
+  "constraints": [
+    "No frozen rule, taxonomy, sample seed or page limit tuning on this cohort"
+  ],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Freeze protocol and code before source reading; verify unchanged through completion",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-2",
+      "condition": "Select substantial uncovered direct messages by metadata, preserve source and observation coverage before candidate lookup",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-3",
+      "condition": "Run independent targeted review and frozen class follow-up plus outside audit without default whole review; repair accepted findings and report unknown scope",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    },
+    {
+      "id": "AC-4",
+      "condition": "Publish comparable actual input and useful Context decisions, validate privacy/budgets and synchronize repository",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "Clean b48ee37 equals live remote; Python/tiktoken available; corrected code hashes match 10 passing checks; legacy qualification metadata and source controls present; new run path unused",
+    "detail": "",
+    "checked_at": "2026-10-15T11:04:21+00:00"
+  },
+  "gates": {
+    "route": "2026-10-15T11:04:22+00:00",
+    "execute": "2026-10-15T11:04:22+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-15T11:04:22+00:00",
+      "phase": "execute",
+      "action": "Freeze existing review protocol and select rich uncovered cohort without reading message bodies into model context",
+      "expected_effect": "A source-independent fixed policy and separately frozen train/eval sources suitable for a new evaluation",
+      "owner": "agent",
+      "result": "Protocol frozen before selection and body reading. Prepared 147 messages, 5944 body tokens after canonical wrapper normalization, excluded 8 cited messages; two independent evaluation roots reserved. Metadata titles never displayed. Qualification estimate was higher before normalization; frozen sample remains above planned richness minimum.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/evolution/round-008/protocol-freeze.json",
+        ".local/context-evolution/round-008-20261015.meta/selection-freeze.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T11:07:57+00:00"
+    },
+    {
+      "id": "A-002",
+      "time": "2026-10-15T11:07:58+00:00",
+      "phase": "execute",
+      "action": "Observe every frozen source once and independently review only frozen risk pages, matching classes and bounded outside sample",
+      "expected_effect": "Prospective evidence about omissions and actual cost with no classifier tuning or default whole review",
+      "owner": "agent",
+      "result": "Frozen protocol unchanged: 63 initial, 42 plus 7 matching-class follow-up, 4 outside sample; 116/147 independently checked. Accepted 19 issues across 9 messages and repaired them; 1 antecedent finding rejected by immediate original context. No extra full review, no promotions; eval independence/privacy limitations recorded.",
+      "outcome": "passed",
+      "evidence": [
+        ".local/context-evolution/round-008-20261015/review/routing-closed.json",
+        ".local/context-evolution/round-008-20261015/observer-final-validation.json",
+        ".local/context-evolution/round-008-20261015/evaluation.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T11:27:45+00:00"
+    },
+    {
+      "id": "A-003",
+      "time": "2026-10-15T11:27:46+00:00",
+      "phase": "execute",
+      "action": "Measure actual loading against matched whole and legacy reconstructions, publish redacted Context refinements and blind-test limitations, verify synchronization",
+      "expected_effect": "A reviewable verdict about observed cost and omission detection, without claiming unknown recall or unmeasured whole-task savings",
+      "owner": "agent",
+      "result": "",
+      "outcome": "running",
+      "evidence": [],
+      "failure_cause": ""
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-39203e1e0636",
+      "time": "2026-10-15T11:04:20+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-2d2998086560",
+      "time": "2026-10-15T11:04:21+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "Clean b48ee37 equals live remote; Python/tiktoken available; corrected code hashes match 10 passing checks; legacy qualification metadata and source controls present; new run path unused"
+      }
+    },
+    {
+      "event_id": "EV-a7157678c8cb",
+      "time": "2026-10-15T11:04:22+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-9762121eb02c",
+      "time": "2026-10-15T11:04:22+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-c36586e8af8b",
+      "time": "2026-10-15T11:04:22+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-4f04edda46a1",
+      "time": "2026-10-15T11:07:57+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-be3a0750df81",
+      "time": "2026-10-15T11:07:58+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-002"
+      }
+    },
+    {
+      "event_id": "EV-a8e940deafc9",
+      "time": "2026-10-15T11:27:45+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-002",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-3c243322004d",
+      "time": "2026-10-15T11:27:46+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-003"
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-15T11:04:20+00:00",
+  "updated_at": "2026-10-15T11:27:46+00:00"
+}

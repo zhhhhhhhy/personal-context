@@ -1,0 +1,13 @@
+{
+  "schema_version": "metering-recovery/1",
+  "recovered_at": "2026-10-15T11:32:04.595571+00:00",
+  "file": "review/observe-03.json",
+  "reader": "parent-observer",
+  "tokens": 1010,
+  "sha256": "5da966deeab13682f1c742f648d05e9858c0d00a2d175b09a599e8a263e2a7fb",
+  "original_log_edited": false,
+  "model_payload_reloaded": false,
+  "evidence": "The two-call source-read tool result returned this complete page. Its current hash equals the pre-read observer manifest; only observe-02 was retained in the shared append log.",
+  "cause": "Suspected cross-process JSONL append race; not re-tested or fixed in frozen code during this cohort.",
+  "resolution": "Retain original log, add explicit delivery-recovery receipt and include its exact payload tokens once. Serialize future operations sharing one ledger."
+}
