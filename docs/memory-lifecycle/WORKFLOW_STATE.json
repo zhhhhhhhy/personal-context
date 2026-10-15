@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "state_version": 27,
+  "state_version": 31,
   "transaction_id": "memory-lifecycle-46-20261015",
   "objective": "Make existing personal Context memories usable and maintainable, and resolve all 46 historical candidates.",
   "scope": "Memory lifecycle CLI, sparse routing, evidence-bounded candidate dispositions, relevant Skill reconciliation, focused validation and delivery.",
-  "status": "in_progress",
-  "phase": "execute",
+  "status": "completed",
+  "phase": "report",
   "owner": "codex",
-  "next_action": "Finish attempt A-006 and record its evidence.",
+  "next_action": "Report the verified result and link the evidence.",
   "constraints": [
     "Raw and sensitive evidence stays local. No new history cohort or default full independent review. Preserve the existing communication.md edit."
   ],
@@ -55,8 +55,11 @@
     {
       "id": "AC-5",
       "condition": "Chinese delivery shows all outcomes, examples, loading behavior and limitations; repository changes are reviewable and synchronized.",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "notes/evolution/memory-resolution-20261015.md",
+        "docs/memory-lifecycle/synchronization.json"
+      ],
       "note": ""
     }
   ],
@@ -68,7 +71,9 @@
   },
   "gates": {
     "route": "2026-10-15T14:19:50+00:00",
-    "execute": "2026-10-15T14:19:50+00:00"
+    "execute": "2026-10-15T14:19:50+00:00",
+    "verify": "2026-10-15T14:21:12+00:00",
+    "report": "2026-10-15T14:21:13+00:00"
   },
   "attempts": [
     {
@@ -155,10 +160,13 @@
       "action": "Publish the reviewed content after correcting generated formatting and recording final preflight detail.",
       "expected_effect": "GitHub main contains the bounded memory implementation; user communication changes remain uncommitted.",
       "owner": "codex",
-      "result": "",
-      "outcome": "running",
-      "evidence": [],
-      "failure_cause": ""
+      "result": "Published implementation and all 46 dispositions to GitHub main; protected communication edit excluded.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/memory-lifecycle/synchronization.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T14:21:12+00:00"
     }
   ],
   "events": [
@@ -442,9 +450,51 @@
       "detail": {
         "attempt_id": "A-006"
       }
+    },
+    {
+      "event_id": "EV-51ed7cea2cd1",
+      "time": "2026-10-15T14:21:12+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-006",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-cf1de9aefe40",
+      "time": "2026-10-15T14:21:12+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-7f0273e30f1d",
+      "time": "2026-10-15T14:21:13+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-5",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-e3da609202ba",
+      "time": "2026-10-15T14:21:13+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
     }
   ],
   "artifacts": [],
   "created_at": "2026-10-15T13:28:02+00:00",
-  "updated_at": "2026-10-15T14:19:51+00:00"
+  "updated_at": "2026-10-15T14:21:13+00:00"
 }

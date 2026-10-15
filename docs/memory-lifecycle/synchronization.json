@@ -1,0 +1,7 @@
+{
+  "status": "verified",
+  "content_commit": "33a6f5345e1cc08dccc1ba5e69c2e17d0f8fa0ca",
+  "remote_main_at_verification": "33a6f5345e1cc08dccc1ba5e69c2e17d0f8fa0ca",
+  "protected_uncommitted_file": "habits/communication.md",
+  "scope": "Implementation, memory dispositions and delivery content. Final controller-state metadata is synchronized separately."
+}

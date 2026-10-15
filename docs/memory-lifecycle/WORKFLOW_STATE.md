@@ -1,16 +1,16 @@
 # Workflow Transaction State
 
 - Schema version: 1
-- State version: 27
+- State version: 31
 - Transaction ID: memory-lifecycle-46-20261015
 - Objective: Make existing personal Context memories usable and maintainable, and resolve all 46 historical candidates.
 - Scope: Memory lifecycle CLI, sparse routing, evidence-bounded candidate dispositions, relevant Skill reconciliation, focused validation and delivery.
-- Status: in_progress
-- Current phase: execute
+- Status: completed
+- Current phase: report
 - Owner: codex
-- Next action: Finish attempt A-006 and record its evidence.
+- Next action: Report the verified result and link the evidence.
 - Created: 2026-10-15T13:28:02+00:00
-- Updated: 2026-10-15T14:19:51+00:00
+- Updated: 2026-10-15T14:21:13+00:00
 
 ## Acceptance conditions
 
@@ -20,7 +20,7 @@
 | AC-2 | Exactly 46 candidates have evidence-grounded final dispositions and retrievable targets. | passed | docs/memory-lifecycle/validation.json; notes/candidate-dispositions.md |
 | AC-3 | Relevant task retrieval returns scoped memories, rules and Skill pointers without retired or unrelated content. | passed | docs/memory-lifecycle/loading.json; docs/memory-lifecycle/forward-use.json |
 | AC-4 | Entry budgets pass, runtime Skills match canonical packages, and pre-existing user changes remain intact. | passed | docs/memory-lifecycle/budget-final.json; docs/memory-lifecycle/validation.json |
-| AC-5 | Chinese delivery shows all outcomes, examples, loading behavior and limitations; repository changes are reviewable and synchronized. | pending |  |
+| AC-5 | Chinese delivery shows all outcomes, examples, loading behavior and limitations; repository changes are reviewable and synchronized. | passed | notes/evolution/memory-resolution-20261015.md; docs/memory-lifecycle/synchronization.json |
 
 ## Preflight
 
@@ -37,8 +37,8 @@
 
 - route: 2026-10-15T14:19:50+00:00
 - execute: 2026-10-15T14:19:50+00:00
-- verify: not_run
-- report: not_run
+- verify: 2026-10-15T14:21:12+00:00
+- report: 2026-10-15T14:21:13+00:00
 
 ## Decisions
 
@@ -53,7 +53,7 @@
 | A-003 | execute | Correct the reversed manuscript instruction chronology using native message timestamps, then close validation and delivery. | Corrected the actual source chronology and disposition reason, preserved old records, verified retrieval and wrote the Chinese delivery report. | passed | docs/memory-lifecycle/chronology-correction.json; notes/evolution/memory-resolution-20261015.md |
 | A-004 | execute | Commit and synchronize the reviewed implementation and delivery artifacts without the pre-existing communication edit. | Pre-commit diff check found trailing blank lines in six generated candidate topic pages; no commit or push was attempted. | failed | .local/context-memory/execution-issues.json |
 | A-005 | execute | Normalize generated topic endings, rerun the failed diff check, and synchronize the reviewed change. | The topic renderer fix passed; staged diff check found a separate empty Detail line in the controller-generated mirror. No commit or push occurred. | failed | .local/context-memory/execution-issues.json |
-| A-006 | execute | Publish the reviewed content after correcting generated formatting and recording final preflight detail. |  | running |  |
+| A-006 | execute | Publish the reviewed content after correcting generated formatting and recording final preflight detail. | Published implementation and all 46 dispositions to GitHub main; protected communication edit excluded. | passed | docs/memory-lifecycle/synchronization.json |
 
 ## Event log
 
@@ -84,3 +84,7 @@
 - `EV-20bcb63aee88` 2026-10-15T14:19:50+00:00 `gate_passed` {"stage": "route"}
 - `EV-17e88bea6844` 2026-10-15T14:19:50+00:00 `gate_passed` {"stage": "execute"}
 - `EV-240f4d1f4b8f` 2026-10-15T14:19:51+00:00 `attempt_started` {"attempt_id": "A-006"}
+- `EV-51ed7cea2cd1` 2026-10-15T14:21:12+00:00 `attempt_finished` {"attempt_id": "A-006", "outcome": "passed"}
+- `EV-cf1de9aefe40` 2026-10-15T14:21:12+00:00 `gate_passed` {"stage": "verify"}
+- `EV-7f0273e30f1d` 2026-10-15T14:21:13+00:00 `acceptance_verified` {"criterion": "AC-5", "result": "passed"}
+- `EV-e3da609202ba` 2026-10-15T14:21:13+00:00 `gate_passed` {"stage": "report"}
