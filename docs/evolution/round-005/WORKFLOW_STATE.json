@@ -1,43 +1,51 @@
 {
   "schema_version": 1,
-  "state_version": 9,
+  "state_version": 17,
   "transaction_id": "TX-d5ea5f0019d2",
   "objective": "Reduce review input with risk-directed checks and verify completeness on unused conversations",
   "scope": "Compact source-preserving review, deterministic risk routing and sentinel audit, one frozen shared extraction, targeted/full comparison, bounded evolution and delivery",
-  "status": "in_progress",
-  "phase": "execute",
+  "status": "completed",
+  "phase": "report",
   "owner": "agent",
-  "next_action": "Finish attempt A-003 and record its evidence.",
+  "next_action": "User evaluates the published report; no further automatic experiment scheduled.",
   "constraints": [],
   "blockers": [],
   "acceptance": [
     {
       "id": "AC-1",
       "condition": "Risk review preserves source and catches known omissions with scoped fallback",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "scripts/test-context-review.py; references/skills/personal-context-review.md; .local/context-evolution/round-005-calibration/"
+      ],
+      "note": "Four focused tests passed; routing selects all 15 known gaps within 55/112 old messages. New-batch escalation was not triggered; no universal semantic recall claim."
     },
     {
       "id": "AC-2",
       "condition": "Freeze unused parent conversations before semantic reading and preserve privacy",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-005/PLAN.md; .local/context-evolution/round-005-20261015/final-audit.json"
+      ],
+      "note": "Metadata-frozen 10 train and 4 held-out unused parent conversations; 37 direct train messages. Raw sources remain ignored and staged public additions passed scoped privacy inspection."
     },
     {
       "id": "AC-3",
       "condition": "Compare completeness and complete pipeline input on identical frozen observations",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-005/measurements.json; notes/evolution/round-005-20261015-evaluation.md"
+      ],
+      "note": "Identical frozen observations; 13 targeted versus 37 whole-reviewed messages; no additional gaps observed. Comparable explicit input estimates 22578 versus 25379; extra experiment 7813 disclosed. Small one-batch model reference, not human ground truth."
     },
     {
       "id": "AC-4",
       "condition": "Validate final decisions, preserve core budgets, record problems and synchronize repository",
-      "status": "pending",
-      "evidence": [],
-      "note": ""
+      "status": "passed",
+      "evidence": [
+        "notes/evolution/round-005-20261015.md; docs/evolution/TROUBLESHOOTING.md; .local/context-evolution/round-005-20261015/final-audit.json; origin/main dd082f1"
+      ],
+      "note": "45 integrity checks passed; zero learned promotions, core unchanged at 1823 tokens, backups available. Public content synchronized and verified; final user acceptance remains pending."
     }
   ],
   "preflight": {
@@ -48,7 +56,9 @@
   },
   "gates": {
     "route": "2026-10-15T06:56:20+00:00",
-    "execute": "2026-10-15T06:56:20+00:00"
+    "execute": "2026-10-15T06:56:20+00:00",
+    "verify": "2026-10-15T07:21:37+00:00",
+    "report": "2026-10-15T07:21:42+00:00"
   },
   "attempts": [
     {
@@ -88,10 +98,13 @@
       "action": "Finalize public report, inspect scoped diff and privacy, synchronize repository and record acceptance",
       "expected_effect": "Deliver reproducible measurements and troubleshooting with local raw evidence protected and verified remote content",
       "owner": "agent",
-      "result": "",
-      "outcome": "running",
-      "evidence": [],
-      "failure_cause": ""
+      "result": "Public report and troubleshooting delivered; staged diff and privacy patterns checked; raw evidence remains ignored. Content commit dd082f1 pushed and live origin/main equals local HEAD.",
+      "outcome": "passed",
+      "evidence": [
+        "notes/evolution/round-005-20261015-evaluation.md; verified dd082f11fed04bf91ff7793d608cffe5b9b21ae8 equals live origin/main"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T07:21:36+00:00"
     }
   ],
   "events": [
@@ -187,9 +200,100 @@
       "detail": {
         "attempt_id": "A-003"
       }
+    },
+    {
+      "event_id": "EV-90804eee9b0c",
+      "time": "2026-10-15T07:21:36+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-003",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-fce8fb55a4b0",
+      "time": "2026-10-15T07:21:37+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-42b4bb2801eb",
+      "time": "2026-10-15T07:21:38+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-918a3527739d",
+      "time": "2026-10-15T07:21:39+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-b2ec61ddd9ce",
+      "time": "2026-10-15T07:21:40+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-c3d00a6369ee",
+      "time": "2026-10-15T07:21:41+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-4",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-ed3171390198",
+      "time": "2026-10-15T07:21:42+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
+    },
+    {
+      "event_id": "EV-58daf3de342a",
+      "time": "2026-10-15T07:21:43+00:00",
+      "type": "checkpoint",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "note": "Execution acceptance passed with explicit limitations. User acceptance pending. Record this state in the repository and verify final synchronization."
+      }
     }
   ],
   "artifacts": [],
   "created_at": "2026-10-15T06:56:20+00:00",
-  "updated_at": "2026-10-15T07:19:32+00:00"
+  "updated_at": "2026-10-15T07:21:43+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-15T07:21:43+00:00",
+      "note": "Execution acceptance passed with explicit limitations. User acceptance pending. Record this state in the repository and verify final synchronization."
+    }
+  ]
 }
