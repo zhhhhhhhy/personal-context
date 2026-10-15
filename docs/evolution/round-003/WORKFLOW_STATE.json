@@ -1,49 +1,59 @@
 {
   "schema_version": 1,
-  "state_version": 11,
+  "state_version": 20,
   "transaction_id": "TX-f4fdaeb747c4",
   "objective": "Evolve Context from a new unused batch using progressive retrieval and measure actual semantic read payloads against whole-file loading",
   "scope": "Frozen unused parent cohort, local-only evidence, supported low-risk reflection and validation, metered Context and evidence reads, controlled loading comparison and reviewable result",
-  "status": "in_progress",
-  "phase": "execute",
+  "status": "completed",
+  "phase": "report",
   "owner": "agent",
-  "next_action": "Finish attempt A-004 and record its evidence.",
+  "next_action": "User evaluates the redacted round-three report; preserve deferred observations for later independent evidence.",
   "constraints": [],
   "blockers": [],
   "acceptance": [
     {
       "id": "AC-1",
       "condition": "Freeze unused human parent train/eval cohorts and preserve local-only sources",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "selection-freeze.json and source-integrity.json: 12 unused parents, 8 train and 4 held-out, 115 earlier roots excluded; native user-message-only exports stay local"
+      ],
       "note": ""
     },
     {
       "id": "AC-2",
       "condition": "Run evidence-based reflection with explicit novelty, scope and conflicts",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "Frozen reflection.json: direct training source review, 3 reinforced, 4 deferred, 4 rejected; isolated arm results reconciled, figure-handoff omission disclosed"
+      ],
       "note": ""
     },
     {
       "id": "AC-3",
       "condition": "Record actual returned Context fragments and evidence tokens, compare matched inputs with whole-file loading, disclose unobserved overhead",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "load-audit.json and published measurements.json: 16 byte-hash/JSON/token-checked payloads; shared bootstrap and train hashes match; 9128 vs 15214 Context tokens, limits and extra reads disclosed"
+      ],
       "note": ""
     },
     {
       "id": "AC-4",
       "condition": "Validate supported promotions or zero-promotion outcome and report independent usefulness limits",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "validation.json and apply.json: zero promotions; heldout-review.json: reflection unchanged after inspection, no response-benefit claim; protected file hashes and entry budgets pass"
+      ],
       "note": ""
     },
     {
       "id": "AC-5",
       "condition": "Publish redacted results and synchronize canonical repository",
-      "status": "pending",
-      "evidence": [],
+      "status": "passed",
+      "evidence": [
+        "delivery-check.json and delivery-proof.json: redacted report and helper committed as c10e2b6, pushed, live remote equality and clean working tree verified before closure metadata"
+      ],
       "note": ""
     }
   ],
@@ -55,7 +65,9 @@
   },
   "gates": {
     "route": "2026-10-15T02:44:09+00:00",
-    "execute": "2026-10-15T02:44:10+00:00"
+    "execute": "2026-10-15T02:44:10+00:00",
+    "verify": "2026-10-15T05:30:54+00:00",
+    "report": "2026-10-15T05:30:55+00:00"
   },
   "attempts": [
     {
@@ -110,10 +122,13 @@
       "action": "Check redacted tracked outputs and synchronize canonical repository",
       "expected_effect": "Publish reviewable report and metering helper with no local evidence or credentials; verify clean local and remote main equality",
       "owner": "agent",
-      "result": "",
-      "outcome": "running",
-      "evidence": [],
-      "failure_cause": ""
+      "result": "Ten redacted delivery files checked; local evidence ignored and untracked. Commit c10e2b6 pushed; live remote main equals clean local HEAD. Final workflow closure metadata follows.",
+      "outcome": "passed",
+      "evidence": [
+        ".local/context-evolution/round-003-20261015/delivery-check.json; delivery-proof.json; commit c10e2b6"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-15T05:30:54+00:00"
     }
   ],
   "events": [
@@ -230,9 +245,111 @@
       "detail": {
         "attempt_id": "A-004"
       }
+    },
+    {
+      "event_id": "EV-2949fea2f900",
+      "time": "2026-10-15T05:30:54+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-004",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-734f6eec74d3",
+      "time": "2026-10-15T05:30:54+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-585e48293c19",
+      "time": "2026-10-15T05:30:54+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-ff6dc48a9d6f",
+      "time": "2026-10-15T05:30:55+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-acf6518ad946",
+      "time": "2026-10-15T05:30:55+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-3f2b0f1bee82",
+      "time": "2026-10-15T05:30:55+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-4",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-d7d7ecc813db",
+      "time": "2026-10-15T05:30:55+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-5",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-ad4bb3a06d03",
+      "time": "2026-10-15T05:30:55+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
+    },
+    {
+      "event_id": "EV-f04693d87865",
+      "time": "2026-10-15T05:30:56+00:00",
+      "type": "checkpoint",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "note": "Technical task complete. Measured loading savings established for returned payloads; no new learned rule or response-quality gain established. Human acceptance pending."
+      }
     }
   ],
   "artifacts": [],
   "created_at": "2026-10-15T02:43:31+00:00",
-  "updated_at": "2026-10-15T03:13:47+00:00"
+  "updated_at": "2026-10-15T05:30:56+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-15T05:30:56+00:00",
+      "note": "Technical task complete. Measured loading savings established for returned payloads; no new learned rule or response-quality gain established. Human acceptance pending."
+    }
+  ]
 }
