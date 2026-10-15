@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "run_id": "round-003-20261015",
+  "tokenizer": "o200k_base",
+  "scope": "Actual successful reader text payloads, not full session usage",
+  "cohort": {
+    "train_roots": 8,
+    "heldout_roots": 4,
+    "train_families": 7,
+    "prior_roots_excluded": 115,
+    "direct_train_messages": 26,
+    "direct_train_text_tokens": 899
+  },
+  "arms": {
+    "progressive": {
+      "reads": 10,
+      "context": 9128,
+      "history": 3060,
+      "bootstrap": 6267,
+      "candidate_retrieval": 2861,
+      "extra_skills": 0,
+      "total_returned_payload": 12188
+    },
+    "whole": {
+      "reads": 6,
+      "context": 15214,
+      "history": 3060,
+      "bootstrap": 6267,
+      "candidate_retrieval": 7690,
+      "extra_skills": 1257,
+      "total_returned_payload": 18274
+    }
+  },
+  "savings": {
+    "candidate_retrieval": {
+      "tokens": 4829,
+      "percent_of_whole": 62.796
+    },
+    "context": {
+      "tokens": 6086,
+      "percent_of_whole": 40.003
+    },
+    "total_returned_payload": {
+      "tokens": 6086,
+      "percent_of_whole": 33.304
+    }
+  },
+  "payload_checks_passed": 20,
+  "matched_bootstrap_and_training_payloads": true,
+  "candidate_bodies_matched": 46,
+  "source_integrity_checks_passed": 30,
+  "core_body_tokens": 1823,
+  "learned_body_tokens": 31,
+  "protected_file_hashes_unchanged": {
+    "rules\\SOUL.md": true,
+    "profile.md": true,
+    "habits\\communication.md": true,
+    "INDEX.md": true,
+    "habits\\learned.md": true
+  },
+  "reflection_frozen_sha256": "1130dc3a373b4f7c5f46cc1c30d9eae1e25935672720664b9d0d12301b42f7e9",
+  "instrument_sha256_during_runs": "9da07d636ae6bdd20d0defee54f608841c69b0368420dc2338dfa4f518ea7432",
+  "instrument_sha256_final": "04e681358d3b1cd8eb4dda5881b594bb9784d7b673125c1245934969f2a5a9ef",
+  "observed_payloads_unchanged_by_serialization_fix": true,
+  "outcome": {
+    "promotions": 0,
+    "reinforced": 3,
+    "deferred": 4,
+    "rejected": 4,
+    "progressive_observation_groups": 9,
+    "whole_observation_groups": 10,
+    "human_acceptance": "pending"
+  },
+  "quality_limits": [
+    "Progressive observer omitted manual figure-handoff evidence already returned to both arms",
+    "Single pair of independent runs; extra Skill reads differ",
+    "No promoted candidate or response-improvement test",
+    "Platform, setup, failed commands and parent integration overhead excluded"
+  ]
+}

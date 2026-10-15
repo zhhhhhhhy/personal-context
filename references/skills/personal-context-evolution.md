@@ -60,6 +60,15 @@ The extractor removes AGENTS runtime wrappers and normalizes IDE request wrapper
 
 Record `reinforced` existing rules separately from novel `promotions`. Additional support can be useful even when no new rule is needed. Keep current core and Skill behavior as the baseline; do not weaken it to make a candidate look beneficial.
 
+When the user requests measured loading, use `scripts/context-meter.py` with a
+prepared local run and separate arm names. Its bootstrap, training, candidate
+search and exact-record commands log the text actually returned, including
+repeated payloads. Keep matching evidence and constraints across conditions;
+the explicit whole-ledger arm verifies that archived candidate bodies still
+match. Report Context and historical-evidence payloads separately from setup,
+platform prompts and tool schemas, which this reader does not observe. A reader
+log alone does not prove every later tool output was metered.
+
 ## Apply, evaluate, rollback
 
 ```powershell
