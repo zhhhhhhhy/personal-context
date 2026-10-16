@@ -47,7 +47,9 @@
 
 本轮69条消息有67条逐字唯一，去重原文1,997 tokens，仅3 tokens差异；按逐字唯一原文归一化后结论仍为开销增加。空白归一化后64条唯一、1,924 tokens，但同时改变格式token，另存为辅助诊断，不作为主比较口径。
 
-| 轮次 | 逐字唯一原文tokens | 每千唯一原文开销 | 相对第11轮主参照节省 |
+口径澄清：第12/13轮为此前空白归一判重后保留原文的计数，第14轮为逐字判重；下表只列各自历史敏感性，不是相同去重算法的严格对照。主表未去重口径不受影响。
+
+| 轮次 | 各轮已保存去重原文tokens | 每千对应原文开销 | 相对第11轮主参照节省 |
 |---|---:|---:|---:|
 | 12 | 2,079 | 8,027.90 | 70.13% |
 | 13 | 1,757 | 7,348.32 | 72.66% |
@@ -90,3 +92,5 @@ GAIA的历史9题请求不替代旧5题联调要求，也不与gaia_claude_code�
 已提交并推送；同一仓库main分支的现场回执保存在本地，当前提交哈希由最终交付消息给出。 不提交用户已有的 `habits/communication.md` 修改；本轮只提交非敏感项目记忆及round-014成果。原文、个人材料、敏感证据、provenance映射和审计日志均保持本地忽略。
 
 复核入口：[freeze.json](freeze.json)、[preparation.json](preparation.json)、[actual-loading.json](actual-loading.json)、[loading.json](loading.json)、[comparison.json](comparison.json)、[duplicate-sensitivity.json](duplicate-sensitivity.json)、[validation.json](validation.json)、[memory-summary.json](memory-summary.json)。本报告自足；进一步逐条复核需在本机读取上述`.local`账本，不能从公开摘要推断完整语义召回。
+
+原会话补充核计与协调成本见[PARENT_ACCOUNTING.md](PARENT_ACCOUNTING.md)：同截止主表68,469已独立对齐，扩展观测合计79,731，具体范围与尾部排除见补充。

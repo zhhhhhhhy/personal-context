@@ -1,0 +1,40 @@
+{
+  "status": "independently_reconciled",
+  "cold_thread_id": "01a14301-36c0-7261-8aef-55e2ef5a25e5",
+  "cold_result_commit": "391a5dbf79c139fb6a724fd5dfc9a5f77e09fb5a",
+  "cold_primary_cutoff": "2026-10-16T05:02:14.096Z",
+  "cold_primary_tool_return_tokens": 68469,
+  "independent_output_shaped_tokens_at_same_cutoff": 69223,
+  "initial_task_envelope_separate": 754,
+  "independent_reconciliation": "69223 minus754 initial task input equals68469 actual working tool returns",
+  "cold_end_cutoff": "2026-10-16T05:03:32.518Z",
+  "cold_end_working_tool_return_tokens": 68717,
+  "cold_end_including_initial_task_envelope_tokens": 69471,
+  "delivery_tail_after_primary_snapshot_tokens": 248,
+  "parent_orchestration_tokens": 10260,
+  "parent_cutoff": "2026-10-16T05:07:10.702Z",
+  "parent_calls": 39,
+  "combined_observed_tools_plus_task_envelope_tokens": 79731,
+  "raw_tokens": 2000,
+  "cold_primary_tokens_per_1000_raw": 34234.5,
+  "cold_primary_unit_cost_increase_vs_round011_pct": 27.36,
+  "stages": {
+    "cold_entry_protocol_skill_and_anchors": 22205,
+    "qualification_preparation_adaptation_errors": 16840,
+    "source_return": 4255,
+    "observation_and_initial_validation": 685,
+    "focused_review_routes_adjudication": 8071,
+    "retrieval_reflection_and_review_close": 5327,
+    "validation_adaptation_lifecycle": 5900,
+    "measurement_final_validation_network_publication": 5186
+  },
+  "logged_automatic_context_separate": {
+    "developer_message_tokens": 12473,
+    "router_environment_tokens": 337,
+    "full_platform_context": "unmeasured; not billing"
+  },
+  "model_observed": "gpt-6.1-sol",
+  "prior89_framework_hashes_unchanged": true,
+  "boundary": "Main cold metric is comparable tool-return snapshot; parent includes dispatch/wait/receipt/report reads, independent arithmetic and own failed audit adapters. Combined includes initial task envelope and child delivery tail. Parent current in-flight accounting response and later publishing are outside its cutoff. System/developer/prior history/assistant generation not in tool-return comparison. Not a complete context-window or billing measurement.",
+  "duplicate_sensitivity_correction": "Prior rounds12/13 used whitespace-normalized equality while retaining first original text tokens; round14 uses byte/text-exact equality and a separately normalized diagnostic. Their auxiliary dedup table is not a controlled same-algorithm comparison; the primary non-dedup table remains comparable."
+}
