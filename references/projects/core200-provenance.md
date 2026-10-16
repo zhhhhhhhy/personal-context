@@ -8,7 +8,7 @@
 |---|---|---|
 | 历史用户口径 | 73 / 127 | 原始对应材料仍待核；原12个来源及历史条目保留，不作为当前修订分母 |
 | 此前本地快照 | 88 / 112 | 本地旧 `reference_labels.jsonl`、统计和中文稿的已核对口径；不是所有副本已更新的证明 |
-| QC4复核修订 | 89 / 111 | 已生成修订参考和实验一重评分；用户已要求正式采用，但本次尚未确认正式冻结完成 |
+| 本地正式版 `core200-reference-v3-qc4` | 89 / 111 | 已只读核实正式冻结和对应实验一结果；远端新版镜像仍未同步 |
 
 ### 四题已取得复核结论
 
@@ -31,13 +31,19 @@
 
 0039由误填变为动作正确，不证明其值、完整性或引用支持均通过，也不代表新版完整JointSuccess或ReliableFill已完成。实验一需更新数值、分母及字段范围表述；本次没有重新运行该实验或替原任务改写论文。
 
-### 正式采用与仍待确认的内容
+### 本地正式冻结与尚未同步的边界
 
-原“200题”任务已收到用户正式采用4题修订、冻结新版200题与实验一结果、保留旧版的明确指令。本次截至2026-10-16T06:03Z只确认QC4材料及重评分结果；该采用任务仍在执行，正式冻结包路径、清单哈希和完成验收尚未核实，不能提前写成正式版本已冻结。后续取得完成结果时更新本节与同一项目条目。
+2026-10-16只读核对已确认本地正式冻结，关闭此前“正式冻结待确认”的状态：
 
-实验二继续不跑。本次不启动实验、修改标签或覆盖旧结果；原始人审、旧45份覆盖分母和候选V/M/C仍需各自证据。Core200资料不升级长期规则，也不提供历史实验启动、迁移或删除权限。
+- 正式标签目录为 `2026-10-13/deng/outputs/core200_reference_v3_20261016/`；`RELEASE.json` 的版本为 `core200-reference-v3-qc4`、状态为 `OFFICIAL_FROZEN`，应填89、应审核111。`sol_labels.jsonl` 的SHA-256为 `bc00c44f6752ab80a7940481aa50fefaf1caebeafa3552eac390ec1c9ed7c7ec`。
+- 正式实验一目录为 `2026-10-13/deng/outputs/core200_experiment1_v3_20261016/`；`RESULTS.json` 同样为 `OFFICIAL_FROZEN`，绑定上述同一参考哈希。5组已有输出共1000行逐题记录均绑定新版，逐组动作误填/过度审核计数与汇总一致。
+- 两个目录的 `VALIDATION.json` 均为PASS，清单冻结时间为2026-10-16T06:06:29Z、验证时间约06:06:37Z。本次独立只读核对了清单内301+32=333个文件的字节数和哈希；旧88/112参考及原始来源归档的哈希也与保留记录一致，没有运行包内的校验或重生成脚本。
+- **远端新版镜像尚未同步：** 验证记录明确为 `NOT_SYNCED_SSH_CONNECT_TIMEOUT`。旧版原始归档的服务器回执不能当作新版镜像回执；本次没有重试SSH或进行远端写入。论文和其他副本是否同步仍未核实。
+- `RELEASE.json` 明确 `human_gold=false`，`RESULTS.json` 明确 `content_scoring=NOT_PERFORMED`。正式冻结不等于新增独立人工标注，也不代表候选V/M/C、完整JointSuccess或ReliableFill已经完成。
 
-本地结果位于 `2026-10-13/deng/outputs/core200_reference_qc4_20261016/`（相对于本机 `Documents/Codex/`），重点文件为 `FOUR_CASE_AUDIT.json`、`reference.original.jsonl`、`reference.proposed_qc4.jsonl`、`RESCORE_RESULTS.json`、`VALIDATION.json`、`EXECUTION_BOUNDARY.json` 和 `CASE_REPORT.html`。当前入口为 `project.core200-provenance-v4`，v3的88/112及待核快照、v2及所有来源保留追溯；本次来源清单、文件哈希和事务只存 `.local/context-memory/`。
+实验二继续不跑：正式结果包的 `EXPERIMENT2_STATUS.json` 为 `NOT_RUN`、`allow_model_execution=false`。旧v1材料绑定的是旧参考，未来取得明确执行授权后仍须先重新绑定新版，不能照旧元数据直接运行。本次没有启动实验、修改标签或覆盖旧结果；原始人审、旧45份覆盖分母和候选V/M/C仍需各自证据。Core200资料不升级长期规则，也不提供实验启动、迁移或删除权限。
+
+上述目录均相对于本机 `Documents/Codex/`。原QC4候选与复核报告继续保留在 `2026-10-13/deng/outputs/core200_reference_qc4_20261016/`，不将其历史“候选”状态误当作正式新版未冻结。当前入口为 `project.core200-provenance-v5`；v4的冻结待确认快照、v3的88/112快照、v2及全部来源保留追溯。本次来源清单、文件哈希和事务只存 `.local/context-memory/`。
 
 ## 首先锁定对象与版本
 

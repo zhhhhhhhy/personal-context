@@ -5724,8 +5724,424 @@
       ],
       "project": "contract-research",
       "target": "references/projects/core200-provenance.md",
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:09:39+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "project.core200-provenance-v4",
+          "kind": "project",
+          "title": "Core200：4题P复核修订89/111，正式冻结待确认",
+          "claim": "Core200版本分开：73应填/127应审核为历史用户口径，88/112为此前本地快照。2026-10-16 QC4已给出复核结论并生成修订参考：0005/0006适用法律、0037签署日期由Partial改无可用证据；0039适用法律改充分，仅0039由审核改应填，得到89应填/111应审核（充分89、部分36、无证据75、冲突0）。实验一复用已有输出重评分：主配对4B的Partial误填22/36、无证据13/75，总FalseFill由36/112变35/111。主要关联方向保留，但适用法律不再有Partial样本，不能称五类字段均复现。用户已要求正式采用并保留旧版；本次尚未确认正式冻结完成。实验二未运行，不从此记录获得启动权限。",
+          "scope": "contract-research 的Core200：2026-10-16 QC4修订及实验一重评分；候选标签与正式冻结状态分开，旧快照和原始来源保留",
+          "exceptions": [
+            "73/127原始对应材料仍待核；88/112仍存在于旧标签、本地旧统计和中文稿中，不能因QC4结果生成就宣称所有副本已经同步。",
+            "QC4报告已完成，不能再笼统记作4题尚未核查；本次确认的是4个复核结论和候选参考89/111，不是正式采用/冻结事务已完成。用户已明确要求采用，原任务仍在执行，完成后再核对正式版本路径、哈希和结果。",
+            "0005、0006、0037仅改变证据分类，仍应审核；0039改为应填。全文参考值未改，不把4题都记成动作翻转。",
+            "主配对4B在Partial为22/36=61.1%、无证据13/75=17.3%；共同支持的四类字段调整差44.7个百分点。五字段兼容分析包含缺失状态单元外推，不当作正式四字段结论；不是因果证明，也不是每个字段独立显著。",
+            "OverReview仍12题，分母由88变89；总FalseFill变35/111。0039动作改判正确不证明值、完整性或引用评分通过，不代表新版JointSuccess或ReliableFill已完成。",
+            "本次QC4不是新的独立人工标注；原始人审、45份覆盖分母和候选V/M/C仍需各自证据。不沿用实验启动、迁移或删除权限，不升级长期规则；实验二继续不跑。"
+          ],
+          "tags": [
+            "127",
+            "4题P",
+            "73",
+            "73/127",
+            "88/112",
+            "89/111",
+            "Core200",
+            "Partial",
+            "QC4复核",
+            "一致性",
+            "人审",
+            "原始",
+            "四字段",
+            "待核",
+            "构造",
+            "标签",
+            "标签版本",
+            "正式冻结待确认",
+            "版本",
+            "重标"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "project",
+          "verification": "qc4_local_label_diff_and_rescore_artifacts_checked; formal_freeze_completion_pending; original_human_provenance_pending",
+          "evidence": [
+            {
+              "ref": "E131",
+              "thread_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+              "location": "rollout-2026-10-08T18-23-02-01a116a5-96a5-7cb3-8150-3c62ba850e3f_01a11b09-b103-74e1-8e5d-763c1027e4e7.jsonl:L314",
+              "source_kind": "user_authored",
+              "family_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+              "text_sha256": "e74a1e3ce2f8ea9630b0aac5f36e0e33cb4e57e95a23e31b269e59c7d6b78510",
+              "support": "用户给出的200题与两人加第三人审核流程是论文写作要求。"
+            },
+            {
+              "ref": "E134",
+              "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+              "location": "rollout-2026-10-08T23-13-42-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3_01a11c13-cd58-7681-8a0a-437158e937cb.jsonl:L2297",
+              "source_kind": "user_authored",
+              "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+              "text_sha256": "31ea2f5d628ae202c11054bcd8b524f0878bdea88c92c66bdd1521482c8b0e80",
+              "support": "用户同时列出逐题原始记录和人工评分依据尚待对应的缺口。"
+            },
+            {
+              "ref": "R010-M004",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-13T19-16-28-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a134fa-6953-7843-b518-34b0bc88d7f9.jsonl:L58",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "47388156d2ee6cc4daa6796ee7b497752fcbe459387905663b52ca1884baa578",
+              "message_timestamp": "2026-10-13T11:20:10.432Z",
+              "support": "要求全量逐题ID及独立判断/裁定记录。"
+            },
+            {
+              "ref": "R010-M013",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-13T21-29-52-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13574-8a51-70b0-9635-7ac130694f2e.jsonl:L113",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "a1091c19b3927cd6cb7dd012539fd8458a747eb6b20d6e0e08e9d90f48928f00",
+              "message_timestamp": "2026-10-13T14:16:46.886Z",
+              "support": "询问45份标注覆盖及FILL来源，非实测统计。"
+            },
+            {
+              "ref": "R010-M027",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-13T21-29-52-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13574-8a51-70b0-9635-7ac130694f2e.jsonl:L1197",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "5bf6b7076714fb57dd1adcc6cbb93641e8ede70102a0c813e5ebf344ac8f812c",
+              "message_timestamp": "2026-10-14T07:23:46.463Z",
+              "support": "用户对teacher或专家来源仍有不确定。"
+            },
+            {
+              "ref": "R010-M038",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-14T18-53-03-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13a0b-5548-76d0-a802-1ee7859bf65d.jsonl:L8",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "aa6366c40b46d918e0b305314e3d0e9444005b0912d0c187812c4aadcb1ff3a5",
+              "message_timestamp": "2026-10-14T10:53:07.016Z",
+              "support": "回忆5.6sol与输入，询问原始记录是否存在。"
+            },
+            {
+              "ref": "R010-M043",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-14T18-53-03-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13a0b-5548-76d0-a802-1ee7859bf65d.jsonl:L559",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "139e90d3d257fdc844d7a32b92cd2b342ca5124d7e321331c3c183447136be8f",
+              "message_timestamp": "2026-10-14T12:00:49.320Z",
+              "support": "明确寻找原始200题生成记录及完整输入。"
+            },
+            {
+              "ref": "R010-M063",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-14T23-00-09-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13aed-8e8c-7371-a885-f1b070ba18a0.jsonl:L1438",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "71802673d93a8ee6ae39c79f1c07e845b4997b809bc4e046d70a43e0433c3322",
+              "message_timestamp": "2026-10-15T02:58:50.520Z",
+              "support": "希望两次隔离上下文的Agent标注，不证明人工金标。"
+            },
+            {
+              "ref": "R010-M064",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-14T23-00-09-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13aed-8e8c-7371-a885-f1b070ba18a0.jsonl:L4845",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "3af01ed5f2488a9f9757ca47f6f057db4954b39676983e62e6d1dc315f490086",
+              "message_timestamp": "2026-10-15T08:47:44.455Z",
+              "support": "比较原200题与新版动作/四分类及差异。"
+            },
+            {
+              "ref": "R010-M072",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-15T17-57-47-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13eff-1677-7392-8915-242e18ac916d.jsonl:L426",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "f05e1756c0b7228df226305d24223a6a5ce600c3e4110050574366ee41aef640",
+              "message_timestamp": "2026-10-15T10:58:24.439Z",
+              "support": "提供200、73/127口径并要求逐题初判和分歧/确认记录。"
+            },
+            {
+              "ref": "R010-M021",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-13T21-29-52-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13574-8a51-70b0-9635-7ac130694f2e.jsonl:L682",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "96a18733eb2361094d7507f16ca5500bfe2f289133aef2be3257bfab3893f589",
+              "message_timestamp": "2026-10-14T05:04:10.312Z",
+              "support": "原任务明确sol_labels路径及构造结果、prompt、原始数据等迁移范围；不是当前迁移授权。"
+            },
+            {
+              "ref": "R010-M059",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-14T23-00-09-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13aed-8e8c-7371-a885-f1b070ba18a0.jsonl:L449",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "616c05b35b289170fa057e30e28a90e3560f9e1a337c690145ce63df7b6ac3e9",
+              "message_timestamp": "2026-10-14T16:00:10.849Z",
+              "support": "用户粘贴的启动方案；角色、八字段与pilot规模只作所供方案，不证明实际执行。"
+            },
+            {
+              "ref": "context_update",
+              "thread_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+              "family_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+              "source_kind": "user_authored",
+              "location": "rollout-2026-10-14T23-52-05-01a138aa-2f25-70b3-bca8-406bf55d1c10_01a13b1d-1a97-79e2-93a5-3aafc649c916.jsonl:L8723",
+              "message_timestamp": "2026-10-16T05:52:20.402Z",
+              "text_sha256": "0a38ff619a9cbcc0f514c0fa841e6c6bf68d323577a0f04252a1aaa6daa9f465",
+              "support": "用户明确要求保留73/127旧来源，补记88/112当前本地口径与4题P待核，限定为Core200项目记忆，不晋升长期规则。"
+            },
+            {
+              "ref": "qc4_update",
+              "thread_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+              "family_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+              "source_kind": "user_authored",
+              "location": "rollout-2026-10-14T23-52-05-01a138aa-2f25-70b3-bca8-406bf55d1c10_01a13b1d-1a97-79e2-93a5-3aafc649c916.jsonl:L8802",
+              "message_timestamp": "2026-10-16T05:58:35.437Z",
+              "text_sha256": "b8b8b31202ac71913a7a93d9db133cb4d72ae19415c471d3480faf3d003981f9",
+              "support": "用户要求查4题P核查结果，核对口径和实验一影响后更新同一项目记忆；无结果不推断，不启动实验二。"
+            },
+            {
+              "ref": "qc4_adoption",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "family_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "source_kind": "user_authored",
+              "location": "rollout-2026-10-15T19-25-44-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13f4f-9e03-7360-b298-eb3a761788f7.jsonl:L2165",
+              "message_timestamp": "2026-10-16T05:56:48.268Z",
+              "text_sha256": "18d524cc8befd3469909fe6640388e8eb5852df62fba57d30aa9ea4e1b737ed5",
+              "support": "用户在原任务明确要求采用4题复核结论修正正式标签、冻结新版200题及实验一结果并保留旧版本；实验二先不跑。"
+            }
+          ],
+          "review_after": "2026-10-17",
+          "source_candidates": [
+            "C-20261014-033"
+          ],
+          "project": "contract-research",
+          "target": "references/projects/core200-provenance.md",
+          "status": "active",
+          "updated_at": "2026-10-16T06:03:03+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "project.core200-provenance-v5",
+      "last_reason": "同一Core200项目记忆更新为v5，保留v4及全部15个来源，只新增本次只读核对指令来源；不编辑长期规则。"
+    },
+    {
+      "id": "project.core200-provenance-v5",
+      "kind": "project",
+      "title": "Core200：本地正式冻结89/111，远端镜像未同步",
+      "claim": "Core200保留历史73/127及旧快照88/112。2026-10-16本地正式版core200-reference-v3-qc4已冻结89应填/111应审核（充分89、部分36、无证据75、冲突0）；对应实验一正式结果也为OFFICIAL_FROZEN，5组既有输出共1000行绑定同一参考哈希。已只读核对333个清单文件及旧标签/原始归档哈希。4题QC修订已正式采用，仅0039由审核变应填；主配对4B总误填35/111、过度审核12/89，解释限四类有共同支持的字段。新版远端镜像因SSH连接超时仍未同步，不能宣称远端更新。正式冻结不等于人工金标或完整JointSuccess：release声明human_gold=false，content_scoring=NOT_PERFORMED。实验二NOT_RUN，旧v1材料须在未来明确授权执行前重绑新版参考。",
+      "scope": "contract-research 的Core200：2026-10-16本地正式冻结标签及实验一动作/关联结果；不代表远端镜像、论文副本同步或候选V/M/C完成",
+      "exceptions": [
+        "正式标签目录为core200_reference_v3_20261016，参考哈希bc00c44f6752ab80a7940481aa50fefaf1caebeafa3552eac390ec1c9ed7c7ec；实验一目录core200_experiment1_v3_20261016绑定相同哈希，不能再笼统标记本地正式冻结待确认。",
+        "73/127为历史用户口径，原始对应材料仍待核；88/112旧标签和原始归档保留。未核实论文及所有副本已同步，不把本地冻结当作服务器最新版本。",
+        "远端镜像状态NOT_SYNCED_SSH_CONNECT_TIMEOUT；旧版本已有服务器回执不证明新版同步。此次只读核对没有重试SSH、改标签、改结果或启动实验。",
+        "0005、0006适用法律及0037签署日期改为无可用证据，仍审核；0039适用法律改充分、应填，全文参考值未改。主配对4B Partial误填22/36、无证据13/75；四字段调整差44.7个百分点，属于关联结果，不能声称五类字段均复现或每个字段独立显著。",
+        "正式release的human_gold=false，原始A/B和裁定记录保留；候选V/M/C及完整JointSuccess未完成，不因标签冻结而认证人工金标或ReliableFill。原始人审和旧覆盖分母仍需各自证据。",
+        "实验二状态NOT_RUN、allow_model_execution=false；旧v1材料绑定旧参考，未来明确授权执行前须重绑新版。此记忆不授权启动实验、迁移或删除，不晋升长期规则。"
+      ],
+      "tags": [
+        "127",
+        "4题P",
+        "73",
+        "73/127",
+        "88/112",
+        "89/111",
+        "Core200",
+        "Partial",
+        "QC4复核",
+        "human_gold=false",
+        "一致性",
+        "人审",
+        "原始",
+        "四字段",
+        "实验二未运行",
+        "本地正式冻结",
+        "构造",
+        "标签",
+        "标签版本",
+        "版本",
+        "远端未同步",
+        "重标"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "local_official_freeze_and_manifest_hashes_verified; remote_mirror_not_synced; human_gold_false; content_scoring_not_performed",
+      "evidence": [
+        {
+          "ref": "E131",
+          "thread_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+          "location": "rollout-2026-10-08T18-23-02-01a116a5-96a5-7cb3-8150-3c62ba850e3f_01a11b09-b103-74e1-8e5d-763c1027e4e7.jsonl:L314",
+          "source_kind": "user_authored",
+          "family_id": "01a116a5-96a5-7cb3-8150-3c62ba850e3f",
+          "text_sha256": "e74a1e3ce2f8ea9630b0aac5f36e0e33cb4e57e95a23e31b269e59c7d6b78510",
+          "support": "用户给出的200题与两人加第三人审核流程是论文写作要求。"
+        },
+        {
+          "ref": "E134",
+          "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "location": "rollout-2026-10-08T23-13-42-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3_01a11c13-cd58-7681-8a0a-437158e937cb.jsonl:L2297",
+          "source_kind": "user_authored",
+          "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "text_sha256": "31ea2f5d628ae202c11054bcd8b524f0878bdea88c92c66bdd1521482c8b0e80",
+          "support": "用户同时列出逐题原始记录和人工评分依据尚待对应的缺口。"
+        },
+        {
+          "ref": "R010-M004",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-13T19-16-28-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a134fa-6953-7843-b518-34b0bc88d7f9.jsonl:L58",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "47388156d2ee6cc4daa6796ee7b497752fcbe459387905663b52ca1884baa578",
+          "message_timestamp": "2026-10-13T11:20:10.432Z",
+          "support": "要求全量逐题ID及独立判断/裁定记录。"
+        },
+        {
+          "ref": "R010-M013",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-13T21-29-52-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13574-8a51-70b0-9635-7ac130694f2e.jsonl:L113",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "a1091c19b3927cd6cb7dd012539fd8458a747eb6b20d6e0e08e9d90f48928f00",
+          "message_timestamp": "2026-10-13T14:16:46.886Z",
+          "support": "询问45份标注覆盖及FILL来源，非实测统计。"
+        },
+        {
+          "ref": "R010-M027",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-13T21-29-52-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13574-8a51-70b0-9635-7ac130694f2e.jsonl:L1197",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "5bf6b7076714fb57dd1adcc6cbb93641e8ede70102a0c813e5ebf344ac8f812c",
+          "message_timestamp": "2026-10-14T07:23:46.463Z",
+          "support": "用户对teacher或专家来源仍有不确定。"
+        },
+        {
+          "ref": "R010-M038",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-14T18-53-03-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13a0b-5548-76d0-a802-1ee7859bf65d.jsonl:L8",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "aa6366c40b46d918e0b305314e3d0e9444005b0912d0c187812c4aadcb1ff3a5",
+          "message_timestamp": "2026-10-14T10:53:07.016Z",
+          "support": "回忆5.6sol与输入，询问原始记录是否存在。"
+        },
+        {
+          "ref": "R010-M043",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-14T18-53-03-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13a0b-5548-76d0-a802-1ee7859bf65d.jsonl:L559",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "139e90d3d257fdc844d7a32b92cd2b342ca5124d7e321331c3c183447136be8f",
+          "message_timestamp": "2026-10-14T12:00:49.320Z",
+          "support": "明确寻找原始200题生成记录及完整输入。"
+        },
+        {
+          "ref": "R010-M063",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-14T23-00-09-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13aed-8e8c-7371-a885-f1b070ba18a0.jsonl:L1438",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "71802673d93a8ee6ae39c79f1c07e845b4997b809bc4e046d70a43e0433c3322",
+          "message_timestamp": "2026-10-15T02:58:50.520Z",
+          "support": "希望两次隔离上下文的Agent标注，不证明人工金标。"
+        },
+        {
+          "ref": "R010-M064",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-14T23-00-09-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13aed-8e8c-7371-a885-f1b070ba18a0.jsonl:L4845",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "3af01ed5f2488a9f9757ca47f6f057db4954b39676983e62e6d1dc315f490086",
+          "message_timestamp": "2026-10-15T08:47:44.455Z",
+          "support": "比较原200题与新版动作/四分类及差异。"
+        },
+        {
+          "ref": "R010-M072",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-15T17-57-47-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13eff-1677-7392-8915-242e18ac916d.jsonl:L426",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "f05e1756c0b7228df226305d24223a6a5ce600c3e4110050574366ee41aef640",
+          "message_timestamp": "2026-10-15T10:58:24.439Z",
+          "support": "提供200、73/127口径并要求逐题初判和分歧/确认记录。"
+        },
+        {
+          "ref": "R010-M021",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-13T21-29-52-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13574-8a51-70b0-9635-7ac130694f2e.jsonl:L682",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "96a18733eb2361094d7507f16ca5500bfe2f289133aef2be3257bfab3893f589",
+          "message_timestamp": "2026-10-14T05:04:10.312Z",
+          "support": "原任务明确sol_labels路径及构造结果、prompt、原始数据等迁移范围；不是当前迁移授权。"
+        },
+        {
+          "ref": "R010-M059",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-14T23-00-09-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13aed-8e8c-7371-a885-f1b070ba18a0.jsonl:L449",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "616c05b35b289170fa057e30e28a90e3560f9e1a337c690145ce63df7b6ac3e9",
+          "message_timestamp": "2026-10-14T16:00:10.849Z",
+          "support": "用户粘贴的启动方案；角色、八字段与pilot规模只作所供方案，不证明实际执行。"
+        },
+        {
+          "ref": "context_update",
+          "thread_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+          "family_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+          "source_kind": "user_authored",
+          "location": "rollout-2026-10-14T23-52-05-01a138aa-2f25-70b3-bca8-406bf55d1c10_01a13b1d-1a97-79e2-93a5-3aafc649c916.jsonl:L8723",
+          "message_timestamp": "2026-10-16T05:52:20.402Z",
+          "text_sha256": "0a38ff619a9cbcc0f514c0fa841e6c6bf68d323577a0f04252a1aaa6daa9f465",
+          "support": "用户明确要求保留73/127旧来源，补记88/112当前本地口径与4题P待核，限定为Core200项目记忆，不晋升长期规则。"
+        },
+        {
+          "ref": "qc4_update",
+          "thread_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+          "family_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+          "source_kind": "user_authored",
+          "location": "rollout-2026-10-14T23-52-05-01a138aa-2f25-70b3-bca8-406bf55d1c10_01a13b1d-1a97-79e2-93a5-3aafc649c916.jsonl:L8802",
+          "message_timestamp": "2026-10-16T05:58:35.437Z",
+          "text_sha256": "b8b8b31202ac71913a7a93d9db133cb4d72ae19415c471d3480faf3d003981f9",
+          "support": "用户要求查4题P核查结果，核对口径和实验一影响后更新同一项目记忆；无结果不推断，不启动实验二。"
+        },
+        {
+          "ref": "qc4_adoption",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "family_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "source_kind": "user_authored",
+          "location": "rollout-2026-10-15T19-25-44-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13f4f-9e03-7360-b298-eb3a761788f7.jsonl:L2165",
+          "message_timestamp": "2026-10-16T05:56:48.268Z",
+          "text_sha256": "18d524cc8befd3469909fe6640388e8eb5852df62fba57d30aa9ea4e1b737ed5",
+          "support": "用户在原任务明确要求采用4题复核结论修正正式标签、冻结新版200题及实验一结果并保留旧版本；实验二先不跑。"
+        },
+        {
+          "ref": "freeze_check",
+          "thread_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+          "family_id": "01a138aa-2f25-70b3-bca8-406bf55d1c10",
+          "source_kind": "user_authored",
+          "location": "rollout-2026-10-14T23-52-05-01a138aa-2f25-70b3-bca8-406bf55d1c10_01a13b1d-1a97-79e2-93a5-3aafc649c916.jsonl:L8911",
+          "message_timestamp": "2026-10-16T06:05:59.446Z",
+          "text_sha256": "ce2fb1e091d84a324953e3e26137b0e00935e0a3f2b0f509d6458d140126abdc",
+          "support": "用户要求只读核对89/111新版200题与实验一正式冻结证据；有完成证据才更新同一项目记忆，保留旧版来源，不启动实验二。"
+        }
+      ],
+      "review_after": "2026-11-16",
+      "source_candidates": [
+        "C-20261014-033"
+      ],
+      "project": "contract-research",
+      "target": "references/projects/core200-provenance.md",
       "status": "active",
-      "updated_at": "2026-10-16T06:03:03+00:00",
+      "updated_at": "2026-10-16T06:09:39+00:00",
       "revision": 1,
       "history": []
     }
@@ -6018,7 +6434,7 @@
       "candidate_id": "C-20261014-033",
       "bucket": "project",
       "targets": [
-        "project.core200-provenance-v4"
+        "project.core200-provenance-v5"
       ],
       "action": "scope_project_material",
       "reason": "仅恢复对应项目时加载，保留版本与待核边界。"
@@ -6141,5 +6557,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。"
     }
   ],
-  "updated_at": "2026-10-16T06:03:03+00:00"
+  "updated_at": "2026-10-16T06:09:39+00:00"
 }

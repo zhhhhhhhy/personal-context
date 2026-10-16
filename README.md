@@ -68,7 +68,7 @@ Skill 的完整说明仍按目录独立维护。需要让本机 Codex 使用最�
 
 `docs/evolution/POLICY.md` 定义最小闭环：**加载相关记忆 → 完成真实任务 → 观察有复用价值的信息 → 对照已有内容 → 校验写入 → 后续任务使用或淘汰**。用户已授权非敏感、可撤回的记忆维护；核心规则、权限和 Skill 修改仍需当前相应任务，不由自动写入器完成。
 
-例如：`python -X utf8 scripts/context-memory.py search --query "文档 风格"`，再用 `show --id documents.preserve-style` 读取命中条目。继续 Core200 时先核对项目，再用 `search --project contract-research --query "Core200 人审"` 和 `show --id project.core200-provenance-v4`。项目资料退出默认关键词检索；项目键见 `references/projects/index.md`。
+例如：`python -X utf8 scripts/context-memory.py search --query "文档 风格"`，再用 `show --id documents.preserve-style` 读取命中条目。继续 Core200 时先核对项目，再用 `search --project contract-research --query "Core200 人审"` 和 `show --id project.core200-provenance-v5`。项目资料退出默认关键词检索；项目键见 `references/projects/index.md`。
 
 有值得保存的新内容时才读 `references/skills/personal-context-memory.md`，复用现有 `snapshot`、本地来源清单与变更计划、`validate/apply` 和受保护回滚。无需批量 prepare、观察账本、评测分区、全量复核或每次全库 maintain。原始日志和敏感证据只留本地；敏感摘要未经明确确认不推送 GitHub；不保存凭据，没有后台定时任务。
 

@@ -1,12 +1,14 @@
 # Core200：4题P复核修订89/111，正式冻结待确认
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.core200-provenance-v4`
 - kind: project
-- status: active
+- status: superseded
 - scope: contract-research 的Core200：2026-10-16 QC4修订及实验一重评分；候选标签与正式冻结状态分开，旧快照和原始来源保留
 - verification: qc4_local_label_diff_and_rescore_artifacts_checked; formal_freeze_completion_pending; original_human_provenance_pending
 - validity: project
-- updated_at: 2026-10-16T06:03:03+00:00
+- updated_at: 2026-10-16T06:09:39+00:00
 
 Core200版本分开：73应填/127应审核为历史用户口径，88/112为此前本地快照。2026-10-16 QC4已给出复核结论并生成修订参考：0005/0006适用法律、0037签署日期由Partial改无可用证据；0039适用法律改充分，仅0039由审核改应填，得到89应填/111应审核（充分89、部分36、无证据75、冲突0）。实验一复用已有输出重评分：主配对4B的Partial误填22/36、无证据13/75，总FalseFill由36/112变35/111。主要关联方向保留，但适用法律不再有Partial样本，不能称五类字段均复现。用户已要求正式采用并保留旧版；本次尚未确认正式冻结完成。实验二未运行，不从此记录获得启动权限。
 
@@ -20,6 +22,7 @@ Core200版本分开：73应填/127应审核为历史用户口径，88/112为此�
 - 本次QC4不是新的独立人工标注；原始人审、45份覆盖分母和候选V/M/C仍需各自证据。不沿用实验启动、迁移或删除权限，不升级长期规则；实验二继续不跑。
 - review_after: 2026-10-17
 - target: references/projects/core200-provenance.md
+- replaced_by: project.core200-provenance-v5
 
 ## Evidence pointers
 
