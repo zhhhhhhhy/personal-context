@@ -1,0 +1,11 @@
+{
+  "raw_tokens": 2000,
+  "messages": 69,
+  "unique_exact_messages": 67,
+  "unique_exact_raw_tokens": 1997,
+  "duplicate_raw_tokens": 3,
+  "whitespace_normalized_unique_messages": 64,
+  "whitespace_normalized_unique_raw_tokens": 1924,
+  "same_thread_repeat_not_independent_support": true,
+  "normalization_caveat": "Exact text is primary sensitivity; whitespace-normalized denominator also changes formatting tokens, so it is a secondary diagnostic."
+}

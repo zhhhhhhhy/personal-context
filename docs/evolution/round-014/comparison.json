@@ -1,0 +1,65 @@
+{
+  "reference": {
+    "round": 11,
+    "tool_return_tokens": 56959,
+    "raw_tokens": 2119,
+    "tokens_per_1000_raw": 26880.13
+  },
+  "runs": [
+    {
+      "label": "冻结运行1",
+      "round": 12,
+      "tool_return_tokens": 16690,
+      "raw_tokens": 2084,
+      "tokens_per_1000_raw": 8008.64,
+      "normalized_saving_pct": 70.21,
+      "checked": 38,
+      "messages": 50,
+      "substantive_issues": 2,
+      "scope_spelling_issues": 0,
+      "unreviewed": 12,
+      "unique_raw_tokens": 2079,
+      "tokens_per_1000_unique_raw": 8027.9,
+      "normalized_saving_unique_raw_pct": 70.13
+    },
+    {
+      "label": "冻结运行2",
+      "round": 13,
+      "tool_return_tokens": 12911,
+      "raw_tokens": 1960,
+      "tokens_per_1000_raw": 6587.24,
+      "normalized_saving_pct": 75.49,
+      "checked": 29,
+      "messages": 39,
+      "substantive_issues": 1,
+      "scope_spelling_issues": 1,
+      "unreviewed": 10,
+      "unique_raw_tokens": 1757,
+      "tokens_per_1000_unique_raw": 7348.32,
+      "normalized_saving_unique_raw_pct": 72.66
+    },
+    {
+      "label": "冷启动冻结运行",
+      "round": 14,
+      "tool_return_tokens": 66994,
+      "raw_tokens": 2000,
+      "tokens_per_1000_raw": 33497.0,
+      "normalized_saving_pct": -24.62,
+      "whole_snapshot_saving_pct": -17.62,
+      "checked": 30,
+      "messages": 69,
+      "substantive_issues": 1,
+      "unreviewed": 39,
+      "unique_raw_tokens": 1997,
+      "tokens_per_1000_unique_raw": 33547.32,
+      "normalized_saving_unique_raw_pct": -24.8,
+      "source_review_payload": 11233
+    }
+  ],
+  "cutoff": "2026-10-16T04:59:38.009Z",
+  "boundary": "Top-level returned tool text captured in this new session from the first recorded tool return through cutoff, o200k_base. Every captured output is included, including required entry/protocol/Skill reads, preparation and adapter errors, truncated wrappers, source and bounded review, retrieval, lifecycle validation/application, budget, metering and delivery outputs already captured. Excludes this in-flight measurement response and later delivery; these tails must be explicitly acknowledged. Excludes tool-call input/assistant generation, provider billing and hidden platform context. Same snapshot convention as rounds012/013; not a full context-window or billing measurement.",
+  "cold_start": true,
+  "framework_unchanged": true,
+  "single_real_run_no_best_of": true,
+  "independent_completeness_reference": false
+}

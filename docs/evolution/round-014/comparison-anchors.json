@@ -1,0 +1,16 @@
+{
+  "rounds": {
+    "12": {
+      "comparison.json": "fd6627c49250c360a64880ead055d34bb22c85bf21bd4210bbf6eddd6b09480d",
+      "loading.json": "59652e525fa4d5c8fd3e3b23be630c3da9f2d7642eddd468b5165ee889221a3d",
+      "validation.json": "8b548ba23153f03a0e3e32ccda2e39e10db5ef9fa4e27d45b2446aeef5603c72"
+    },
+    "13": {
+      "comparison.json": "9262ea149cbeb3d2bd3dbff868c8c780379245ec4d36a0cdc5fd660ffbb9db44",
+      "loading.json": "8e81f8cdcc38507a7317f5f0e52ef57b222a755090e78b6a7c701ccf88d33e4c",
+      "validation.json": "6ea31cf57469a64c895506062e8afe9566809a3abcfd09f7f3a37533944428fe"
+    }
+  },
+  "round011_reference": "Reported56959 tool returns /2119 raw; not rerun",
+  "anchor_time": "2026-10-16T04:59:42.204224+00:00"
+}

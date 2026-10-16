@@ -1,0 +1,57 @@
+{
+  "observations": 75,
+  "new_project_records": 4,
+  "new_personal_preferences": 0,
+  "new_general_rules": 0,
+  "new_methods": 0,
+  "covered_observations": 1,
+  "project_observations": 13,
+  "rejected_local_observations": 61,
+  "deferred": 0,
+  "destinations": [
+    {
+      "id": "project.cad3dto2d-asm-png",
+      "project": "cad3dto2d",
+      "target": "references/projects/cad3dto2d-asm-png.md",
+      "observation_ids": [
+        "O021",
+        "O022",
+        "O023",
+        "O024",
+        "O025",
+        "O026"
+      ]
+    },
+    {
+      "id": "project.visual-pdf-word-uv-exception",
+      "project": "visual-pdf-to-word",
+      "target": "references/projects/visual-pdf-word-uv-exception.md",
+      "observation_ids": [
+        "O055",
+        "O056",
+        "O057",
+        "O058"
+      ]
+    },
+    {
+      "id": "project.gaia-new-data-nine",
+      "project": "gaia-claude-test",
+      "target": "references/projects/gaia-new-data-nine.md",
+      "observation_ids": [
+        "O059",
+        "O060"
+      ]
+    },
+    {
+      "id": "project.icml-published-benchmark-comparator",
+      "project": "contract-research",
+      "target": "references/projects/icml-published-benchmark-comparator.md",
+      "observation_ids": [
+        "O075"
+      ]
+    }
+  ],
+  "privacy": "Sensitive observations and all raw/audit evidence stay in .local; no credentials or private identity facts in new public records.",
+  "merge_replace_archive_discard_operations": 0,
+  "already_covered_not_added": true
+}

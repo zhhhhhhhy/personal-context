@@ -1,0 +1,21 @@
+{
+  "train_roots": 35,
+  "reserved_unread_roots": 1,
+  "messages": 69,
+  "raw_tokens": 2000,
+  "cached_qualification_rows": 103,
+  "selected_only_source_verification": true,
+  "new_source": {
+    "messages": 69,
+    "status": "prepared",
+    "source_files": [
+      "review/source/page-001.json"
+    ],
+    "source_tokens": 4242,
+    "identity": "Full IDs, paths and line numbers stay in the local source-map; text is unchanged."
+  },
+  "training_ids_sha256": "50a78497f1c0751a689c906fe811ec12e17dafbf8b31395d0cf6e0693d59d644",
+  "prior_processed_overlap": 0,
+  "body_freeze": "cohort.freeze.final.json before any model source-page read",
+  "own_pre_body_provisional_overlap": 28
+}

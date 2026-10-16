@@ -1,0 +1,30 @@
+{
+  "preflight_id": "round014-cold-start",
+  "timestamp": "2026-10-16T04:41:04.729022+00:00",
+  "scope": "evaluation",
+  "status": "ready",
+  "checks": [
+    {
+      "id": "framework_hashes",
+      "owner": "script",
+      "status": "passed",
+      "evidence": "freeze.json",
+      "detail": "89 prior hashes compared; 0 drift"
+    },
+    {
+      "id": "runtime",
+      "owner": "script",
+      "status": "passed",
+      "evidence": "python imports",
+      "detail": "context_memory and o200k_base available"
+    },
+    {
+      "id": "output_boundary",
+      "owner": "script",
+      "status": "passed",
+      "evidence": ".local and docs/evolution/round-014",
+      "detail": "Raw sources and sensitive ledgers remain local; existing communication change protected"
+    }
+  ],
+  "next_action": "Freeze new source cohort from qualification metadata"
+}

@@ -4816,6 +4816,202 @@
       "updated_at": "2026-10-16T04:29:06+00:00",
       "revision": 1,
       "history": []
+    },
+    {
+      "id": "project.cad3dto2d-asm-png",
+      "project": "cad3dto2d",
+      "title": "CAD3DTO2D：asm到PNG需求边界",
+      "target": "references/projects/cad3dto2d-asm-png.md",
+      "claim": "历史CAD3DTO2D任务要求把3D asm模型转为2D PNG图纸；模块号是零部件装配选择条件之一；转换中自动标注尺寸、粗糙度、公差和明细表。",
+      "scope": "来源cwd为CAD3DTO2D的历史转换试验；具体Git版本与制图标准未核",
+      "exceptions": [
+        "这是用户需求，未证明转换、装配选择或自动标注已实现。",
+        "不能把模块号解释为唯一选择条件；当前版本继续时先确认项目根、输入格式与输出要求。",
+        "不与报告转换、RAG或其它CAD项目合并。"
+      ],
+      "tags": [
+        "CAD3DTO2D",
+        "asm",
+        "PNG",
+        "装配",
+        "自动标注"
+      ],
+      "kind": "project",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "evidence": [
+        {
+          "ref": "R014-M021",
+          "thread_id": "019e0bb8-0556-72e2-ae28-3af77c24eb2a",
+          "location": "rollout-2026-05-09T15-51-09-019e0bb8-0556-72e2-ae28-3af77c24eb2a.jsonl:L21",
+          "family_id": "019e0bb8-0556-72e2-ae28-3af77c24eb2a",
+          "source_kind": "user_authored",
+          "text_sha256": "466d08bd8f0ae512c39ff3096d872d1eafb7459e94ffb3d203064043fe359b56",
+          "message_timestamp": "2026-05-09T07:53:47.423Z",
+          "support": "用户的历史项目请求；完整对象、条件、数量和待核边界保存在本条claim/scope/exception与本地观察账本。"
+        }
+      ],
+      "status": "active",
+      "updated_at": "2026-10-16T04:52:48+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "project.visual-pdf-word-uv-exception",
+      "project": "visual-pdf-to-word",
+      "title": "PDF转Word项目：uv构建与API例外",
+      "target": "references/projects/visual-pdf-word-uv-exception.md",
+      "claim": "历史visual_pdf_to_word任务要求先了解环境、检查整个项目并修复问题，API硬编码保持不变，同时将项目改用uv构建。",
+      "scope": "原D:/worker/reportCodex/visual_pdf_to_word这次环境检查和修复任务；提交版本未核",
+      "exceptions": [
+        "API硬编码保留仅限原任务，不是通用安全或编码偏好。",
+        "需求与执行结果分开；未检查当前仓库或确认uv迁移完成。",
+        "当前明确要求或项目协议发生变化时先核对适用性，不把旧修改要求当无限执行授权。"
+      ],
+      "tags": [
+        "visual_pdf_to_word",
+        "uv",
+        "API",
+        "项目例外"
+      ],
+      "kind": "project",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "evidence": [
+        {
+          "ref": "R014-M051",
+          "thread_id": "019daf30-eed7-73d2-8eee-6dbc1f223c12",
+          "location": "rollout-2026-04-21T16-38-33-019daf30-eed7-73d2-8eee-6dbc1f223c12.jsonl:L6",
+          "family_id": "019daf30-eed7-73d2-8eee-6dbc1f223c12",
+          "source_kind": "user_authored",
+          "text_sha256": "f3043cb4a5f84fff1baf19717c0c4ec82f2dbd19c491e5eb305576152e26a21a",
+          "message_timestamp": "2026-04-21T08:38:41.817Z",
+          "support": "用户的历史项目请求；完整对象、条件、数量和待核边界保存在本条claim/scope/exception与本地观察账本。"
+        },
+        {
+          "ref": "R014-M052",
+          "thread_id": "019daf30-eed7-73d2-8eee-6dbc1f223c12",
+          "location": "rollout-2026-04-21T16-38-33-019daf30-eed7-73d2-8eee-6dbc1f223c12.jsonl:L56",
+          "family_id": "019daf30-eed7-73d2-8eee-6dbc1f223c12",
+          "source_kind": "user_authored",
+          "text_sha256": "ea5fa8551e605865a61e39e5bbda2f2f466a2aae30b3e6ec32fb18001b051e8a",
+          "message_timestamp": "2026-04-21T08:42:18.580Z",
+          "support": "用户的历史项目请求；完整对象、条件、数量和待核边界保存在本条claim/scope/exception与本地观察账本。"
+        }
+      ],
+      "status": "active",
+      "updated_at": "2026-10-16T04:52:48+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "project.gaia-new-data-nine",
+      "project": "gaia-claude-test",
+      "title": "GAIA Claude test：未跑数据按三级各取三道",
+      "target": "references/projects/gaia-new-data-nine.md",
+      "claim": "历史gaia_claude_test任务先测试项目连通性，再重新挑选未跑过的数据：level1、level2、level3各3道，共9道，再运行一次。",
+      "scope": "来源cwd为D:/worker/gaia_claude_test的该次测试请求；与其它批次及gaia_claude_code版本分开",
+      "exceptions": [
+        "这是选择和运行要求，不是运行成功、正确率或完整验收证据。",
+        "每级3道和总计9道仅限该次请求，不替代既有历史5题联调记录或成为固定配额。",
+        "虽然cwd对应既有gaia-claude-test项目键，提交版本与跨线程先后关系未核，不合并或替代旧任务；不能并入gaia_claude_code。"
+      ],
+      "tags": [
+        "gaia_claude_test",
+        "level1",
+        "level2",
+        "level3",
+        "未跑数据",
+        "9道"
+      ],
+      "kind": "project",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "evidence": [
+        {
+          "ref": "R014-M053",
+          "thread_id": "019dbe91-4bb2-7aa1-a063-602802df9c2e",
+          "location": "rollout-2026-04-24T16-18-06-019dbe91-4bb2-7aa1-a063-602802df9c2e.jsonl:L6",
+          "family_id": "019dbe91-4bb2-7aa1-a063-602802df9c2e",
+          "source_kind": "user_authored",
+          "text_sha256": "356fe9e13598e6bc66e14c645f08c3a5eb8e5f79926a07174f9d0ba7030e9e0d",
+          "message_timestamp": "2026-04-24T08:18:21.838Z",
+          "support": "用户的历史项目请求；完整对象、条件、数量和待核边界保存在本条claim/scope/exception与本地观察账本。"
+        },
+        {
+          "ref": "R014-M054",
+          "thread_id": "019dbe91-4bb2-7aa1-a063-602802df9c2e",
+          "location": "rollout-2026-04-24T16-18-06-019dbe91-4bb2-7aa1-a063-602802df9c2e.jsonl:L148",
+          "family_id": "019dbe91-4bb2-7aa1-a063-602802df9c2e",
+          "source_kind": "user_authored",
+          "text_sha256": "52880e25e331a5ec58184ab67aacfd8971d27c1db4d5a8a227b8ba7d529105cf",
+          "message_timestamp": "2026-04-24T08:22:21.926Z",
+          "support": "用户的历史项目请求；完整对象、条件、数量和待核边界保存在本条claim/scope/exception与本地观察账本。"
+        }
+      ],
+      "status": "active",
+      "updated_at": "2026-10-16T04:52:48+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "project.icml-published-benchmark-comparator",
+      "project": "contract-research",
+      "title": "icml_chinese：已发表且最接近的Benchmark对照文献",
+      "target": "references/projects/icml-published-benchmark-comparator.md",
+      "claim": "历史icml_chinese论文任务要求寻找一篇已经发表、与该论文工作最接近的Benchmark文章。",
+      "scope": "来源cwd为桌面icml_chinese的该次文献定位请求；语言、稿件文件及提交版本未指定",
+      "exceptions": [
+        "已发表、最接近和Benchmark三个条件同时保留；未证明已找到合格文章。",
+        "目录相同不能认定与2026-10-12中文稿同版；先核对论文对象后使用，不将本条并入或覆盖该中文稿定位。",
+        "具体文献、论文机制和实验结果均待核，不从搜索请求反推结论。"
+      ],
+      "tags": [
+        "benchmark",
+        "已发表",
+        "最接近",
+        "icml_chinese",
+        "对照文献"
+      ],
+      "kind": "project",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "evidence": [
+        {
+          "ref": "R014-M069",
+          "thread_id": "01a129c9-9986-74d2-8fd1-12ca73495ad4",
+          "location": "rollout-2026-10-11T15-07-20-01a129c9-9986-74d2-8fd1-12ca73495ad4.jsonl:L23",
+          "family_id": "01a129c9-9986-74d2-8fd1-12ca73495ad4",
+          "source_kind": "user_authored",
+          "text_sha256": "fdb8a74f91cb01032a36d957463c460f4fb7e83d1a7b5601fbcaff9e70407f71",
+          "message_timestamp": "2026-10-11T07:08:17.931Z",
+          "support": "用户的历史项目请求；完整对象、条件、数量和待核边界保存在本条claim/scope/exception与本地观察账本。"
+        }
+      ],
+      "status": "active",
+      "updated_at": "2026-10-16T04:52:48+00:00",
+      "revision": 1,
+      "history": []
     }
   ],
   "decisions": [
@@ -5229,5 +5425,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。"
     }
   ],
-  "updated_at": "2026-10-16T04:29:06+00:00"
+  "updated_at": "2026-10-16T04:52:48+00:00"
 }

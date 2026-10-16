@@ -1,0 +1,223 @@
+{
+  "schema_version": 1,
+  "state_version": 12,
+  "transaction_id": "TX-9723d374a771",
+  "objective": "Measure one frozen cold-start personal Context evolution run against rounds 011-013",
+  "scope": "Round014 cohort, source extraction, targeted review, lifecycle, complete tool-return metering, report and authorized push",
+  "status": "verifying",
+  "phase": "verify",
+  "owner": "agent",
+  "next_action": "Resolve or verify the remaining acceptance conditions.",
+  "constraints": [],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Frozen framework and untouched communication user change",
+      "status": "passed",
+      "evidence": [
+        "D:\\worker\\personal-context\\docs\\evolution\\round-014\\validation.json"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-2",
+      "condition": "New cohort, complete source accounting and bounded review",
+      "status": "passed",
+      "evidence": [
+        "D:\\worker\\personal-context\\docs\\evolution\\round-014\\validation.json"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-3",
+      "condition": "Validated memory destinations and cold-start metering with explicit boundaries",
+      "status": "passed",
+      "evidence": [
+        "D:\\worker\\personal-context\\docs\\evolution\\round-014\\REPORT.md"
+      ],
+      "note": ""
+    },
+    {
+      "id": "AC-4",
+      "condition": "Safe report committed and pushed",
+      "status": "pending",
+      "evidence": [],
+      "note": ""
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "D:\\worker\\personal-context\\docs\\evolution\\round-014\\preflight.json",
+    "detail": "",
+    "checked_at": "2026-10-16T04:41:05+00:00"
+  },
+  "gates": {
+    "route": "2026-10-16T04:41:05+00:00",
+    "execute": "2026-10-16T04:41:05+00:00",
+    "verify": "2026-10-16T04:54:04+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-16T04:41:05+00:00",
+      "phase": "execute",
+      "action": "Freeze cohort and extract source-backed observations",
+      "expected_effect": "Fresh approximately 2000-token source cohort and valid coverage ledger",
+      "owner": "agent",
+      "result": "35 fresh parents, 69 messages, 75 observations; 30 targeted second-pass checks; one narrow repair; four scoped records planned",
+      "outcome": "passed",
+      "evidence": [
+        "D:\\worker\\personal-context\\.local\\context-evolution\\round-014-20261016\\observations.repaired.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-16T04:51:08+00:00"
+    },
+    {
+      "id": "A-002",
+      "time": "2026-10-16T04:51:08+00:00",
+      "phase": "execute",
+      "action": "Validate and apply four scoped lifecycle records, then verify retrieval",
+      "expected_effect": "Four valid scoped project records and inspectable transaction, with framework protected",
+      "owner": "agent",
+      "result": "Lifecycle applied four scoped records; all project retrieval and stored-record rereads passed; framework and communication preserved",
+      "outcome": "passed",
+      "evidence": [
+        "D:\\worker\\personal-context\\.local\\context-evolution\\round-014-20261016\\post-write-verification.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-16T04:54:03+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-c963c4d50ac8",
+      "time": "2026-10-16T04:41:04+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-028b5fe7562e",
+      "time": "2026-10-16T04:41:05+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "D:\\worker\\personal-context\\docs\\evolution\\round-014\\preflight.json"
+      }
+    },
+    {
+      "event_id": "EV-cfc4eb30a7b0",
+      "time": "2026-10-16T04:41:05+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-bfeb391e9769",
+      "time": "2026-10-16T04:41:05+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-f0b36349d049",
+      "time": "2026-10-16T04:41:05+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-55d656e5272a",
+      "time": "2026-10-16T04:51:08+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-0154d1af53d1",
+      "time": "2026-10-16T04:51:08+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-002"
+      }
+    },
+    {
+      "event_id": "EV-0dacfe65b6bd",
+      "time": "2026-10-16T04:54:03+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-002",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-f4b55dc889fd",
+      "time": "2026-10-16T04:54:04+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-148ebdaebbb0",
+      "time": "2026-10-16T04:59:43+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-d32aaa5ede38",
+      "time": "2026-10-16T04:59:43+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-9d9384dc6280",
+      "time": "2026-10-16T04:59:43+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-16T04:41:04+00:00",
+  "updated_at": "2026-10-16T04:59:43+00:00"
+}

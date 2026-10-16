@@ -1,0 +1,17 @@
+{
+  "messages": 69,
+  "train_roots": 35,
+  "eval_roots_unread": 1,
+  "raw_user_text": 2000,
+  "source_actual_payload": 4242,
+  "source_reads": 1,
+  "review_actual_payload": 6991,
+  "review_whole_same_batch_mechanical": 11818,
+  "review_saving_pct": 40.84,
+  "source_plus_review_actual": 11233,
+  "legacy_same_batch_source_reconstruction": 12882,
+  "source_format_saving_pct": 67.07,
+  "core_files_tokens": 1931,
+  "payload_is_subset_of_tool_total": true,
+  "cross_batch_caveat": "Different fresh source content and many short parents. Mechanical whole/source reconstructions are not second model runs or quality equivalence."
+}

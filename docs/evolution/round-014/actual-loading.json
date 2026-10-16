@@ -1,0 +1,77 @@
+{
+  "current_tool_return_tokens": 66994,
+  "all_recorded_tool_output_tokens_including_task_delivery": 67748,
+  "initial_task_envelope_tokens": 754,
+  "initial_task_input_body_tokens": [
+    700
+  ],
+  "groups": {
+    "冷启动核心、协议、Skill与对照": 22205,
+    "资格缓存、样本准备、适配与错误": 16840,
+    "来源原文返回": 4255,
+    "来源提炼与首轮校验": 685,
+    "重点复核、补查与裁决": 8071,
+    "检索与反思（含复核收尾）": 5327,
+    "校验、适配修复与生命周期": 5900,
+    "校验、生命周期、计量与交付": 3711
+  },
+  "calls": 46,
+  "start": "2026-10-16T04:38:38.913Z",
+  "cutoff": "2026-10-16T04:59:38.009Z",
+  "tokenizer": "o200k_base",
+  "boundary": "Top-level returned tool text captured in this new session from the first recorded tool return through cutoff, o200k_base. Every captured output is included, including required entry/protocol/Skill reads, preparation and adapter errors, truncated wrappers, source and bounded review, retrieval, lifecycle validation/application, budget, metering and delivery outputs already captured. Excludes this in-flight measurement response and later delivery; these tails must be explicitly acknowledged. Excludes tool-call input/assistant generation, provider billing and hidden platform context. Same snapshot convention as rounds012/013; not a full context-window or billing measurement.",
+  "model": [
+    "gpt-6.1-sol"
+  ],
+  "raw_current": 2000,
+  "rate_per_1000_raw": 33497.0,
+  "visible_prompt_records": [
+    {
+      "role": "developer",
+      "tokens": 11811,
+      "chars": 51041,
+      "task_prompt_match": false,
+      "sha256": "5408eca2b8e4857d7fa73a523f0b0f8b38ce358cad32faa6b3094d81869bbbce"
+    },
+    {
+      "role": "developer",
+      "tokens": 530,
+      "chars": 2400,
+      "task_prompt_match": false,
+      "sha256": "3edd51083129388f52e881435e93e4b981e00c5ee3d62ab5d32e22c428fd504b"
+    },
+    {
+      "role": "developer",
+      "tokens": 52,
+      "chars": 271,
+      "task_prompt_match": false,
+      "sha256": "6ded806e3cdbb35599ecaf8742574bc5274908472b1729090010c404c2151e8e"
+    },
+    {
+      "role": "user",
+      "tokens": 337,
+      "chars": 1372,
+      "task_prompt_match": false,
+      "sha256": "e551da7a7e2dddc20a8aa9c0a1ed5106eea67cc7aa19609659d1b97cf5549805"
+    },
+    {
+      "role": "developer",
+      "tokens": 62,
+      "chars": 271,
+      "task_prompt_match": false,
+      "sha256": "d8e30ddb0db4d933b10f91b7b30740028e010085bbdf03d46db201c81558b34c"
+    },
+    {
+      "role": "developer",
+      "tokens": 18,
+      "chars": 66,
+      "task_prompt_match": false,
+      "sha256": "b302e989e3372be5b0ce29da7c49f473092c597e27d02af7e91752ebb3291172"
+    }
+  ],
+  "captured_developer_prompt_tokens": 12473,
+  "captured_user_router_environment_tokens": 337,
+  "platform_context_fully_measured": false,
+  "initial_task_prompt_part_of_tool_return_total": false,
+  "task_envelope_boundary": "The initial delegated task is stored as an unpaired tool-output event in this journal. It is task input, not a response to an assistant tool call. Report its exact observed token count separately; all-recorded-output upper accounting is also retained."
+}
