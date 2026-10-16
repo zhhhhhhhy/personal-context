@@ -12,4 +12,4 @@
 
 检索示例：`python -X utf8 scripts/context-memory.py search --project contract-research --query "Core200 人审"`。默认关键词检索不返回 `kind=project`；知道项目后再加 `--project`，用 `show` 选中条目并读取目标正文的相关小节。旧记录用 `history --id <旧ID>`，不作为当前指令。
 
-本轮补充（2026-10-16）：合同研究按对象读取[Core200构造/版本追溯](core200-provenance.md)（旧73/127、本地88/112与4题P待核）、[2026-10-12中文稿定位](contractfill-zh-20261012.md)、[2026-10-10开题报告约定](opening-report-20261010.md)。旧人审缺口和各次任务边界继续保留；后两份不会自动覆盖新稿。
+本轮补充（2026-10-16）：合同研究按对象读取[Core200构造/版本追溯](core200-provenance.md)（历史73/127、旧快照88/112与QC4修订89/111；正式冻结待确认）、[2026-10-12中文稿定位](contractfill-zh-20261012.md)、[2026-10-10开题报告约定](opening-report-20261010.md)。旧人审缺口和各次任务边界继续保留；后两份不会自动覆盖新稿。

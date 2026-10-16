@@ -36,7 +36,7 @@
 | 030 | Skill | already_covered | [研究因果链与证据边界](../contexts/memory/items/skill.research-causality.md) | 与019合并为可检验假设和证据范围，不重复新增同义规则。 |
 | 031 | 可用记忆 | concise_reusable | [中文逐题人工审核](../contexts/memory/items/research.chinese-item-review.md) | 精简保留可复用部分；原数量与执行条件留历史。 |
 | 032 | 归档 | archive_history_constraints_retained | [特定论文的局部修改约定](../contexts/memory/items/research.localized-paper-edits.md) | 归档旧执行记录；可能仍有效的约定已按原任务版本保留于项目资料，未判定失效。 |
-| 033 | 项目资料 | scope_project_material | [Core200：旧版73/127、本地88/112与4题P待核](../contexts/memory/items/project.core200-provenance-v3.md) | 仅恢复对应项目时加载，保留版本与待核边界。 |
+| 033 | 项目资料 | scope_project_material | [Core200：4题P复核修订89/111，正式冻结待确认](../contexts/memory/items/project.core200-provenance-v4.md) | 仅恢复对应项目时加载，保留版本与待核边界。 |
 | 034 | 项目资料 | scope_project_material | [合同研究：JEV对照与任务边界](../contexts/memory/items/project.jev-comparison.md) | 仅恢复对应项目时加载，保留版本与待核边界。 |
 | 035 | 长期规则 | already_covered | [已有沟通规则覆盖](../contexts/memory/items/core.communication.md) | 直白说明机制由已有沟通规则覆盖，不强制每次都读全部代码。 |
 | 036 | Skill | refined | [学术证据核验已吸收](../contexts/memory/items/skill.research-evidence.md) | 已有证据规则补足陈述、写作要求和可核验记录的区分。 |

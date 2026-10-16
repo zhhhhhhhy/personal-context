@@ -1,12 +1,14 @@
 # Core200：旧版73/127、本地88/112与4题P待核
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.core200-provenance-v3`
 - kind: project
-- status: active
+- status: superseded
 - scope: contract-research 的Core200构造与标签版本追溯；2026-10-16本地快照和4题P待核状态，不代表远端权威或最终标签
 - verification: local_snapshot_checked; label_adjudication_and_original_human_provenance_pending
 - validity: project
-- updated_at: 2026-10-16T05:55:15+00:00
+- updated_at: 2026-10-16T06:03:03+00:00
 
 Core200按版本使用：73应填/127应审核保留为历史用户口径，原始对应材料仍待核；2026-10-16本地修订参考、统计与中文稿为88应填/112应审核（充分88、部分40、无可用证据72、冲突0）。本地口径尚非最终定稿：4题原始P是否符合Partial、是否需改标签及是否影响实验一仍待逐题核查；本次未核验题目ID或最终裁定。原始构造、人审与Agent重标、候选V/M/C评分分开追溯；不据此认证人工金标。
 
@@ -19,6 +21,7 @@ Core200按版本使用：73应填/127应审核保留为历史用户口径，原�
 - 不沿用历史实验启动、迁移或删除权限，不升级为跨项目长期规则；本次未核验远端权威目录。
 - review_after: 2026-10-17
 - target: references/projects/core200-provenance.md
+- replaced_by: project.core200-provenance-v4
 
 ## Evidence pointers
 
