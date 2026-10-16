@@ -65,5 +65,5 @@
 - overlap: reinforces C-20261014-025
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / local_only
-- destination: local.project-material-verification
+- disposition: memory / concise_reusable
+- destination: local.verify-project-materials

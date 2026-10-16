@@ -1,12 +1,14 @@
 # Core200 用途与人审事实的待核边界
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.core200-status`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 核对该合同研究的 Core200 协议、人审归档和论文表述
 - verification: claims_pending_source_verification
 - validity: project
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T01:41:42+00:00
 
 用户要求将 Core200 作为固定200题评测集表述，模型选择与阈值拟合使用开发集。用户提供的写作要求包含200题全部人审、两名独立审核者、第三人裁决分歧且未看模型建议；后续材料缺口明确逐题审核记录与样本ID尚未对应齐全，部分答案评分仍有模型评审记录。因此这些审核过程细节必须保留为用户陈述或待核事实，不能仅凭修改论文的请求当作已证实。
 
@@ -16,6 +18,7 @@
 - 审核汇总不证明每个模型输出都经过独立人工评分。
 - 重用前核对最新台账；本轮没有重新验证历史实验数值。
 - review_after: 2026-10-15
+- replaced_by: project.core200-open-evidence
 
 ## Evidence pointers
 

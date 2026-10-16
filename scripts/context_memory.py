@@ -20,7 +20,7 @@ import uuid
 KEY = re.compile(r"^[a-z0-9][a-z0-9._-]{2,100}$")
 ACTIVE = "active"
 RETIRED = {"merged", "superseded", "archived", "discarded"}
-KINDS = {"memory", "rule", "skill", "core"}
+KINDS = {"memory", "project", "rule", "skill", "core"}
 SECRET = re.compile(r"(?i)(?:\bBearer\s+[A-Za-z0-9._~+/=-]{12,}|\b(?:sk-|ghp_|github_pat_)[A-Za-z0-9_-]{15,}|-----BEGIN [^-]+PRIVATE KEY-----)")
 PUBLIC = "contexts/memory/registry.json"
 PRIVATE = ".local/context-memory/registry.json"
@@ -160,7 +160,7 @@ def projections(root, data):
     outputs["habits/learned.md"] = "\n".join(lines).encode("utf-8")
     decisions = data["public"].get("decisions", [])
     if decisions:
-        labels = {"memory": "可用记忆", "skill": "Skill", "rule": "长期规则", "discard": "舍弃"}
+        labels = {"memory": "可用记忆", "project": "项目资料", "archive": "归档", "skill": "Skill", "rule": "长期规则", "discard": "舍弃"}
         lines = ["# 46 条历史候选的最终去向", "", "原候选是历史提炼文本；实际使用以目标条目的范围、状态和例外为准。已有覆盖与本次新增分开记录。", "",
                  "| 编号 | 去向 | 处理方式 | 目标 | 理由 |", "|---|---|---|---|---|"]
         for row in sorted(decisions, key=lambda x: x["candidate_id"]):
@@ -247,7 +247,9 @@ def validate_entry(root, item, check_source, known_evidence):
         raise ValueError("only explicitly temporary memory may expire by date")
     if item["validity"] == "temporary" and not item.get("expires_after"):
         raise ValueError("temporary memory requires an explicit expiry")
-    if item["kind"] in {"skill", "core"}:
+    if item["kind"] == "project" and (not item.get("project") or item["validity"] != "project"):
+        raise ValueError("project material requires an explicit project and project validity")
+    if item["kind"] in {"skill", "core", "project"}:
         target = safe_path(root, item.get("target", ""))
         if not target.is_file():
             raise ValueError("Skill/core target does not exist")
@@ -340,7 +342,7 @@ def prepare_plan(root, plan):
         if len(ids) != len(set(ids)) or set(ids) != expected or len(ids) != 46:
             raise ValueError("candidate dispositions must cover exactly the 46 historical IDs")
         for row in decisions:
-            if row["bucket"] not in {"memory", "skill", "rule", "discard"} or not row.get("reason"):
+            if row["bucket"] not in {"memory", "project", "archive", "skill", "rule", "discard"} or not row.get("reason"):
                 raise ValueError("invalid candidate disposition")
             if row["bucket"] != "discard" and not row["targets"]:
                 raise ValueError("accepted candidate has no destination")
@@ -350,8 +352,10 @@ def prepare_plan(root, plan):
                 if key not in items:
                     raise ValueError("candidate target is missing")
                 item = items[key]
-                expected_kind = {"memory": {"memory"}, "skill": {"skill"}, "rule": {"rule", "core"}, "discard": KINDS}[row["bucket"]]
-                if item["status"] != ACTIVE or item["kind"] not in expected_kind:
+                expected_kind = {"memory": {"memory"}, "project": {"project"}, "archive": KINDS,
+                                 "skill": {"skill"}, "rule": {"rule", "core"}, "discard": KINDS}[row["bucket"]]
+                expected_status = "archived" if row["bucket"] == "archive" else ACTIVE
+                if item["status"] != expected_status or item["kind"] not in expected_kind:
                     raise ValueError("candidate target is inactive or of the wrong kind")
         data["public"]["decisions"] = decisions
     for registry in data.values():
@@ -422,11 +426,13 @@ def search(root, query, project=None, include_local=False, limit=5, today=None):
     for item in items.values():
         if not usable(item, today) or (item["visibility"] == "local" and not include_local):
             continue
-        if project and item.get("project") != project:
+        if item["kind"] == "project" and not project:
+            continue
+        if project and item.get("project") not in {None, project}:
             continue
         text = " ".join([item["title"], item["scope"], item.get("project", "")] + item["tags"]).lower()
         score = sum(1 for term in terms if term in text)
-        if score or (project and not query):
+        if score or (project and not query and item.get("project") == project):
             matches.append((score, item))
     matches.sort(key=lambda pair: (-pair[0], pair[1]["id"]))
     return {"matches": [{"id": x["id"], "title": x["title"], "kind": x["kind"], "scope": x["scope"],

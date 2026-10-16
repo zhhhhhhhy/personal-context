@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "snapshot_date": "2026-10-15",
+  "snapshot_date": "2026-10-16",
   "hash_algorithm": "sha256(concat(sorted(relative_path UTF-8 + NUL + sha256(file_bytes).hexdigest() ASCII + LF)))",
   "repository": "https://github.com/zhhhhhhhy/personal-context",
   "migrated_from": {
@@ -17,8 +17,8 @@
       "source_path": "skills/academic-write",
       "source_kind": "runtime_reconciled_then_progressively_split",
       "file_count": 8,
-      "source_tree_sha256": "c573ce2b408ba7fbedf2c064d713cf60f831a8759c155fe00645e4f93576a70f",
-      "caveat": "Runtime additions retained; historical candidate lessons on causal claims and attributed human-review assertions reconciled on 2026-10-15.",
+      "source_tree_sha256": "1e6cdfdb3ec1622241c75aa568bc85e6c0b1724eb849ba686d56bf443e4cce5c",
+      "caveat": "Runtime additions retained; historical candidate lessons on causal claims and attributed human-review assertions reconciled on 2026-10-15. Existing artifact-gap audit memory consolidated on 2026-10-16.",
       "import_snapshot": {
         "source_path": "D:/worker/zhy-private-skill/skills/academic-write",
         "source_kind": "migrated_from_zhy-private-skill_worktree",
@@ -96,6 +96,15 @@
       "file_count": 2,
       "source_tree_sha256": "a1eb500b0433f0fbfb5c7e411905b7f4a72cb1ec574d69a0b91ef0bf02c921bf",
       "caveat": "Complete installed package reconciled on 2026-10-15; the canonical repository is the maintenance source. Patent full workflow preserved in a supporting reference."
+    },
+    {
+      "name": "engineering-project-workflow",
+      "target_path": "skills/engineering-project-workflow",
+      "source_path": "skills/engineering-project-workflow",
+      "source_kind": "complete_runtime_package_import_then_progressive_entry",
+      "file_count": 14,
+      "source_tree_sha256": "b2ced69f76b5fa2db8343f1a8efe078e43a5bb99a258cb1e72de3a4d7a5dc380",
+      "caveat": "Complete installed source package preserved on 2026-10-16; original entry retained as a migration snapshot. Entry routed under existing budget; four duplicate method memories consolidated."
     }
   ]
 }

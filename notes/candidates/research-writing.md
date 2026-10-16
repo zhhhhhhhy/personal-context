@@ -22,7 +22,7 @@
 - overlap: new
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / corrected_and_replaced
+- disposition: archive / archive_history_constraints_retained
 - destination: research.paper-sync-current
 
 ## C-20261014-018
@@ -70,7 +70,7 @@
 - overlap: reinforces C-20261014-006 and C-20261014-018
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / narrowed
+- disposition: archive / archive_history_constraints_retained
 - destination: research.localized-paper-edits
 
 ## C-20261014-036

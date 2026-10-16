@@ -11,8 +11,8 @@
 - overlap: new; partly reinforces C-20261014-008
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / merged_scoped
-- destination: research.startup-protocol
+- disposition: skill / merge_existing_method
+- destination: skill.engineering-methods
 
 ## C-20261014-020
 
@@ -35,8 +35,8 @@
 - overlap: new; complements C-20261014-019
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / narrowed
-- destination: research.data-audit-task
+- disposition: skill / merge_existing_method
+- destination: skill.research-evidence
 
 ## C-20261014-031
 
@@ -47,8 +47,8 @@
 - overlap: new; complements C-20261014-023
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / new_scoped
-- destination: research.human-review
+- disposition: memory / concise_reusable
+- destination: research.chinese-item-review
 
 ## C-20261014-033
 
@@ -59,8 +59,8 @@
 - overlap: new; complements C-20261014-018 and C-20261014-023
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / pending_facts_usable_scope
-- destination: research.core200-status
+- disposition: project / scope_project_material
+- destination: project.core200-open-evidence
 
 ## C-20261014-034
 
@@ -71,8 +71,8 @@
 - overlap: new
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / narrowed
-- destination: research.comparison-protocol
+- disposition: project / scope_project_material
+- destination: project.jev-comparison
 
 ## C-20261014-039
 
@@ -83,8 +83,8 @@
 - overlap: new; complements C-20261014-020 and C-20261014-022
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / merged_scoped
-- destination: autofill.execution-method
+- disposition: skill / merge_existing_method
+- destination: skill.engineering-methods
 
 ## C-20261014-043
 
@@ -95,5 +95,5 @@
 - overlap: reinforces C-20261014-019 and existing AutoFill guidance
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / new_scoped
-- destination: autofill.safety-target
+- disposition: project / scope_project_material
+- destination: project.autofill-safety

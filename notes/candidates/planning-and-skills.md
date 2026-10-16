@@ -41,8 +41,8 @@
 - confidence: high
 - overlap: reinforces `skills/personal-context/SKILL.md` and routing audit notes
 - status: resolved
-- disposition: memory / new_scoped
-- destination: skills.passive-routing
+- disposition: memory / concise_reusable
+- destination: skills.prefer-passive-routing
 
 ## C-20261014-014
 
@@ -53,8 +53,8 @@
 - overlap: reinforces C-20261014-001 and C-20261014-003
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / narrowed
-- destination: project.adjustable-plan
+- disposition: skill / merge_existing_method
+- destination: skill.engineering-methods
 
 ## C-20261014-015
 
@@ -89,8 +89,8 @@
 - overlap: reinforces C-20261014-014 and C-20261014-020
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / merged_scoped
-- destination: autofill.execution-method
+- disposition: skill / merge_existing_method
+- destination: skill.engineering-methods
 
 ## C-20261014-040
 
@@ -113,8 +113,8 @@
 - overlap: reinforces C-20261014-016 and C-20261014-039
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / merged_scoped
-- destination: research.startup-protocol
+- disposition: skill / merge_existing_method
+- destination: skill.engineering-methods
 
 ## C-20261014-042
 
@@ -125,8 +125,8 @@
 - overlap: reinforces C-20261014-022 and existing L5/L6 guidance
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / merged_scoped
-- destination: autofill.execution-method
+- disposition: skill / merge_existing_method
+- destination: skill.engineering-methods
 
 ## C-20261014-045
 
@@ -137,5 +137,5 @@
 - overlap: new
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / merged_scoped
-- destination: autofill.execution-method
+- disposition: skill / merge_existing_method
+- destination: skill.engineering-methods

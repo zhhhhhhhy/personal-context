@@ -1,12 +1,14 @@
 # DemoPilot 的数据与失败记录
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `demopilot.acceptance`
 - kind: memory
-- status: active
+- status: merged
 - scope: 继续 DemoPilot 的构建、测试和可视化交付
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T01:41:42+00:00
 
 该 DemoPilot 项目要求按 demo ID 管理 testdata，使用项目的可执行验收约定，并看真实浏览器可见结果。用户追问20个数据集、其中5个失败的说法，并要求记录失败、采取的修复和前后效果；这些数字是历史提问内容，不是本轮核实的成绩。
 
@@ -15,6 +17,7 @@
 - 自动 Builder 模板不作为个人偏好的独立支持。
 - 该目录和契约方案不推广到所有项目；历史覆盖数和失败数须查当前记录。
 - review_after: 2026-10-15
+- merged_into: skill.engineering-methods
 
 ## Evidence pointers
 

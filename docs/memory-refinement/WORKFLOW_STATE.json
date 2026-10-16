@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "state_version": 13,
+  "transaction_id": "TX-7500f654be55",
+  "objective": "Refine the approved 19 memories with project-safe lifecycle dispositions",
+  "scope": "Existing 19 only; preserve unknown/current project guards and private evidence",
+  "status": "completed",
+  "phase": "report",
+  "owner": "agent",
+  "next_action": "User assesses the six concise memories and project boundaries; do not import new conversations",
+  "constraints": [],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Exact 6/5/5/3 mapping and concise retained content",
+      "status": "passed",
+      "evidence": [
+        "docs/memory-refinement/validation.json",
+        "docs/memory-refinement/version-checks.json"
+      ],
+      "note": "Automated evidence passed; final usefulness remains for user assessment."
+    },
+    {
+      "id": "AC-2",
+      "condition": "Project identities, versions and still-applicable constraints preserved",
+      "status": "passed",
+      "evidence": [
+        "docs/memory-refinement/validation.json",
+        "docs/memory-refinement/version-checks.json"
+      ],
+      "note": "Automated evidence passed; final usefulness remains for user assessment."
+    },
+    {
+      "id": "AC-3",
+      "condition": "Sparse retrieval, privacy and unrelated user edits preserved",
+      "status": "passed",
+      "evidence": [
+        "docs/memory-refinement/validation.json",
+        "docs/memory-refinement/version-checks.json"
+      ],
+      "note": "Automated evidence passed; final usefulness remains for user assessment."
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "docs/memory-refinement/PREFLIGHT.json",
+    "detail": "Frozen 19 IDs, protected hashes, source chronology and no-remote scope verified.",
+    "checked_at": "2026-10-16T01:36:29+00:00"
+  },
+  "gates": {
+    "route": "2026-10-16T01:36:29+00:00",
+    "execute": "2026-10-16T01:36:41+00:00",
+    "verify": "2026-10-16T01:48:27+00:00",
+    "report": "2026-10-16T01:48:27+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-16T01:36:41+00:00",
+      "phase": "execute",
+      "action": "Refine 19 records and canonical Skill/project destinations",
+      "expected_effect": "Six concise memories, five method merges, five project records, three archived histories with current guards preserved",
+      "owner": "agent",
+      "result": "Approved 19-record cleanup applied; live guards retained, taskgraph version discrepancy corrected, targeted retrieval and privacy checks passed.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/memory-refinement/validation.json",
+        "docs/memory-refinement/version-checks.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-16T01:48:27+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-7977d5e3ec22",
+      "time": "2026-10-16T01:36:28+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-737ec0b73520",
+      "time": "2026-10-16T01:36:29+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "docs/memory-refinement/PREFLIGHT.json"
+      }
+    },
+    {
+      "event_id": "EV-f5619a4b4695",
+      "time": "2026-10-16T01:36:29+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-4e7213bbac37",
+      "time": "2026-10-16T01:36:41+00:00",
+      "type": "checkpoint",
+      "phase": "route",
+      "status": "in_progress",
+      "detail": {
+        "note": "Allocation recorded in PLAN.md. Initial checkpoint rejected invalid status active before any data mutation; corrected to documented in_progress."
+      }
+    },
+    {
+      "event_id": "EV-e31439c5cc13",
+      "time": "2026-10-16T01:36:41+00:00",
+      "type": "gate_passed",
+      "phase": "route",
+      "status": "in_progress",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-77c2444e5d9a",
+      "time": "2026-10-16T01:36:41+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-68b3adc82a69",
+      "time": "2026-10-16T01:48:27+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-37022bd2f9a7",
+      "time": "2026-10-16T01:48:27+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-414b0d42f0c1",
+      "time": "2026-10-16T01:48:27+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-ca4cf69825df",
+      "time": "2026-10-16T01:48:27+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-33ee54cf05c2",
+      "time": "2026-10-16T01:48:27+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-0179b12affef",
+      "time": "2026-10-16T01:48:27+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
+    },
+    {
+      "event_id": "EV-5191786f9d59",
+      "time": "2026-10-16T01:49:31+00:00",
+      "type": "checkpoint",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "note": "All approved organizational criteria passed. Final usefulness remains for the user."
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-16T01:36:28+00:00",
+  "updated_at": "2026-10-16T01:49:31+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-16T01:36:41+00:00",
+      "note": "Allocation recorded in PLAN.md. Initial checkpoint rejected invalid status active before any data mutation; corrected to documented in_progress."
+    },
+    {
+      "time": "2026-10-16T01:49:31+00:00",
+      "note": "All approved organizational criteria passed. Final usefulness remains for the user."
+    }
+  ]
+}

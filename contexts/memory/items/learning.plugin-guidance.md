@@ -1,12 +1,14 @@
 # 陌生插件的逐步引导
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `learning.plugin-guidance`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 初次使用且用户需要指导的插件或浏览器工具
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T01:41:42+00:00
 
 第一次使用插件、尚不清楚界面和修改效果时，用户要求一步一步指导，并能实时看到修改。先说明当前操作和下一步，再根据用户熟悉程度调整。
 
@@ -15,6 +17,7 @@
 - 已有熟练操作经验或当前直接授权执行时，不机械退回教学流程。
 - 不从这段历史推断完成授权后必须自动接管。
 - review_after: 2027-01-15
+- replaced_by: learning.plugin-first-use
 
 ## Evidence pointers
 

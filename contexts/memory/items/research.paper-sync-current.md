@@ -1,12 +1,14 @@
 # 论文同步要求的实际时间线
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.paper-sync-current`
 - kind: memory
-- status: active
+- status: archived
 - scope: 合同研究工程与指定 ICML 稿件之间的同步
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-15T13:59:53+00:00
+- updated_at: 2026-10-16T01:41:42+00:00
 
 2026-10-04，用户曾指定第三章对应的独立 ICML 稿，要求复制到服务器后按约束更新这份稿件。2026-10-06，用户随后要求当前工程推进阶段将项目与论文分开，只做项目相关内容，不自动同步文章。恢复工程任务时沿用这个项目范围；若当前另有更新论文的明确指令，再确认目标稿件和修改范围。两段话不构成所有未来论文永久不更新的规则。
 
@@ -16,6 +18,7 @@
 - 不能把10月4日对指定稿件的授权自动延续到10月6日后的工程任务。
 - 不证明历史同步已经完成，实际文件与服务器状态仍需核查。
 - review_after: 2026-10-15
+- retirement_reason: User-approved archival of standalone execution history; potentially live constraints retained with source dates and task boundaries in references/projects/contract-research.md; expiry/completion is not asserted.
 
 ## Evidence pointers
 

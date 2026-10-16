@@ -9,8 +9,8 @@
 - scope: 插件安装、浏览器和不熟悉的工具
 - confidence: medium
 - status: resolved
-- disposition: memory / narrowed
-- destination: learning.plugin-guidance
+- disposition: memory / concise_reusable
+- destination: learning.plugin-first-use
 
 ## C-20261014-011
 
@@ -44,8 +44,8 @@
 - overlap: new
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / new_scoped
-- destination: learning.question-dedup
+- disposition: memory / concise_reusable
+- destination: learning.deduplicate-by-knowledge
 
 ## C-20261014-035
 

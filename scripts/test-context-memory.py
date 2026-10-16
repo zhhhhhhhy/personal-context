@@ -89,6 +89,26 @@ class MemoryTests(unittest.TestCase):
             m.rollback(self.root, receipt["transaction_id"])
         self.assertEqual((self.root / "contexts/memory/items/project.first.md").read_bytes(), b"newer user edit")
 
+    def test_project_material_requires_identity_and_explicit_project_search(self):
+        target = self.root / "references/projects/alpha.md"
+        target.parent.mkdir(parents=True)
+        target.write_text("Version-specific project conditions\n", encoding="utf-8")
+        record = self.record("project.scoped", kind="project", project="alpha",
+                             target="references/projects/alpha.md")
+        m.apply_plan(self.root, self.plan([self.add(record)]))
+        self.assertEqual(m.search(self.root, "focused")["matches"], [])
+        self.assertEqual(m.search(self.root, "focused", project="beta")["matches"], [])
+        self.assertEqual(m.search(self.root, "focused", project="alpha")["matches"][0]["id"], "project.scoped")
+        m.apply_plan(self.root, self.plan([self.add(self.record("common.preference", validity="stable"))]))
+        self.assertEqual({x["id"] for x in m.search(self.root, "focused", project="alpha")["matches"]},
+                         {"project.scoped", "common.preference"})
+        self.assertEqual([x["id"] for x in m.search(self.root, "", project="alpha")["matches"]],
+                         ["project.scoped"])
+        before = m.base_hash(self.root)
+        with self.assertRaisesRegex(ValueError, "explicit project"):
+            m.prepare_plan(self.root, self.plan([self.add(self.record("project.invalid", kind="project"))]))
+        self.assertEqual(m.base_hash(self.root), before)
+
     def test_private_memory_cannot_be_published_or_found_by_default(self):
         private = self.record("local.context", visibility="local", sensitivity="sensitive")
         m.apply_plan(self.root, self.plan([self.add(private)]))

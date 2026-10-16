@@ -36,3 +36,10 @@ entry now routes to `references/patent-workflow.md`, which preserves its full
 previous body. The academic writing references received two narrow additions
 on causal claims and attributed human-review assertions. Existing Skill coverage
 is credited separately from new personal rules in `notes/candidate-dispositions.md`.
+
+On 2026-10-16, the complete installed `engineering-project-workflow` source
+package was imported into this canonical library, with its prior entry retained
+as a migration snapshot and the active entry routed under the existing budget.
+Four duplicate planning/iteration/startup memories now point to this workflow;
+one evidence-gap audit was consolidated into `academic-write`. Project-specific
+conditions remain in `references/projects/`, separate from these methods.

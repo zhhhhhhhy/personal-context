@@ -1,0 +1,106 @@
+{
+  "status": "passed",
+  "original_mapping": {
+    "retain": 6,
+    "merge": 5,
+    "project": 5,
+    "archive": 3
+  },
+  "active_kinds": {
+    "rule": 2,
+    "core": 3,
+    "skill": 6,
+    "memory": 6,
+    "project": 5
+  },
+  "candidate_buckets": {
+    "skill": 20,
+    "discard": 3,
+    "rule": 9,
+    "memory": 6,
+    "project": 5,
+    "archive": 3
+  },
+  "cases": [
+    {
+      "name": "generic preference",
+      "query": "人工审核",
+      "project": null,
+      "matched_ids": [
+        "research.chinese-item-review",
+        "skill.research-evidence"
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "no project default",
+      "query": "Core200 人审",
+      "project": null,
+      "matched_ids": [],
+      "status": "passed"
+    },
+    {
+      "name": "known research project",
+      "query": "Core200 人审",
+      "project": "contract-research",
+      "matched_ids": [
+        "project.core200-open-evidence"
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "preference survives project filter",
+      "query": "人工审核",
+      "project": "contract-research",
+      "matched_ids": [
+        "project.core200-open-evidence",
+        "research.chinese-item-review",
+        "skill.research-evidence"
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "correct AutoFill project",
+      "query": "Qwen32B 浏览器",
+      "project": "browser-autofill",
+      "matched_ids": [
+        "learning.plugin-first-use",
+        "project.autofill-safety"
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "different RAG project",
+      "query": "Qwen32B 浏览器",
+      "project": "rag-system",
+      "matched_ids": [
+        "learning.plugin-first-use"
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "taskgraph corrected scope",
+      "query": "任务图",
+      "project": "taskgraph",
+      "matched_ids": [
+        "core.autonomy",
+        "core.delegation",
+        "project.taskgraph-design-scoped",
+        "skills.prefer-passive-routing"
+      ],
+      "status": "passed"
+    }
+  ],
+  "protected_user_edits": "unchanged",
+  "private_record": "local only; public output omits content",
+  "canonical_runtime_packages": "2 packages match byte-for-byte and source manifests",
+  "retained_content_size": {
+    "protocol": "o200k_base; sum of title, claim, scope, exceptions serialized identically; six retained entries including local; excludes evidence/history and is not live session billing",
+    "before": 776,
+    "after": 500,
+    "reduction_percent": 35.6
+  },
+  "focused_tests": "Three focused lifecycle/privacy/routing checks passed; the amended project routing check rerun after final routing adjustment.",
+  "scope": "Existing 19 only. Source rereads and local project artifacts were used to verify their versions; no new dialogue cohort or experiments.",
+  "user_acceptance": "pending"
+}

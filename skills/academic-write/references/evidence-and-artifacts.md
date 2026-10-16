@@ -3,6 +3,7 @@
 - Report what the experiment measures, not what the system was intended to achieve.
 - If only a pre-generation gate was evaluated, attribute gains to action control or false-fill reduction; do not call them gains in the generator or the complete multi-module system.
 - If references or evaluators are model-assisted, state that limitation without presenting them as human gold.
+- When diagnosing missing research evidence, inspect the actual project artifacts and map scores to labels, references and source records. List what is missing and the effort to recover it; final scores cannot establish that an annotation process occurred. Concrete unresolved gaps belong to that project.
 - A user-provided description or request to rewrite the paper records what was stated or requested; it does not establish that the annotation procedure occurred. Preserve concrete counts and conditions as attributed, pending claims until records support them. Human-review summaries do not establish that every model output was independently scored by humans.
 - If a benchmark is diagnostic or not independently held out, limit generalization claims accordingly.
 - Treat privacy as a motivation and deployment constraint unless a privacy evaluation was actually performed.

@@ -21,8 +21,8 @@
 - confidence: high
 - overlap: reinforces existing RAGSystem and browser-channel guidance
 - status: resolved
-- disposition: memory / narrowed
-- destination: remote.rag-execution-contract
+- disposition: project / scope_project_material
+- destination: project.rag-contract
 
 ## C-20261014-021
 
@@ -33,8 +33,8 @@
 - overlap: new
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / narrowed
-- destination: demopilot.acceptance
+- disposition: skill / merge_existing_method
+- destination: skill.engineering-methods
 
 ## C-20261014-027
 
@@ -57,8 +57,8 @@
 - overlap: new
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / new_scoped
-- destination: migration.old-directory-checklist
+- disposition: memory / concise_reusable
+- destination: migration.verify-before-cleanup
 
 ## C-20261014-037
 
@@ -69,8 +69,8 @@
 - overlap: new
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / new_scoped
-- destination: taskgraph.project-design
+- disposition: project / scope_project_material
+- destination: project.taskgraph-design-scoped
 
 ## C-20261014-044
 
@@ -81,5 +81,5 @@
 - overlap: reinforces C-20261014-009 and C-20261014-015
 - privacy: safe_to_sync
 - status: resolved
-- disposition: memory / new_scoped
+- disposition: archive / archive_history_constraints_retained
 - destination: remote.server-browser-topology

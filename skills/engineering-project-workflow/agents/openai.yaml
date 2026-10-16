@@ -1,0 +1,7 @@
+interface:
+  display_name: "Engineering Project Workflow"
+  short_description: "Run gated, stateful multi-step engineering work"
+  default_prompt: "Use $engineering-project-workflow. Apply $minimal-validation-workflow as the reduction-first validation policy before choosing checks. Before any material change, initialize or resume the bundled workflow_controller.py transaction and pass its preflight and execution gates; then allocate the work, record bounded attempts, verify only the required acceptance evidence, and report blockers and next steps."
+
+policy:
+  allow_implicit_invocation: true

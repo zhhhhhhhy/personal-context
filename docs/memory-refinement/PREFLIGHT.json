@@ -1,0 +1,29 @@
+{
+  "preflight_id": "refine-existing-19-20261016",
+  "scope": "19 existing records only; no new conversation import or remote execution",
+  "status": "ready",
+  "checks": [
+    {
+      "id": "store",
+      "owner": "script",
+      "status": "passed",
+      "evidence": "existing registry",
+      "detail": "Exactly 19 active original memories; existing communication edit fingerprinted."
+    },
+    {
+      "id": "identity",
+      "owner": "agent",
+      "status": "passed",
+      "evidence": "original evidence E042/E068/E078/E128/E129/E150/E160/E161",
+      "detail": "Source dates and project scope checked; unknown remote revisions will remain explicit instead of assumed expired."
+    },
+    {
+      "id": "runtime",
+      "owner": "script",
+      "status": "passed",
+      "evidence": "D:\\anaconda\\python.exe",
+      "detail": "Existing guarded lifecycle writer and local raw-source access available."
+    }
+  ],
+  "next_action": "Retain 6, merge 5, scope 5 as project material, archive 3 records after transferring live guards."
+}

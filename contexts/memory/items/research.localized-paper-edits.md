@@ -1,12 +1,14 @@
 # 特定论文的局部修改约定
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.localized-paper-edits`
 - kind: memory
-- status: active
+- status: archived
 - scope: 恢复该次已有 ICML 稿件的外部编辑任务
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T01:41:42+00:00
 
 该次 ICML 稿件逻辑已基本稳定，用户要求只改定位明确的问题位置，使用当时指定的 Claude Code；另一轮要求发送外部编辑 Prompt 前先供用户审核。恢复同一任务时先查当前编辑约定。
 
@@ -15,6 +17,7 @@
 - 这是特定稿件和委托的约定，不是所有未来修改都先审批。
 - 当前用户直接指定的新工具或更大修改范围优先。
 - review_after: 2026-10-15
+- retirement_reason: User-approved archival of standalone execution history; potentially live constraints retained with source dates and task boundaries in references/projects/contract-research.md; expiry/completion is not asserted.
 
 ## Evidence pointers
 

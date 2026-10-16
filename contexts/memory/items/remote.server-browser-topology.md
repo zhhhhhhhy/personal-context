@@ -1,12 +1,14 @@
 # 一次服务器与本机浏览器分工
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `remote.server-browser-topology`
 - kind: memory
-- status: active
+- status: archived
 - scope: 恢复该次远程模型与主机浏览器联合测试
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T01:41:42+00:00
 
 该次实现方案明确服务器可使用 Qwen32B，其他工程工作放服务器，浏览器使用用户主机的浏览器，测试后释放模型资源。这是指定任务的部署选择；重用前确认当前模型、GPU、服务器和真实浏览器通道。
 
@@ -15,6 +17,7 @@
 - 不是所有项目的固定部署拓扑。
 - 不含登录凭据，也不授予新的远程或浏览器操作权限。
 - review_after: 2026-10-15
+- retirement_reason: User-approved archival of standalone execution history; potentially live constraints retained with source dates and task boundaries in references/projects/browser-autofill.md; expiry/completion is not asserted.
 
 ## Evidence pointers
 

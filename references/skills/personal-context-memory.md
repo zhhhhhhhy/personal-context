@@ -4,7 +4,8 @@ Read this only for memory maintenance, candidate resolution, or a retrieval prob
 
 ## Meaning and use
 
-- `memory`: one evidenced project agreement or narrow scenario preference is enough. Keep concrete quantities, conditions, attribution, and unknown facts. A writing request does not prove its requested facts.
+- `memory`: a concise reusable scenario preference or working method with evidence and scope. Old task quantities stay in its history unless still needed for reuse.
+- `project`: one evidenced project agreement or open issue is enough. Keep concrete quantities, conditions, attribution, unknown facts and source version in the project target. A writing request does not prove its requested facts.
 - `rule`: a reusable behavior supported by distinct direct human expressions in independent parent conversations and task families. Preserve scope and exceptions. Existing core coverage is recorded as `core`, not counted as a new learned rule.
 - `skill`: a receipt pointing to a real canonical Skill or reference. The Skill carries the workflow; the receipt must not create another divergent instruction copy.
 - Private themes stay in `.local/context-memory/`. Retrieval requires `--include-local`; only local summaries and original evidence may contain sensitive details.
@@ -22,7 +23,7 @@ Reflector chooses:
 | `add` | New active scoped memory, rule or coverage receipt |
 | `merge` | Union evidence/candidate IDs into an explicit destination; close source entries |
 | `replace` | Activate a later interpretation and mark old entries superseded; retain the old claim and source |
-| `archive` | Stop ordinary use, retain audit/history for a completed or expired context |
+| `archive` | Stop ordinary use and retain history; move any still-applicable constraint to its scoped destination before archiving a redundant execution record |
 | `discard` | Reject incorrect, unsupported, redundant or non-reusable material; retain the reason |
 | `review` | Record a justified recheck and next review date without changing the claim |
 
@@ -31,6 +32,10 @@ Conflicting human preferences require a contextual resolution or explicit new in
 Before interpreting a later instruction as replacing an earlier one, check the actual message timestamps. Conversation creation dates, candidate numbering and source-map order do not establish message order. For a correction, record which prior interpretation was wrong and retain the source dates.
 
 ## Executable boundary
+
+The 2026-10-16 cleanup separates reusable `kind=memory` entries from `kind=project` material. Project records require a project key, `validity=project` and an existing target file. Default keyword search excludes project material; use `--project <key>` after checking identity/version. Explicit `show` may read a selected project record. Project roots, commits and task versions are checked on continuation; an overdue review is not proof that an agreement expired.
+
+Historical candidate dispositions may use `project` for an active project record or `archive` for an archived original. Archiving an execution record does not cancel its still-applicable conditions: preserve those in the matching project target with source dates and verification boundaries first.
 
 `scripts/context-memory.py` reads a local plan. Only memory registries/leaves, learned projections, candidate statuses and the disposition report are writable. Core and Skill edits need current user-directed work and are outside this automatic writer. Transactions and raw source manifests stay local. `habits/learned.json` is a projection, not a second source of truth.
 

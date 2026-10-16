@@ -1,12 +1,14 @@
 # 任务图产品的设计选择
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `taskgraph.project-design`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 恢复该任务完成可视化产品的架构与验收设计
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T01:41:42+00:00
 
 该任务可视化项目选择 Workspace → Run → Task Graph，每次运行独立留存；先定义 HTTP/JSON 协议。采用混合验收：后端可验证的任务自动检查，其他进入待验收，由现有AI应用提供人工确认后上报 complete_task/reject_task。观察子 Agent 通过 Skill 更新任务图是用户期望的后续交互，不代表已实现。
 
@@ -14,6 +16,7 @@
 
 - 仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。
 - review_after: 2026-10-15
+- replaced_by: project.taskgraph-design
 
 ## Evidence pointers
 

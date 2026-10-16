@@ -1,0 +1,45 @@
+{
+  "checked_on": "2026-10-16",
+  "checks": [
+    {
+      "project": "taskgraph",
+      "source_version": "2026-07-24 direct-user design",
+      "current_local_root": "D:/worker/codex-visual",
+      "git_revision": null,
+      "artifact": "docs/MVP_SPEC.md",
+      "artifact_sha256": "dd7aa92f28217e9ea1587ea8cb3dd09ff104d0457d1e2d4e35cfa118b576920c",
+      "finding": "Current local specification says read-only observability; mixed acceptance is historical intent, not verified implementation."
+    },
+    {
+      "project": "demopilot",
+      "current_local_root": "D:/worker/DemoPilot",
+      "head": "1af6b332dc3058277a8bc782052233f44dcc6462",
+      "tracked_worktree_modified": true,
+      "finding": "Per-demo acceptance data and CLI exist; old report is dated 2026-08-26, not current metrics."
+    },
+    {
+      "project": "browser-autofill",
+      "source_version": "2026-10-02 through 2026-10-04",
+      "current_remote_revision": "not_checked",
+      "finding": "32B later conditional on GPU capacity; keep host-browser and same-assignment constraints; no identity equivalence with rag-system proven."
+    },
+    {
+      "project": "rag-system",
+      "source_version": "2026-10-04 E042 root /workspace/zhy/RAGSystem",
+      "current_remote_revision": "not_checked",
+      "finding": "Distinct supplied execution contract; do not combine by similar AutoFill name."
+    },
+    {
+      "project": "contract-research",
+      "source_versions": [
+        "2026-10-04 specified ICML draft",
+        "2026-10-06 engineering-only assignment",
+        "2026-10-08 localized Claude Code assignment",
+        "2026-10-06 through 2026-10-13 JEV/Core200 discussions"
+      ],
+      "current_remote_or_draft_revision": "not_checked",
+      "finding": "Keep artifact and assignment boundaries; do not cancel unverified live constraints."
+    }
+  ],
+  "limit": "Read-only project identification and document checks, not deployment/experiment verification; no new conversations imported."
+}

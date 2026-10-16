@@ -1,12 +1,14 @@
 # 新产品原型的可调整计划
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.adjustable-plan`
 - kind: memory
-- status: active
+- status: merged
 - scope: 恢复该原型规划或明确需要架构和验收计划的新产品任务
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T01:41:42+00:00
 
 该次新产品原型任务要求先创建项目文件夹和可调整的 PLAN.md，规划架构与验收标准。可作为相似原型项目的起点；文件名和文档数量不构成所有任务的强制模板。
 
@@ -14,6 +16,7 @@
 
 - 仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。
 - review_after: 2026-10-15
+- merged_into: skill.engineering-methods
 
 ## Evidence pointers
 

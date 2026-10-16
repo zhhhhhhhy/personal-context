@@ -1,12 +1,14 @@
 # 迁移后清理旧目录的检查清单
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `migration.old-directory-checklist`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 迁移完成后讨论旧目录清理
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T01:41:42+00:00
 
 该次迁移清理的顺序是：更新旧路径引用；核对迁移文件与哈希；提交迁移内容或完整压缩归档；最后才处理旧目录。复用时先确认当前目标、影响范围和本次删除授权。
 
@@ -15,6 +17,7 @@
 - 保留检查方法不等于保留未来删除权限。
 - 每次操作按当前系统核对真实路径、目标和备份，不沿用旧目录名。
 - review_after: 2026-10-15
+- replaced_by: migration.verify-before-cleanup
 
 ## Evidence pointers
 
