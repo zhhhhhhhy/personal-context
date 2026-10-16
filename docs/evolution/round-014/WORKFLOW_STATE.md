@@ -1,16 +1,16 @@
 # Workflow Transaction State
 
 - Schema version: 1
-- State version: 12
+- State version: 14
 - Transaction ID: TX-9723d374a771
 - Objective: Measure one frozen cold-start personal Context evolution run against rounds 011-013
 - Scope: Round014 cohort, source extraction, targeted review, lifecycle, complete tool-return metering, report and authorized push
-- Status: verifying
-- Current phase: verify
+- Status: completed
+- Current phase: report
 - Owner: agent
-- Next action: Resolve or verify the remaining acceptance conditions.
+- Next action: Report the verified result and link the evidence.
 - Created: 2026-10-16T04:41:04+00:00
-- Updated: 2026-10-16T04:59:43+00:00
+- Updated: 2026-10-16T05:02:13+00:00
 
 ## Acceptance conditions
 
@@ -19,7 +19,7 @@
 | AC-1 | Frozen framework and untouched communication user change | passed | D:\worker\personal-context\docs\evolution\round-014\validation.json |
 | AC-2 | New cohort, complete source accounting and bounded review | passed | D:\worker\personal-context\docs\evolution\round-014\validation.json |
 | AC-3 | Validated memory destinations and cold-start metering with explicit boundaries | passed | D:\worker\personal-context\docs\evolution\round-014\REPORT.md |
-| AC-4 | Safe report committed and pushed | pending |  |
+| AC-4 | Safe report committed and pushed | passed | D:\worker\personal-context\.local\context-evolution\round-014-20261016.meta\publish-receipt.json |
 
 ## Preflight
 
@@ -37,7 +37,7 @@
 - route: 2026-10-16T04:41:05+00:00
 - execute: 2026-10-16T04:41:05+00:00
 - verify: 2026-10-16T04:54:04+00:00
-- report: not_run
+- report: 2026-10-16T05:02:13+00:00
 
 ## Decisions
 
@@ -64,3 +64,5 @@
 - `EV-148ebdaebbb0` 2026-10-16T04:59:43+00:00 `acceptance_verified` {"criterion": "AC-1", "result": "passed"}
 - `EV-d32aaa5ede38` 2026-10-16T04:59:43+00:00 `acceptance_verified` {"criterion": "AC-2", "result": "passed"}
 - `EV-9d9384dc6280` 2026-10-16T04:59:43+00:00 `acceptance_verified` {"criterion": "AC-3", "result": "passed"}
+- `EV-e2847a3b2e2f` 2026-10-16T05:02:13+00:00 `acceptance_verified` {"criterion": "AC-4", "result": "passed"}
+- `EV-ff32762292d0` 2026-10-16T05:02:13+00:00 `gate_passed` {"stage": "report"}

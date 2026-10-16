@@ -1,6 +1,6 @@
 {
-  "current_tool_return_tokens": 66994,
-  "all_recorded_tool_output_tokens_including_task_delivery": 67748,
+  "current_tool_return_tokens": 68469,
+  "all_recorded_tool_output_tokens_including_task_delivery": 69223,
   "initial_task_envelope_tokens": 754,
   "initial_task_input_body_tokens": [
     700
@@ -13,18 +13,18 @@
     "重点复核、补查与裁决": 8071,
     "检索与反思（含复核收尾）": 5327,
     "校验、适配修复与生命周期": 5900,
-    "校验、生命周期、计量与交付": 3711
+    "计量、收尾校验、网络与发布": 5186
   },
-  "calls": 46,
+  "calls": 52,
   "start": "2026-10-16T04:38:38.913Z",
-  "cutoff": "2026-10-16T04:59:38.009Z",
+  "cutoff": "2026-10-16T05:02:14.096Z",
   "tokenizer": "o200k_base",
   "boundary": "Top-level returned tool text captured in this new session from the first recorded tool return through cutoff, o200k_base. Every captured output is included, including required entry/protocol/Skill reads, preparation and adapter errors, truncated wrappers, source and bounded review, retrieval, lifecycle validation/application, budget, metering and delivery outputs already captured. Excludes this in-flight measurement response and later delivery; these tails must be explicitly acknowledged. Excludes tool-call input/assistant generation, provider billing and hidden platform context. Same snapshot convention as rounds012/013; not a full context-window or billing measurement.",
   "model": [
     "gpt-6.1-sol"
   ],
   "raw_current": 2000,
-  "rate_per_1000_raw": 33497.0,
+  "rate_per_1000_raw": 34234.5,
   "visible_prompt_records": [
     {
       "role": "developer",
