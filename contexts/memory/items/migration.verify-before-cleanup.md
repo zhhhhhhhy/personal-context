@@ -1,12 +1,14 @@
 # 迁移后再按授权清理
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `migration.verify-before-cleanup`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 目录迁移与旧副本清理
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-16T01:41:42+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 清理旧目录前，更新路径引用，核对迁移文件及哈希，并保留提交或完整归档。
 
@@ -14,6 +16,7 @@
 
 - 清理前核对当前绝对路径、影响范围与授权；历史删除许可不延续。
 - review_after: 2027-01-16
+- replaced_by: migration.verify-before-cleanup-v2
 
 ## Evidence pointers
 

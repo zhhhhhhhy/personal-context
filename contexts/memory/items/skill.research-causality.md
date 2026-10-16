@@ -1,12 +1,14 @@
 # 研究因果链与证据边界
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `skill.research-causality`
 - kind: skill
-- status: active
+- status: merged
 - scope: 研究论证、论文逻辑检查和方法解释
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 从实际任务难点和可观测失败建立问题、假设、机制与实验的联系。区分一个决策节点和已经得到证据支持的机制，结论不能超过实验能检验的范围。
 
@@ -15,6 +17,7 @@
 - 仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。
 - review_after: 2027-01-15
 - target: skills/academic-write/references/paper-workflow.md
+- merged_into: skill.academic-writing-entry
 
 ## Evidence pointers
 

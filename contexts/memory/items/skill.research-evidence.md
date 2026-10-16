@@ -1,12 +1,14 @@
 # 学术证据核验已吸收
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `skill.research-evidence`
 - kind: skill
-- status: active
+- status: merged
 - scope: 论文或实验结果的来源、人工审核与结论范围检查
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-16T01:41:42+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 把用户陈述、论文写作请求、已核验记录和缺失归档分开。人工审核汇总不证明所有模型输出逐题人工评分；模型辅助参考不能直接叫人工金标准。
 
@@ -15,6 +17,7 @@
 - 仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。
 - review_after: 2027-01-15
 - target: skills/academic-write/references/evidence-and-artifacts.md
+- merged_into: skill.academic-writing-entry
 
 ## Evidence pointers
 

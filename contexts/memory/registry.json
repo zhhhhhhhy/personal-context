@@ -48,10 +48,64 @@
       "validity": "stable",
       "verification": "supported_preference",
       "review_after": "2027-01-15",
-      "status": "active",
-      "updated_at": "2026-10-15T13:49:28+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "documents.preserve-style",
+          "title": "编辑已有材料时保留约定风格",
+          "kind": "rule",
+          "claim": "编辑已有文档时，沿用用户认可的结构和风格；有参考模板时按约定的模板处理。改文字不自动授权更换整套布局。",
+          "scope": "修改已有简历、专利或其他已经确定风格的文档",
+          "exceptions": [
+            "用户当前明确要求重做结构或版式时按新要求执行。",
+            "渲染验收和目标目录的具体要求由对应文档 Skill 或项目约定处理。"
+          ],
+          "tags": [
+            "文档",
+            "简历",
+            "专利",
+            "风格",
+            "版式",
+            "保留结构",
+            "修改"
+          ],
+          "source_candidates": [
+            "C-20261014-005"
+          ],
+          "evidence": [
+            {
+              "ref": "E015",
+              "thread_id": "01a1078a-5052-73a2-b38e-5624a193a91f",
+              "location": "rollout-2026-10-04T23-32-27-01a1078a-5052-73a2-b38e-5624a193a91f_01a1078b-8726-7e61-84d0-98deed6961bf.jsonl:L487",
+              "source_kind": "user_authored",
+              "family_id": "existing-resume",
+              "text_sha256": "2f9b10ac495c14c30c027b0666a0bdef727f62759e0dbbb2a86fbdb1e1029d9e",
+              "support": "用户直接纠正简历整体结构和风格被改变。"
+            },
+            {
+              "ref": "E017",
+              "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+              "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L3210",
+              "source_kind": "user_authored",
+              "family_id": "patent-package",
+              "text_sha256": "cf9d070db4fef9944837f22d62d534984c554c3f4ae81ead0d86801c20b02f99",
+              "support": "另一专利任务要求修复生成材料与指定参考格式的偏差。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "supported_preference",
+          "review_after": "2027-01-15",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "documents.preserve-style-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "validation.agreed-coverage",
@@ -100,10 +154,64 @@
       "validity": "stable",
       "verification": "supported_preference",
       "review_after": "2027-01-15",
-      "status": "active",
-      "updated_at": "2026-10-15T13:49:28+00:00",
-      "revision": 1,
-      "history": []
+      "status": "merged",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "validation.agreed-coverage",
+          "title": "按约定范围说明验收结果",
+          "kind": "rule",
+          "claim": "用户已经约定最终验收集合时，使用该集合判断整体是否完成，并说明实际测试范围与未覆盖部分。单个样本通过只证明该样本；日常开发检查仍使用足够证明变更路径的最小范围。",
+          "scope": "存在用户指定验收集合的工程交付或实验验收",
+          "exceptions": [
+            "未约定完整集合时先说明实际证据范围，不擅自制造全量测试义务。",
+            "该规则不要求每次小改动重跑全部验收集。"
+          ],
+          "tags": [
+            "验收",
+            "覆盖",
+            "测试集",
+            "完成",
+            "实验",
+            "测试",
+            "验证"
+          ],
+          "source_candidates": [
+            "C-20261014-020"
+          ],
+          "evidence": [
+            {
+              "ref": "E086",
+              "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L2836",
+              "source_kind": "user_authored",
+              "family_id": "demopilot",
+              "text_sha256": "bd4934e4b68b0b4eaa522a2c625c7c3d6da714457349bf564a086a288a3dcaca",
+              "support": "Demo 项目明确拒绝用单个样本通过代表整体完成。"
+            },
+            {
+              "ref": "E088",
+              "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+              "location": "rollout-2026-10-03T02-46-13-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0fdf0-3692-7ad3-b962-7bb604fd5054.jsonl:L6347",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "93ceadef96dac462263b139c1c472125e1502715e7e3300defca18b75c1d112b",
+              "support": "另一科研任务指定200条核心集用于最终验收，一般测试使用开发集。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "supported_preference",
+          "review_after": "2027-01-15",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "merged_into": "validation.scoped-acceptance",
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。"
     },
     {
       "id": "core.communication",
@@ -163,10 +271,75 @@
       "verification": "historical_user_instruction",
       "review_after": "2027-01-15",
       "target": "habits/communication.md",
-      "status": "active",
-      "updated_at": "2026-10-15T13:49:28+00:00",
-      "revision": 1,
-      "history": []
+      "status": "archived",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "core.communication",
+          "title": "已有沟通规则覆盖",
+          "kind": "core",
+          "claim": "先用直白语言说明目的、当前效果和结果；针对读者保留关键原因、机制和证据。工程细节需要时追溯，不强迫每次解释都展开全部代码。",
+          "scope": "技术解释、导师汇报和工程或实验结果说明",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "解释",
+            "汇报",
+            "沟通",
+            "导师",
+            "机制",
+            "通俗"
+          ],
+          "source_candidates": [
+            "C-20261014-011",
+            "C-20261014-024",
+            "C-20261014-035",
+            "C-20261014-046"
+          ],
+          "evidence": [
+            {
+              "ref": "E056",
+              "thread_id": "01a1102f-03ff-78d0-a2cb-0c548a5fc046",
+              "location": "rollout-2026-10-06T15-47-59-01a1102f-03ff-78d0-a2cb-0c548a5fc046.jsonl:L685",
+              "source_kind": "user_authored",
+              "family_id": "01a1102f-03ff-78d0-a2cb-0c548a5fc046",
+              "text_sha256": "456282b1570d0e4f69edbc845bd13ecbd94323ffd41f50391b018b488120a985",
+              "support": "用户对报告意图、行为、原因的直接纠正。"
+            },
+            {
+              "ref": "E097",
+              "thread_id": "01a12e11-c5c2-71f0-871f-a34737fc4f2a",
+              "location": "rollout-2026-10-12T11-04-39-01a12e11-c5c2-71f0-871f-a34737fc4f2a.jsonl:L12",
+              "source_kind": "user_authored",
+              "family_id": "01a12e11-c5c2-71f0-871f-a34737fc4f2a",
+              "text_sha256": "58dc073a04759d06764fd31e8bec8d4a1d58c5d58657fe79d5f69b8a7faa7d8d",
+              "support": "用户指定面向导师的产出汇报。"
+            },
+            {
+              "ref": "E141",
+              "thread_id": "01a0ddd6-44b2-7a60-ada3-74bc62dbf566",
+              "location": "rollout-2026-09-26T21-10-02-01a0ddd6-44b2-7a60-ada3-74bc62dbf566.jsonl:L9",
+              "source_kind": "user_authored",
+              "family_id": "01a0ddd6-44b2-7a60-ada3-74bc62dbf566",
+              "text_sha256": "9a37bd02c593ae2da3b18645de97c73d347b4389588b235c07481d1927561c72",
+              "support": "用户明确要求直白并说明差异。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "habits/communication.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "retirement_reason": "2026-10-16用户批准归档重复覆盖登记；communication.md与SOUL.md中的沟通、委派、自主执行及隐私授权规则继续生效，原正文与证据保留。",
+      "last_reason": "2026-10-16用户批准归档重复覆盖登记；communication.md与SOUL.md中的沟通、委派、自主执行及隐私授权规则继续生效，原正文与证据保留。"
     },
     {
       "id": "core.delegation-old",
@@ -415,9 +588,9 @@
       "verification": "historical_user_instruction",
       "review_after": "2027-01-15",
       "target": "rules/SOUL.md",
-      "status": "active",
-      "updated_at": "2026-10-15T13:49:28+00:00",
-      "revision": 2,
+      "status": "archived",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 3,
       "history": [
         {
           "id": "core.delegation",
@@ -468,9 +641,88 @@
           "status": "active",
           "updated_at": "2026-10-15T13:49:28+00:00",
           "revision": 1
+        },
+        {
+          "id": "core.delegation",
+          "title": "已有委派规则与任务 Prompt",
+          "kind": "core",
+          "claim": "委派时提供当前目标、权威目录、必要材料、约束和验收方式。已有的信息直接复用；按实际任务补足缺口，不强制无关字段或固定模板。",
+          "scope": "把一个有边界的工程或研究任务交给另一个 Agent",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "Goal Prompt",
+            "委派",
+            "上下文",
+            "目录",
+            "验收"
+          ],
+          "source_candidates": [
+            "C-20261014-015",
+            "C-20261014-040"
+          ],
+          "evidence": [
+            {
+              "ref": "E067",
+              "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "location": "rollout-2026-10-07T14-04-46-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a114f6-e3d4-7ad1-9c6e-2c63ce7e1efa.jsonl:L6709",
+              "source_kind": "user_authored",
+              "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "text_sha256": "ade4bab5a19aed371d6e317b79016622e8073d081a357d68bcb2a44f3f09283b",
+              "support": "用户指定上下文、目标和验收。"
+            },
+            {
+              "ref": "E155",
+              "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "location": "rollout-2026-10-04T16-59-27-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a10623-bad2-76e0-8a73-67933330f954.jsonl:L18",
+              "source_kind": "user_authored",
+              "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "text_sha256": "dacb6179fbed75a656c61afd4e45616ddf875ee265091ac0b7125f600d723aab",
+              "support": "用户指定目录及目的、约束、验收文档。"
+            },
+            {
+              "ref": "E067",
+              "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "location": "rollout-2026-10-07T14-04-46-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a114f6-e3d4-7ad1-9c6e-2c63ce7e1efa.jsonl:L6709",
+              "source_kind": "user_authored",
+              "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "text_sha256": "ade4bab5a19aed371d6e317b79016622e8073d081a357d68bcb2a44f3f09283b",
+              "support": "用户要求 Prompt 提供文件位置、目标和评估方式。"
+            },
+            {
+              "ref": "E069",
+              "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "location": "rollout-2026-10-06T13-32-05-01a10644-aeb3-74b3-abac-f511ead2e049_01a10fb2-9966-7a63-ba7b-7f18d50e2463.jsonl:L1718",
+              "source_kind": "user_authored",
+              "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "text_sha256": "73e7b7420ef0c04b25fcf15c9e590eb9fc3fa7c97a3c200f996ed29ad59d9fa3",
+              "support": "用户纠正项目文件夹和约束材料未明确。"
+            },
+            {
+              "ref": "E155",
+              "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "location": "rollout-2026-10-04T16-59-27-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a10623-bad2-76e0-8a73-67933330f954.jsonl:L18",
+              "source_kind": "user_authored",
+              "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "text_sha256": "dacb6179fbed75a656c61afd4e45616ddf875ee265091ac0b7125f600d723aab",
+              "support": "用户明确要求在 Goal Prompt 标注目标、目录、约束和验收文档。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "rules/SOUL.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 2,
+          "last_reason": "Candidates 015 and 040 describe overlapping delegation context; merge evidence and use the existing SOUL instruction."
         }
       ],
-      "last_reason": "Candidates 015 and 040 describe overlapping delegation context; merge evidence and use the existing SOUL instruction."
+      "last_reason": "2026-10-16用户批准归档重复覆盖登记；communication.md与SOUL.md中的沟通、委派、自主执行及隐私授权规则继续生效，原正文与证据保留。",
+      "retirement_reason": "2026-10-16用户批准归档重复覆盖登记；communication.md与SOUL.md中的沟通、委派、自主执行及隐私授权规则继续生效，原正文与证据保留。"
     },
     {
       "id": "core.autonomy",
@@ -507,10 +759,52 @@
       "verification": "historical_user_instruction",
       "review_after": "2027-01-15",
       "target": "rules/SOUL.md",
-      "status": "active",
-      "updated_at": "2026-10-15T13:49:28+00:00",
-      "revision": 1,
-      "history": []
+      "status": "archived",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "core.autonomy",
+          "title": "已有授权内自主执行规则",
+          "kind": "core",
+          "claim": "在当前已经授权的任务范围内自主推进常规工作，按约定交付结果和证据；历史研究授权不会自动授予当前额外权限。",
+          "scope": "当前授权已经清楚的研究或工程任务",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "自主执行",
+            "授权",
+            "迭代",
+            "持续工作"
+          ],
+          "source_candidates": [
+            "C-20261014-022"
+          ],
+          "evidence": [
+            {
+              "ref": "E093",
+              "thread_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "location": "rollout-2026-10-04T17-35-26-01a10644-aeb3-74b3-abac-f511ead2e049.jsonl:L3497",
+              "source_kind": "user_authored",
+              "family_id": "01a10644-aeb3-74b3-abac-f511ead2e049",
+              "text_sha256": "2f158f4ebd51e94ed2dce363a3dbec429c960f6469ea444b3add6a31766cbf4c",
+              "support": "用户要求常规步骤自主完成，并按已有工程 Skill 汇报。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "rules/SOUL.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "retirement_reason": "2026-10-16用户批准归档重复覆盖登记；communication.md与SOUL.md中的沟通、委派、自主执行及隐私授权规则继续生效，原正文与证据保留。",
+      "last_reason": "2026-10-16用户批准归档重复覆盖登记；communication.md与SOUL.md中的沟通、委派、自主执行及隐私授权规则继续生效，原正文与证据保留。"
     },
     {
       "id": "skill.patent-workflow",
@@ -571,10 +865,76 @@
       "verification": "historical_user_instruction",
       "review_after": "2027-01-15",
       "target": "skills/contract-field-patent-drafting/SKILL.md",
-      "status": "active",
-      "updated_at": "2026-10-15T13:49:28+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "skill.patent-workflow",
+          "title": "专利材料工作流已吸收",
+          "kind": "skill",
+          "claim": "专利任务先盘点本人材料与参考模板，建立步骤.md 的输入、输出和验收；模板只提供结构和格式。具体实施方式逐步写输入、动作、条件和输出；交付时检查文稿与渲染结果。",
+          "scope": "合同字段研究转专利交底书、说明书及配套文档",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "专利",
+            "步骤.md",
+            "参考模板",
+            "实施方式",
+            "公式",
+            "渲染"
+          ],
+          "source_candidates": [
+            "C-20261014-001",
+            "C-20261014-003",
+            "C-20261014-004",
+            "C-20261014-012",
+            "C-20261014-013"
+          ],
+          "evidence": [
+            {
+              "ref": "E001",
+              "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+              "location": "rollout-2026-10-03T02-36-47-01a0fde7-9236-78c1-9068-6867a4ce6d8e.jsonl:L12",
+              "source_kind": "user_authored",
+              "family_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+              "text_sha256": "56d9de250298c43547220c0f8312a685211de52b7ffad0f726ef8b01fb104ba0",
+              "support": "直接要求专利任务拆解并产出步骤.md。"
+            },
+            {
+              "ref": "E059",
+              "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+              "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L9638",
+              "source_kind": "user_authored",
+              "family_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+              "text_sha256": "c697109f0fd873705710ec138e95e03e01d13659b7a867ed07a30256ed4130ce",
+              "support": "直接要求实施步骤逐项对应并写实际动作。"
+            },
+            {
+              "ref": "E017",
+              "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+              "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L3210",
+              "source_kind": "user_authored",
+              "family_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+              "text_sha256": "cf9d070db4fef9944837f22d62d534984c554c3f4ae81ead0d86801c20b02f99",
+              "support": "直接纠正参考模板与生成材料的格式差异。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "skills/contract-field-patent-drafting/SKILL.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "skill.patent-workflow-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "skill.minimal-validation",
@@ -621,10 +981,62 @@
       "verification": "historical_user_instruction",
       "review_after": "2027-01-15",
       "target": "skills/minimal-validation-workflow/SKILL.md",
-      "status": "active",
-      "updated_at": "2026-10-15T13:49:28+00:00",
-      "revision": 1,
-      "history": []
+      "status": "merged",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "skill.minimal-validation",
+          "title": "最小充分验证已吸收",
+          "kind": "skill",
+          "claim": "默认选择能够证明变更路径的最小检查，避免无关扩测和无变化时重复已经通过的检查；用户指定的验收范围仍须完成。",
+          "scope": "代码、配置、Skill 和工程变更",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "验证",
+            "测试",
+            "检查",
+            "开销",
+            "成本"
+          ],
+          "source_candidates": [
+            "C-20261014-008"
+          ],
+          "evidence": [
+            {
+              "ref": "E036",
+              "thread_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+              "location": "rollout-2026-10-08T03-22-25-01a117d1-2764-72e2-ad04-6d9436d6ce3e.jsonl:L315",
+              "source_kind": "user_authored",
+              "family_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+              "text_sha256": "4b08da777d92f50d183a615341535314e01f4b73456a8ed79239bcf737326cf8",
+              "support": "用户明确指出验证过多、耗时。"
+            },
+            {
+              "ref": "E041",
+              "thread_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+              "location": "rollout-2026-10-08T03-22-25-01a117d1-2764-72e2-ad04-6d9436d6ce3e.jsonl:L594",
+              "source_kind": "user_authored",
+              "family_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+              "text_sha256": "65c70924976ded998213b6ff30d1c3eb94a3ada0bb4b54e8e804f1d9f4e64b07",
+              "support": "用户要求减少重复和无关验证。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "skills/minimal-validation-workflow/SKILL.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "merged_into": "validation.scoped-acceptance",
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。"
     },
     {
       "id": "skill.paper-hierarchy",
@@ -673,10 +1085,64 @@
       "verification": "historical_user_instruction",
       "review_after": "2027-01-15",
       "target": "skills/academic-write/SKILL.md",
-      "status": "active",
-      "updated_at": "2026-10-15T13:49:28+00:00",
-      "revision": 1,
-      "history": []
+      "status": "merged",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "skill.paper-hierarchy",
+          "title": "论文类型与贡献层级已吸收",
+          "kind": "skill",
+          "claim": "先锁定论文类型和中心逻辑，再改具体段落。Benchmark 论文围绕任务、评测和发现组织，方法作为被评测对象；工程日志不进入科学叙事。历史章节冻结只在当次稿件约定内使用。",
+          "scope": "论文结构修改、Benchmark 写作和方法层级检查",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "论文",
+            "benchmark",
+            "Introduction",
+            "ICML",
+            "贡献",
+            "结构"
+          ],
+          "source_candidates": [
+            "C-20261014-006",
+            "C-20261014-018"
+          ],
+          "evidence": [
+            {
+              "ref": "E024",
+              "thread_id": "01a129b0-b99c-7f42-96c0-a0f4b948f786",
+              "location": "rollout-2026-10-11T14-40-10-01a129b0-b99c-7f42-96c0-a0f4b948f786.jsonl:L31",
+              "source_kind": "user_authored",
+              "family_id": "01a129b0-b99c-7f42-96c0-a0f4b948f786",
+              "text_sha256": "c4496482c5ec8b689b587fb649e6264d6d48a6ebc0dab9c323da792a128e3b7c",
+              "support": "用户对当前论文逻辑和贡献层级提出要求。"
+            },
+            {
+              "ref": "E079",
+              "thread_id": "01a0fe11-bb1e-7611-afc3-6a939e318c78",
+              "location": "rollout-2026-10-03T05-34-38-01a0fe11-bb1e-7611-afc3-6a939e318c78_01a0fe8a-6932-7a43-9823-4e5d3522f69f.jsonl:L36",
+              "source_kind": "user_authored",
+              "family_id": "01a0fe11-bb1e-7611-afc3-6a939e318c78",
+              "text_sha256": "d911efaeb373336db78d7e9aba7260d95ef89a2681bac5667f9174bfb5e54cc7",
+              "support": "用户明确要求 benchmark-first。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "skills/academic-write/SKILL.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "merged_into": "skill.academic-writing-entry",
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。"
     },
     {
       "id": "skill.research-causality",
@@ -725,10 +1191,64 @@
       "verification": "historical_user_instruction",
       "review_after": "2027-01-15",
       "target": "skills/academic-write/references/paper-workflow.md",
-      "status": "active",
-      "updated_at": "2026-10-15T13:49:28+00:00",
-      "revision": 1,
-      "history": []
+      "status": "merged",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "skill.research-causality",
+          "title": "研究因果链与证据边界",
+          "kind": "skill",
+          "claim": "从实际任务难点和可观测失败建立问题、假设、机制与实验的联系。区分一个决策节点和已经得到证据支持的机制，结论不能超过实验能检验的范围。",
+          "scope": "研究论证、论文逻辑检查和方法解释",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "论文",
+            "研究",
+            "因果链",
+            "机制",
+            "假设",
+            "实验"
+          ],
+          "source_candidates": [
+            "C-20261014-019",
+            "C-20261014-030"
+          ],
+          "evidence": [
+            {
+              "ref": "E082",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-07T14-02-01-01a11266-18ff-7b92-bdec-81772b1c0b18_01a114f4-5f69-7071-9452-011db73195e6.jsonl:L691",
+              "source_kind": "user_authored",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "text_sha256": "033648dbf669d40a08b1bc283ed7e492d29b6d3ea5190065f3a3e492da09c57d",
+              "support": "用户直接批评判定节点尚不足以构成机制，并要求回到合同任务问题。"
+            },
+            {
+              "ref": "E120",
+              "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L444",
+              "source_kind": "user_authored",
+              "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "text_sha256": "7a064c3c4f9dd44cd19a593cda67d9caaa956a232c4def75baf07f00cf584ef8",
+              "support": "用户要求将核心主张改成可检验假设。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "skills/academic-write/references/paper-workflow.md",
+          "status": "active",
+          "updated_at": "2026-10-15T13:49:28+00:00",
+          "revision": 1
+        }
+      ],
+      "merged_into": "skill.academic-writing-entry",
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。"
     },
     {
       "id": "skill.research-evidence",
@@ -795,9 +1315,9 @@
       "verification": "historical_user_instruction",
       "review_after": "2027-01-15",
       "target": "skills/academic-write/references/evidence-and-artifacts.md",
-      "status": "active",
-      "updated_at": "2026-10-16T01:41:42+00:00",
-      "revision": 2,
+      "status": "merged",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 3,
       "history": [
         {
           "id": "skill.research-evidence",
@@ -848,9 +1368,80 @@
           "status": "active",
           "updated_at": "2026-10-15T13:49:28+00:00",
           "revision": 1
+        },
+        {
+          "id": "skill.research-evidence",
+          "title": "学术证据核验已吸收",
+          "kind": "skill",
+          "claim": "把用户陈述、论文写作请求、已核验记录和缺失归档分开。人工审核汇总不证明所有模型输出逐题人工评分；模型辅助参考不能直接叫人工金标准。",
+          "scope": "论文或实验结果的来源、人工审核与结论范围检查",
+          "exceptions": [
+            "仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。"
+          ],
+          "tags": [
+            "论文",
+            "证据",
+            "人工审核",
+            "金标准",
+            "标注",
+            "结果"
+          ],
+          "source_candidates": [
+            "C-20261014-023",
+            "C-20261014-036"
+          ],
+          "evidence": [
+            {
+              "ref": "E134",
+              "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+              "location": "rollout-2026-10-08T23-13-42-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3_01a11c13-cd58-7681-8a0a-437158e937cb.jsonl:L2297",
+              "source_kind": "user_authored",
+              "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+              "text_sha256": "31ea2f5d628ae202c11054bcd8b524f0878bdea88c92c66bdd1521482c8b0e80",
+              "support": "用户明确列出逐题人审归档和模型评分依据仍待对应的缺口。"
+            },
+            {
+              "ref": "E143",
+              "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L53",
+              "source_kind": "user_authored",
+              "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "text_sha256": "fca6739944d273e901456b71ae96679f9416a087fadce5536623b30f9284d920",
+              "support": "用户要求核查材料和结果边界。"
+            },
+            {
+              "ref": "E094",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-07T14-02-01-01a11266-18ff-7b92-bdec-81772b1c0b18_01a114f4-5f69-7071-9452-011db73195e6.jsonl:L1268",
+              "source_kind": "user_authored",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "text_sha256": "d2e3d284ee467bece1c91f45bc335ae20a621ba8bdcf7df0b3de6c6d852a0e5c",
+              "support": "用户要求到实际项目查找论文证据缺口。"
+            },
+            {
+              "ref": "E095",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-09T17-47-15-01a11266-18ff-7b92-bdec-81772b1c0b18_01a1200f-4915-7602-9658-c9f6fa81d259.jsonl:L3853",
+              "source_kind": "user_authored",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "text_sha256": "13ce3698a831897a1f330493d65c1317d81de8bbfd181a8f5b80cfba336debb4",
+              "support": "用户提出实际评分与数据诊断问题。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "target": "skills/academic-write/references/evidence-and-artifacts.md",
+          "status": "active",
+          "updated_at": "2026-10-16T01:41:42+00:00",
+          "revision": 2,
+          "last_reason": "Actual-artifact gap audit belongs to academic-write; Core200 unresolved facts remain project-scoped."
         }
       ],
-      "last_reason": "Actual-artifact gap audit belongs to academic-write; Core200 unresolved facts remain project-scoped."
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。",
+      "merged_into": "skill.academic-writing-entry"
     },
     {
       "id": "skills.passive-routing",
@@ -3010,10 +3601,61 @@
       "validity": "stable",
       "verification": "historical_user_instruction",
       "review_after": "2027-01-16",
-      "status": "active",
-      "updated_at": "2026-10-16T01:41:42+00:00",
-      "revision": 1,
-      "history": []
+      "status": "merged",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "learning.plugin-first-use",
+          "title": "陌生插件逐步引导",
+          "kind": "memory",
+          "claim": "首次使用且需要帮助时，分步解释操作，并让用户看见实际修改效果。",
+          "scope": "陌生插件或浏览器工具的初次引导",
+          "exceptions": [
+            "熟悉或已直接授权执行时，按当前要求推进。"
+          ],
+          "tags": [
+            "插件",
+            "新工具",
+            "引导",
+            "一步一步",
+            "浏览器"
+          ],
+          "source_candidates": [
+            "C-20261014-010"
+          ],
+          "evidence": [
+            {
+              "ref": "E049",
+              "thread_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+              "location": "rollout-2026-08-12T03-29-48-019ff24d-6d48-7321-80f0-e96c1cedbeda.jsonl:L433",
+              "source_kind": "user_authored",
+              "family_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+              "text_sha256": "caa95362a036b4ad815c5f6524533bc2842383440b61ee0bd7b0c0614fc2a01d",
+              "support": "用户明确要求一步一步教使用。"
+            },
+            {
+              "ref": "E055",
+              "thread_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+              "location": "rollout-2026-08-12T03-29-48-019ff24d-6d48-7321-80f0-e96c1cedbeda.jsonl:L1261",
+              "source_kind": "user_authored",
+              "family_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+              "text_sha256": "eed98d4a6b6aca32b05473f1776cf05ae5bf00727d99b23a3fff0f14413ae800",
+              "support": "用户说明第一次做插件并询问如何实时看修改。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-16",
+          "status": "active",
+          "updated_at": "2026-10-16T01:41:42+00:00",
+          "revision": 1
+        }
+      ],
+      "merged_into": "learning.adaptive-guidance",
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。"
     },
     {
       "id": "learning.deduplicate-by-knowledge",
@@ -3051,10 +3693,53 @@
       "validity": "stable",
       "verification": "historical_user_instruction",
       "review_after": "2027-01-16",
-      "status": "active",
-      "updated_at": "2026-10-16T01:41:42+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "learning.deduplicate-by-knowledge",
+          "title": "按知识点整理题库",
+          "kind": "memory",
+          "claim": "按知识点去重，保留覆盖多个知识点的题；提供代表题和答案解释。",
+          "scope": "题库整理与重复题筛选",
+          "exceptions": [
+            "批次大小和题量依当前任务确定；旧2000题、20题一批不是默认值。"
+          ],
+          "tags": [
+            "题库",
+            "刷题",
+            "知识点",
+            "去重",
+            "解析",
+            "分批"
+          ],
+          "source_candidates": [
+            "C-20261014-028"
+          ],
+          "evidence": [
+            {
+              "ref": "E116",
+              "thread_id": "01a116af-faaf-73b0-a7db-17c5e66eebc3",
+              "location": "rollout-2026-10-07T22-06-34-01a116af-faaf-73b0-a7db-17c5e66eebc3.jsonl:L1205",
+              "source_kind": "user_authored",
+              "family_id": "01a116af-faaf-73b0-a7db-17c5e66eebc3",
+              "text_sha256": "8de9322bcfcd8b162d07e2665ae03c1bf3a7eb29f4fbebde277e76c7c00c3e69",
+              "support": "用户明确知识点去重、保留多知识点、配解析及约20题分批。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-16",
+          "status": "active",
+          "updated_at": "2026-10-16T01:41:42+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "learning.deduplicate-by-knowledge-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "migration.verify-before-cleanup",
@@ -3092,10 +3777,53 @@
       "validity": "stable",
       "verification": "historical_user_instruction",
       "review_after": "2027-01-16",
-      "status": "active",
-      "updated_at": "2026-10-16T01:41:42+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "migration.verify-before-cleanup",
+          "title": "迁移后再按授权清理",
+          "kind": "memory",
+          "claim": "清理旧目录前，更新路径引用，核对迁移文件及哈希，并保留提交或完整归档。",
+          "scope": "目录迁移与旧副本清理",
+          "exceptions": [
+            "清理前核对当前绝对路径、影响范围与授权；历史删除许可不延续。"
+          ],
+          "tags": [
+            "迁移",
+            "旧目录",
+            "删除",
+            "清理",
+            "哈希",
+            "归档"
+          ],
+          "source_candidates": [
+            "C-20261014-029"
+          ],
+          "evidence": [
+            {
+              "ref": "E118",
+              "thread_id": "01a12aaf-133a-7d63-977d-927f3b56711e",
+              "location": "rollout-2026-10-11T19-17-59-01a12aaf-133a-7d63-977d-927f3b56711e.jsonl:L384",
+              "source_kind": "user_authored",
+              "family_id": "01a12aaf-133a-7d63-977d-927f3b56711e",
+              "text_sha256": "4bbb1da13d6461a5407702cb74237710a7d18408591bc353566353cb05abed71",
+              "support": "用户直接给出引用、文件哈希、提交或归档、最后删除的四步顺序。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-16",
+          "status": "active",
+          "updated_at": "2026-10-16T01:41:42+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "migration.verify-before-cleanup-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "research.chinese-item-review",
@@ -3142,10 +3870,62 @@
       "validity": "stable",
       "verification": "historical_user_instruction",
       "review_after": "2027-01-16",
-      "status": "active",
-      "updated_at": "2026-10-16T01:41:42+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "research.chinese-item-review",
+          "title": "中文逐题人工审核",
+          "kind": "memory",
+          "claim": "需要本人逐项判定时，用中文逐题展示，并查当前台账避免重复已审条目。",
+          "scope": "用户参与的研究样本人工审核",
+          "exceptions": [
+            "审核进度和批次从当前台账读取；旧10/20批次不是默认值。"
+          ],
+          "tags": [
+            "人工审核",
+            "逐题",
+            "翻译",
+            "中文",
+            "标注",
+            "台账"
+          ],
+          "source_candidates": [
+            "C-20261014-031"
+          ],
+          "evidence": [
+            {
+              "ref": "E125",
+              "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "location": "rollout-2026-09-13T12-24-32-01a09902-7e8e-7290-af3d-e24a15f69e60.jsonl:L373",
+              "source_kind": "user_authored",
+              "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "text_sha256": "635c86d1a9d685bee8aa536bb8f31387f727222c8521bafc83068751d0306d26",
+              "support": "用户要求中文翻译、逐题审核，先10题。"
+            },
+            {
+              "ref": "E120",
+              "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L444",
+              "source_kind": "user_authored",
+              "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "text_sha256": "7a064c3c4f9dd44cd19a593cda67d9caaa956a232c4def75baf07f00cf584ef8",
+              "support": "另一次要求再20题并说明此前10题不要重复。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-16",
+          "status": "active",
+          "updated_at": "2026-10-16T01:41:42+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "research.chinese-item-review-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "skills.prefer-passive-routing",
@@ -3182,10 +3962,52 @@
       "validity": "stable",
       "verification": "historical_user_instruction",
       "review_after": "2027-01-16",
-      "status": "active",
-      "updated_at": "2026-10-16T01:41:42+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "skills.prefer-passive-routing",
+          "title": "希望个人Skill按任务匹配",
+          "kind": "memory",
+          "claim": "希望合适的个人Skill按任务被动匹配，并能区分已加载、已执行和触发状态。",
+          "scope": "个人Skill的选择与维护",
+          "exceptions": [
+            "上游选择器不可观测时明确说明，不能仅凭回答声称已自动触发。"
+          ],
+          "tags": [
+            "Skill",
+            "触发",
+            "路由",
+            "被动",
+            "可观测性"
+          ],
+          "source_candidates": [
+            "C-20261014-007"
+          ],
+          "evidence": [
+            {
+              "ref": "E030",
+              "thread_id": "01a110ab-dbb0-7f10-9f7d-a31f4ce0e75c",
+              "location": "rollout-2026-10-06T18-04-20-01a110ab-dbb0-7f10-9f7d-a31f4ce0e75c.jsonl:L12",
+              "source_kind": "user_authored",
+              "family_id": "01a110ab-dbb0-7f10-9f7d-a31f4ce0e75c",
+              "text_sha256": "57596143786897337a528809f09235c6a5d6598939ccd5cb6cd422f81a0359c9",
+              "support": "用户明确要求修复被动路由、长程重路由和可观测性。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-16",
+          "status": "active",
+          "updated_at": "2026-10-16T01:41:42+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "skills.prefer-passive-routing-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "skill.engineering-methods",
@@ -3315,9 +4137,9 @@
       "verification": "historical_user_instruction",
       "review_after": "2027-01-16",
       "target": "skills/engineering-project-workflow/SKILL.md",
-      "status": "active",
-      "updated_at": "2026-10-16T01:41:42+00:00",
-      "revision": 2,
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 3,
       "history": [
         {
           "id": "skill.engineering-methods",
@@ -3392,9 +4214,143 @@
           "status": "active",
           "updated_at": "2026-10-16T01:41:42+00:00",
           "revision": 1
+        },
+        {
+          "id": "skill.engineering-methods",
+          "title": "工程计划、失败迭代与实验启动方法",
+          "kind": "skill",
+          "claim": "计划、逐步输入输出、失败归因、修复前后证据、浏览器实际验收和资源预检统一使用工程Skill；原项目约定留项目资料。",
+          "scope": "需要这些方法的工程迭代、原型规划和实验启动",
+          "exceptions": [
+            "不固定文档数、模型、批次或委派方式；当前项目协议与授权优先。"
+          ],
+          "tags": [
+            "工程",
+            "迭代",
+            "失败",
+            "原型",
+            "计划",
+            "启动",
+            "实验",
+            "autofill",
+            "demopilot"
+          ],
+          "source_candidates": [
+            "C-20261014-014",
+            "C-20261014-016",
+            "C-20261014-021",
+            "C-20261014-038",
+            "C-20261014-039",
+            "C-20261014-041",
+            "C-20261014-042",
+            "C-20261014-045"
+          ],
+          "evidence": [
+            {
+              "ref": "E150",
+              "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "location": "rollout-2026-10-03T04-23-37-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a0fe49-6364-77a3-a7c5-7977bfb6fa15.jsonl:L391",
+              "source_kind": "user_authored",
+              "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "text_sha256": "2f01f736b2f2f44902ddec3116747cae83a43fe959edd25ebd2b735c00a7a58e",
+              "support": "用户指定需求、SDD、任务拆解、评估和面向人的验收汇报。"
+            },
+            {
+              "ref": "E152",
+              "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L2174",
+              "source_kind": "user_authored",
+              "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "text_sha256": "58f0a2c5d5b627b24c487e397467b41d7f0140a0a28e1230372de09986a0eb61",
+              "support": "用户明确失败归因、实验和效果比较循环。"
+            },
+            {
+              "ref": "E153",
+              "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L218",
+              "source_kind": "user_authored",
+              "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "text_sha256": "0be529ca4fee29b0b3ebc64eeb765d3224a921c87de6c11cbc882fb6d38d279d",
+              "support": "用户要求记录重要失败分析，不在该分析文档堆环境准备流水。"
+            },
+            {
+              "ref": "E156",
+              "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L3457",
+              "source_kind": "user_authored",
+              "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+              "text_sha256": "c4f054e5e685280e176843738f7ecdc3ca1d54d520fe42c8e0e6dc6baeef06a9",
+              "support": "用户要求尽可能规划分发、复用开源、英文项目材料和中文汇报。"
+            },
+            {
+              "ref": "E090",
+              "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L125",
+              "source_kind": "user_authored",
+              "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "text_sha256": "6c9aa508c91baec12e3f69e7209a59cc6faaf399cb301afc8adb5947e13fe002",
+              "support": "用户对 DemoPilot 的测试数据与工作流提出明确需求。"
+            },
+            {
+              "ref": "E091",
+              "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L4038",
+              "source_kind": "user_authored",
+              "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "text_sha256": "64a8422e31a403d22ad03fbfd76a22c55ae46a1f0ecf8ae00af9f9faf3ffba7f",
+              "support": "用户明确要求可见结果与项目验收。"
+            },
+            {
+              "ref": "E085",
+              "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "location": "rollout-2026-10-06T19-38-59-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a11102-837d-7ef1-b47d-f7857b62d170.jsonl:L658",
+              "source_kind": "user_authored",
+              "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "text_sha256": "2325e8c1f87b7874378bcd85ed1b2a98a35e12e9b2db284e5e83750ea7975f9d",
+              "support": "用户要求失败记录及修复前后效果，并追问历史20/5数量。"
+            },
+            {
+              "ref": "E063",
+              "thread_id": "019ff1d6-4550-7441-a14c-a7e4d1695d48",
+              "location": "rollout-2026-08-12T01-19-39-019ff1d6-4550-7441-a14c-a7e4d1695d48.jsonl:L9",
+              "source_kind": "user_authored",
+              "family_id": "019ff1d6-4550-7441-a14c-a7e4d1695d48",
+              "text_sha256": "8d1461b1c5f90f07ccea4c2c07cce2c2a93d146a20683dd79aca79376736d9cc",
+              "support": "用户直接要求创建可调整的 PLAN.md，规划架构和验收标准。"
+            },
+            {
+              "ref": "E077",
+              "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+              "location": "rollout-2026-10-02T00-39-00-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0f855-628d-7821-8637-f119a9631540.jsonl:L621",
+              "source_kind": "user_authored",
+              "family_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+              "text_sha256": "a8a66f8504c5f9eb5e6acaa211734b7f52e7cac156bf224f59245e61db4c86a4",
+              "support": "用户指定小批测试、顺序、GPU 条件、主模型4B和可跳过 API。"
+            },
+            {
+              "ref": "E158",
+              "thread_id": "01a0de32-f9d8-7691-9871-af57b35b13fd",
+              "location": "rollout-2026-09-26T22-55-31-01a0de32-f9d8-7691-9871-af57b35b13fd_01a0de36-d864-72e0-a4f3-4b7459b976c1.jsonl:L237",
+              "source_kind": "user_authored",
+              "family_id": "01a0de32-f9d8-7691-9871-af57b35b13fd",
+              "text_sha256": "9d7d7e4071c8048482d10c5a0499e82d9d617ec13ed0fe51228188cfd1db373f",
+              "support": "该次方案明确不要立刻开始，先说明六项启动条件。"
+            }
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-16",
+          "target": "skills/engineering-project-workflow/SKILL.md",
+          "status": "active",
+          "updated_at": "2026-10-16T01:41:42+00:00",
+          "revision": 2,
+          "last_reason": "Consolidate shared methods in the complete canonical engineering Skill; preserve distinct project residue in references/projects."
         }
       ],
-      "last_reason": "Consolidate shared methods in the complete canonical engineering Skill; preserve distinct project residue in references/projects."
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。",
+      "replaced_by": "skill.engineering-methods-v2"
     },
     {
       "id": "project.autofill-safety",
@@ -4198,10 +5154,55 @@
       "review_after": "2027-01-16",
       "source_candidates": [],
       "memory_class": "working_method",
-      "status": "active",
-      "updated_at": "2026-10-16T02:20:00+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "research.reuse-predictions-before-rerun",
+          "kind": "memory",
+          "title": "方法：换标签后先盘点预测再决定重跑",
+          "claim": "实验标签或评分版本变化时，先核对已保存的逐题预测和对应输入/协议，分清可重新评分与必须重跑的实验，再安排执行。",
+          "scope": "已有实验因标签或评分口径变化而复评时",
+          "exceptions": [
+            "历史MASArena位置和20/50题批次不作为默认值；是否能复用须核对当前条件。",
+            "输入、模型或流程改变时，不能假定旧预测足以代表新实验。"
+          ],
+          "tags": [
+            "方法",
+            "预测",
+            "重新评分",
+            "重跑",
+            "标签",
+            "实验",
+            "复评"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "evidence": [
+            {
+              "ref": "R010-M070",
+              "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+              "location": "rollout-2026-10-15T17-57-47-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13eff-1677-7392-8915-242e18ac916d.jsonl:L39",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "1a40c129d79a9649b8898f4f838a2e0808bbb13f72f4af52bc4649071bfd8a5d",
+              "message_timestamp": "2026-10-15T10:02:11.400Z",
+              "support": "先检查逐题预测，区分可重新评分和必须重跑；未要求直接全量重跑。"
+            }
+          ],
+          "review_after": "2027-01-16",
+          "source_candidates": [],
+          "memory_class": "working_method",
+          "status": "active",
+          "updated_at": "2026-10-16T02:20:00+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "research.reuse-predictions-before-rerun-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "documents.resolve-language-version",
@@ -4252,10 +5253,66 @@
       "review_after": "2027-01-16",
       "source_candidates": [],
       "memory_class": "working_method",
-      "status": "active",
-      "updated_at": "2026-10-16T02:20:00+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "documents.resolve-language-version",
+          "kind": "memory",
+          "title": "方法：多语种稿先确认目标版本",
+          "claim": "同目录存在中英文或多个稿件时，先查当前项目索引，确认用户指定的语种、文件及版本，再评审或修改；避免误用另一语种旧稿。",
+          "scope": "多语种论文或多个文档版本并存的评审与修改",
+          "exceptions": [
+            "中文优先只适用于原项目约定；其它任务遵循当前指定语言。",
+            "不凭未带语言后缀的文件名认定最新，不假定中英文同步。"
+          ],
+          "tags": [
+            "方法",
+            "中文",
+            "英文",
+            "稿件",
+            "版本",
+            "索引",
+            "论文",
+            "文档"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "evidence": [
+            {
+              "ref": "R010-M090",
+              "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+              "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L903",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "91a82ce054757f422e63ac3fe6edf310535d289ffedd649546aed2f8d31fb786",
+              "message_timestamp": "2026-10-12T05:08:30.159Z",
+              "support": "用户纠正误评英文旧稿，要求建立中英文索引后再评中文。"
+            },
+            {
+              "ref": "R010-M091",
+              "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+              "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L1173",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "bc135f92ac3d2ddca47bf904d4ed402a0ecc7697cd3fa93496800434e754380d",
+              "message_timestamp": "2026-10-12T09:05:00.977Z",
+              "support": "用户再次确认评审是否依据中文稿。"
+            }
+          ],
+          "review_after": "2027-01-16",
+          "source_candidates": [],
+          "memory_class": "working_method",
+          "status": "active",
+          "updated_at": "2026-10-16T02:20:00+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "documents.resolve-language-version-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "project.contractfill-zh-positioning",
@@ -4904,10 +5961,84 @@
       "review_after": "2027-01-16",
       "source_candidates": [],
       "memory_class": "personal_preference",
-      "status": "active",
-      "updated_at": "2026-10-16T03:53:18+00:00",
-      "revision": 1,
-      "history": []
+      "status": "merged",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "learning.calibrate-technical-depth",
+          "kind": "memory",
+          "title": "偏好：简洁讲机制，随反馈校准深度",
+          "claim": "学习模型或代码项目时，用简洁说明和具体例子连接实际代码、数据与机制；根据用户当下反馈调整深度，既不堆术语，也不因为自称“小白”就一直讲得过于入门。",
+          "scope": "解释模型训练或代码项目时",
+          "exceptions": [
+            "历史NanoJev问题不证明其实现事实；不要永久固定用户能力等级。",
+            "不是要求每次全读仓库；当前问题和用户最新反馈优先。"
+          ],
+          "tags": [
+            "学习",
+            "讲解",
+            "机制",
+            "深度",
+            "例子",
+            "代码"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "evidence": [
+            {
+              "ref": "R011-M046",
+              "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L42",
+              "source_kind": "user_authored",
+              "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "text_sha256": "813004965ecedf8621a90fc1308748a59abb5571df271651805ecd8a290938d1",
+              "message_timestamp": "2026-09-27T05:17:09.832Z",
+              "support": "要求从代码角度讲解。"
+            },
+            {
+              "ref": "R011-M048",
+              "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L132",
+              "source_kind": "user_authored",
+              "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "text_sha256": "b0bd4cdbbc2630abb74adb6c1e1d602dd05a2375154f0d9e6ac9c0d514c65bfc",
+              "message_timestamp": "2026-09-27T05:23:37.996Z",
+              "support": "明确要求简洁干练，原解释太长难懂。"
+            },
+            {
+              "ref": "R011-M049",
+              "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L144",
+              "source_kind": "user_authored",
+              "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "text_sha256": "b393e7fe419a02b0fbd262d57deb4c72807ba77aeb7dd81a6db8e6a80a527482",
+              "message_timestamp": "2026-09-27T05:24:29.090Z",
+              "support": "随即纠正过于入门，表示已有一些基础。"
+            },
+            {
+              "ref": "R011-M060",
+              "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L293",
+              "source_kind": "user_authored",
+              "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "text_sha256": "cf76e76d87bd2f7678d3823a11d2df218f3202de6c40566425c890764ba8a3b0",
+              "message_timestamp": "2026-09-27T05:47:57.486Z",
+              "support": "要求给一个具体例子。"
+            }
+          ],
+          "review_after": "2027-01-16",
+          "source_candidates": [],
+          "memory_class": "personal_preference",
+          "status": "active",
+          "updated_at": "2026-10-16T03:53:18+00:00",
+          "revision": 1
+        }
+      ],
+      "merged_into": "learning.adaptive-guidance",
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。"
     },
     {
       "id": "skills.prefer-academic-write",
@@ -4945,10 +6076,53 @@
       "review_after": "2027-01-16",
       "source_candidates": [],
       "memory_class": "personal_preference",
-      "status": "active",
-      "updated_at": "2026-10-16T03:53:18+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "skills.prefer-academic-write",
+          "kind": "memory",
+          "title": "偏好：学术写作优先考虑academic-write",
+          "claim": "用户明确表示academic-write用得最顺手；有适用的学术写作任务时优先考虑它，仍按当前任务与Skill适用范围路由。",
+          "scope": "学术论文写作或大幅修改时",
+          "exceptions": [
+            "旧private-skill仓库已并入personal-context；这条不恢复旧仓库为维护入口。",
+            "不是所有论文相关任务都调用；评审、专利等按对应任务路由；Skill可用性和当前明确指定优先。"
+          ],
+          "tags": [
+            "偏好",
+            "Skill",
+            "academic-write",
+            "学术",
+            "写作"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "evidence": [
+            {
+              "ref": "R011-M039",
+              "thread_id": "01a106a2-9f5f-7592-928f-43ecd98f78a4",
+              "location": "rollout-2026-10-04T19-18-03-01a106a2-9f5f-7592-928f-43ecd98f78a4.jsonl:L191",
+              "source_kind": "user_authored",
+              "family_id": "01a106a2-9f5f-7592-928f-43ecd98f78a4",
+              "text_sha256": "dd0c464d99667224454cd35c89307eaa1f72382d660f62cb874b765301180ec0",
+              "message_timestamp": "2026-10-04T11:28:43.775Z",
+              "support": "直接说明academic-write最顺手并要求加入项目。"
+            }
+          ],
+          "review_after": "2027-01-16",
+          "source_candidates": [],
+          "memory_class": "personal_preference",
+          "status": "active",
+          "updated_at": "2026-10-16T03:53:18+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "skills.prefer-academic-write-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "evaluation.count-real-artifacts",
@@ -5029,10 +6203,96 @@
       "review_after": "2027-01-16",
       "source_candidates": [],
       "memory_class": "working_method",
-      "status": "active",
-      "updated_at": "2026-10-16T03:53:18+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "evaluation.count-real-artifacts",
+          "kind": "memory",
+          "title": "方法：分开统计成品、mock和生成尝试",
+          "claim": "汇报demo生成或扩容时，先定义计数对象，分开列当前有效成品、mock测试案例和生成尝试；真实demo的可用性须有实际查看/功能验证的证据。扩容可按简单与复杂需求分层，避免用尝试总数冒充成品数量。",
+          "scope": "demo或生成式原型的扩容、验收与数量汇报",
+          "exceptions": [
+            "原项目3、30、11和追加3个均为历史问题/要求，不是当前已核数量或固定配额。",
+            "历史清理/推送授权不延续；当前验收标准优先；不固定其它项目必须两种难度。"
+          ],
+          "tags": [
+            "方法",
+            "demo",
+            "mock",
+            "计数",
+            "成品",
+            "尝试",
+            "难度",
+            "验收"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "evidence": [
+            {
+              "ref": "R011-M024",
+              "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L8756",
+              "source_kind": "user_authored",
+              "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "text_sha256": "f9ced5d59e9a172788193b59e79302cad30f37959cf727c6cd18fc0a9df5c2b5",
+              "message_timestamp": "2026-08-28T05:49:45.230Z",
+              "support": "要求说清demo数量与生成次数。"
+            },
+            {
+              "ref": "R011-M026",
+              "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L8877",
+              "source_kind": "user_authored",
+              "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "text_sha256": "41a5912a8f4c5f61792f51ce539ecd68c5d4e65910380543fc0ed735406090c9",
+              "message_timestamp": "2026-08-28T06:00:31.612Z",
+              "support": "质疑mock30个被称为demo。"
+            },
+            {
+              "ref": "R011-M027",
+              "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L8913",
+              "source_kind": "user_authored",
+              "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "text_sha256": "7e9d0845c0111f56b7532abed0d7f0be2a8580b330fb413162ffb84c94b7bb0f",
+              "message_timestamp": "2026-08-28T06:04:41.906Z",
+              "support": "要求扩充真实demo。"
+            },
+            {
+              "ref": "R011-M028",
+              "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L9717",
+              "source_kind": "user_authored",
+              "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "text_sha256": "46248edac5881371ea9c1cd288f94869039f5680d65e09d6039733351e0fd8c1",
+              "message_timestamp": "2026-08-28T07:48:44.632Z",
+              "support": "追问是否实际查看和测试。"
+            },
+            {
+              "ref": "R011-M031",
+              "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L9830",
+              "source_kind": "user_authored",
+              "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+              "text_sha256": "d31ea6984ee3c8be8c33514ab61dfb772a107b2523b9e4185366a72da75639a9",
+              "message_timestamp": "2026-08-28T09:34:02.961Z",
+              "support": "原扩容任务提出简单/复杂分层。"
+            }
+          ],
+          "review_after": "2027-01-16",
+          "source_candidates": [],
+          "memory_class": "working_method",
+          "status": "active",
+          "updated_at": "2026-10-16T03:53:18+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "evaluation.count-real-artifacts-v2",
+      "last_reason": "2026-10-16用户批准21条整理：精简保留此入口并收紧范围；旧正文、来源和有效边界保留于原记录，不修改核心或Skill。"
     },
     {
       "id": "project.masarena-migration-acceptance",
@@ -8258,6 +9518,1254 @@
         }
       ],
       "last_reason": "用户要求只合并入口；两个原目标文件逐字保留，各版本约定不拼接、不取消。"
+    },
+    {
+      "kind": "rule",
+      "evidence": [
+        {
+          "ref": "E015",
+          "thread_id": "01a1078a-5052-73a2-b38e-5624a193a91f",
+          "location": "rollout-2026-10-04T23-32-27-01a1078a-5052-73a2-b38e-5624a193a91f_01a1078b-8726-7e61-84d0-98deed6961bf.jsonl:L487",
+          "source_kind": "user_authored",
+          "family_id": "existing-resume",
+          "text_sha256": "2f9b10ac495c14c30c027b0666a0bdef727f62759e0dbbb2a86fbdb1e1029d9e",
+          "support": "用户直接纠正简历整体结构和风格被改变。"
+        },
+        {
+          "ref": "E017",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L3210",
+          "source_kind": "user_authored",
+          "family_id": "patent-package",
+          "text_sha256": "cf9d070db4fef9944837f22d62d534984c554c3f4ae81ead0d86801c20b02f99",
+          "support": "另一专利任务要求修复生成材料与指定参考格式的偏差。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-005"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "supported_preference",
+      "review_after": "2027-01-15",
+      "tags": [
+        "文档",
+        "简历",
+        "专利",
+        "风格",
+        "版式",
+        "保留结构",
+        "修改"
+      ],
+      "id": "documents.preserve-style-v2",
+      "title": "编辑已有材料：保留约定风格",
+      "claim": "修改已有文档时，沿用用户认可的结构和风格；改文字不自动授权重做布局。",
+      "scope": "修改已有简历、专利等已经确定结构或参考模板的材料",
+      "exceptions": [
+        "当前明确要求重做结构或版式时按新要求执行。",
+        "渲染验收由对应文档Skill或项目约定承载，不在这里另设流程。"
+      ],
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "skill",
+      "evidence": [
+        {
+          "ref": "E001",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-36-47-01a0fde7-9236-78c1-9068-6867a4ce6d8e.jsonl:L12",
+          "source_kind": "user_authored",
+          "family_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "text_sha256": "56d9de250298c43547220c0f8312a685211de52b7ffad0f726ef8b01fb104ba0",
+          "support": "直接要求专利任务拆解并产出步骤.md。"
+        },
+        {
+          "ref": "E059",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L9638",
+          "source_kind": "user_authored",
+          "family_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "text_sha256": "c697109f0fd873705710ec138e95e03e01d13659b7a867ed07a30256ed4130ce",
+          "support": "直接要求实施步骤逐项对应并写实际动作。"
+        },
+        {
+          "ref": "E017",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L3210",
+          "source_kind": "user_authored",
+          "family_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "text_sha256": "cf9d070db4fef9944837f22d62d534984c554c3f4ae81ead0d86801c20b02f99",
+          "support": "直接纠正参考模板与生成材料的格式差异。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-001",
+        "C-20261014-003",
+        "C-20261014-004",
+        "C-20261014-012",
+        "C-20261014-013"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "tags": [
+        "专利",
+        "步骤.md",
+        "参考模板",
+        "实施方式",
+        "公式",
+        "渲染"
+      ],
+      "id": "skill.patent-workflow-v2",
+      "title": "专利材料：已有Skill入口",
+      "claim": "合同字段研究材料转专利包时，按contract-field-patent-drafting处理；本人材料承载事实，参考专利只供结构和格式。具体步骤与渲染要求在该Skill中读取。",
+      "scope": "合同字段/RAG/LLM材料转专利交底书、说明书及配套文档",
+      "exceptions": [
+        "步骤.md等文件名属于对应Skill流程，不推广为所有任务的个人硬要求。",
+        "专利法咨询、单纯检索或局部小修改不因这个入口自动扩成完整材料包；当前范围优先。"
+      ],
+      "target": "skills/contract-field-patent-drafting/SKILL.md",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "memory",
+      "evidence": [
+        {
+          "ref": "E116",
+          "thread_id": "01a116af-faaf-73b0-a7db-17c5e66eebc3",
+          "location": "rollout-2026-10-07T22-06-34-01a116af-faaf-73b0-a7db-17c5e66eebc3.jsonl:L1205",
+          "source_kind": "user_authored",
+          "family_id": "01a116af-faaf-73b0-a7db-17c5e66eebc3",
+          "text_sha256": "8de9322bcfcd8b162d07e2665ae03c1bf3a7eb29f4fbebde277e76c7c00c3e69",
+          "support": "用户明确知识点去重、保留多知识点、配解析及约20题分批。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-028"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "题库",
+        "刷题",
+        "知识点",
+        "去重",
+        "解析",
+        "分批"
+      ],
+      "id": "learning.deduplicate-by-knowledge-v2",
+      "title": "题库整理：按知识点归并",
+      "claim": "整理重复题库时，可按知识点归并，保留多知识点覆盖题，并给出代表题和答案解析。",
+      "scope": "题库整理和重复题筛选时可选择的方法",
+      "exceptions": [
+        "来源集中于原题库任务；是否采用以当前整理目标为准，不作为所有学习任务的个人偏好。",
+        "旧题量和分批数量留在历史，不作为默认配额。"
+      ],
+      "memory_class": "working_method",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "memory",
+      "evidence": [
+        {
+          "ref": "E118",
+          "thread_id": "01a12aaf-133a-7d63-977d-927f3b56711e",
+          "location": "rollout-2026-10-11T19-17-59-01a12aaf-133a-7d63-977d-927f3b56711e.jsonl:L384",
+          "source_kind": "user_authored",
+          "family_id": "01a12aaf-133a-7d63-977d-927f3b56711e",
+          "text_sha256": "4bbb1da13d6461a5407702cb74237710a7d18408591bc353566353cb05abed71",
+          "support": "用户直接给出引用、文件哈希、提交或归档、最后删除的四步顺序。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-029"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "迁移",
+        "旧目录",
+        "删除",
+        "清理",
+        "哈希",
+        "归档"
+      ],
+      "id": "migration.verify-before-cleanup-v2",
+      "title": "目录迁移：核对后再按授权清理",
+      "claim": "清理旧目录前，先更新路径引用、核对迁移文件及哈希，并保留提交或完整归档，最后再清理。",
+      "scope": "目录迁移完成后的旧副本清理",
+      "exceptions": [
+        "清理前核对当前绝对路径、影响范围与授权；历史删除许可不延续。",
+        "原项目路径和迁移进度属于历史资料，这条方法不证明当前迁移已完成。"
+      ],
+      "memory_class": "working_method",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "memory",
+      "evidence": [
+        {
+          "ref": "E125",
+          "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "location": "rollout-2026-09-13T12-24-32-01a09902-7e8e-7290-af3d-e24a15f69e60.jsonl:L373",
+          "source_kind": "user_authored",
+          "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "text_sha256": "635c86d1a9d685bee8aa536bb8f31387f727222c8521bafc83068751d0306d26",
+          "support": "用户要求中文翻译、逐题审核，先10题。"
+        },
+        {
+          "ref": "E120",
+          "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L444",
+          "source_kind": "user_authored",
+          "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "text_sha256": "7a064c3c4f9dd44cd19a593cda67d9caaa956a232c4def75baf07f00cf584ef8",
+          "support": "另一次要求再20题并说明此前10题不要重复。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-031"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "人工审核",
+        "逐题",
+        "翻译",
+        "中文",
+        "标注",
+        "台账"
+      ],
+      "id": "research.chinese-item-review-v2",
+      "title": "本人样本审核：中文展示并避免重复",
+      "claim": "需要用户本人逐项判定研究样本时，用中文逐题展示，并核对已审清单避免重复。",
+      "scope": "用户亲自参与的研究样本人工审核",
+      "exceptions": [
+        "不要求所有研究都逐题人工审核，也不因中文展示而改变原始样本。",
+        "审核进度取当前台账；旧10/20题批次不是默认值。"
+      ],
+      "memory_class": "personal_preference",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "memory",
+      "evidence": [
+        {
+          "ref": "E030",
+          "thread_id": "01a110ab-dbb0-7f10-9f7d-a31f4ce0e75c",
+          "location": "rollout-2026-10-06T18-04-20-01a110ab-dbb0-7f10-9f7d-a31f4ce0e75c.jsonl:L12",
+          "source_kind": "user_authored",
+          "family_id": "01a110ab-dbb0-7f10-9f7d-a31f4ce0e75c",
+          "text_sha256": "57596143786897337a528809f09235c6a5d6598939ccd5cb6cd422f81a0359c9",
+          "support": "用户明确要求修复被动路由、长程重路由和可观测性。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-007"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "Skill",
+        "触发",
+        "路由",
+        "被动",
+        "可观测性"
+      ],
+      "id": "skills.prefer-passive-routing-v2",
+      "title": "个人Skill：按任务匹配",
+      "claim": "希望合适的个人Skill按任务自动匹配；需要核查时，区分已加载、已执行及可观测的触发状态。",
+      "scope": "个人Skill的选择、维护和触发问题核查",
+      "exceptions": [
+        "上游选择器不可观测时明确说明，不能仅凭回答声称已自动触发。",
+        "不要求每个普通任务都生成路由报告；实际适用范围和当前指令优先。"
+      ],
+      "memory_class": "personal_preference",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "skill",
+      "evidence": [
+        {
+          "ref": "E150",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-03T04-23-37-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a0fe49-6364-77a3-a7c5-7977bfb6fa15.jsonl:L391",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "2f01f736b2f2f44902ddec3116747cae83a43fe959edd25ebd2b735c00a7a58e",
+          "support": "用户指定需求、SDD、任务拆解、评估和面向人的验收汇报。"
+        },
+        {
+          "ref": "E152",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L2174",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "58f0a2c5d5b627b24c487e397467b41d7f0140a0a28e1230372de09986a0eb61",
+          "support": "用户明确失败归因、实验和效果比较循环。"
+        },
+        {
+          "ref": "E153",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L218",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "0be529ca4fee29b0b3ebc64eeb765d3224a921c87de6c11cbc882fb6d38d279d",
+          "support": "用户要求记录重要失败分析，不在该分析文档堆环境准备流水。"
+        },
+        {
+          "ref": "E156",
+          "thread_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "location": "rollout-2026-10-03T16-19-22-01a0f78f-e0ea-7a70-ab46-85f58a670924_01a100d8-ac5f-7cd2-83e2-762f1858158f.jsonl:L3457",
+          "source_kind": "user_authored",
+          "family_id": "01a0f78f-e0ea-7a70-ab46-85f58a670924",
+          "text_sha256": "c4f054e5e685280e176843738f7ecdc3ca1d54d520fe42c8e0e6dc6baeef06a9",
+          "support": "用户要求尽可能规划分发、复用开源、英文项目材料和中文汇报。"
+        },
+        {
+          "ref": "E090",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L125",
+          "source_kind": "user_authored",
+          "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "text_sha256": "6c9aa508c91baec12e3f69e7209a59cc6faaf399cb301afc8adb5947e13fe002",
+          "support": "用户对 DemoPilot 的测试数据与工作流提出明确需求。"
+        },
+        {
+          "ref": "E091",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L4038",
+          "source_kind": "user_authored",
+          "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "text_sha256": "64a8422e31a403d22ad03fbfd76a22c55ae46a1f0ecf8ae00af9f9faf3ffba7f",
+          "support": "用户明确要求可见结果与项目验收。"
+        },
+        {
+          "ref": "E085",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-06T19-38-59-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a11102-837d-7ef1-b47d-f7857b62d170.jsonl:L658",
+          "source_kind": "user_authored",
+          "family_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "text_sha256": "2325e8c1f87b7874378bcd85ed1b2a98a35e12e9b2db284e5e83750ea7975f9d",
+          "support": "用户要求失败记录及修复前后效果，并追问历史20/5数量。"
+        },
+        {
+          "ref": "E063",
+          "thread_id": "019ff1d6-4550-7441-a14c-a7e4d1695d48",
+          "location": "rollout-2026-08-12T01-19-39-019ff1d6-4550-7441-a14c-a7e4d1695d48.jsonl:L9",
+          "source_kind": "user_authored",
+          "family_id": "019ff1d6-4550-7441-a14c-a7e4d1695d48",
+          "text_sha256": "8d1461b1c5f90f07ccea4c2c07cce2c2a93d146a20683dd79aca79376736d9cc",
+          "support": "用户直接要求创建可调整的 PLAN.md，规划架构和验收标准。"
+        },
+        {
+          "ref": "E077",
+          "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "location": "rollout-2026-10-02T00-39-00-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0f855-628d-7821-8637-f119a9631540.jsonl:L621",
+          "source_kind": "user_authored",
+          "family_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "text_sha256": "a8a66f8504c5f9eb5e6acaa211734b7f52e7cac156bf224f59245e61db4c86a4",
+          "support": "用户指定小批测试、顺序、GPU 条件、主模型4B和可跳过 API。"
+        },
+        {
+          "ref": "E158",
+          "thread_id": "01a0de32-f9d8-7691-9871-af57b35b13fd",
+          "location": "rollout-2026-09-26T22-55-31-01a0de32-f9d8-7691-9871-af57b35b13fd_01a0de36-d864-72e0-a4f3-4b7459b976c1.jsonl:L237",
+          "source_kind": "user_authored",
+          "family_id": "01a0de32-f9d8-7691-9871-af57b35b13fd",
+          "text_sha256": "9d7d7e4071c8048482d10c5a0499e82d9d617ec13ed0fe51228188cfd1db373f",
+          "support": "该次方案明确不要立刻开始，先说明六项启动条件。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-014",
+        "C-20261014-016",
+        "C-20261014-021",
+        "C-20261014-038",
+        "C-20261014-039",
+        "C-20261014-041",
+        "C-20261014-042",
+        "C-20261014-045"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "工程",
+        "迭代",
+        "失败",
+        "原型",
+        "计划",
+        "启动",
+        "实验",
+        "autofill",
+        "demopilot"
+      ],
+      "id": "skill.engineering-methods-v2",
+      "title": "多步骤工程任务：已有Skill入口",
+      "claim": "多步骤、需要过程控制与验收证据的工程任务，按engineering-project-workflow读取所需模式；计划、失败迭代、浏览器实际验收和实验启动方法由该Skill承载。",
+      "scope": "需要预检、过程控制与验收证据的实质性多步骤工程任务",
+      "exceptions": [
+        "独立小改动、简单状态回复和纯文字汇报不因这个入口启动完整工程流程。",
+        "不固定文档数、模型、批次或委派方式；当前协议与授权优先，原项目约定留项目资料。"
+      ],
+      "target": "skills/engineering-project-workflow/SKILL.md",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "memory",
+      "evidence": [
+        {
+          "ref": "R010-M070",
+          "thread_id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+          "location": "rollout-2026-10-15T17-57-47-01a134f8-4858-77f0-9b71-6e9c7a96f06c_01a13eff-1677-7392-8915-242e18ac916d.jsonl:L39",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "1a40c129d79a9649b8898f4f838a2e0808bbb13f72f4af52bc4649071bfd8a5d",
+          "message_timestamp": "2026-10-15T10:02:11.400Z",
+          "support": "先检查逐题预测，区分可重新评分和必须重跑；未要求直接全量重跑。"
+        }
+      ],
+      "source_candidates": [],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "方法",
+        "预测",
+        "重新评分",
+        "重跑",
+        "标签",
+        "实验",
+        "复评"
+      ],
+      "id": "research.reuse-predictions-before-rerun-v2",
+      "title": "实验复评：先判断能否复用预测",
+      "claim": "标签或评分口径变化时，先核对已保存的逐题预测及对应输入、模型和协议，区分可重新评分与必须重跑，再安排执行。",
+      "scope": "已有实验因标签或评分口径变化而复评",
+      "exceptions": [
+        "输入、模型或流程改变时，不能假定旧预测代表新实验。",
+        "原项目路径、批次数量和旧实验授权不作为当前事实或默认值。"
+      ],
+      "memory_class": "working_method",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "memory",
+      "evidence": [
+        {
+          "ref": "R010-M090",
+          "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+          "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L903",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "91a82ce054757f422e63ac3fe6edf310535d289ffedd649546aed2f8d31fb786",
+          "message_timestamp": "2026-10-12T05:08:30.159Z",
+          "support": "用户纠正误评英文旧稿，要求建立中英文索引后再评中文。"
+        },
+        {
+          "ref": "R010-M091",
+          "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+          "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L1173",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "bc135f92ac3d2ddca47bf904d4ed402a0ecc7697cd3fa93496800434e754380d",
+          "message_timestamp": "2026-10-12T09:05:00.977Z",
+          "support": "用户再次确认评审是否依据中文稿。"
+        }
+      ],
+      "source_candidates": [],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "方法",
+        "中文",
+        "英文",
+        "稿件",
+        "版本",
+        "索引",
+        "论文",
+        "文档"
+      ],
+      "id": "documents.resolve-language-version-v2",
+      "title": "多稿件编辑：确认语种与版本",
+      "claim": "中英文或多个稿件并存时，先通过已有索引定位当前指定的语种、文件和版本，再评审或修改，避免误用另一语种旧稿。",
+      "scope": "多语种或多个文档版本并存的评审与修改",
+      "exceptions": [
+        "某项目的中文优先约定不推广到其他任务；当前指定语言优先。",
+        "不凭文件名认定最新，不假定不同语种同步；没有索引时也须确认目标，不强制新建一套管理流程。"
+      ],
+      "memory_class": "working_method",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "memory",
+      "evidence": [
+        {
+          "ref": "R011-M039",
+          "thread_id": "01a106a2-9f5f-7592-928f-43ecd98f78a4",
+          "location": "rollout-2026-10-04T19-18-03-01a106a2-9f5f-7592-928f-43ecd98f78a4.jsonl:L191",
+          "source_kind": "user_authored",
+          "family_id": "01a106a2-9f5f-7592-928f-43ecd98f78a4",
+          "text_sha256": "dd0c464d99667224454cd35c89307eaa1f72382d660f62cb874b765301180ec0",
+          "message_timestamp": "2026-10-04T11:28:43.775Z",
+          "support": "直接说明academic-write最顺手并要求加入项目。"
+        }
+      ],
+      "source_candidates": [],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "偏好",
+        "Skill",
+        "academic-write",
+        "学术",
+        "写作"
+      ],
+      "id": "skills.prefer-academic-write-v2",
+      "title": "论文写作：优先考虑academic-write",
+      "claim": "用户明确表示academic-write最顺手；论文写作或大幅修改时，在适用范围内优先考虑它。",
+      "scope": "学术论文写作或大幅修改时的Skill选择",
+      "exceptions": [
+        "论文评审、专利等按对应任务路由，不因这个偏好全部调用academic-write。",
+        "当前明确指定和Skill可用性优先；旧private-skill仓库不恢复为维护入口。"
+      ],
+      "memory_class": "personal_preference",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "memory",
+      "evidence": [
+        {
+          "ref": "R011-M024",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L8756",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "f9ced5d59e9a172788193b59e79302cad30f37959cf727c6cd18fc0a9df5c2b5",
+          "message_timestamp": "2026-08-28T05:49:45.230Z",
+          "support": "要求说清demo数量与生成次数。"
+        },
+        {
+          "ref": "R011-M026",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L8877",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "41a5912a8f4c5f61792f51ce539ecd68c5d4e65910380543fc0ed735406090c9",
+          "message_timestamp": "2026-08-28T06:00:31.612Z",
+          "support": "质疑mock30个被称为demo。"
+        },
+        {
+          "ref": "R011-M027",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L8913",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "7e9d0845c0111f56b7532abed0d7f0be2a8580b330fb413162ffb84c94b7bb0f",
+          "message_timestamp": "2026-08-28T06:04:41.906Z",
+          "support": "要求扩充真实demo。"
+        },
+        {
+          "ref": "R011-M028",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L9717",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "46248edac5881371ea9c1cd288f94869039f5680d65e09d6039733351e0fd8c1",
+          "message_timestamp": "2026-08-28T07:48:44.632Z",
+          "support": "追问是否实际查看和测试。"
+        },
+        {
+          "ref": "R011-M031",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L9830",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "d31ea6984ee3c8be8c33514ab61dfb772a107b2523b9e4185366a72da75639a9",
+          "message_timestamp": "2026-08-28T09:34:02.961Z",
+          "support": "原扩容任务提出简单/复杂分层。"
+        }
+      ],
+      "source_candidates": [],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "方法",
+        "demo",
+        "mock",
+        "计数",
+        "成品",
+        "尝试",
+        "难度",
+        "验收"
+      ],
+      "id": "evaluation.count-real-artifacts-v2",
+      "title": "Demo汇报：区分成品、mock与尝试",
+      "claim": "汇报demo生成或扩容时，先定义计数对象，分开列有效成品、mock案例与生成尝试；成品可用性须有实际查看或功能验证的证据。",
+      "scope": "demo或生成式原型的数量汇报、扩容和验收",
+      "exceptions": [
+        "旧数量、追加配额、简单/复杂分层及清理/推送许可均留在历史，不作为当前目标或授权。",
+        "是否需要难度分层由当前任务决定；尝试次数、静态产物存在或mock数量不能替代成品可用性证据。"
+      ],
+      "memory_class": "working_method",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "rule",
+      "evidence": [
+        {
+          "ref": "E086",
+          "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+          "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L2836",
+          "source_kind": "user_authored",
+          "family_id": "demopilot",
+          "text_sha256": "bd4934e4b68b0b4eaa522a2c625c7c3d6da714457349bf564a086a288a3dcaca",
+          "support": "Demo 项目明确拒绝用单个样本通过代表整体完成。"
+        },
+        {
+          "ref": "E088",
+          "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+          "location": "rollout-2026-10-03T02-46-13-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0fdf0-3692-7ad3-b962-7bb604fd5054.jsonl:L6347",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "93ceadef96dac462263b139c1c472125e1502715e7e3300defca18b75c1d112b",
+          "support": "另一科研任务指定200条核心集用于最终验收，一般测试使用开发集。"
+        },
+        {
+          "ref": "E036",
+          "thread_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+          "location": "rollout-2026-10-08T03-22-25-01a117d1-2764-72e2-ad04-6d9436d6ce3e.jsonl:L315",
+          "source_kind": "user_authored",
+          "family_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+          "text_sha256": "4b08da777d92f50d183a615341535314e01f4b73456a8ed79239bcf737326cf8",
+          "support": "用户明确指出验证过多、耗时。"
+        },
+        {
+          "ref": "E041",
+          "thread_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+          "location": "rollout-2026-10-08T03-22-25-01a117d1-2764-72e2-ad04-6d9436d6ce3e.jsonl:L594",
+          "source_kind": "user_authored",
+          "family_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+          "text_sha256": "65c70924976ded998213b6ff30d1c3eb94a3ada0bb4b54e8e804f1d9f4e64b07",
+          "support": "用户要求减少重复和无关验证。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-008",
+        "C-20261014-020"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "supported_preference",
+      "review_after": "2027-01-15",
+      "tags": [
+        "验收",
+        "覆盖",
+        "测试集",
+        "完成",
+        "实验",
+        "测试",
+        "验证",
+        "检查",
+        "开销",
+        "成本"
+      ],
+      "id": "validation.scoped-acceptance",
+      "title": "工程验证：最小充分检查与约定验收",
+      "claim": "日常检查按minimal-validation-workflow选择最小充分证据；用户已约定最终验收集合时，按该集合判断完成并说明未覆盖部分。抽样通过只证明抽样范围。",
+      "scope": "工程变更的验证；存在指定最终验收集合时同时遵守该集合",
+      "exceptions": [
+        "不因小改动重复全量验收，不在未约定时擅自制造全量测试义务。",
+        "强制安全门槛和明确验收集合仍须满足；具体检查流程只读目标Skill。",
+        "合并的是既有验收原则和覆盖登记，不是新晋升一条长期规则。"
+      ],
+      "target": "skills/minimal-validation-workflow/SKILL.md",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "kind": "rule",
+          "evidence": [
+            {
+              "ref": "E086",
+              "thread_id": "01a1087d-3246-7ec3-a3a0-f49546b4c391",
+              "location": "rollout-2026-10-05T21-10-27-01a1087d-3246-7ec3-a3a0-f49546b4c391_01a10c2f-e3c1-7a00-9714-cfff64d5eda2.jsonl:L2836",
+              "source_kind": "user_authored",
+              "family_id": "demopilot",
+              "text_sha256": "bd4934e4b68b0b4eaa522a2c625c7c3d6da714457349bf564a086a288a3dcaca",
+              "support": "Demo 项目明确拒绝用单个样本通过代表整体完成。"
+            },
+            {
+              "ref": "E088",
+              "thread_id": "01a0f292-cdfe-7463-ad96-65832ab94c06",
+              "location": "rollout-2026-10-03T02-46-13-01a0f292-cdfe-7463-ad96-65832ab94c06_01a0fdf0-3692-7ad3-b962-7bb604fd5054.jsonl:L6347",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "93ceadef96dac462263b139c1c472125e1502715e7e3300defca18b75c1d112b",
+              "support": "另一科研任务指定200条核心集用于最终验收，一般测试使用开发集。"
+            },
+            {
+              "ref": "E036",
+              "thread_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+              "location": "rollout-2026-10-08T03-22-25-01a117d1-2764-72e2-ad04-6d9436d6ce3e.jsonl:L315",
+              "source_kind": "user_authored",
+              "family_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+              "text_sha256": "4b08da777d92f50d183a615341535314e01f4b73456a8ed79239bcf737326cf8",
+              "support": "用户明确指出验证过多、耗时。"
+            },
+            {
+              "ref": "E041",
+              "thread_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+              "location": "rollout-2026-10-08T03-22-25-01a117d1-2764-72e2-ad04-6d9436d6ce3e.jsonl:L594",
+              "source_kind": "user_authored",
+              "family_id": "01a117d1-2764-72e2-ad04-6d9436d6ce3e",
+              "text_sha256": "65c70924976ded998213b6ff30d1c3eb94a3ada0bb4b54e8e804f1d9f4e64b07",
+              "support": "用户要求减少重复和无关验证。"
+            }
+          ],
+          "source_candidates": [
+            "C-20261014-008",
+            "C-20261014-020"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "supported_preference",
+          "review_after": "2027-01-15",
+          "tags": [
+            "验收",
+            "覆盖",
+            "测试集",
+            "完成",
+            "实验",
+            "测试",
+            "验证",
+            "检查",
+            "开销",
+            "成本"
+          ],
+          "id": "validation.scoped-acceptance",
+          "title": "工程验证：最小充分检查与约定验收",
+          "claim": "日常检查按minimal-validation-workflow选择最小充分证据；用户已约定最终验收集合时，按该集合判断完成并说明未覆盖部分。抽样通过只证明抽样范围。",
+          "scope": "工程变更的验证；存在指定最终验收集合时同时遵守该集合",
+          "exceptions": [
+            "不因小改动重复全量验收，不在未约定时擅自制造全量测试义务。",
+            "强制安全门槛和明确验收集合仍须满足；具体检查流程只读目标Skill。",
+            "合并的是既有验收原则和覆盖登记，不是新晋升一条长期规则。"
+          ],
+          "target": "skills/minimal-validation-workflow/SKILL.md",
+          "status": "active",
+          "updated_at": "2026-10-16T06:51:20+00:00",
+          "revision": 1
+        }
+      ],
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。"
+    },
+    {
+      "kind": "skill",
+      "evidence": [
+        {
+          "ref": "E024",
+          "thread_id": "01a129b0-b99c-7f42-96c0-a0f4b948f786",
+          "location": "rollout-2026-10-11T14-40-10-01a129b0-b99c-7f42-96c0-a0f4b948f786.jsonl:L31",
+          "source_kind": "user_authored",
+          "family_id": "01a129b0-b99c-7f42-96c0-a0f4b948f786",
+          "text_sha256": "c4496482c5ec8b689b587fb649e6264d6d48a6ebc0dab9c323da792a128e3b7c",
+          "support": "用户对当前论文逻辑和贡献层级提出要求。"
+        },
+        {
+          "ref": "E079",
+          "thread_id": "01a0fe11-bb1e-7611-afc3-6a939e318c78",
+          "location": "rollout-2026-10-03T05-34-38-01a0fe11-bb1e-7611-afc3-6a939e318c78_01a0fe8a-6932-7a43-9823-4e5d3522f69f.jsonl:L36",
+          "source_kind": "user_authored",
+          "family_id": "01a0fe11-bb1e-7611-afc3-6a939e318c78",
+          "text_sha256": "d911efaeb373336db78d7e9aba7260d95ef89a2681bac5667f9174bfb5e54cc7",
+          "support": "用户明确要求 benchmark-first。"
+        },
+        {
+          "ref": "E082",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-07T14-02-01-01a11266-18ff-7b92-bdec-81772b1c0b18_01a114f4-5f69-7071-9452-011db73195e6.jsonl:L691",
+          "source_kind": "user_authored",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "text_sha256": "033648dbf669d40a08b1bc283ed7e492d29b6d3ea5190065f3a3e492da09c57d",
+          "support": "用户直接批评判定节点尚不足以构成机制，并要求回到合同任务问题。"
+        },
+        {
+          "ref": "E120",
+          "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L444",
+          "source_kind": "user_authored",
+          "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "text_sha256": "7a064c3c4f9dd44cd19a593cda67d9caaa956a232c4def75baf07f00cf584ef8",
+          "support": "用户要求将核心主张改成可检验假设。"
+        },
+        {
+          "ref": "E134",
+          "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "location": "rollout-2026-10-08T23-13-42-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3_01a11c13-cd58-7681-8a0a-437158e937cb.jsonl:L2297",
+          "source_kind": "user_authored",
+          "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+          "text_sha256": "31ea2f5d628ae202c11054bcd8b524f0878bdea88c92c66bdd1521482c8b0e80",
+          "support": "用户明确列出逐题人审归档和模型评分依据仍待对应的缺口。"
+        },
+        {
+          "ref": "E143",
+          "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L53",
+          "source_kind": "user_authored",
+          "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+          "text_sha256": "fca6739944d273e901456b71ae96679f9416a087fadce5536623b30f9284d920",
+          "support": "用户要求核查材料和结果边界。"
+        },
+        {
+          "ref": "E094",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-07T14-02-01-01a11266-18ff-7b92-bdec-81772b1c0b18_01a114f4-5f69-7071-9452-011db73195e6.jsonl:L1268",
+          "source_kind": "user_authored",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "text_sha256": "d2e3d284ee467bece1c91f45bc335ae20a621ba8bdcf7df0b3de6c6d852a0e5c",
+          "support": "用户要求到实际项目查找论文证据缺口。"
+        },
+        {
+          "ref": "E095",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-09T17-47-15-01a11266-18ff-7b92-bdec-81772b1c0b18_01a1200f-4915-7602-9658-c9f6fa81d259.jsonl:L3853",
+          "source_kind": "user_authored",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "text_sha256": "13ce3698a831897a1f330493d65c1317d81de8bbfd181a8f5b80cfba336debb4",
+          "support": "用户提出实际评分与数据诊断问题。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-006",
+        "C-20261014-018",
+        "C-20261014-019",
+        "C-20261014-023",
+        "C-20261014-030",
+        "C-20261014-036"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-15",
+      "tags": [
+        "论文",
+        "benchmark",
+        "Introduction",
+        "ICML",
+        "贡献",
+        "结构",
+        "研究",
+        "因果链",
+        "机制",
+        "假设",
+        "实验",
+        "证据",
+        "人工审核",
+        "金标准",
+        "标注",
+        "结果"
+      ],
+      "id": "skill.academic-writing-entry",
+      "title": "学术写作：层级、因果链与证据入口",
+      "claim": "论文层级、研究因果链和证据核验按academic-write读取相关小节：paper-workflow.md管定位与论证，evidence-and-artifacts.md管来源、人工审核与结论范围。",
+      "scope": "论文写作或大幅修改及其中的论证、来源和结论边界核查",
+      "exceptions": [
+        "先确认当篇论文类型；Benchmark中的方法定位不能推广到所有论文，存在方法贡献时按该篇定位处理。",
+        "人工审核汇总不等于所有输出逐题人工评分；模型辅助参考不自动成为人工金标准。",
+        "旧章节冻结和项目结果留历史；覆盖入口不取代专门评审Skill，也不强制加载全部写作参考。"
+      ],
+      "target": "skills/academic-write/SKILL.md",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "kind": "skill",
+          "evidence": [
+            {
+              "ref": "E024",
+              "thread_id": "01a129b0-b99c-7f42-96c0-a0f4b948f786",
+              "location": "rollout-2026-10-11T14-40-10-01a129b0-b99c-7f42-96c0-a0f4b948f786.jsonl:L31",
+              "source_kind": "user_authored",
+              "family_id": "01a129b0-b99c-7f42-96c0-a0f4b948f786",
+              "text_sha256": "c4496482c5ec8b689b587fb649e6264d6d48a6ebc0dab9c323da792a128e3b7c",
+              "support": "用户对当前论文逻辑和贡献层级提出要求。"
+            },
+            {
+              "ref": "E079",
+              "thread_id": "01a0fe11-bb1e-7611-afc3-6a939e318c78",
+              "location": "rollout-2026-10-03T05-34-38-01a0fe11-bb1e-7611-afc3-6a939e318c78_01a0fe8a-6932-7a43-9823-4e5d3522f69f.jsonl:L36",
+              "source_kind": "user_authored",
+              "family_id": "01a0fe11-bb1e-7611-afc3-6a939e318c78",
+              "text_sha256": "d911efaeb373336db78d7e9aba7260d95ef89a2681bac5667f9174bfb5e54cc7",
+              "support": "用户明确要求 benchmark-first。"
+            },
+            {
+              "ref": "E082",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-07T14-02-01-01a11266-18ff-7b92-bdec-81772b1c0b18_01a114f4-5f69-7071-9452-011db73195e6.jsonl:L691",
+              "source_kind": "user_authored",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "text_sha256": "033648dbf669d40a08b1bc283ed7e492d29b6d3ea5190065f3a3e492da09c57d",
+              "support": "用户直接批评判定节点尚不足以构成机制，并要求回到合同任务问题。"
+            },
+            {
+              "ref": "E120",
+              "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L444",
+              "source_kind": "user_authored",
+              "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "text_sha256": "7a064c3c4f9dd44cd19a593cda67d9caaa956a232c4def75baf07f00cf584ef8",
+              "support": "用户要求将核心主张改成可检验假设。"
+            },
+            {
+              "ref": "E134",
+              "thread_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+              "location": "rollout-2026-10-08T23-13-42-01a111b0-3cc1-70e1-9f7c-7d22cae53bd3_01a11c13-cd58-7681-8a0a-437158e937cb.jsonl:L2297",
+              "source_kind": "user_authored",
+              "family_id": "01a111b0-3cc1-70e1-9f7c-7d22cae53bd3",
+              "text_sha256": "31ea2f5d628ae202c11054bcd8b524f0878bdea88c92c66bdd1521482c8b0e80",
+              "support": "用户明确列出逐题人审归档和模型评分依据仍待对应的缺口。"
+            },
+            {
+              "ref": "E143",
+              "thread_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "location": "rollout-2026-09-14T11-27-11-01a09902-7e8e-7290-af3d-e24a15f69e60_01a09df4-569b-7a30-86d9-3badd1999ad3.jsonl:L53",
+              "source_kind": "user_authored",
+              "family_id": "01a09902-7e8e-7290-af3d-e24a15f69e60",
+              "text_sha256": "fca6739944d273e901456b71ae96679f9416a087fadce5536623b30f9284d920",
+              "support": "用户要求核查材料和结果边界。"
+            },
+            {
+              "ref": "E094",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-07T14-02-01-01a11266-18ff-7b92-bdec-81772b1c0b18_01a114f4-5f69-7071-9452-011db73195e6.jsonl:L1268",
+              "source_kind": "user_authored",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "text_sha256": "d2e3d284ee467bece1c91f45bc335ae20a621ba8bdcf7df0b3de6c6d852a0e5c",
+              "support": "用户要求到实际项目查找论文证据缺口。"
+            },
+            {
+              "ref": "E095",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-09T17-47-15-01a11266-18ff-7b92-bdec-81772b1c0b18_01a1200f-4915-7602-9658-c9f6fa81d259.jsonl:L3853",
+              "source_kind": "user_authored",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "text_sha256": "13ce3698a831897a1f330493d65c1317d81de8bbfd181a8f5b80cfba336debb4",
+              "support": "用户提出实际评分与数据诊断问题。"
+            }
+          ],
+          "source_candidates": [
+            "C-20261014-006",
+            "C-20261014-018",
+            "C-20261014-019",
+            "C-20261014-023",
+            "C-20261014-030",
+            "C-20261014-036"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-15",
+          "tags": [
+            "论文",
+            "benchmark",
+            "Introduction",
+            "ICML",
+            "贡献",
+            "结构",
+            "研究",
+            "因果链",
+            "机制",
+            "假设",
+            "实验",
+            "证据",
+            "人工审核",
+            "金标准",
+            "标注",
+            "结果"
+          ],
+          "id": "skill.academic-writing-entry",
+          "title": "学术写作：层级、因果链与证据入口",
+          "claim": "论文层级、研究因果链和证据核验按academic-write读取相关小节：paper-workflow.md管定位与论证，evidence-and-artifacts.md管来源、人工审核与结论范围。",
+          "scope": "论文写作或大幅修改及其中的论证、来源和结论边界核查",
+          "exceptions": [
+            "先确认当篇论文类型；Benchmark中的方法定位不能推广到所有论文，存在方法贡献时按该篇定位处理。",
+            "人工审核汇总不等于所有输出逐题人工评分；模型辅助参考不自动成为人工金标准。",
+            "旧章节冻结和项目结果留历史；覆盖入口不取代专门评审Skill，也不强制加载全部写作参考。"
+          ],
+          "target": "skills/academic-write/SKILL.md",
+          "status": "active",
+          "updated_at": "2026-10-16T06:51:20+00:00",
+          "revision": 1
+        }
+      ],
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。"
+    },
+    {
+      "kind": "memory",
+      "evidence": [
+        {
+          "ref": "R011-M046",
+          "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L42",
+          "source_kind": "user_authored",
+          "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "text_sha256": "813004965ecedf8621a90fc1308748a59abb5571df271651805ecd8a290938d1",
+          "message_timestamp": "2026-09-27T05:17:09.832Z",
+          "support": "要求从代码角度讲解。"
+        },
+        {
+          "ref": "R011-M048",
+          "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L132",
+          "source_kind": "user_authored",
+          "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "text_sha256": "b0bd4cdbbc2630abb74adb6c1e1d602dd05a2375154f0d9e6ac9c0d514c65bfc",
+          "message_timestamp": "2026-09-27T05:23:37.996Z",
+          "support": "明确要求简洁干练，原解释太长难懂。"
+        },
+        {
+          "ref": "R011-M049",
+          "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L144",
+          "source_kind": "user_authored",
+          "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "text_sha256": "b393e7fe419a02b0fbd262d57deb4c72807ba77aeb7dd81a6db8e6a80a527482",
+          "message_timestamp": "2026-09-27T05:24:29.090Z",
+          "support": "随即纠正过于入门，表示已有一些基础。"
+        },
+        {
+          "ref": "R011-M060",
+          "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L293",
+          "source_kind": "user_authored",
+          "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "text_sha256": "cf76e76d87bd2f7678d3823a11d2df218f3202de6c40566425c890764ba8a3b0",
+          "message_timestamp": "2026-09-27T05:47:57.486Z",
+          "support": "要求给一个具体例子。"
+        },
+        {
+          "ref": "E049",
+          "thread_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+          "location": "rollout-2026-08-12T03-29-48-019ff24d-6d48-7321-80f0-e96c1cedbeda.jsonl:L433",
+          "source_kind": "user_authored",
+          "family_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+          "text_sha256": "caa95362a036b4ad815c5f6524533bc2842383440b61ee0bd7b0c0614fc2a01d",
+          "support": "用户明确要求一步一步教使用。"
+        },
+        {
+          "ref": "E055",
+          "thread_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+          "location": "rollout-2026-08-12T03-29-48-019ff24d-6d48-7321-80f0-e96c1cedbeda.jsonl:L1261",
+          "source_kind": "user_authored",
+          "family_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+          "text_sha256": "eed98d4a6b6aca32b05473f1776cf05ae5bf00727d99b23a3fff0f14413ae800",
+          "support": "用户说明第一次做插件并询问如何实时看修改。"
+        }
+      ],
+      "source_candidates": [
+        "C-20261014-010"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "review_after": "2027-01-16",
+      "tags": [
+        "学习",
+        "讲解",
+        "机制",
+        "深度",
+        "例子",
+        "代码",
+        "插件",
+        "新工具",
+        "引导",
+        "一步一步",
+        "浏览器"
+      ],
+      "id": "learning.adaptive-guidance",
+      "title": "学习讲解：随反馈调深度，初用工具分步引导",
+      "claim": "解释模型或代码时，用简洁机制说明和具体例子，随当前反馈调整深度；首次使用陌生插件且需要帮助时，分步引导并展示实际效果。",
+      "scope": "模型或代码项目讲解，以及陌生插件/浏览器工具的首次求助",
+      "exceptions": [
+        "不永久固定用户能力等级，不因曾自称小白而持续采用入门解释。",
+        "熟悉工具或明确要求直接执行时按当前要求推进；不强制从零教学、全读仓库或展开全部代码。",
+        "历史项目中的学习问题不证明该项目实现事实；最新反馈优先。"
+      ],
+      "memory_class": "personal_preference",
+      "status": "active",
+      "updated_at": "2026-10-16T06:51:20+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "kind": "memory",
+          "evidence": [
+            {
+              "ref": "R011-M046",
+              "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L42",
+              "source_kind": "user_authored",
+              "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "text_sha256": "813004965ecedf8621a90fc1308748a59abb5571df271651805ecd8a290938d1",
+              "message_timestamp": "2026-09-27T05:17:09.832Z",
+              "support": "要求从代码角度讲解。"
+            },
+            {
+              "ref": "R011-M048",
+              "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L132",
+              "source_kind": "user_authored",
+              "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "text_sha256": "b0bd4cdbbc2630abb74adb6c1e1d602dd05a2375154f0d9e6ac9c0d514c65bfc",
+              "message_timestamp": "2026-09-27T05:23:37.996Z",
+              "support": "明确要求简洁干练，原解释太长难懂。"
+            },
+            {
+              "ref": "R011-M049",
+              "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L144",
+              "source_kind": "user_authored",
+              "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "text_sha256": "b393e7fe419a02b0fbd262d57deb4c72807ba77aeb7dd81a6db8e6a80a527482",
+              "message_timestamp": "2026-09-27T05:24:29.090Z",
+              "support": "随即纠正过于入门，表示已有一些基础。"
+            },
+            {
+              "ref": "R011-M060",
+              "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L293",
+              "source_kind": "user_authored",
+              "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+              "text_sha256": "cf76e76d87bd2f7678d3823a11d2df218f3202de6c40566425c890764ba8a3b0",
+              "message_timestamp": "2026-09-27T05:47:57.486Z",
+              "support": "要求给一个具体例子。"
+            },
+            {
+              "ref": "E049",
+              "thread_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+              "location": "rollout-2026-08-12T03-29-48-019ff24d-6d48-7321-80f0-e96c1cedbeda.jsonl:L433",
+              "source_kind": "user_authored",
+              "family_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+              "text_sha256": "caa95362a036b4ad815c5f6524533bc2842383440b61ee0bd7b0c0614fc2a01d",
+              "support": "用户明确要求一步一步教使用。"
+            },
+            {
+              "ref": "E055",
+              "thread_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+              "location": "rollout-2026-08-12T03-29-48-019ff24d-6d48-7321-80f0-e96c1cedbeda.jsonl:L1261",
+              "source_kind": "user_authored",
+              "family_id": "019ff24d-6d48-7321-80f0-e96c1cedbeda",
+              "text_sha256": "eed98d4a6b6aca32b05473f1776cf05ae5bf00727d99b23a3fff0f14413ae800",
+              "support": "用户说明第一次做插件并询问如何实时看修改。"
+            }
+          ],
+          "source_candidates": [
+            "C-20261014-010"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "review_after": "2027-01-16",
+          "tags": [
+            "学习",
+            "讲解",
+            "机制",
+            "深度",
+            "例子",
+            "代码",
+            "插件",
+            "新工具",
+            "引导",
+            "一步一步",
+            "浏览器"
+          ],
+          "id": "learning.adaptive-guidance",
+          "title": "学习讲解：随反馈调深度，初用工具分步引导",
+          "claim": "解释模型或代码时，用简洁机制说明和具体例子，随当前反馈调整深度；首次使用陌生插件且需要帮助时，分步引导并展示实际效果。",
+          "scope": "模型或代码项目讲解，以及陌生插件/浏览器工具的首次求助",
+          "exceptions": [
+            "不永久固定用户能力等级，不因曾自称小白而持续采用入门解释。",
+            "熟悉工具或明确要求直接执行时按当前要求推进；不强制从零教学、全读仓库或展开全部代码。",
+            "历史项目中的学习问题不证明该项目实现事实；最新反馈优先。"
+          ],
+          "memory_class": "personal_preference",
+          "status": "active",
+          "updated_at": "2026-10-16T06:51:20+00:00",
+          "revision": 1
+        }
+      ],
+      "last_reason": "2026-10-16用户批准合并重复入口；保留各原条目的证据、历史和边界，工作流仍由既有Skill承载，不新增通用规则或修改Skill。"
     }
   ],
   "decisions": [
@@ -8265,10 +10773,10 @@
       "candidate_id": "C-20261014-001",
       "bucket": "skill",
       "targets": [
-        "skill.patent-workflow"
+        "skill.patent-workflow-v2"
       ],
       "action": "already_covered",
-      "reason": "与003合并；专利Skill已经要求步骤.md，不把同一任务重复计数。"
+      "reason": "与003合并；专利Skill已经要求步骤.md，不把同一任务重复计数。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-002",
@@ -8281,55 +10789,55 @@
       "candidate_id": "C-20261014-003",
       "bucket": "skill",
       "targets": [
-        "skill.patent-workflow"
+        "skill.patent-workflow-v2"
       ],
       "action": "already_covered",
-      "reason": "保留专利场景的输入输出与步骤要求；其他材料未逐项支持的泛化不采纳。"
+      "reason": "保留专利场景的输入输出与步骤要求；其他材料未逐项支持的泛化不采纳。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-004",
       "bucket": "skill",
       "targets": [
-        "skill.patent-workflow"
+        "skill.patent-workflow-v2"
       ],
       "action": "already_covered",
-      "reason": "模板与本人事实隔离已由专利Skill明确承载。"
+      "reason": "模板与本人事实隔离已由专利Skill明确承载。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-005",
       "bucket": "rule",
       "targets": [
-        "documents.preserve-style"
+        "documents.preserve-style-v2"
       ],
       "action": "new",
-      "reason": "不同材料任务均直接纠正风格偏移；仅晋升风格保持，视觉验收仍由对应Skill承载。"
+      "reason": "不同材料任务均直接纠正风格偏移；仅晋升风格保持，视觉验收仍由对应Skill承载。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-006",
       "bucket": "skill",
       "targets": [
-        "skill.paper-hierarchy"
+        "skill.academic-writing-entry"
       ],
       "action": "already_covered",
-      "reason": "论文类型和贡献层级已被academic-write覆盖；历史章节冻结不作永久规则。"
+      "reason": "论文类型和贡献层级已被academic-write覆盖；历史章节冻结不作永久规则。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-007",
       "bucket": "memory",
       "targets": [
-        "skills.prefer-passive-routing"
+        "skills.prefer-passive-routing-v2"
       ],
       "action": "concise_reusable",
-      "reason": "精简保留可复用部分；原数量与执行条件留历史。"
+      "reason": "精简保留可复用部分；原数量与执行条件留历史。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-008",
-      "bucket": "skill",
+      "bucket": "rule",
       "targets": [
-        "skill.minimal-validation"
+        "validation.scoped-acceptance"
       ],
-      "action": "already_covered",
-      "reason": "最小验证Skill已有完整约束，本次纳入统一维护源。"
+      "action": "merge_existing_coverage",
+      "reason": "最小验证Skill已有完整约束，本次纳入统一维护源。 2026-10-16并入既有验收原则入口，详细方法仍在最小验证Skill；不计新增规则。"
     },
     {
       "candidate_id": "C-20261014-009",
@@ -8344,64 +10852,64 @@
       "candidate_id": "C-20261014-010",
       "bucket": "memory",
       "targets": [
-        "learning.plugin-first-use"
+        "learning.adaptive-guidance"
       ],
       "action": "concise_reusable",
-      "reason": "精简保留可复用部分；原数量与执行条件留历史。"
+      "reason": "精简保留可复用部分；原数量与执行条件留历史。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-011",
-      "bucket": "rule",
+      "bucket": "archive",
       "targets": [
         "core.communication"
       ],
-      "action": "already_covered",
-      "reason": "已有沟通核心覆盖，去掉固定意图审计格式的泛化。"
+      "action": "archive_duplicate_receipt",
+      "reason": "已有沟通核心覆盖，去掉固定意图审计格式的泛化。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     },
     {
       "candidate_id": "C-20261014-012",
       "bucket": "skill",
       "targets": [
-        "skill.patent-workflow"
+        "skill.patent-workflow-v2"
       ],
       "action": "already_covered",
-      "reason": "专利实施步骤直接动作与逐项对应已在Skill中。"
+      "reason": "专利实施步骤直接动作与逐项对应已在Skill中。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-013",
       "bucket": "skill",
       "targets": [
-        "skill.patent-workflow"
+        "skill.patent-workflow-v2"
       ],
       "action": "already_covered",
-      "reason": "文稿与渲染检查由专利Skill承载，具体图形格式保持项目范围。"
+      "reason": "文稿与渲染检查由专利Skill承载，具体图形格式保持项目范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-014",
       "bucket": "skill",
       "targets": [
-        "skill.engineering-methods"
+        "skill.engineering-methods-v2"
       ],
       "action": "merge_existing_method",
-      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。"
+      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-015",
-      "bucket": "rule",
+      "bucket": "archive",
       "targets": [
         "core.delegation"
       ],
-      "action": "merged_existing",
-      "reason": "与040合并，主行为已在SOUL委派规则中，不算新增长期规则。"
+      "action": "archive_duplicate_receipt",
+      "reason": "与040合并，主行为已在SOUL委派规则中，不算新增长期规则。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     },
     {
       "candidate_id": "C-20261014-016",
       "bucket": "skill",
       "targets": [
-        "skill.engineering-methods"
+        "skill.engineering-methods-v2"
       ],
       "action": "merge_existing_method",
-      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。"
+      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-017",
@@ -8416,64 +10924,64 @@
       "candidate_id": "C-20261014-018",
       "bucket": "skill",
       "targets": [
-        "skill.paper-hierarchy"
+        "skill.academic-writing-entry"
       ],
       "action": "already_covered",
-      "reason": "合并到benchmark写作层级，不把所有论文固定为benchmark。"
+      "reason": "合并到benchmark写作层级，不把所有论文固定为benchmark。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-019",
       "bucket": "skill",
       "targets": [
-        "skill.research-causality"
+        "skill.academic-writing-entry"
       ],
       "action": "refined",
-      "reason": "只吸收直接表达的任务难点与机制区分，引用意见不作个人偏好。"
+      "reason": "只吸收直接表达的任务难点与机制区分，引用意见不作个人偏好。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-020",
       "bucket": "rule",
       "targets": [
-        "validation.agreed-coverage"
+        "validation.scoped-acceptance"
       ],
-      "action": "new",
-      "reason": "Demo与科研均明确指定验收范围；与日常最小验证保持兼容。"
+      "action": "merge_existing_coverage",
+      "reason": "Demo与科研均明确指定验收范围；与日常最小验证保持兼容。 2026-10-16并入既有验收原则入口，详细方法仍在最小验证Skill；不计新增规则。"
     },
     {
       "candidate_id": "C-20261014-021",
       "bucket": "skill",
       "targets": [
-        "skill.engineering-methods"
+        "skill.engineering-methods-v2"
       ],
       "action": "merge_existing_method",
-      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。"
+      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-022",
-      "bucket": "rule",
+      "bucket": "archive",
       "targets": [
         "core.autonomy"
       ],
-      "action": "already_covered",
-      "reason": "已授权内自主推进由SOUL覆盖；不从历史扩大当前权限。"
+      "action": "archive_duplicate_receipt",
+      "reason": "已授权内自主推进由SOUL覆盖；不从历史扩大当前权限。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     },
     {
       "candidate_id": "C-20261014-023",
       "bucket": "skill",
       "targets": [
-        "skill.research-evidence"
+        "skill.academic-writing-entry"
       ],
       "action": "merge_existing_method",
-      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。"
+      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-024",
-      "bucket": "rule",
+      "bucket": "archive",
       "targets": [
         "core.communication"
       ],
-      "action": "merged_existing",
-      "reason": "与011/035/046合并到已有沟通规则。"
+      "action": "archive_duplicate_receipt",
+      "reason": "与011/035/046合并到已有沟通规则。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     },
     {
       "candidate_id": "C-20261014-025",
@@ -8503,37 +11011,37 @@
       "candidate_id": "C-20261014-028",
       "bucket": "memory",
       "targets": [
-        "learning.deduplicate-by-knowledge"
+        "learning.deduplicate-by-knowledge-v2"
       ],
       "action": "concise_reusable",
-      "reason": "精简保留可复用部分；原数量与执行条件留历史。"
+      "reason": "精简保留可复用部分；原数量与执行条件留历史。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-029",
       "bucket": "memory",
       "targets": [
-        "migration.verify-before-cleanup"
+        "migration.verify-before-cleanup-v2"
       ],
       "action": "concise_reusable",
-      "reason": "精简保留可复用部分；原数量与执行条件留历史。"
+      "reason": "精简保留可复用部分；原数量与执行条件留历史。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-030",
       "bucket": "skill",
       "targets": [
-        "skill.research-causality"
+        "skill.academic-writing-entry"
       ],
       "action": "already_covered",
-      "reason": "与019合并为可检验假设和证据范围，不重复新增同义规则。"
+      "reason": "与019合并为可检验假设和证据范围，不重复新增同义规则。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-031",
       "bucket": "memory",
       "targets": [
-        "research.chinese-item-review"
+        "research.chinese-item-review-v2"
       ],
       "action": "concise_reusable",
-      "reason": "精简保留可复用部分；原数量与执行条件留历史。"
+      "reason": "精简保留可复用部分；原数量与执行条件留历史。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-032",
@@ -8564,21 +11072,21 @@
     },
     {
       "candidate_id": "C-20261014-035",
-      "bucket": "rule",
+      "bucket": "archive",
       "targets": [
         "core.communication"
       ],
-      "action": "already_covered",
-      "reason": "直白说明机制由已有沟通规则覆盖，不强制每次都读全部代码。"
+      "action": "archive_duplicate_receipt",
+      "reason": "直白说明机制由已有沟通规则覆盖，不强制每次都读全部代码。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     },
     {
       "candidate_id": "C-20261014-036",
       "bucket": "skill",
       "targets": [
-        "skill.research-evidence"
+        "skill.academic-writing-entry"
       ],
       "action": "refined",
-      "reason": "已有证据规则补足陈述、写作要求和可核验记录的区分。"
+      "reason": "已有证据规则补足陈述、写作要求和可核验记录的区分。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-037",
@@ -8593,46 +11101,46 @@
       "candidate_id": "C-20261014-038",
       "bucket": "skill",
       "targets": [
-        "skill.engineering-methods"
+        "skill.engineering-methods-v2"
       ],
       "action": "merge_existing_method",
-      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。"
+      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-039",
       "bucket": "skill",
       "targets": [
-        "skill.engineering-methods"
+        "skill.engineering-methods-v2"
       ],
       "action": "merge_existing_method",
-      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。"
+      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-040",
-      "bucket": "rule",
+      "bucket": "archive",
       "targets": [
         "core.delegation"
       ],
-      "action": "merged_existing",
-      "reason": "与015合并到已有委派规则，按任务补缺，不机械扩大Prompt。"
+      "action": "archive_duplicate_receipt",
+      "reason": "与015合并到已有委派规则，按任务补缺，不机械扩大Prompt。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     },
     {
       "candidate_id": "C-20261014-041",
       "bucket": "skill",
       "targets": [
-        "skill.engineering-methods"
+        "skill.engineering-methods-v2"
       ],
       "action": "merge_existing_method",
-      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。"
+      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-042",
       "bucket": "skill",
       "targets": [
-        "skill.engineering-methods"
+        "skill.engineering-methods-v2"
       ],
       "action": "merge_existing_method",
-      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。"
+      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-043",
@@ -8656,20 +11164,20 @@
       "candidate_id": "C-20261014-045",
       "bucket": "skill",
       "targets": [
-        "skill.engineering-methods"
+        "skill.engineering-methods-v2"
       ],
       "action": "merge_existing_method",
-      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。"
+      "reason": "通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。"
     },
     {
       "candidate_id": "C-20261014-046",
-      "bucket": "rule",
+      "bucket": "archive",
       "targets": [
         "core.communication"
       ],
-      "action": "merged_existing",
-      "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。"
+      "action": "archive_duplicate_receipt",
+      "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     }
   ],
-  "updated_at": "2026-10-16T06:33:13+00:00"
+  "updated_at": "2026-10-16T06:51:20+00:00"
 }

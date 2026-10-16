@@ -10,7 +10,7 @@
 - confidence: medium
 - status: resolved
 - disposition: skill / already_covered
-- destination: skill.patent-workflow
+- destination: skill.patent-workflow-v2
 
 ## C-20261014-002
 
@@ -31,7 +31,7 @@
 - overlap: reinforces C-20261014-001
 - status: resolved
 - disposition: skill / already_covered
-- destination: skill.patent-workflow
+- destination: skill.patent-workflow-v2
 
 ## C-20261014-007
 
@@ -42,7 +42,7 @@
 - overlap: reinforces `skills/personal-context/SKILL.md` and routing audit notes
 - status: resolved
 - disposition: memory / concise_reusable
-- destination: skills.prefer-passive-routing
+- destination: skills.prefer-passive-routing-v2
 
 ## C-20261014-014
 
@@ -54,7 +54,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / merge_existing_method
-- destination: skill.engineering-methods
+- destination: skill.engineering-methods-v2
 
 ## C-20261014-015
 
@@ -65,7 +65,7 @@
 - overlap: new; complements C-20261014-009
 - privacy: safe_to_sync
 - status: resolved
-- disposition: rule / merged_existing
+- disposition: archive / archive_duplicate_receipt
 - destination: core.delegation
 
 ## C-20261014-022
@@ -77,7 +77,7 @@
 - overlap: new; complements C-20261014-011
 - privacy: safe_to_sync
 - status: resolved
-- disposition: rule / already_covered
+- disposition: archive / archive_duplicate_receipt
 - destination: core.autonomy
 
 ## C-20261014-038
@@ -90,7 +90,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / merge_existing_method
-- destination: skill.engineering-methods
+- destination: skill.engineering-methods-v2
 
 ## C-20261014-040
 
@@ -101,7 +101,7 @@
 - overlap: reinforces C-20261014-015
 - privacy: safe_to_sync
 - status: resolved
-- disposition: rule / merged_existing
+- disposition: archive / archive_duplicate_receipt
 - destination: core.delegation
 
 ## C-20261014-041
@@ -114,7 +114,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / merge_existing_method
-- destination: skill.engineering-methods
+- destination: skill.engineering-methods-v2
 
 ## C-20261014-042
 
@@ -126,7 +126,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / merge_existing_method
-- destination: skill.engineering-methods
+- destination: skill.engineering-methods-v2
 
 ## C-20261014-045
 
@@ -138,4 +138,4 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / merge_existing_method
-- destination: skill.engineering-methods
+- destination: skill.engineering-methods-v2

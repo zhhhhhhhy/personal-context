@@ -10,7 +10,7 @@
 - confidence: high
 - status: resolved
 - disposition: skill / already_covered
-- destination: skill.patent-workflow
+- destination: skill.patent-workflow-v2
 
 ## C-20261014-005
 
@@ -21,7 +21,7 @@
 - overlap: partially covered by `habits/communication.md`
 - status: resolved
 - disposition: rule / new
-- destination: documents.preserve-style
+- destination: documents.preserve-style-v2
 
 ## C-20261014-012
 
@@ -31,7 +31,7 @@
 - confidence: high
 - status: resolved
 - disposition: skill / already_covered
-- destination: skill.patent-workflow
+- destination: skill.patent-workflow-v2
 
 ## C-20261014-013
 
@@ -42,7 +42,7 @@
 - overlap: reinforces document and PDF render-validation guidance
 - status: resolved
 - disposition: skill / already_covered
-- destination: skill.patent-workflow
+- destination: skill.patent-workflow-v2
 
 ## C-20261014-025
 

@@ -1,12 +1,14 @@
 # 方法：多语种稿先确认目标版本
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `documents.resolve-language-version`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 多语种论文或多个文档版本并存的评审与修改
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-16T02:20:00+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 同目录存在中英文或多个稿件时，先查当前项目索引，确认用户指定的语种、文件及版本，再评审或修改；避免误用另一语种旧稿。
 
@@ -15,6 +17,7 @@
 - 中文优先只适用于原项目约定；其它任务遵循当前指定语言。
 - 不凭未带语言后缀的文件名认定最新，不假定中英文同步。
 - review_after: 2027-01-16
+- replaced_by: documents.resolve-language-version-v2
 
 ## Evidence pointers
 

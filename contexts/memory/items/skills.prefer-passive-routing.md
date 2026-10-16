@@ -1,12 +1,14 @@
 # 希望个人Skill按任务匹配
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `skills.prefer-passive-routing`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 个人Skill的选择与维护
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-16T01:41:42+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 希望合适的个人Skill按任务被动匹配，并能区分已加载、已执行和触发状态。
 
@@ -14,6 +16,7 @@
 
 - 上游选择器不可观测时明确说明，不能仅凭回答声称已自动触发。
 - review_after: 2027-01-16
+- replaced_by: skills.prefer-passive-routing-v2
 
 ## Evidence pointers
 

@@ -10,7 +10,7 @@
 - confidence: medium
 - status: resolved
 - disposition: memory / concise_reusable
-- destination: learning.plugin-first-use
+- destination: learning.adaptive-guidance
 
 ## C-20261014-011
 
@@ -20,7 +20,7 @@
 - confidence: high
 - overlap: reinforces `habits/communication.md`
 - status: resolved
-- disposition: rule / already_covered
+- disposition: archive / archive_duplicate_receipt
 - destination: core.communication
 
 ## C-20261014-024
@@ -32,7 +32,7 @@
 - overlap: reinforces C-20261014-011
 - privacy: safe_to_sync
 - status: resolved
-- disposition: rule / merged_existing
+- disposition: archive / archive_duplicate_receipt
 - destination: core.communication
 
 ## C-20261014-028
@@ -45,7 +45,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: memory / concise_reusable
-- destination: learning.deduplicate-by-knowledge
+- destination: learning.deduplicate-by-knowledge-v2
 
 ## C-20261014-035
 
@@ -56,7 +56,7 @@
 - overlap: reinforces profile.md communication guidance
 - privacy: safe_to_sync
 - status: resolved
-- disposition: rule / already_covered
+- disposition: archive / archive_duplicate_receipt
 - destination: core.communication
 
 ## C-20261014-046
@@ -68,5 +68,5 @@
 - overlap: reinforces C-20261014-011 and C-20261014-024
 - privacy: safe_to_sync
 - status: resolved
-- disposition: rule / merged_existing
+- disposition: archive / archive_duplicate_receipt
 - destination: core.communication

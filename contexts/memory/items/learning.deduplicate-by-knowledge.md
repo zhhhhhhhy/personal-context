@@ -1,12 +1,14 @@
 # 按知识点整理题库
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `learning.deduplicate-by-knowledge`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 题库整理与重复题筛选
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-16T01:41:42+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 按知识点去重，保留覆盖多个知识点的题；提供代表题和答案解释。
 
@@ -14,6 +16,7 @@
 
 - 批次大小和题量依当前任务确定；旧2000题、20题一批不是默认值。
 - review_after: 2027-01-16
+- replaced_by: learning.deduplicate-by-knowledge-v2
 
 ## Evidence pointers
 

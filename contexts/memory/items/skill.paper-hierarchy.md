@@ -1,12 +1,14 @@
 # 论文类型与贡献层级已吸收
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `skill.paper-hierarchy`
 - kind: skill
-- status: active
+- status: merged
 - scope: 论文结构修改、Benchmark 写作和方法层级检查
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 先锁定论文类型和中心逻辑，再改具体段落。Benchmark 论文围绕任务、评测和发现组织，方法作为被评测对象；工程日志不进入科学叙事。历史章节冻结只在当次稿件约定内使用。
 
@@ -15,6 +17,7 @@
 - 仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。
 - review_after: 2027-01-15
 - target: skills/academic-write/SKILL.md
+- merged_into: skill.academic-writing-entry
 
 ## Evidence pointers
 

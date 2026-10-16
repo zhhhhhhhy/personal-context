@@ -1,12 +1,14 @@
 # 按约定范围说明验收结果
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `validation.agreed-coverage`
 - kind: rule
-- status: active
+- status: merged
 - scope: 存在用户指定验收集合的工程交付或实验验收
 - verification: supported_preference
 - validity: stable
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 用户已经约定最终验收集合时，使用该集合判断整体是否完成，并说明实际测试范围与未覆盖部分。单个样本通过只证明该样本；日常开发检查仍使用足够证明变更路径的最小范围。
 
@@ -15,6 +17,7 @@
 - 未约定完整集合时先说明实际证据范围，不擅自制造全量测试义务。
 - 该规则不要求每次小改动重跑全部验收集。
 - review_after: 2027-01-15
+- merged_into: validation.scoped-acceptance
 
 ## Evidence pointers
 

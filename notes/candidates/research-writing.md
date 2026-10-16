@@ -11,7 +11,7 @@
 - overlap: reinforces existing academic-write guidance
 - status: resolved
 - disposition: skill / already_covered
-- destination: skill.paper-hierarchy
+- destination: skill.academic-writing-entry
 
 ## C-20261014-017
 
@@ -35,7 +35,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / already_covered
-- destination: skill.paper-hierarchy
+- destination: skill.academic-writing-entry
 
 ## C-20261014-019
 
@@ -47,7 +47,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / refined
-- destination: skill.research-causality
+- destination: skill.academic-writing-entry
 
 ## C-20261014-030
 
@@ -59,7 +59,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / already_covered
-- destination: skill.research-causality
+- destination: skill.academic-writing-entry
 
 ## C-20261014-032
 
@@ -83,4 +83,4 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / refined
-- destination: skill.research-evidence
+- destination: skill.academic-writing-entry

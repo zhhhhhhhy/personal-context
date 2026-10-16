@@ -1,12 +1,14 @@
 # 已有委派规则与任务 Prompt
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `core.delegation`
 - kind: core
-- status: active
+- status: archived
 - scope: 把一个有边界的工程或研究任务交给另一个 Agent
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 委派时提供当前目标、权威目录、必要材料、约束和验收方式。已有的信息直接复用；按实际任务补足缺口，不强制无关字段或固定模板。
 
@@ -15,6 +17,7 @@
 - 仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。
 - review_after: 2027-01-15
 - target: rules/SOUL.md
+- retirement_reason: 2026-10-16用户批准归档重复覆盖登记；communication.md与SOUL.md中的沟通、委派、自主执行及隐私授权规则继续生效，原正文与证据保留。
 
 ## Evidence pointers
 

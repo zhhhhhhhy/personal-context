@@ -10,8 +10,8 @@
 - confidence: high
 - overlap: evidence-only candidate; already covered by `minimal-validation-workflow`
 - status: resolved
-- disposition: skill / already_covered
-- destination: skill.minimal-validation
+- disposition: rule / merge_existing_coverage
+- destination: validation.scoped-acceptance
 
 ## C-20261014-009
 
@@ -34,7 +34,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / merge_existing_method
-- destination: skill.engineering-methods
+- destination: skill.engineering-methods-v2
 
 ## C-20261014-027
 
@@ -58,7 +58,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: memory / concise_reusable
-- destination: migration.verify-before-cleanup
+- destination: migration.verify-before-cleanup-v2
 
 ## C-20261014-037
 

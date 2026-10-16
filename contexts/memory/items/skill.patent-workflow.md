@@ -1,12 +1,14 @@
 # 专利材料工作流已吸收
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `skill.patent-workflow`
 - kind: skill
-- status: active
+- status: superseded
 - scope: 合同字段研究转专利交底书、说明书及配套文档
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 专利任务先盘点本人材料与参考模板，建立步骤.md 的输入、输出和验收；模板只提供结构和格式。具体实施方式逐步写输入、动作、条件和输出；交付时检查文稿与渲染结果。
 
@@ -15,6 +17,7 @@
 - 仅用于上述场景；当前用户要求、当前项目协议和事实核查结果优先。
 - review_after: 2027-01-15
 - target: skills/contract-field-patent-drafting/SKILL.md
+- replaced_by: skill.patent-workflow-v2
 
 ## Evidence pointers
 

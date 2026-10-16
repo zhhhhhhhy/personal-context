@@ -1,12 +1,14 @@
 # 编辑已有材料时保留约定风格
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `documents.preserve-style`
 - kind: rule
-- status: active
+- status: superseded
 - scope: 修改已有简历、专利或其他已经确定风格的文档
 - verification: supported_preference
 - validity: stable
-- updated_at: 2026-10-15T13:49:28+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 编辑已有文档时，沿用用户认可的结构和风格；有参考模板时按约定的模板处理。改文字不自动授权更换整套布局。
 
@@ -15,6 +17,7 @@
 - 用户当前明确要求重做结构或版式时按新要求执行。
 - 渲染验收和目标目录的具体要求由对应文档 Skill 或项目约定处理。
 - review_after: 2027-01-15
+- replaced_by: documents.preserve-style-v2
 
 ## Evidence pointers
 

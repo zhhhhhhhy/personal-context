@@ -12,7 +12,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / merge_existing_method
-- destination: skill.engineering-methods
+- destination: skill.engineering-methods-v2
 
 ## C-20261014-020
 
@@ -23,8 +23,8 @@
 - overlap: reinforces C-20261014-008 and C-20261014-011
 - privacy: safe_to_sync
 - status: resolved
-- disposition: rule / new
-- destination: validation.agreed-coverage
+- disposition: rule / merge_existing_coverage
+- destination: validation.scoped-acceptance
 
 ## C-20261014-023
 
@@ -36,7 +36,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / merge_existing_method
-- destination: skill.research-evidence
+- destination: skill.academic-writing-entry
 
 ## C-20261014-031
 
@@ -48,7 +48,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: memory / concise_reusable
-- destination: research.chinese-item-review
+- destination: research.chinese-item-review-v2
 
 ## C-20261014-033
 
@@ -84,7 +84,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: skill / merge_existing_method
-- destination: skill.engineering-methods
+- destination: skill.engineering-methods-v2
 
 ## C-20261014-043
 

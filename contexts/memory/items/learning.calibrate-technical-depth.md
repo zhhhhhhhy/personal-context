@@ -1,12 +1,14 @@
 # 偏好：简洁讲机制，随反馈校准深度
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `learning.calibrate-technical-depth`
 - kind: memory
-- status: active
+- status: merged
 - scope: 解释模型训练或代码项目时
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-16T03:53:18+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 学习模型或代码项目时，用简洁说明和具体例子连接实际代码、数据与机制；根据用户当下反馈调整深度，既不堆术语，也不因为自称“小白”就一直讲得过于入门。
 
@@ -15,6 +17,7 @@
 - 历史NanoJev问题不证明其实现事实；不要永久固定用户能力等级。
 - 不是要求每次全读仓库；当前问题和用户最新反馈优先。
 - review_after: 2027-01-16
+- merged_into: learning.adaptive-guidance
 
 ## Evidence pointers
 

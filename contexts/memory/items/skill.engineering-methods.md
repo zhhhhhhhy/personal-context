@@ -1,12 +1,14 @@
 # 工程计划、失败迭代与实验启动方法
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `skill.engineering-methods`
 - kind: skill
-- status: active
+- status: superseded
 - scope: 需要这些方法的工程迭代、原型规划和实验启动
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-16T01:41:42+00:00
+- updated_at: 2026-10-16T06:51:20+00:00
 
 计划、逐步输入输出、失败归因、修复前后证据、浏览器实际验收和资源预检统一使用工程Skill；原项目约定留项目资料。
 
@@ -15,6 +17,7 @@
 - 不固定文档数、模型、批次或委派方式；当前项目协议与授权优先。
 - review_after: 2027-01-16
 - target: skills/engineering-project-workflow/SKILL.md
+- replaced_by: skill.engineering-methods-v2
 
 ## Evidence pointers
 
