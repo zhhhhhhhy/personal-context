@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "evolution_validation": "passed",
+  "repaired_coverage": "passed",
+  "messages": 62,
+  "observations": 59,
+  "source_pack_tests": 3,
+  "ast_parse": "passed",
+  "frozen_protocol_hashes": "unchanged after revision",
+  "four_core_hashes": "unchanged including pre-existing user communication edit",
+  "old46_dispositions": "unchanged",
+  "notes": [
+    "Original reflection metadata validation failed; added required schema/run/base/conflict-check fields and nonempty deferred claim; passed without source or semantic changes.",
+    "No fresh original-project experiments or browser acceptance were run.",
+    "Reserved eval root remained unread."
+  ]
+}

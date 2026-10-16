@@ -4,6 +4,15 @@ Use the current Codex session as the semantic Observer and Reflector. Raw eviden
 
 ## Requested run
 
+Reuse session-loaded rules, Skills and known CLI contracts. Confirm their hashes
+in one local preparation summary; reread only changed or newly relevant sections.
+Reuse prior qualification metadata, exclude every processed selection, and verify
+only newly selected/changed source files. Do not redump database schemas, complete
+rankings or script bodies on success. Keep full check logs locally and return
+counts, failures and artifact paths. Return subprocess stdout directly instead
+of JSON-encoding the entire command result again. Count source, review and all
+tool-return text separately so preparation savings cannot hide skipped evidence.
+
 1. Run `python -X utf8 scripts/context-memory.py maintain`. Check due reviews, inactive targets and explicit temporary expiry. Stable preferences remain applicable within scope until new evidence or current instructions change them.
 2. Use `context-evolution.py prepare` for a new bounded cohort. Freeze dates, hashes and evaluation partition before reading message bodies. Keep parent conversation families together; exclude automatic worker requests as personal preference evidence. Do not import new history when the task only asks to maintain existing memory.
 3. Follow [source coverage](personal-context-observation.md) before candidate lookup. Preserve concrete requirements, counts, conditions, source and unknown status. A useful one-project agreement can become usable memory immediately; recurrence is required only for general rules.

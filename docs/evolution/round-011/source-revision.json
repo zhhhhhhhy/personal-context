@@ -1,0 +1,19 @@
+{
+  "changed_short_ids": [
+    "M044"
+  ],
+  "unchanged_messages": 61,
+  "initial_payload_tokens": 3545,
+  "revised_source": {
+    "messages": 62,
+    "status": "prepared",
+    "source_files": [
+      "review/source/page-001.json"
+    ],
+    "source_tokens": 3305,
+    "identity": "Full IDs, paths and line numbers stay in the local source-map; text is unchanged."
+  },
+  "cause": "Missed URL login-token query parameter; raw local only.",
+  "count_both_reads": true,
+  "initial_source_frozen": true
+}

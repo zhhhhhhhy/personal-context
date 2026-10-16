@@ -1,0 +1,18 @@
+{
+  "initial_checked": 30,
+  "same_class_checked": 13,
+  "outside_checked": 2,
+  "checked_unique": 45,
+  "total": 62,
+  "unreviewed_second_pass": 17,
+  "issue_count": 2,
+  "repaired_observations": [
+    "O003",
+    "O027"
+  ],
+  "followup_issues": 0,
+  "outside_issues": 0,
+  "independent": false,
+  "full_review_run": false,
+  "caveat": "Same-agent focused semantic check, not completeness proof; immutable initial observations and reports retained locally."
+}

@@ -49,17 +49,44 @@ def compact_sources(run):
     mapping = {f'M{n:03}': m for n, m in enumerate(inv['messages'], 1)}
     return inv, mapping
 
-def build_source(run):
+def source_packets(inv, mapping, page_tokens):
+    conversations = {key: f'T{n:02}' for n, key in enumerate(dict.fromkeys(m['thread_id'] for m in mapping.values()), 1)}
+    shared = {conversations[m['thread_id']]: {'family': m['family_id'], 'category': m['category']} for m in mapping.values()}
+    rows = [{'id': key, 'conversation': conversations[m['thread_id']], 'text': m['text']} for key, m in mapping.items()]
+
+    def packet(selected):
+        keys = {row['conversation'] for row in selected}
+        return {'schema_version': 'observer-source/2', 'source_digest': inv['source_digest'],
+                'conversations': {key: value for key, value in shared.items() if key in keys}, 'messages': selected}
+
+    pages, current = [], []
+    for row in rows:
+        if token_count(packet(current + [row])) > page_tokens:
+            if not current or token_count(packet([row])) > page_tokens:
+                raise ValueError('single source message exceeds page bound; raise the explicit bound, never truncate')
+            pages.append(packet(current)); current = []
+        current.append(row)
+    if current: pages.append(packet(current))
+    return packet(rows), pages
+
+def build_source(run, page_tokens=6500):
+    if (run/'review/source-manifest.json').exists():
+        raise ValueError('source packet is frozen; reuse its pages instead of rebuilding')
     inv, mapping = compact_sources(run)
-    conversations={id:f'T{n:02}' for n,id in enumerate(dict.fromkeys(m['thread_id'] for m in mapping.values()),1)}
     save(run/'review/source-map.json', {'source_digest': inv['source_digest'], 'messages': mapping})
-    save(run/'review/source.json', {'source_digest': inv['source_digest'], 'messages':[
-        {'id': k, 'conversation':conversations[m['thread_id']], 'family':m['family_id'], 'category':m['category'], 'text':m['text']}
-        for k,m in mapping.items()]})
+    whole, pages = source_packets(inv, mapping, page_tokens)
+    save(run/'review/source.json', whole)
+    files = []
+    for n, page in enumerate(pages, 1):
+        name = f'review/source/page-{n:03}.json'; save(run/name, page)
+        files.append({'file': name, 'sha256': sha(run/name), 'tokens': token_count(page), 'ids': [row['id'] for row in page['messages']]})
+    save(run/'review/source-manifest.json', {'source_digest': inv['source_digest'], 'source_map_sha256': sha(run/'review/source-map.json'), 'files': files})
     # Common session requirements are metered once per independent worker.
     save(run/'review/core.json', [{'file':name,'text':(ROOT/name).read_text('utf-8-sig')}
         for name in ['rules/SOUL.md','profile.md','habits/communication.md','INDEX.md']])
-    print(json.dumps({'messages':len(mapping),'status':'prepared'}))
+    print(json.dumps({'messages':len(mapping),'status':'prepared','source_files':[x['file'] for x in files],
+                      'source_tokens':sum(x['tokens'] for x in files),
+                      'identity':'Full IDs, paths and line numbers stay in the local source-map; text is unchanged.'}))
 
 def expand(run, draft_path):
     inv, mapping = compact_sources(run)
@@ -156,8 +183,16 @@ def deliver(run, file, reader, limit, reread_reason=None):
     path=(run/file).resolve()
     if not path.is_relative_to(run.resolve()):raise ValueError('packet must stay within run directory')
     file=path.relative_to(run.resolve()).as_posix()
+    source_page = file.startswith('review/source/')
+    if source_page:
+        manifest = read(run/'review/source-manifest.json')
+        entries = {entry['file']: entry for entry in manifest['files']}
+        if file not in entries or sha(path) != entries[file]['sha256'] or sha(run/'review/source-map.json') != manifest['source_map_sha256']:
+            raise ValueError('frozen source page or map changed')
+        if module().source_inventory(run)['source_digest'] != manifest['source_digest']:
+            raise ValueError('frozen source identity changed')
     plan_path=run/'review/plan.json'
-    if plan_path.exists() and read(plan_path).get('version') == 'risk-review/2' and file not in {'review/source.json','review/source-map.json','review/core.json'}:
+    if not source_page and plan_path.exists() and read(plan_path).get('version') == 'risk-review/2' and file not in {'review/source.json','review/source-map.json','review/core.json'}:
         text=v2().deliver(run,file,reader,limit,reread_reason)
         if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8',newline='\n')
         sys.stdout.write(text)
@@ -204,14 +239,14 @@ def check_review(run, report, validate_only=False):
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--run-dir',type=Path,required=True)
-    sub=p.add_subparsers(dest='command',required=True);sub.add_parser('build-source')
+    sub=p.add_subparsers(dest='command',required=True);b=sub.add_parser('build-source');b.add_argument('--page-tokens',type=int,default=6500)
     plan=sub.add_parser('plan');plan.add_argument('--protocol',choices=['v1','v2'],default='v2');plan.add_argument('--page-tokens',type=int,default=9000)
     e=sub.add_parser('expand');e.add_argument('--draft',type=Path,required=True)
     c=sub.add_parser('check-review');c.add_argument('--report',type=Path,required=True);c.add_argument('--validate-only',action='store_true')
     d=sub.add_parser('read');d.add_argument('--file',required=True);d.add_argument('--reader',required=True);d.add_argument('--max-tokens',type=int,default=9000);d.add_argument('--reread-reason')
     r=sub.add_parser('route');r.add_argument('--report',type=Path,action='append',default=[]);r.add_argument('--outside-audit',action='store_true')
     a=p.parse_args();run=a.run_dir.resolve()
-    if a.command=='build-source':build_source(run)
+    if a.command=='build-source':build_source(run,a.page_tokens)
     elif a.command=='expand':expand(run,a.draft)
     elif a.command=='plan':prepare_review(run,a.protocol,a.page_tokens)
     elif a.command=='check-review':check_review(run,a.report,a.validate_only)

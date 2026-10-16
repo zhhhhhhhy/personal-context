@@ -1,0 +1,15 @@
+{
+  "messages": 62,
+  "status": "prepared",
+  "source_files": [
+    "review/source/page-001.json"
+  ],
+  "source_tokens": 3545,
+  "identity": "Full IDs, paths and line numbers stay in the local source-map; text is unchanged.",
+  "train_roots": 6,
+  "reserved_unread_roots": 1,
+  "reused_qualification_rows": 100,
+  "selected_members_changed": 0,
+  "maintenance_expiry": 0,
+  "review_due": 0
+}

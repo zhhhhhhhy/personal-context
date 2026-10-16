@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "tokenizer": "o200k_base",
+  "measurement": "UTF-8 text with LF line endings; file bodies only, not live session usage",
+  "status": "passed",
+  "rules": [
+    {
+      "name": "session-core",
+      "mode": "group",
+      "limit": 2000,
+      "tokens": 1931,
+      "files": [
+        {
+          "path": "rules/SOUL.md",
+          "tokens": 542,
+          "chars": 907
+        },
+        {
+          "path": "profile.md",
+          "tokens": 339,
+          "chars": 575
+        },
+        {
+          "path": "habits/communication.md",
+          "tokens": 541,
+          "chars": 863
+        },
+        {
+          "path": "INDEX.md",
+          "tokens": 509,
+          "chars": 1048
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "repository-router",
+      "mode": "group",
+      "limit": 400,
+      "tokens": 363,
+      "files": [
+        {
+          "path": "AGENTS.md",
+          "tokens": 363,
+          "chars": 759
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "skill-entry",
+      "mode": "per_file",
+      "limit": 1000,
+      "tokens": 4095,
+      "files": [
+        {
+          "path": "skills/academic-write/SKILL.md",
+          "tokens": 369,
+          "chars": 1933
+        },
+        {
+          "path": "skills/contract-field-patent-drafting/SKILL.md",
+          "tokens": 322,
+          "chars": 1637
+        },
+        {
+          "path": "skills/deep-research/SKILL.md",
+          "tokens": 435,
+          "chars": 2195
+        },
+        {
+          "path": "skills/engineering-project-workflow/SKILL.md",
+          "tokens": 730,
+          "chars": 3884
+        },
+        {
+          "path": "skills/grill-me/SKILL.md",
+          "tokens": 311,
+          "chars": 925
+        },
+        {
+          "path": "skills/grilling/SKILL.md",
+          "tokens": 399,
+          "chars": 1352
+        },
+        {
+          "path": "skills/minimal-validation-workflow/SKILL.md",
+          "tokens": 928,
+          "chars": 4937
+        },
+        {
+          "path": "skills/personal-context/SKILL.md",
+          "tokens": 601,
+          "chars": 3220
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "candidate-index",
+      "mode": "group",
+      "limit": 600,
+      "tokens": 428,
+      "files": [
+        {
+          "path": "notes/candidates.md",
+          "tokens": 428,
+          "chars": 868
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "candidate-topics",
+      "mode": "per_file",
+      "limit": 2500,
+      "tokens": 8266,
+      "files": [
+        {
+          "path": "notes/candidates/communication.md",
+          "tokens": 1002,
+          "chars": 2280
+        },
+        {
+          "path": "notes/candidates/documents.md",
+          "tokens": 1085,
+          "chars": 2428
+        },
+        {
+          "path": "notes/candidates/engineering.md",
+          "tokens": 1325,
+          "chars": 3032
+        },
+        {
+          "path": "notes/candidates/experiments.md",
+          "tokens": 1464,
+          "chars": 3381
+        },
+        {
+          "path": "notes/candidates/planning-and-skills.md",
+          "tokens": 2096,
+          "chars": 4794
+        },
+        {
+          "path": "notes/candidates/research-writing.md",
+          "tokens": 1294,
+          "chars": 3022
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "learned-entry",
+      "mode": "group",
+      "limit": 1000,
+      "tokens": 135,
+      "files": [
+        {
+          "path": "habits/learned.md",
+          "tokens": 135,
+          "chars": 300
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "memory-index",
+      "mode": "group",
+      "limit": 600,
+      "tokens": 375,
+      "files": [
+        {
+          "path": "contexts/memory/INDEX.md",
+          "tokens": 375,
+          "chars": 802
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    },
+    {
+      "name": "loading-policy",
+      "mode": "group",
+      "limit": 900,
+      "tokens": 755,
+      "files": [
+        {
+          "path": "rules/CONTEXT_LOADING.md",
+          "tokens": 755,
+          "chars": 1242
+        }
+      ],
+      "errors": [],
+      "status": "passed"
+    }
+  ]
+}

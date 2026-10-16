@@ -1,0 +1,61 @@
+{
+  "new_records": [
+    {
+      "id": "learning.calibrate-technical-depth",
+      "class": "personal_preference",
+      "claim": "学习模型或代码项目时，用简洁说明和具体例子连接实际代码、数据与机制；根据用户当下反馈调整深度，既不堆术语，也不因为自称“小白”就一直讲得过于入门。",
+      "scope": "解释模型训练或代码项目时",
+      "exceptions": [
+        "历史NanoJev问题不证明其实现事实；不要永久固定用户能力等级。",
+        "不是要求每次全读仓库；当前问题和用户最新反馈优先。"
+      ]
+    },
+    {
+      "id": "skills.prefer-academic-write",
+      "class": "personal_preference",
+      "claim": "用户明确表示academic-write用得最顺手；有适用的学术写作任务时优先考虑它，仍按当前任务与Skill适用范围路由。",
+      "scope": "学术论文写作或大幅修改时",
+      "exceptions": [
+        "旧private-skill仓库已并入personal-context；这条不恢复旧仓库为维护入口。",
+        "不是所有论文相关任务都调用；评审、专利等按对应任务路由；Skill可用性和当前明确指定优先。"
+      ]
+    },
+    {
+      "id": "evaluation.count-real-artifacts",
+      "class": "working_method",
+      "claim": "汇报demo生成或扩容时，先定义计数对象，分开列当前有效成品、mock测试案例和生成尝试；真实demo的可用性须有实际查看/功能验证的证据。扩容可按简单与复杂需求分层，避免用尝试总数冒充成品数量。",
+      "scope": "demo或生成式原型的扩容、验收与数量汇报",
+      "exceptions": [
+        "原项目3、30、11和追加3个均为历史问题/要求，不是当前已核数量或固定配额。",
+        "历史清理/推送授权不延续；当前验收标准优先；不固定其它项目必须两种难度。"
+      ]
+    },
+    {
+      "id": "project.masarena-migration-acceptance",
+      "class": "project_material",
+      "claim": "历史验收要求：AutoFill不可用时MASArena仍可数据准备、审计和评测入口检查；活动代码/配置无AutoFill路径依赖；迁移前后数据SHA-256一致；AutoFill保留产品代码与无关历史项目；历史来源只留清单，不构成运行时依赖。",
+      "scope": "恢复该AutoFill→MASArena迁移或核查毕业设计实验环境时",
+      "exceptions": [
+        "这是用户给出的验收条件，未在本轮重跑；入口检查不证明全部实验能独立完成。",
+        "唯一实验环境、共享数据关系与全实验可运行性仍待相应代码/运行记录核实；不获得清理授权。"
+      ]
+    },
+    {
+      "id": "project.industrial-slide-request",
+      "class": "project_material",
+      "claim": "原工业智能体PPT新增1页并保持风格，建议2×3宫格或五边形；标题称五道门槛但正文仅有四项，缺项须确认；底栏承接下一页EI Copilot的视觉/听觉/多模态方案。",
+      "scope": "恢复原工业智能体PPT新增页任务时",
+      "exceptions": [
+        "超过10步、2027约40%、Manus130天、制造现场70%以上等是用户待核材料；[8][9][10]尚未查证。",
+        "不能编造第五项或把历史写作要求当成事实；原附件未重开，不确定新版本是否已补齐。"
+      ]
+    }
+  ],
+  "observation_outcomes": {
+    "memories": 28,
+    "covered": 1,
+    "deferred": 30
+  },
+  "global_rule_promotions": 0,
+  "skill_edits": 0
+}

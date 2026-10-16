@@ -1,0 +1,277 @@
+{
+  "schema_version": 1,
+  "state_version": 17,
+  "transaction_id": "TX-34887e58e34b",
+  "objective": "Reduce source wrapping and repeated preparation, then verify on new conversations",
+  "scope": "Preserve source fidelity and current focused-review policy",
+  "status": "completed",
+  "phase": "report",
+  "owner": "agent",
+  "next_action": "Deliver measured report and await human assessment.",
+  "constraints": [],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Exact baseline audit and lossless compact source",
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-011/baseline-breakdown.json"
+      ],
+      "note": "Bounded evidence and measurement limitations recorded; no completeness/independent AB claim."
+    },
+    {
+      "id": "AC-2",
+      "condition": "New scoped memories and bounded omission evidence",
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-011/memory-summary.json"
+      ],
+      "note": "Bounded evidence and measurement limitations recorded; no completeness/independent AB claim."
+    },
+    {
+      "id": "AC-3",
+      "condition": "Whole tool-return accounting and protections",
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-011/actual-loading.json"
+      ],
+      "note": "Bounded evidence and measurement limitations recorded; no completeness/independent AB claim."
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "docs/evolution/round-011/protocol-freeze.json",
+    "detail": "Changed packaging tested; current budget passes; seven selected new roots and frozen source files verified, raw bodies not returned yet.",
+    "checked_at": "2026-10-16T03:44:49+00:00"
+  },
+  "gates": {
+    "route": "2026-10-16T03:44:49+00:00",
+    "execute": "2026-10-16T03:44:49+00:00",
+    "verify": "2026-10-16T03:57:45+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-16T03:41:40+00:00",
+      "phase": "execute",
+      "action": "Compact source packaging and replace repeated preparation reads with hash summaries",
+      "expected_effect": "Identical source text and identity with fewer returned tokens and no weakened review scope",
+      "owner": "agent",
+      "result": "Same91 messages lossless; source payload16993 to5461;2 focused guards passed; reuse and concise output rules saved.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/evolution/round-011/packaging-calibration.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-16T03:44:48+00:00"
+    },
+    {
+      "id": "A-002",
+      "time": "2026-10-16T03:44:49+00:00",
+      "phase": "execute",
+      "action": "Run frozen compact-source process on new unprocessed roots",
+      "expected_effect": "Lower total returned inputs with scoped new memories and explicit targeted-review omissions",
+      "owner": "agent",
+      "result": "62 fresh user messages,59 observations,45 bounded rechecks,2 repaired findings;2 preferences+1 method+2 scoped project records; no global promotion. Privacy revision and all actual overhead disclosed.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/evolution/round-011/validation.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-16T03:57:29+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-c21bdd25ad76",
+      "time": "2026-10-16T03:41:39+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-3d680f0e384d",
+      "time": "2026-10-16T03:41:40+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "docs/evolution/round-011/PREFLIGHT.json"
+      }
+    },
+    {
+      "event_id": "EV-792c78a268e4",
+      "time": "2026-10-16T03:41:40+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-c1d50387bf37",
+      "time": "2026-10-16T03:41:40+00:00",
+      "type": "checkpoint",
+      "phase": "route",
+      "status": "in_progress",
+      "detail": {
+        "note": "Agent semantics; scripts packaging and checks; user acceptance. Allocation in PLAN.md."
+      }
+    },
+    {
+      "event_id": "EV-885b60d921cd",
+      "time": "2026-10-16T03:41:40+00:00",
+      "type": "gate_passed",
+      "phase": "route",
+      "status": "in_progress",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-012eb04dfdb7",
+      "time": "2026-10-16T03:41:40+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-c380ed28bbcc",
+      "time": "2026-10-16T03:44:48+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-e6390e47c02f",
+      "time": "2026-10-16T03:44:49+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "docs/evolution/round-011/protocol-freeze.json"
+      }
+    },
+    {
+      "event_id": "EV-f57b0a0ad10d",
+      "time": "2026-10-16T03:44:49+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-2f5cfc965a2a",
+      "time": "2026-10-16T03:44:49+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-7f5141eff0a4",
+      "time": "2026-10-16T03:44:49+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-002"
+      }
+    },
+    {
+      "event_id": "EV-b39bc850a247",
+      "time": "2026-10-16T03:57:29+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-002",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-c42ec3f93bf7",
+      "time": "2026-10-16T03:57:45+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-ce40dd335bd9",
+      "time": "2026-10-16T03:57:45+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-8ac29b926607",
+      "time": "2026-10-16T03:57:45+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-7ec476226174",
+      "time": "2026-10-16T03:57:45+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-9aa411570058",
+      "time": "2026-10-16T03:57:45+00:00",
+      "type": "checkpoint",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "note": "No new history import planned; remaining user communication edit excluded from commit."
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-16T03:41:39+00:00",
+  "updated_at": "2026-10-16T03:57:45+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-16T03:41:40+00:00",
+      "note": "Agent semantics; scripts packaging and checks; user acceptance. Allocation in PLAN.md."
+    },
+    {
+      "time": "2026-10-16T03:57:45+00:00",
+      "note": "No new history import planned; remaining user communication edit excluded from commit."
+    }
+  ]
+}

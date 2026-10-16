@@ -1,0 +1,9 @@
+{
+  "same_91_messages": true,
+  "raw_text_unchanged": true,
+  "complete_source_map_local": true,
+  "old_actual_source_payload": 16993,
+  "new_compact_reconstruction": 5461,
+  "saved_percent": 67.86,
+  "comparison": "Same original91 messages; mechanical reconstruction only, not a semantic rerun."
+}

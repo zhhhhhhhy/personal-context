@@ -5,11 +5,15 @@ coverage ledgers remain in the ignored local run directory.
 
 ## Observe before lookup
 
-Read the direct training messages in bounded pages, using
-`context-meter.py ... train --offset 0 --limit 24` when measuring loading.
-Continue at the returned `next_offset`; narrow a rejected page instead of
-accepting truncated output. Each message carries a stable `message_id`; the
-pack has a `source_digest`. Do not use evaluation messages.
+Prefer `context-review.py --run-dir <run> build-source --page-tokens 6500`,
+then `read --file <each returned source_files path> --reader observer`.
+Messages use short IDs and share conversation metadata; exact text is unchanged.
+Full IDs, filenames and line numbers stay in the frozen local source-map.
+Use `expand --draft <draft.json>` to restore the coverage ledger. Do not return
+the map or core packet to a role that already has them. Source pages are hashed,
+bounded and never truncated; changed pages/maps or source identities are rejected.
+The older `context-meter.py ... train` remains available for explicit comparisons,
+not the default source reader. Do not use evaluation messages.
 
 For each message, separate concrete requirements, corrections, exceptions,
 permissions and project facts. One message can contain several independent

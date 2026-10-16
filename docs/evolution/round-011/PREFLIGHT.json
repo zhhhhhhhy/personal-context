@@ -1,0 +1,21 @@
+{
+  "status": "ready",
+  "scope": "Lossless source packaging and preparation reuse; fixed existing risk review, then fresh batch",
+  "checks": [
+    {
+      "id": "baseline",
+      "status": "passed",
+      "detail": "39 baseline tool replies reconcile exactly to76413; no raw/private text published."
+    },
+    {
+      "id": "existing adapters",
+      "status": "passed",
+      "detail": "Existing short-ID source map/expand and v2 concentrated review inspected; current rules remain available in session."
+    },
+    {
+      "id": "protection",
+      "status": "passed",
+      "detail": "Existing communication edit and four core hashes protected; raw sources stay local."
+    }
+  ]
+}

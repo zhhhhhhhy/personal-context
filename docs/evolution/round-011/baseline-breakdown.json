@@ -1,0 +1,21 @@
+{
+  "baseline": "round-010 reported snapshot only",
+  "total": 76413,
+  "groups": {
+    "准备协议与脚本查阅": 29176,
+    "资格筛选与准备": 5331,
+    "来源读取": 18000,
+    "观察校验": 210,
+    "重点复核与路由": 15055,
+    "修复与已有覆盖": 3926,
+    "写入校验": 435,
+    "计量与状态": 3014,
+    "新记忆检索": 1266
+  },
+  "source_raw_tokens": 3920,
+  "source_payload_tokens": 16993,
+  "source_tool_return_tokens": 18000,
+  "source_wrapper_tokens": 14080,
+  "per_call_accounting": "All39 saved call IDs and token hashes reconciled in local baseline audit. Categories classify returned calls; source is not added again to total.",
+  "cutoff": "2026-10-16T02:25:23.725Z"
+}

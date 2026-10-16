@@ -4296,6 +4296,311 @@
       "updated_at": "2026-10-16T02:20:00+00:00",
       "revision": 1,
       "history": []
+    },
+    {
+      "id": "learning.calibrate-technical-depth",
+      "kind": "memory",
+      "title": "偏好：简洁讲机制，随反馈校准深度",
+      "claim": "学习模型或代码项目时，用简洁说明和具体例子连接实际代码、数据与机制；根据用户当下反馈调整深度，既不堆术语，也不因为自称“小白”就一直讲得过于入门。",
+      "scope": "解释模型训练或代码项目时",
+      "exceptions": [
+        "历史NanoJev问题不证明其实现事实；不要永久固定用户能力等级。",
+        "不是要求每次全读仓库；当前问题和用户最新反馈优先。"
+      ],
+      "tags": [
+        "学习",
+        "讲解",
+        "机制",
+        "深度",
+        "例子",
+        "代码"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "evidence": [
+        {
+          "ref": "R011-M046",
+          "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L42",
+          "source_kind": "user_authored",
+          "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "text_sha256": "813004965ecedf8621a90fc1308748a59abb5571df271651805ecd8a290938d1",
+          "message_timestamp": "2026-09-27T05:17:09.832Z",
+          "support": "要求从代码角度讲解。"
+        },
+        {
+          "ref": "R011-M048",
+          "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L132",
+          "source_kind": "user_authored",
+          "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "text_sha256": "b0bd4cdbbc2630abb74adb6c1e1d602dd05a2375154f0d9e6ac9c0d514c65bfc",
+          "message_timestamp": "2026-09-27T05:23:37.996Z",
+          "support": "明确要求简洁干练，原解释太长难懂。"
+        },
+        {
+          "ref": "R011-M049",
+          "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L144",
+          "source_kind": "user_authored",
+          "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "text_sha256": "b393e7fe419a02b0fbd262d57deb4c72807ba77aeb7dd81a6db8e6a80a527482",
+          "message_timestamp": "2026-09-27T05:24:29.090Z",
+          "support": "随即纠正过于入门，表示已有一些基础。"
+        },
+        {
+          "ref": "R011-M060",
+          "thread_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "location": "rollout-2026-09-27T13-15-13-01a0e149-edce-7c41-9ef4-34c4a27edfb8.jsonl:L293",
+          "source_kind": "user_authored",
+          "family_id": "01a0e149-edce-7c41-9ef4-34c4a27edfb8",
+          "text_sha256": "cf76e76d87bd2f7678d3823a11d2df218f3202de6c40566425c890764ba8a3b0",
+          "message_timestamp": "2026-09-27T05:47:57.486Z",
+          "support": "要求给一个具体例子。"
+        }
+      ],
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "personal_preference",
+      "status": "active",
+      "updated_at": "2026-10-16T03:53:18+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "skills.prefer-academic-write",
+      "kind": "memory",
+      "title": "偏好：学术写作优先考虑academic-write",
+      "claim": "用户明确表示academic-write用得最顺手；有适用的学术写作任务时优先考虑它，仍按当前任务与Skill适用范围路由。",
+      "scope": "学术论文写作或大幅修改时",
+      "exceptions": [
+        "旧private-skill仓库已并入personal-context；这条不恢复旧仓库为维护入口。",
+        "不是所有论文相关任务都调用；评审、专利等按对应任务路由；Skill可用性和当前明确指定优先。"
+      ],
+      "tags": [
+        "偏好",
+        "Skill",
+        "academic-write",
+        "学术",
+        "写作"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "evidence": [
+        {
+          "ref": "R011-M039",
+          "thread_id": "01a106a2-9f5f-7592-928f-43ecd98f78a4",
+          "location": "rollout-2026-10-04T19-18-03-01a106a2-9f5f-7592-928f-43ecd98f78a4.jsonl:L191",
+          "source_kind": "user_authored",
+          "family_id": "01a106a2-9f5f-7592-928f-43ecd98f78a4",
+          "text_sha256": "dd0c464d99667224454cd35c89307eaa1f72382d660f62cb874b765301180ec0",
+          "message_timestamp": "2026-10-04T11:28:43.775Z",
+          "support": "直接说明academic-write最顺手并要求加入项目。"
+        }
+      ],
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "personal_preference",
+      "status": "active",
+      "updated_at": "2026-10-16T03:53:18+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "evaluation.count-real-artifacts",
+      "kind": "memory",
+      "title": "方法：分开统计成品、mock和生成尝试",
+      "claim": "汇报demo生成或扩容时，先定义计数对象，分开列当前有效成品、mock测试案例和生成尝试；真实demo的可用性须有实际查看/功能验证的证据。扩容可按简单与复杂需求分层，避免用尝试总数冒充成品数量。",
+      "scope": "demo或生成式原型的扩容、验收与数量汇报",
+      "exceptions": [
+        "原项目3、30、11和追加3个均为历史问题/要求，不是当前已核数量或固定配额。",
+        "历史清理/推送授权不延续；当前验收标准优先；不固定其它项目必须两种难度。"
+      ],
+      "tags": [
+        "方法",
+        "demo",
+        "mock",
+        "计数",
+        "成品",
+        "尝试",
+        "难度",
+        "验收"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction",
+      "evidence": [
+        {
+          "ref": "R011-M024",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L8756",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "f9ced5d59e9a172788193b59e79302cad30f37959cf727c6cd18fc0a9df5c2b5",
+          "message_timestamp": "2026-08-28T05:49:45.230Z",
+          "support": "要求说清demo数量与生成次数。"
+        },
+        {
+          "ref": "R011-M026",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L8877",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "41a5912a8f4c5f61792f51ce539ecd68c5d4e65910380543fc0ed735406090c9",
+          "message_timestamp": "2026-08-28T06:00:31.612Z",
+          "support": "质疑mock30个被称为demo。"
+        },
+        {
+          "ref": "R011-M027",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L8913",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "7e9d0845c0111f56b7532abed0d7f0be2a8580b330fb413162ffb84c94b7bb0f",
+          "message_timestamp": "2026-08-28T06:04:41.906Z",
+          "support": "要求扩充真实demo。"
+        },
+        {
+          "ref": "R011-M028",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L9717",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "46248edac5881371ea9c1cd288f94869039f5680d65e09d6039733351e0fd8c1",
+          "message_timestamp": "2026-08-28T07:48:44.632Z",
+          "support": "追问是否实际查看和测试。"
+        },
+        {
+          "ref": "R011-M031",
+          "thread_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "location": "rollout-2026-08-24T14-39-16-01a0327e-a6d4-7bb2-b5cc-df7159469273.jsonl:L9830",
+          "source_kind": "user_authored",
+          "family_id": "01a0327e-a6d4-7bb2-b5cc-df7159469273",
+          "text_sha256": "d31ea6984ee3c8be8c33514ab61dfb772a107b2523b9e4185366a72da75639a9",
+          "message_timestamp": "2026-08-28T09:34:02.961Z",
+          "support": "原扩容任务提出简单/复杂分层。"
+        }
+      ],
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "working_method",
+      "status": "active",
+      "updated_at": "2026-10-16T03:53:18+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "project.masarena-migration-acceptance",
+      "kind": "project",
+      "title": "项目：AutoFill至MASArena迁移验收层级",
+      "claim": "历史验收要求：AutoFill不可用时MASArena仍可数据准备、审计和评测入口检查；活动代码/配置无AutoFill路径依赖；迁移前后数据SHA-256一致；AutoFill保留产品代码与无关历史项目；历史来源只留清单，不构成运行时依赖。",
+      "scope": "恢复该AutoFill→MASArena迁移或核查毕业设计实验环境时",
+      "exceptions": [
+        "这是用户给出的验收条件，未在本轮重跑；入口检查不证明全部实验能独立完成。",
+        "唯一实验环境、共享数据关系与全实验可运行性仍待相应代码/运行记录核实；不获得清理授权。"
+      ],
+      "tags": [
+        "MASArena",
+        "AutoFill",
+        "迁移",
+        "SHA-256",
+        "依赖",
+        "验收"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "evidence": [
+        {
+          "ref": "R011-M008",
+          "thread_id": "01a12ad7-d6a3-72e0-8b0e-bcb71d595eb7",
+          "location": "rollout-2026-10-11T21-45-37-01a12ad7-d6a3-72e0-8b0e-bcb71d595eb7_01a12b36-3c7a-78c2-acb8-a745ad78ba1f.jsonl:L28",
+          "source_kind": "user_authored",
+          "family_id": "01a12ad7-d6a3-72e0-8b0e-bcb71d595eb7",
+          "text_sha256": "9a904cb029d5f6e6c888d51446fd1d7f13d84f91e381e061daaf739c7031c328",
+          "message_timestamp": "2026-10-11T13:49:28.376Z",
+          "support": "用户逐条给出五项最终验收条件。"
+        },
+        {
+          "ref": "R011-M009",
+          "thread_id": "01a12ad7-d6a3-72e0-8b0e-bcb71d595eb7",
+          "location": "rollout-2026-10-11T21-45-37-01a12ad7-d6a3-72e0-8b0e-bcb71d595eb7_01a12b36-3c7a-78c2-acb8-a745ad78ba1f.jsonl:L547",
+          "source_kind": "user_authored",
+          "family_id": "01a12ad7-d6a3-72e0-8b0e-bcb71d595eb7",
+          "text_sha256": "9e0ac38e2f462abc17325287d3b2e69bca10cf63772bef1c8470f5f62e7ef371",
+          "message_timestamp": "2026-10-11T14:53:30.758Z",
+          "support": "是否能跑全部实验仍是问题。"
+        },
+        {
+          "ref": "R011-M010",
+          "thread_id": "01a12ad7-d6a3-72e0-8b0e-bcb71d595eb7",
+          "location": "rollout-2026-10-11T21-45-37-01a12ad7-d6a3-72e0-8b0e-bcb71d595eb7_01a12b36-3c7a-78c2-acb8-a745ad78ba1f.jsonl:L559",
+          "source_kind": "user_authored",
+          "family_id": "01a12ad7-d6a3-72e0-8b0e-bcb71d595eb7",
+          "text_sha256": "a151ca6ad7b6cd489126520b93985f0a27b2481c37e173fb412681b88adb4c43",
+          "message_timestamp": "2026-10-11T14:54:42.076Z",
+          "support": "唯一实验环境仍是待核提问。"
+        }
+      ],
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "project": "contract-research",
+      "target": "references/projects/masarena-migration-acceptance.md",
+      "status": "active",
+      "updated_at": "2026-10-16T03:53:18+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "project.industrial-slide-request",
+      "kind": "project",
+      "title": "项目：工业智能体新增页约束与缺项",
+      "claim": "原工业智能体PPT新增1页并保持风格，建议2×3宫格或五边形；标题称五道门槛但正文仅有四项，缺项须确认；底栏承接下一页EI Copilot的视觉/听觉/多模态方案。",
+      "scope": "恢复原工业智能体PPT新增页任务时",
+      "exceptions": [
+        "超过10步、2027约40%、Manus130天、制造现场70%以上等是用户待核材料；[8][9][10]尚未查证。",
+        "不能编造第五项或把历史写作要求当成事实；原附件未重开，不确定新版本是否已补齐。"
+      ],
+      "tags": [
+        "工业",
+        "PPT",
+        "EI Copilot",
+        "五道门槛",
+        "缺项",
+        "待核"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "evidence": [
+        {
+          "ref": "R011-M001",
+          "thread_id": "019dafc4-3822-7db3-85ef-9307c9f7114e",
+          "location": "rollout-2026-04-21T19-19-25-019dafc4-3822-7db3-85ef-9307c9f7114e.jsonl:L6",
+          "source_kind": "user_authored",
+          "family_id": "019dafc4-3822-7db3-85ef-9307c9f7114e",
+          "text_sha256": "eecc74cd73fb987b25e2e5de8c83d018a3558e03b0b6378564366a448f793c2e",
+          "message_timestamp": "2026-04-21T11:20:39.188Z",
+          "support": "同一原文含风格、数量、图形布局、四项痛点、待核统计和承接关系。"
+        }
+      ],
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "project": "industrial-agent-slides",
+      "target": "references/projects/industrial-slide-request.md",
+      "status": "active",
+      "updated_at": "2026-10-16T03:53:18+00:00",
+      "revision": 1,
+      "history": []
     }
   ],
   "decisions": [
@@ -4709,5 +5014,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。"
     }
   ],
-  "updated_at": "2026-10-16T02:25:23+00:00"
+  "updated_at": "2026-10-16T03:53:18+00:00"
 }

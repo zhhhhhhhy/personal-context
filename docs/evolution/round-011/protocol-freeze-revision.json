@@ -1,0 +1,24 @@
+{
+  "frozen_before_new_bodies": false,
+  "rules": {
+    "rules/CONTEXT_LOADING.md": "b968977372ca3a23ffcb65c8b8c457e5034d68af8c4949395f7e694bec072a7f",
+    "docs/evolution/POLICY.md": "f67509ccb0b98f4465a78fcab25592fcea669c58c2bf80b01372b5bf4923bbc8",
+    "references/skills/personal-context-observation.md": "e908ce785306907eff00ce58bf9e888f1a2566d77d7e476b53d408fa41c5ec84",
+    "references/skills/personal-context-evolution.md": "a5b1a27ad6ae71a1e13f5235932a119b391105e0f0d55f951c136c1fd483f58e",
+    "references/skills/personal-context-review.md": "7e1b01ac8332059694bf93ecdca7f4769d238812a7b4c919e6fe385c55e8cca8",
+    "scripts/context-review.py": "206b7ef961ebde84ba5cf6d57aac6a20dffd99f3be3efe212f286d803f2ba7a6",
+    "scripts/context_review_v2.py": "fd282cce8014d136a121a83168cc47a765e4c3a5075592af36bc416882882b1f",
+    "scripts/context-coverage.py": "ee6df895a692302de14d0744ec5107571fce928891c51b91472f232137805e78",
+    "scripts/context_memory.py": "0bf9c4ae8d1e66838bb1718a3ef387e7cef310aa07694c8590161b40486b2b38",
+    "scripts/extract-conversation-evidence.py": "acd7918d052ae767720a42abaafc8229fe0f7e6fdf50cd66b7d8e6467d02410d",
+    "scripts/test-context-source-pack.py": "867d40490456415dd6234342dec5cd6a2531ef9e284e68544ba67343f9c317c3"
+  },
+  "review": "Unchanged v2: risk+sentinel, same-class follow-up, one bounded outside sample; no default independent whole inventory.",
+  "preparation": "Reuse loaded instructions and prior qualification; selected-source verification only; stdout summaries, exact inputs and full paths local.",
+  "classification": [
+    "reusable_preference",
+    "working_method",
+    "project_material"
+  ],
+  "revision": "URL credential filter corrected after first source read; prior immutable run retained locally; both reads included in actual cost. Not an independent blind sample."
+}

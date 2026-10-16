@@ -35,6 +35,10 @@ WRAPPER_PREFIXES = (
 
 REDACTION_PATTERNS = (
     (
+        re.compile(r"(?i)([?&](?:disposable_login_token|access_token|refresh_token|id_token|api_key)=)[^&#\s]+"),
+        r"\1[REDACTED_TOKEN]",
+    ),
+    (
         re.compile(
             r"(?i)(password|passwd|密码|口令)\s*[:：=]?\s*[^\s,，;；。]+"
         ),
