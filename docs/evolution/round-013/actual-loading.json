@@ -1,0 +1,17 @@
+{
+  "baseline_reported_tool_return_tokens": 56959,
+  "current_tool_return_tokens": 12911,
+  "saving_pct": 77.33,
+  "groups": {
+    "启动、准备、检索、校验、错误与计量": 3416,
+    "来源页面返回（含失败批次和重读）": 3187,
+    "重点复核页面返回": 6308
+  },
+  "calls": 12,
+  "start": "2026-10-16T04:18:27.679Z",
+  "cutoff": "2026-10-16T04:31:18.747Z",
+  "tokenizer": "o200k_base",
+  "boundary": "Top-level returned tool text since the current user request, o200k_base. Includes metadata selection failures, local adapter quoting error, source/review, domain memory retrieval and validations. No protocol body or framework implementation was returned. Excludes this in-flight measurement response and later delivery, system/developer prompts, already-present history, user input and assistant generation. Not billing or total context-window usage.",
+  "raw_baseline": 2119,
+  "raw_current": 1960
+}

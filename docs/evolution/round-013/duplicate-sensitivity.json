@@ -1,0 +1,52 @@
+{
+  "method": "Whitespace-normalized exact text only; do not rewrite/drop any frozen source; near-duplicate capacity roots are additionally related but not mechanically deduped.",
+  "runs": [
+    {
+      "label": "round011",
+      "messages": 62,
+      "raw_tokens": 2119,
+      "unique_after_whitespace_normalization": 62,
+      "unique_raw_tokens": 2119,
+      "duplicate_excess_tokens": 0,
+      "duplicate_pairs": [],
+      "semantic_duplicates_not_counted": true
+    },
+    {
+      "label": "frozen1",
+      "messages": 50,
+      "raw_tokens": 2084,
+      "unique_after_whitespace_normalization": 49,
+      "unique_raw_tokens": 2079,
+      "duplicate_excess_tokens": 5,
+      "duplicate_pairs": [
+        {
+          "message": "M033",
+          "first": "M032",
+          "tokens": 5
+        }
+      ],
+      "semantic_duplicates_not_counted": true
+    },
+    {
+      "label": "frozen2",
+      "messages": 39,
+      "raw_tokens": 1960,
+      "unique_after_whitespace_normalization": 37,
+      "unique_raw_tokens": 1757,
+      "duplicate_excess_tokens": 203,
+      "duplicate_pairs": [
+        {
+          "message": "M002",
+          "first": "M001",
+          "tokens": 95
+        },
+        {
+          "message": "M026",
+          "first": "M016",
+          "tokens": 108
+        }
+      ],
+      "semantic_duplicates_not_counted": true
+    }
+  ]
+}

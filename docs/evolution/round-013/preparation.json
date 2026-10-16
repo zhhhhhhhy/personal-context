@@ -1,0 +1,117 @@
+{
+  "train_roots": 16,
+  "reserved_unread_roots": 1,
+  "messages": 39,
+  "raw_tokens": 1960,
+  "previous_raw_tokens": 2119,
+  "raw_difference_pct": -7.5,
+  "cached_qualification_rows": 100,
+  "selected_only_source_verification": true,
+  "new_source": {
+    "messages": 39,
+    "status": "prepared",
+    "source_files": [
+      "review/source/page-001.json"
+    ],
+    "source_tokens": 3174,
+    "identity": "Full IDs, paths and line numbers stay in the local source-map; text is unchanged."
+  },
+  "selected": [
+    {
+      "thread": "01a12a5f-c722-73c0-8b39-858b3a6a1fff",
+      "cached_tokens": 190,
+      "messages": 2,
+      "archived": false
+    },
+    {
+      "thread": "01a0e656-866d-7370-aa2c-fd0a88e2ab07",
+      "cached_tokens": 188,
+      "messages": 7,
+      "archived": true
+    },
+    {
+      "thread": "019ff1d2-b448-7302-a8f2-24f52b4c3880",
+      "cached_tokens": 150,
+      "messages": 1,
+      "archived": false
+    },
+    {
+      "thread": "019dc367-2e64-7281-b9fb-d1c54b16a4f0",
+      "cached_tokens": 149,
+      "messages": 3,
+      "archived": true
+    },
+    {
+      "thread": "019ff1cc-1e44-7522-8c83-3fb14fb535fd",
+      "cached_tokens": 144,
+      "messages": 1,
+      "archived": false
+    },
+    {
+      "thread": "019ff1d6-cccb-7113-ad3e-e1e694689557",
+      "cached_tokens": 137,
+      "messages": 1,
+      "archived": false
+    },
+    {
+      "thread": "01a07a2e-1654-7520-944b-08800cb80726",
+      "cached_tokens": 134,
+      "messages": 3,
+      "archived": false
+    },
+    {
+      "thread": "019f9e50-7835-7ef2-bf50-291c2bb22ffa",
+      "cached_tokens": 131,
+      "messages": 4,
+      "archived": false
+    },
+    {
+      "thread": "019fc30b-8f8a-7a80-a986-551301476e81",
+      "cached_tokens": 128,
+      "messages": 1,
+      "archived": true
+    },
+    {
+      "thread": "01a07a1e-7156-74a2-a936-84aa0cb9c5e9",
+      "cached_tokens": 112,
+      "messages": 2,
+      "archived": true
+    },
+    {
+      "thread": "01a07a2b-869e-7be1-80e8-a1d8001474b9",
+      "cached_tokens": 108,
+      "messages": 1,
+      "archived": true
+    },
+    {
+      "thread": "01a12e94-3174-7b31-b1da-81fdb4e0acd5",
+      "cached_tokens": 106,
+      "messages": 4,
+      "archived": false
+    },
+    {
+      "thread": "019cd038-7ef2-7f70-93ab-48cfe66a34f6",
+      "cached_tokens": 99,
+      "messages": 2,
+      "archived": false
+    },
+    {
+      "thread": "01a1068b-2d88-72a1-8686-3056fdbd0fe4",
+      "cached_tokens": 99,
+      "messages": 2,
+      "archived": true
+    },
+    {
+      "thread": "019d8c1e-09c0-75f0-83b5-29d8e9129c6d",
+      "cached_tokens": 93,
+      "messages": 4,
+      "archived": true
+    },
+    {
+      "thread": "019e24c6-9f06-7b90-9a9c-85b1a7462afb",
+      "cached_tokens": 90,
+      "messages": 2,
+      "archived": true
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "checks": 3,
+  "framework_unchanged": true,
+  "messages": 39,
+  "observations": 46,
+  "initial_checked": 23,
+  "same_class_checked": 4,
+  "outside_checked": 2,
+  "checked_unique": 29,
+  "unreviewed_second_pass": 10,
+  "issue_records": 2,
+  "substantive_detail_omissions": 1,
+  "scope_spelling_errors": 1,
+  "outside_issues": 0,
+  "repaired_claim_ids": [
+    "O001"
+  ],
+  "scope_typo_fixed_ids": [
+    "O040",
+    "O041",
+    "O042",
+    "O043"
+  ],
+  "independent_full_review": false,
+  "reserved_eval_unread": true,
+  "sensitive_sources_local": true,
+  "no_live_old_project_tests": true
+}

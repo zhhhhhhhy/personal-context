@@ -4724,6 +4724,98 @@
       "updated_at": "2026-10-16T04:11:13+00:00",
       "revision": 1,
       "history": []
+    },
+    {
+      "id": "project.gaia-claude-code-inputs",
+      "kind": "project",
+      "title": "项目：GAIA Claude Code输入与prompt边界",
+      "claim": "原D:/worker/gaia_claude_code任务指定Gaia_agent_team的去答案split_validation题目和prompt_gaia；允许略改prompt，但保留创建AGENT TEAM的核心。要求完整轨迹、token、tool与subagent调用信息。用户表示历史经第三方API调用OpenAI模型，配置在litellm目录。",
+      "scope": "历史gaia_claude_code项目的GAIA输入、prompt与模型通道核对",
+      "exceptions": [
+        "全部是历史用户要求/陈述：当前数据是否确已去答案、provider/model、运行和日志完整性均未重核。",
+        "Claude Code是工具/编排名称，不能据它认定实际模型为原生Claude；地域可用性描述不作当前事实。",
+        "与上一轮gaia_claude_test来源cwd不同，项目合并/版本关系未核，不能合并或替代那条记忆。",
+        "不在本轮启动LiteLLM、修改prompt或重跑评测；原启动授权不延续。"
+      ],
+      "tags": [
+        "GAIA",
+        "Claude Code",
+        "prompt_gaia",
+        "split_validation",
+        "OpenAI",
+        "LiteLLM",
+        "模型来源"
+      ],
+      "target": "references/projects/gaia-claude-code-inputs.md",
+      "project": "gaia-claude-code",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "evidence": [
+        {
+          "ref": "R012-M012",
+          "thread_id": "019dc367-2e64-7281-b9fb-d1c54b16a4f0",
+          "location": "rollout-2026-04-25T14-50-12-019dc367-2e64-7281-b9fb-d1c54b16a4f0.jsonl:L97",
+          "family_id": "019dc367-2e64-7281-b9fb-d1c54b16a4f0",
+          "source_kind": "user_authored",
+          "text_sha256": "60a51fb80f804b7426a46c01195bd2b6c645e30498194f12e9bd4148c60f4983",
+          "message_timestamp": "2026-04-25T06:56:37.516Z",
+          "support": "原来源cwd为gaia_claude_code；用户指定输入/核心prompt边界、采集要求和历史模型通道。"
+        }
+      ],
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "status": "active",
+      "updated_at": "2026-10-16T04:29:06+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "project.reportcodex-template",
+      "kind": "project",
+      "title": "项目：工业报告样本模板与数据分离",
+      "claim": "原D:/worker/reportCodex任务以同风格demo1.docx、demo2.docx抽取公共框架：起始页、表格框架、字号、行距、字体等；把固定样式与后续非公共数据分离，使后续填充仍生成同风格工业报告。",
+      "scope": "恢复原reportCodex工业报告样本模板任务时",
+      "exceptions": [
+        "原两个样本及当前版本未重开，未验证模板/生成器已实现；不当已交付资产。",
+        "不把两个示例文件或某个字号当所有报告的固定标准；没有指定JSON/schema或新输入格式。",
+        "仅为原项目资料，未来任务先确认样本/格式与当前数据；本轮不处理Word文件。"
+      ],
+      "tags": [
+        "工业报告",
+        "模板",
+        "样本",
+        "公共框架",
+        "数据",
+        "reportCodex"
+      ],
+      "target": "references/projects/reportcodex-template.md",
+      "project": "reportcodex",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "evidence": [
+        {
+          "ref": "R012-M037",
+          "thread_id": "019d8c1e-09c0-75f0-83b5-29d8e9129c6d",
+          "location": "rollout-2026-04-14T21-11-12-019d8c1e-09c0-75f0-83b5-29d8e9129c6d.jsonl:L33",
+          "family_id": "019d8c1e-09c0-75f0-83b5-29d8e9129c6d",
+          "source_kind": "user_authored",
+          "text_sha256": "d39ed0250b40f5a2ba1a2c8e4b89e2ac7a4ef1d8ff49bd6142140b72f4a21370",
+          "message_timestamp": "2026-04-14T13:14:36.268Z",
+          "support": "明确两个同风格样本、公共样式元素及未来非公共数据填充目标。"
+        }
+      ],
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "status": "active",
+      "updated_at": "2026-10-16T04:29:06+00:00",
+      "revision": 1,
+      "history": []
     }
   ],
   "decisions": [
@@ -5137,5 +5229,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。"
     }
   ],
-  "updated_at": "2026-10-16T04:11:13+00:00"
+  "updated_at": "2026-10-16T04:29:06+00:00"
 }

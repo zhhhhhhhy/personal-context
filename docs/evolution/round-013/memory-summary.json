@@ -1,0 +1,35 @@
+{
+  "new_records": [
+    {
+      "id": "project.gaia-claude-code-inputs",
+      "title": "项目：GAIA Claude Code输入与prompt边界",
+      "claim": "原D:/worker/gaia_claude_code任务指定Gaia_agent_team的去答案split_validation题目和prompt_gaia；允许略改prompt，但保留创建AGENT TEAM的核心。要求完整轨迹、token、tool与subagent调用信息。用户表示历史经第三方API调用OpenAI模型，配置在litellm目录。",
+      "scope": "历史gaia_claude_code项目的GAIA输入、prompt与模型通道核对",
+      "exceptions": [
+        "全部是历史用户要求/陈述：当前数据是否确已去答案、provider/model、运行和日志完整性均未重核。",
+        "Claude Code是工具/编排名称，不能据它认定实际模型为原生Claude；地域可用性描述不作当前事实。",
+        "与上一轮gaia_claude_test来源cwd不同，项目合并/版本关系未核，不能合并或替代那条记忆。",
+        "不在本轮启动LiteLLM、修改prompt或重跑评测；原启动授权不延续。"
+      ]
+    },
+    {
+      "id": "project.reportcodex-template",
+      "title": "项目：工业报告样本模板与数据分离",
+      "claim": "原D:/worker/reportCodex任务以同风格demo1.docx、demo2.docx抽取公共框架：起始页、表格框架、字号、行距、字体等；把固定样式与后续非公共数据分离，使后续填充仍生成同风格工业报告。",
+      "scope": "恢复原reportCodex工业报告样本模板任务时",
+      "exceptions": [
+        "原两个样本及当前版本未重开，未验证模板/生成器已实现；不当已交付资产。",
+        "不把两个示例文件或某个字号当所有报告的固定标准；没有指定JSON/schema或新输入格式。",
+        "仅为原项目资料，未来任务先确认样本/格式与当前数据；本轮不处理Word文件。"
+      ]
+    }
+  ],
+  "outcomes": {
+    "memories": 6,
+    "covered": 1,
+    "deferred": 39
+  },
+  "new_preferences": 0,
+  "new_global_rules": 0,
+  "project_merge": "Not performed: gaia_claude_code and gaia_claude_test source directories differ; relationship/version unverified."
+}

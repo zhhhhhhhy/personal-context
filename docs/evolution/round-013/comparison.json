@@ -1,0 +1,47 @@
+{
+  "reference": {
+    "round": 11,
+    "tool_return_tokens": 56959,
+    "raw_tokens": 2119,
+    "tokens_per_1000_raw": 26880.13
+  },
+  "runs": [
+    {
+      "label": "冻结运行1",
+      "round": 12,
+      "tool_return_tokens": 16690,
+      "raw_tokens": 2084,
+      "tokens_per_1000_raw": 8008.64,
+      "normalized_saving_pct": 70.21,
+      "checked": 38,
+      "messages": 50,
+      "substantive_issues": 2,
+      "scope_spelling_issues": 0,
+      "unreviewed": 12,
+      "unique_raw_tokens": 2079,
+      "tokens_per_1000_unique_raw": 8027.9,
+      "normalized_saving_unique_raw_pct": 70.13
+    },
+    {
+      "label": "冻结运行2",
+      "round": 13,
+      "tool_return_tokens": 12911,
+      "raw_tokens": 1960,
+      "tokens_per_1000_raw": 6587.24,
+      "normalized_saving_pct": 75.49,
+      "checked": 29,
+      "messages": 39,
+      "substantive_issues": 1,
+      "scope_spelling_issues": 1,
+      "unreviewed": 10,
+      "unique_raw_tokens": 1757,
+      "tokens_per_1000_unique_raw": 7348.32,
+      "normalized_saving_unique_raw_pct": 72.66
+    }
+  ],
+  "cutoff": "2026-10-16T04:31:18.747Z",
+  "boundary": "Top-level returned tool text since the current user request, o200k_base. Includes metadata selection failures, local adapter quoting error, source/review, domain memory retrieval and validations. No protocol body or framework implementation was returned. Excludes this in-flight measurement response and later delivery, system/developer prompts, already-present history, user input and assistant generation. Not billing or total context-window usage.",
+  "same_framework_hashes": true,
+  "independent_completeness_reference": false,
+  "pooled_normalized_saving_pct": 72.77
+}
