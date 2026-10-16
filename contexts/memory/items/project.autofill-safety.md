@@ -1,12 +1,14 @@
 # 浏览器AutoFill：指标与续接约束
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.autofill-safety`
 - kind: project
-- status: active
+- status: superseded
 - scope: 2026-10-02～04来源版本；当前服务器、模型和评测协议待核
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T01:41:42+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 避免错误填写是独立硬指标；95%+是历史目标，HTML/Word/Excel/Markdown是当时范围。恢复该版本时还需读取项目页的分工、语言和主机浏览器限制。
 
@@ -17,6 +19,7 @@
 - 只用于核对身份后的对应项目；日期到期只提示复核，不自动判失效。
 - review_after: 2026-11-16
 - target: references/projects/browser-autofill.md
+- replaced_by: project.autofill-safety-v2
 
 ## Evidence pointers
 

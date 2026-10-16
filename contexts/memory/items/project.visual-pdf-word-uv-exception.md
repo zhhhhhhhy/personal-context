@@ -1,12 +1,14 @@
 # PDF转Word项目：uv构建与API例外
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.visual-pdf-word-uv-exception`
 - kind: project
-- status: active
+- status: archived
 - scope: 原D:/worker/reportCodex/visual_pdf_to_word这次环境检查和修复任务；提交版本未核
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T04:52:48+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 历史visual_pdf_to_word任务要求先了解环境、检查整个项目并修复问题，API硬编码保持不变，同时将项目改用uv构建。
 
@@ -17,6 +19,7 @@
 - 当前明确要求或项目协议发生变化时先核对适用性，不把旧修改要求当无限执行授权。
 - review_after: 2027-01-16
 - target: references/projects/visual-pdf-word-uv-exception.md
+- retirement_reason: uv迁移和API不改是该次修复约定，退出跨任务活跃记忆；原例外不被取消，也不成为当前执行授权，恢复原任务仍须核对。
 
 ## Evidence pointers
 

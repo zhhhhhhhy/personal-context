@@ -22,7 +22,7 @@
 - overlap: reinforces existing RAGSystem and browser-channel guidance
 - status: resolved
 - disposition: project / scope_project_material
-- destination: project.rag-contract
+- destination: project.rag-contract-v2
 
 ## C-20261014-021
 
@@ -70,7 +70,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: project / scope_project_material
-- destination: project.taskgraph-design-scoped
+- destination: project.taskgraph-design-scoped-v2
 
 ## C-20261014-044
 

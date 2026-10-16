@@ -1,4 +1,17 @@
-# Task Graph: scoped design decisions
+# 任务图：设计意图与能力边界
+
+## 续接摘要
+
+保留Workspace→Run→Task Graph及HTTP/JSON的项目设计入口；已有Context记录区分旧混合验收设计与只读观测MVP规范，不能把执行、自动验证或complete_task/reject_task当作已实现能力。
+
+- 旧设计与已有本地规范核对记录分别标日期；当前实现未在本次核验。
+- 恢复项目时核对实际schema与目标，不把该架构推广成其他项目默认方案。
+
+本次只整理已有Context，没有读取项目运行状态。先用本节确认范围，只有相关任务需要时才读取下面的版本细节；旧约定未因摘要精简而取消。
+
+## 来源版本与历史细节（按需追溯）
+
+### Task Graph: scoped design decisions
 
 Identity: project key `taskgraph`; verified source family `019f92c5-1c9c-78a3-acb0-c23a892d49c1`; source workspace `D:/worker/codex-visual`; E145–E149 at 2026-07-24 06:21–06:31 UTC. That root identifies the historical task, not an assertion about today's implementation commit.
 

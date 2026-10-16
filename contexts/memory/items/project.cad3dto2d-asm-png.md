@@ -1,12 +1,14 @@
 # CAD3DTO2D：asm到PNG需求边界
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.cad3dto2d-asm-png`
 - kind: project
-- status: active
+- status: superseded
 - scope: 来源cwd为CAD3DTO2D的历史转换试验；具体Git版本与制图标准未核
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T04:52:48+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 历史CAD3DTO2D任务要求把3D asm模型转为2D PNG图纸；模块号是零部件装配选择条件之一；转换中自动标注尺寸、粗糙度、公差和明细表。
 
@@ -17,6 +19,7 @@
 - 不与报告转换、RAG或其它CAD项目合并。
 - review_after: 2027-01-16
 - target: references/projects/cad3dto2d-asm-png.md
+- replaced_by: project.cad3dto2d-asm-png-v2
 
 ## Evidence pointers
 

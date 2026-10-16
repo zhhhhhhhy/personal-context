@@ -1,12 +1,14 @@
 # 任务图：范围与验收设计
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.taskgraph-design-scoped`
 - kind: project
-- status: active
+- status: superseded
 - scope: D:/worker/codex-visual；区分2026-07-24设计与当前本地只读MVP规范
 - verification: historical_design_current_local_spec_differs
 - validity: project
-- updated_at: 2026-10-16T01:45:00+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 历史方案选择Workspace→Run→Task Graph、HTTP/JSON和混合验收；2026-10-16核对的本地MVP_SPEC却限定为只读观测，不执行或验证任务。保留旧设计意图，不能据此假定当前已有complete_task/reject_task接口；观察Agent运行情况也未实测。
 
@@ -17,6 +19,7 @@
 - 当前MVP规范与旧混合验收设计不同；继续时核对实际schema和用户当前目标。
 - review_after: 2026-11-16
 - target: references/projects/taskgraph.md
+- replaced_by: project.taskgraph-design-scoped-v2
 
 ## Evidence pointers
 

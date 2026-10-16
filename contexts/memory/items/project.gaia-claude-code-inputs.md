@@ -1,12 +1,14 @@
 # 项目：GAIA Claude Code输入与prompt边界
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.gaia-claude-code-inputs`
 - kind: project
-- status: active
+- status: superseded
 - scope: 历史gaia_claude_code项目的GAIA输入、prompt与模型通道核对
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T04:29:06+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 原D:/worker/gaia_claude_code任务指定Gaia_agent_team的去答案split_validation题目和prompt_gaia；允许略改prompt，但保留创建AGENT TEAM的核心。要求完整轨迹、token、tool与subagent调用信息。用户表示历史经第三方API调用OpenAI模型，配置在litellm目录。
 
@@ -18,6 +20,7 @@
 - 不在本轮启动LiteLLM、修改prompt或重跑评测；原启动授权不延续。
 - review_after: 2027-01-16
 - target: references/projects/gaia-claude-code-inputs.md
+- replaced_by: project.gaia-claude-code-inputs-v2
 
 ## Evidence pointers
 

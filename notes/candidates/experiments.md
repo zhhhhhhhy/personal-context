@@ -60,7 +60,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: project / scope_project_material
-- destination: project.core200-provenance-v5
+- destination: project.core200-provenance-v6
 
 ## C-20261014-034
 
@@ -72,7 +72,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: project / scope_project_material
-- destination: project.jev-comparison
+- destination: project.jev-comparison-v2
 
 ## C-20261014-039
 
@@ -96,4 +96,4 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: project / scope_project_material
-- destination: project.autofill-safety
+- destination: project.autofill-safety-v2

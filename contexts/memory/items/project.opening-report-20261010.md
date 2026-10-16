@@ -1,12 +1,14 @@
 # 开题报告：问题、研究内容与技术路线
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.opening-report-20261010`
 - kind: project
-- status: active
+- status: merged
 - scope: 2026-10-10开题报告备份的修改约定；当前副本未核实
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T02:20:00+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 2026-10-10指定副本先提出三个方面具体问题，再组织至少三个研究内容块；补技术路线、Agent背景和填表到合同的研究衔接，保持拟开展研究口吻，避免数据库等实施细节。
 
@@ -16,6 +18,7 @@
 - 口语中可暂不提的对象不明，不能据此自行删主题。
 - review_after: 2026-11-16
 - target: references/projects/opening-report-20261010.md
+- merged_into: project.opening-report-versions
 
 ## Evidence pointers
 

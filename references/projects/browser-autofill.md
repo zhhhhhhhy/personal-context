@@ -1,4 +1,18 @@
-# Browser AutoFill: scoped project material
+# 浏览器AutoFill：续接约束与验收入口
+
+## 续接摘要
+
+继续对应AutoFill版本时，把错误填写单独作为验收指标，保留主机浏览器边界、技术材料英文/用户汇报中文及条件化模型选择。当前实现和阈值按匹配项目契约确认；旧目标、材料范围和试跑选择仅留历史。
+
+- 只用于2026-10-02～04来源对应任务；当前根目录、版本与浏览器通道需在实际续接时核对。
+- 95%目标、四类材料和旧模型选择不是当前默认值；GPU条件及主机浏览器边界未被此次整理取消。
+- 不与RAGSystem自动合并，不授予委派、服务器或浏览器权限。
+
+本次只整理已有Context，没有读取项目运行状态。先用本节确认范围，只有相关任务需要时才读取下面的版本细节；旧约定未因摘要精简而取消。
+
+## 来源版本与历史细节（按需追溯）
+
+### Browser AutoFill: scoped project material
 
 Identity: project key `browser-autofill`; source family `01a0f78f-e0ea-7a70-ab46-85f58a670924`; source workspace `2026-10-01/new-chat`. Verified source-message version: 2026-10-02 through 2026-10-04 UTC. Current server root, commit and deployed state were not rechecked in this reorganization. Do not merge with `rag-system` until root, remote and contract version are verified.
 

@@ -1,12 +1,14 @@
 # 项目：AutoFill至MASArena迁移验收层级
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.masarena-migration-acceptance`
 - kind: project
-- status: active
+- status: superseded
 - scope: 恢复该AutoFill→MASArena迁移或核查毕业设计实验环境时
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T03:53:18+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 历史验收要求：AutoFill不可用时MASArena仍可数据准备、审计和评测入口检查；活动代码/配置无AutoFill路径依赖；迁移前后数据SHA-256一致；AutoFill保留产品代码与无关历史项目；历史来源只留清单，不构成运行时依赖。
 
@@ -16,6 +18,7 @@
 - 唯一实验环境、共享数据关系与全实验可运行性仍待相应代码/运行记录核实；不获得清理授权。
 - review_after: 2027-01-16
 - target: references/projects/masarena-migration-acceptance.md
+- replaced_by: project.masarena-migration-acceptance-v2
 
 ## Evidence pointers
 

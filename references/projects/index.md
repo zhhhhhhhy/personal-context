@@ -1,15 +1,42 @@
 # 项目资料入口
 
-仅在继续对应项目时加载。先用当前目录、Git remote/commit、协议或稿件确认身份；项目名相似不代表同一版本。历史日期不是失效证明，未核实的当前状态继续标为待核。
+当前有12个活跃项目入口。只在继续对应项目时，先确认项目、目录/版本和目标材料，再读取命中条目的“续接摘要”；详细来源按需追溯。项目名相似不代表同版，历史约定不授予新权限。本次只整理已有Context，没有核验任何项目进度。
 
-| 项目键 | 正文 | 来源版本与边界 |
-|---|---|---|
-| `browser-autofill` | [浏览器 AutoFill](browser-autofill.md) | 2026-10-02～04；指标、语言/分工、主机浏览器与条件模型；当前远程版本待核 |
-| `rag-system` | [RAGSystem](rag-system.md) | 2026-10-04 提供的 `/workspace/zhy/RAGSystem` 契约；不与前一项擅自合并 |
-| `contract-research` | [合同研究](contract-research.md) | JEV、Core200 待核问题；Core200版本资料另见下方，保留论文同步和外部编辑限制 |
-| `taskgraph` | [任务图](taskgraph.md) | 2026-07-24 `D:/worker/codex-visual` 设计；实现状态待核 |
-| `demopilot` | [DemoPilot 历史补充](demopilot.md) | 方法已进 Skill；目录和旧数量只留项目资料 |
+| # | 活跃入口 | 项目键 | 何时加载 |
+|---|---|---|---|
+| 1 | [浏览器AutoFill](browser-autofill.md) | `browser-autofill` | 错误填写指标、浏览器通道及对应版本的续接约束 |
+| 2 | [RAGSystem契约](rag-system.md) | `rag-system` | 定位权威项目契约；不混用其他AutoFill设置 |
+| 3 | [JEV比较与任务边界](contract-research.md) | `contract-research` | 区分系统/判断协议，核对工程、论文和外部编辑范围 |
+| 4 | [任务图](taskgraph.md) | `taskgraph` | 区分历史设计与记录中的只读MVP能力 |
+| 5 | [ContractFill中文稿](contractfill-zh-20261012.md) | `contract-research` | 确认语种、稿件和该版贡献边界 |
+| 6 | [开题报告版本入口](opening-report-versions.md) | `contract-research` | 先选2026-10-03原稿或2026-10-10备份，再加载各自约定 |
+| 7 | [MASArena迁移验收](masarena-migration-acceptance.md) | `contract-research` | 核对对应迁移的依赖、数据一致性及保留范围 |
+| 8 | [GAIA Claude test](gaia-claude-trace-contract.md) | `gaia-claude-test` | 该项目trace、计量范围与联调验收要求 |
+| 9 | [GAIA Claude Code](gaia-claude-code-inputs.md) | `gaia-claude-code` | 该项目输入/prompt契约；不与上一项目混用 |
+| 10 | [reportCodex模板](reportcodex-template.md) | `reportcodex` | 固定格式与可变数据分离的报告需求 |
+| 11 | [CAD3DTO2D](cad3dto2d-asm-png.md) | `cad3dto2d` | asm→PNG、装配条件和标注需求范围 |
+| 12 | [Core200版本](core200-provenance.md) | `contract-research` | 按已有记录确认标签/结果版本及证据边界；不自动跟踪进度 |
 
-检索示例：`python -X utf8 scripts/context-memory.py search --project contract-research --query "Core200 人审"`。默认关键词检索不返回 `kind=project`；知道项目后再加 `--project`，用 `show` 选中条目并读取目标正文的相关小节。旧记录用 `history --id <旧ID>`，不作为当前指令。
+检索使用既有工具，例如：
 
-本轮补充（2026-10-16）：合同研究按对象读取[Core200构造/版本追溯](core200-provenance.md)（历史73/127、88/112与本地正式冻结89/111；远端镜像未同步）、[2026-10-12中文稿定位](contractfill-zh-20261012.md)、[2026-10-10开题报告约定](opening-report-20261010.md)。旧人审缺口和各次任务边界继续保留；后两份不会自动覆盖新稿。
+```powershell
+python -X utf8 D:/worker/personal-context/scripts/context-memory.py search --project reportcodex --query "模板"
+python -X utf8 D:/worker/personal-context/scripts/context-memory.py show --id project.reportcodex-template-v2
+```
+
+搜索默认只返回少量路由，选中后再读正文；不整份加载所有项目。普通关键词检索默认排除项目资料。合并、替代和归档的旧记录退出默认检索，稳定偏好和通用方法仍使用原有入口。
+
+## 归档任务（仅显式恢复原任务或追溯时读取）
+
+归档不是完成、失效或撤销约定。下面4份原文和来源保持原样；未完成要求仍属原任务，恢复同一任务时先核对当前版本及仍适用的约束。
+
+| 原任务 | 保留资料与边界 |
+|---|---|
+| [工业智能体单页PPT](industrial-slide-request.md) | 原布局、内容衔接和第五项缺口；没有确认已完成 |
+| [PDF转Word修复](visual-pdf-word-uv-exception.md) | uv要求和当次API处理例外；不推广或自动延续为新权限 |
+| [GAIA九题批次](gaia-new-data-nine.md) | 三级各三道及未跑数据要求；不是默认配额或运行成功记录 |
+| [Benchmark文献检索](icml-published-benchmark-comparator.md) | 已发表、最接近、Benchmark三个条件；没有确认已找到 |
+
+可用 `history --id <旧条目ID> --include-retired` 查旧条目。精简保留的11条旧记录及两份开题旧入口同样保留历史；两份开题正文未改，入口合并不拼接其约定。
+
+其他已有历史参考：[DemoPilot旧项目补充](demopilot.md)，不计入上述12个活跃入口。

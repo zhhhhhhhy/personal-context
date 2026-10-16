@@ -1,4 +1,18 @@
-# Contract research: versioned project material
+# 合同研究：比较边界与任务约束入口
+
+## 续接摘要
+
+对应合同研究版本区分Direct、JEV-A、JEV-B 0.6B及组合，区分答案盲的前置判断与可见候选的支持判断；按匹配任务保留工程/论文分离、稿件范围及定向外部编辑的确认条件。旧开发集提议和零散分数不作当前协议。
+
+- 不同任务的论文同步、局部编辑与启动约定分别保留，不按消息日期跨任务覆盖。
+- 继续原定向编辑任务时，外发编辑Prompt先确认、只改指定位置等原约定仍需遵守；本次不派发任务。
+- 历史样本数、重复次数和方差问题只在来源细节中追溯，不推断为已完成结果。
+
+本次只整理已有Context，没有读取项目运行状态。先用本节确认范围，只有相关任务需要时才读取下面的版本细节；旧约定未因摘要精简而取消。
+
+## 来源版本与历史细节（按需追溯）
+
+### Contract research: versioned project material
 
 Project key: `contract-research`. These are separate task/artifact versions, not one global current execution prompt. No remote checkout, experiment or human-review record was rerun here. Before continuation, identify the target root, current commit/manifest, draft and active assignment; consult only the matching sections. A later source message in a different task does not silently cancel another assignment.
 

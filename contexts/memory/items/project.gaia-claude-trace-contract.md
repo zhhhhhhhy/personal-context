@@ -1,12 +1,14 @@
 # 项目：GAIA Claude联调与trace计量口径
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.gaia-claude-trace-contract`
 - kind: project
-- status: active
+- status: superseded
 - scope: 历史D:/worker/gaia_claude_test项目的联调与Agent team日志核对
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T04:11:13+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 原gaia_claude_test合并项目的联调先确认链路互通，答案正确率另评；需要完整trace/原始响应，说明token计数是否含system、subagent、hidden context、compaction、retry和工具相关模型调用，并统计代理数/深度、verification与recovery；LiteLLM数据按对话分开。
 
@@ -17,6 +19,7 @@
 - 原尝试5题与启动config.yaml是旧执行要求，不转为永久配额或本次运行授权。
 - review_after: 2027-01-16
 - target: references/projects/gaia-claude-trace-contract.md
+- replaced_by: project.gaia-claude-trace-contract-v2
 
 ## Evidence pointers
 

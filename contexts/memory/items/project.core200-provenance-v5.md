@@ -1,12 +1,14 @@
 # Core200：本地正式冻结89/111，远端镜像未同步
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.core200-provenance-v5`
 - kind: project
-- status: active
+- status: superseded
 - scope: contract-research 的Core200：2026-10-16本地正式冻结标签及实验一动作/关联结果；不代表远端镜像、论文副本同步或候选V/M/C完成
 - verification: local_official_freeze_and_manifest_hashes_verified; remote_mirror_not_synced; human_gold_false; content_scoring_not_performed
 - validity: project
-- updated_at: 2026-10-16T06:09:39+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 Core200保留历史73/127及旧快照88/112。2026-10-16本地正式版core200-reference-v3-qc4已冻结89应填/111应审核（充分89、部分36、无证据75、冲突0）；对应实验一正式结果也为OFFICIAL_FROZEN，5组既有输出共1000行绑定同一参考哈希。已只读核对333个清单文件及旧标签/原始归档哈希。4题QC修订已正式采用，仅0039由审核变应填；主配对4B总误填35/111、过度审核12/89，解释限四类有共同支持的字段。新版远端镜像因SSH连接超时仍未同步，不能宣称远端更新。正式冻结不等于人工金标或完整JointSuccess：release声明human_gold=false，content_scoring=NOT_PERFORMED。实验二NOT_RUN，旧v1材料须在未来明确授权执行前重绑新版参考。
 
@@ -20,6 +22,7 @@ Core200保留历史73/127及旧快照88/112。2026-10-16本地正式版core200-r
 - 实验二状态NOT_RUN、allow_model_execution=false；旧v1材料绑定旧参考，未来明确授权执行前须重绑新版。此记忆不授权启动实验、迁移或删除，不晋升长期规则。
 - review_after: 2026-11-16
 - target: references/projects/core200-provenance.md
+- replaced_by: project.core200-provenance-v6
 
 ## Evidence pointers
 

@@ -1,12 +1,14 @@
 # 合同研究：JEV对照与任务边界
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.jev-comparison`
 - kind: project
-- status: active
+- status: superseded
 - scope: 2026-10-06～10实验讨论；论文及启动任务版本分别列在项目页
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T01:41:42+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 区分Direct、JEV-A、JEV-B 0.6B与组合，以及答案盲/答案可见判断；83开发样本是历史提议，135/200、136/200和164/200的运行次数/方差仍待查。续接时按项目页核对工程与论文范围、指定稿件及外部编辑约定。
 
@@ -16,6 +18,7 @@
 - 只用于核对身份后的对应项目；日期到期只提示复核，不自动判失效。
 - review_after: 2026-11-16
 - target: references/projects/contract-research.md
+- replaced_by: project.jev-comparison-v2
 
 ## Evidence pointers
 

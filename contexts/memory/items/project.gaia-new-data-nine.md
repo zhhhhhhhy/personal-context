@@ -1,12 +1,14 @@
 # GAIA Claude test：未跑数据按三级各取三道
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.gaia-new-data-nine`
 - kind: project
-- status: active
+- status: archived
 - scope: 来源cwd为D:/worker/gaia_claude_test的该次测试请求；与其它批次及gaia_claude_code版本分开
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T04:52:48+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 历史gaia_claude_test任务先测试项目连通性，再重新挑选未跑过的数据：level1、level2、level3各3道，共9道，再运行一次。
 
@@ -17,6 +19,7 @@
 - 虽然cwd对应既有gaia-claude-test项目键，提交版本与跨线程先后关系未核，不合并或替代旧任务；不能并入gaia_claude_code。
 - review_after: 2027-01-16
 - target: references/projects/gaia-new-data-nine.md
+- retirement_reason: 三级各三道/共九道是一次运行请求，保留为旧任务记录，不作为固定配额；不声称已执行或取消未完成要求。
 
 ## Evidence pointers
 

@@ -1,12 +1,14 @@
 # 项目：工业报告样本模板与数据分离
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.reportcodex-template`
 - kind: project
-- status: active
+- status: superseded
 - scope: 恢复原reportCodex工业报告样本模板任务时
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T04:29:06+00:00
+- updated_at: 2026-10-16T06:33:13+00:00
 
 原D:/worker/reportCodex任务以同风格demo1.docx、demo2.docx抽取公共框架：起始页、表格框架、字号、行距、字体等；把固定样式与后续非公共数据分离，使后续填充仍生成同风格工业报告。
 
@@ -17,6 +19,7 @@
 - 仅为原项目资料，未来任务先确认样本/格式与当前数据；本轮不处理Word文件。
 - review_after: 2027-01-16
 - target: references/projects/reportcodex-template.md
+- replaced_by: project.reportcodex-template-v2
 
 ## Evidence pointers
 
