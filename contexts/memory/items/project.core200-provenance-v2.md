@@ -1,12 +1,14 @@
 # Core200：版本、构造与人审证据
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.core200-provenance-v2`
 - kind: project
-- status: active
+- status: superseded
 - scope: 合同研究Core200原始构造与重标注追溯；2026-10-13至15来源版本
 - verification: claims_pending_source_verification
 - validity: project
-- updated_at: 2026-10-16T02:20:00+00:00
+- updated_at: 2026-10-16T05:55:15+00:00
 
 分开追溯原始200题生成、后续审核与新Agent标注；核对实际模型、完整输入、prompt和逐题记录。用户提供73应填/127应审核口径，但原始人审、两人独立/第三人裁定/无模型建议仍待核；Agent重标不改变来源事实。比较旧新版时分报动作、四分类一致性及逐题差异。
 
@@ -18,6 +20,7 @@
 - 不沿用历史启动、迁移、删除权限；现权威目录与完成状态待核。
 - review_after: 2026-11-16
 - target: references/projects/core200-provenance.md
+- replaced_by: project.core200-provenance-v3
 
 ## Evidence pointers
 

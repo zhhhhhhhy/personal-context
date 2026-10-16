@@ -60,7 +60,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: project / scope_project_material
-- destination: project.core200-provenance-v2
+- destination: project.core200-provenance-v3
 
 ## C-20261014-034
 
