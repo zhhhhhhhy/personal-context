@@ -1,32 +1,18 @@
-# Personal Context evolution execution
+# 显式请求的历史对话导入
 
-Use the current Codex session as the semantic Observer and Reflector. Raw evidence stays local. Start with `docs/evolution/POLICY.md`.
+本页仅在用户明确要求“提炼历史对话”“用最近一周对话更新”等批量任务时读取。普通任务中的记忆更新直接使用 `docs/evolution/POLICY.md` 和 [现有记忆写入契约](personal-context-memory.md)，不经过本页。
 
-## Requested run
+## 使用已有工具
 
-Reuse session-loaded rules, Skills and known CLI contracts. Confirm their hashes
-in one local preparation summary; reread only changed or newly relevant sections.
-Reuse prior qualification metadata, exclude every processed selection, and verify
-only newly selected/changed source files. Do not redump database schemas, complete
-rankings or script bodies on success. Keep full check logs locally and return
-counts, failures and artifact paths. Return subprocess stdout directly instead
-of JSON-encoding the entire command result again. Count source, review and all
-tool-return text separately so preparation savings cannot hide skipped evidence.
+- 先明确本次来源范围；复用 `scripts/context-evolution.py prepare` 的日期筛选、增量去重和本地脱敏能力。不为导入重建框架或改写脚本；源日志只读，完整证据留本地。
+- 区分直接用户表达、引用、助手/工具结论和自动工作线程。只有直接父对话表达支持个人偏好；项目数量、对象、条件和待核状态不得因不确定而丢失。
+- Observer 聚焦选定来源；Reflector 对照相关活跃记忆、Skill 和 core，决定保存、已有覆盖、合并、替代或不保存。旧候选只在来源追溯或明确处理它们时读取。
+- 新写入仍使用 `context-memory.py validate/apply` 和现有本地来源清单。旧版 evolution apply/rollback 不能覆盖当前记忆源。
+- 只针对歧义、冲突和疑似遗漏补查相关来源，不默认独立全量复核。没有用户要求的实验时，不建立训练/评测分区，不做 frozen A/B、token 计量或成本比较。
+- 汇报保存了哪些可用内容、适用范围和待核事实；不把“当前已知问题已修复”说成“没有未知遗漏”。
 
-1. Run `python -X utf8 scripts/context-memory.py maintain`. Check due reviews, inactive targets and explicit temporary expiry. Stable preferences remain applicable within scope until new evidence or current instructions change them.
-2. Use `context-evolution.py prepare` for a new bounded cohort. Freeze dates, hashes and evaluation partition before reading message bodies. Keep parent conversation families together; exclude automatic worker requests as personal preference evidence. Do not import new history when the task only asks to maintain existing memory.
-3. Follow [source coverage](personal-context-observation.md) before candidate lookup. Preserve concrete requirements, counts, conditions, source and unknown status. A useful one-project agreement can become usable memory immediately; recurrence is required only for general rules.
-4. Use [concentrated semantic review](personal-context-review.md) when checking new extraction. Reuse already read inputs, check risk classes and a bounded outside-class sample. No default full independent inventory.
-5. Reflector checks active memory, related Skills/core and historical dispositions. Map observations exactly once through `memories`, `covered`, `promotions`, `reinforced`, `deferred` or `rejected` in the local reflection ledger. Entries retain `observation_ids`; the coverage validator accepts these routes. Existing coverage is credited and closed rather than left pending.
-6. Read [the memory write contract](personal-context-memory.md). Produce a local lifecycle plan with exact source pointers and the current memory base hash. Its validated operations add, merge, replace, archive, discard or review records. New general rules need distinct direct expressions in independent parent conversations and families; scoped memories need clear source, applicability and boundaries.
-7. Run `context-memory.py validate --plan ...`, then `apply --plan ...`. Recheck the actual task retrieval and report destinations. Use the returned transaction ID for guarded rollback when necessary. The old evolution `apply`/`rollback` is retained for pre-memory historical runs and refuses to overwrite the new store.
+## 旧协议和记录
 
-## Source and evaluation boundaries
+[来源覆盖](personal-context-observation.md)、[重点复核](personal-context-review.md)、`docs/evolution/round-*/`、`notes/evolution/` 和历史候选账本保留为专项参考和追溯资料。仅在任务需要其细节时读取；其中旧的冻结、计量、全库检查等要求不恢复为日常前置条件，当前政策优先。
 
-Preparation still supports date filtering and `--partition-manifest`, excludes automated roots and keeps evaluation families separate. `--message-date-policy thread-bounded` may retain undated user messages only when the parent's known interval is wholly inside the selected window; retain null message dates and report thread-level precision. Never manufacture timestamps.
-
-For a fresh response comparison, freeze candidate wording before evaluation. Use the same sanitized prompt, baseline Skills and conditions in both arms, and do not tune on held-out responses. Distinguish model judgment from user acceptance. Saving an attributed project agreement does not require an A/B improvement claim.
-
-For measured loading, use `scripts/context-meter.py` or save the exact retrieval outputs and measure their file bodies. Count repeated payloads and follow-up reads; distinguish memory/source payload from setup, tools, platform context and generation. A file-body token count is not full session billing.
-
-Recovery: read only the relevant entry in [the troubleshooting record](../../docs/evolution/TROUBLESHOOTING.md). Old batch records remain historical evidence, not instructions for new writes.
+只在遇到对应错误时查 [已有故障记录](../../docs/evolution/TROUBLESHOOTING.md)。没有后台调度；历史批量导入不是每次真实任务的收尾动作。
