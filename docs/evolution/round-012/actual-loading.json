@@ -1,0 +1,17 @@
+{
+  "baseline_reported_tool_return_tokens": 56959,
+  "current_tool_return_tokens": 16690,
+  "saving_pct": 70.7,
+  "groups": {
+    "启动、准备、检索、校验、错误与计量": 6624,
+    "来源页面返回（含失败批次和重读）": 3130,
+    "重点复核页面返回": 6936
+  },
+  "calls": 14,
+  "start": "2026-10-16T04:02:37.405Z",
+  "cutoff": "2026-10-16T04:13:26.059Z",
+  "tokenizer": "o200k_base",
+  "boundary": "Snapshot of top-level tool returned text since current user request. Includes errors, repeated reads, truncated wrappers, patches, code lookup, initial failed source and security repair. Excludes system/developer/prior history/user/assistant generation and this in-flight measurement output or later delivery. Not billing or independent whole-workflow AB.",
+  "raw_baseline": 2119,
+  "raw_current": 2084
+}

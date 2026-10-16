@@ -4601,6 +4601,129 @@
       "updated_at": "2026-10-16T03:53:18+00:00",
       "revision": 1,
       "history": []
+    },
+    {
+      "id": "project.gaia-claude-trace-contract",
+      "kind": "project",
+      "title": "项目：GAIA Claude联调与trace计量口径",
+      "claim": "原gaia_claude_test合并项目的联调先确认链路互通，答案正确率另评；需要完整trace/原始响应，说明token计数是否含system、subagent、hidden context、compaction、retry和工具相关模型调用，并统计代理数/深度、verification与recovery；LiteLLM数据按对话分开。",
+      "scope": "历史D:/worker/gaia_claude_test项目的联调与Agent team日志核对",
+      "exceptions": [
+        "这是用户提出的验收要求，原项目现版本与运行结果未核；没有证明上述日志或指标已具备。",
+        "链路优先仅适用于原联调阶段，不意味着正式评测忽略答案质量；不可观测计量保留未知。",
+        "原尝试5题与启动config.yaml是旧执行要求，不转为永久配额或本次运行授权。"
+      ],
+      "tags": [
+        "GAIA",
+        "Claude",
+        "trace",
+        "token",
+        "LiteLLM",
+        "联调",
+        "计量",
+        "subagent"
+      ],
+      "target": "references/projects/gaia-claude-trace-contract.md",
+      "project": "gaia-claude-test",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "evidence": [
+        {
+          "ref": "R012-M044",
+          "thread_id": "019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8",
+          "location": "rollout-2026-04-24T11-32-28-019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8.jsonl:L68",
+          "family_id": "019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8",
+          "source_kind": "user_authored",
+          "text_sha256": "ded455977bef9b059614be07be39defbbee3a38cf479f29ddf8552f47af3b78d",
+          "message_timestamp": "2026-04-24T03:35:17.502Z",
+          "support": "源会话cwd为gaia_claude_test；用户要求合并目录联调。"
+        },
+        {
+          "ref": "R012-M045",
+          "thread_id": "019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8",
+          "location": "rollout-2026-04-24T11-32-28-019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8.jsonl:L371",
+          "family_id": "019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8",
+          "source_kind": "user_authored",
+          "text_sha256": "d26159470773e000b06329fe9e7746da5fbad7fda049ee4aad1d800fc7eba1b5",
+          "message_timestamp": "2026-04-24T04:00:22.842Z",
+          "support": "仅原联调阶段先打通流程，答案错误不作阻塞。"
+        },
+        {
+          "ref": "R012-M046",
+          "thread_id": "019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8",
+          "location": "rollout-2026-04-24T11-32-28-019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8.jsonl:L381",
+          "family_id": "019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8",
+          "source_kind": "user_authored",
+          "text_sha256": "ec3b40e42b8cb88d49360ac0fc9fc5bd637c309c3f3c49bac64e38ff47ee5f0b",
+          "message_timestamp": "2026-04-24T04:04:26.422Z",
+          "support": "逐项要求trace、token范围与代理日志指标，未证明已运行。"
+        },
+        {
+          "ref": "R012-M047",
+          "thread_id": "019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8",
+          "location": "rollout-2026-04-24T11-32-28-019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8.jsonl:L436",
+          "family_id": "019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8",
+          "source_kind": "user_authored",
+          "text_sha256": "caf9381234c77851265d08c9f1aa152faee2c08d164664e5f71bc8352c2506cd",
+          "message_timestamp": "2026-04-24T04:22:19.517Z",
+          "support": "需要LiteLLM按对话分开采集。"
+        }
+      ],
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "status": "active",
+      "updated_at": "2026-10-16T04:11:13+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "project.opening-source-plan-20261003",
+      "kind": "project",
+      "title": "项目：开题原稿的素材与章节规划",
+      "claim": "2026-10-03原开题任务先产出拆解报告.md，按部分需求从第三章.pdf中选择合适素材；第三章只是中间过程。原规划第三章benchmark、第四章方法提升、第五章app/网站产品，均为拟完成内容。",
+      "scope": "原桌面郑惠宇开题报告.doc与第三章.pdf这一组合的历史修改任务",
+      "exceptions": [
+        "不能把局部PDF当全毕业设计，也不把章节规划当已有成果；材料不足可补来源或向用户询问。",
+        "不覆盖另一个20261003命名副本或2026-10-10备份的约定；恢复任务先确认目标文件/版本。",
+        "文字层修改、格式保留及开题写作原则仍由现有文档/开题Skill承载；本轮不修改文档。"
+      ],
+      "tags": [
+        "开题",
+        "第三章",
+        "素材",
+        "章节",
+        "benchmark",
+        "app",
+        "20261003"
+      ],
+      "target": "references/projects/opening-source-plan-20261003.md",
+      "project": "contract-research",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction",
+      "evidence": [
+        {
+          "ref": "R012-M025",
+          "thread_id": "01a0fe00-e004-7483-ae4b-5e994f2156df",
+          "location": "rollout-2026-10-03T03-04-25-01a0fe00-e004-7483-ae4b-5e994f2156df.jsonl:L12",
+          "family_id": "01a0fe00-e004-7483-ae4b-5e994f2156df",
+          "source_kind": "user_authored",
+          "text_sha256": "ebb9cd15221bb9f3f8c133b37881d2c1dcf87e50938a0e73a0e7e076fc5f8006",
+          "message_timestamp": "2026-10-02T19:04:37.039Z",
+          "support": "原任务给定素材、先拆解后选材和第三/四/五章规划；未重开附件。"
+        }
+      ],
+      "review_after": "2027-01-16",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "status": "active",
+      "updated_at": "2026-10-16T04:11:13+00:00",
+      "revision": 1,
+      "history": []
     }
   ],
   "decisions": [
@@ -5014,5 +5137,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。"
     }
   ],
-  "updated_at": "2026-10-16T03:53:18+00:00"
+  "updated_at": "2026-10-16T04:11:13+00:00"
 }

@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "evolution": "passed",
+  "source_to_repaired_observation_and_reflection": "passed",
+  "memory_plan": "passed",
+  "framework_hashes_checked": 89,
+  "framework_unchanged": true,
+  "source_messages": 50,
+  "observations": 52,
+  "initial_review_messages": 24,
+  "same_class_messages": 12,
+  "outside_sample_messages": 2,
+  "rechecked_unique": 38,
+  "second_pass_unreviewed": 12,
+  "known_issues": 2,
+  "same_class_issues": 0,
+  "outside_sample_issues": 0,
+  "repaired_observation_ids": [
+    "O025",
+    "O031"
+  ],
+  "independent_full_review": false,
+  "sensitive_records": "Historical login messages and fragments kept local; no raw source publicly saved. Frozen filter is not claimed to remove every credential fragment.",
+  "reserved_eval_unread": true
+}

@@ -1,0 +1,19 @@
+{
+  "messages": 50,
+  "train_roots": 7,
+  "eval_roots_unread": 1,
+  "raw_user_text": 2084,
+  "source_revised_payload": 3117,
+  "source_first_failed_payload": 0,
+  "source_actual_both_payloads": 3117,
+  "legacy_same_batch_source_reconstruction": 8898,
+  "source_format_saving_revised_pct": 64.97,
+  "source_format_saving_including_failed_read_pct": 64.97,
+  "review_actual_payload": 6775,
+  "review_whole_same_batch_mechanical": 8174,
+  "review_saving_pct": 17.12,
+  "source_plus_review_actual": 9892,
+  "source_plus_review_legacy_source_same_targeted_review": 15673,
+  "core_files_tokens": 1931,
+  "cross_batch_caveat": "62 messages/raw text differ from prior62; same-batch legacy reconstruction is mechanical, not a second model run. No source reread; matched raw volume; framework unchanged."
+}

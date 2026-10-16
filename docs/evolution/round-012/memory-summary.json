@@ -1,0 +1,37 @@
+{
+  "new_records": [
+    {
+      "id": "project.gaia-claude-trace-contract",
+      "kind": "project",
+      "title": "项目：GAIA Claude联调与trace计量口径",
+      "claim": "原gaia_claude_test合并项目的联调先确认链路互通，答案正确率另评；需要完整trace/原始响应，说明token计数是否含system、subagent、hidden context、compaction、retry和工具相关模型调用，并统计代理数/深度、verification与recovery；LiteLLM数据按对话分开。",
+      "scope": "历史D:/worker/gaia_claude_test项目的联调与Agent team日志核对",
+      "exceptions": [
+        "这是用户提出的验收要求，原项目现版本与运行结果未核；没有证明上述日志或指标已具备。",
+        "链路优先仅适用于原联调阶段，不意味着正式评测忽略答案质量；不可观测计量保留未知。",
+        "原尝试5题与启动config.yaml是旧执行要求，不转为永久配额或本次运行授权。"
+      ]
+    },
+    {
+      "id": "project.opening-source-plan-20261003",
+      "kind": "project",
+      "title": "项目：开题原稿的素材与章节规划",
+      "claim": "2026-10-03原开题任务先产出拆解报告.md，按部分需求从第三章.pdf中选择合适素材；第三章只是中间过程。原规划第三章benchmark、第四章方法提升、第五章app/网站产品，均为拟完成内容。",
+      "scope": "原桌面郑惠宇开题报告.doc与第三章.pdf这一组合的历史修改任务",
+      "exceptions": [
+        "不能把局部PDF当全毕业设计，也不把章节规划当已有成果；材料不足可补来源或向用户询问。",
+        "不覆盖另一个20261003命名副本或2026-10-10备份的约定；恢复任务先确认目标文件/版本。",
+        "文字层修改、格式保留及开题写作原则仍由现有文档/开题Skill承载；本轮不修改文档。"
+      ]
+    }
+  ],
+  "outcomes": {
+    "memories": 9,
+    "covered": 11,
+    "rejected": 2,
+    "deferred": 30
+  },
+  "new_preferences": 0,
+  "new_global_rules": 0,
+  "new_skills": 0
+}

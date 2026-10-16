@@ -1,0 +1,14 @@
+{
+  "prior_round": 11,
+  "current_round": 12,
+  "prior_tool_return_snapshot": 56959,
+  "current_tool_return_snapshot": 16690,
+  "prior_raw_tokens": 2119,
+  "current_raw_tokens": 2084,
+  "prior_return_tokens_per_1000_raw": 26880.13,
+  "current_return_tokens_per_1000_raw": 8008.64,
+  "normalized_saving_pct": 70.21,
+  "whole_snapshot_saving_pct": 70.7,
+  "cutoff": "2026-10-16T04:13:26.059Z",
+  "boundary": "Snapshot of top-level tool returned text since current user request. Includes errors, repeated reads, truncated wrappers, patches, code lookup, initial failed source and security repair. Excludes system/developer/prior history/user/assistant generation and this in-flight measurement output or later delivery. Not billing or independent whole-workflow AB."
+}

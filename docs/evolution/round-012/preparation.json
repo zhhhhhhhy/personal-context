@@ -1,0 +1,70 @@
+{
+  "train_roots": 7,
+  "reserved_unread_roots": 1,
+  "messages": 50,
+  "raw_tokens": 2084,
+  "previous_raw_tokens": 2119,
+  "raw_difference_pct": -1.65,
+  "cached_qualification_rows": 100,
+  "selected_only_source_verification": true,
+  "new_source": {
+    "messages": 50,
+    "status": "prepared",
+    "source_files": [
+      "review/source/page-001.json"
+    ],
+    "source_tokens": 3117,
+    "identity": "Full IDs, paths and line numbers stay in the local source-map; text is unchanged."
+  },
+  "selected": [
+    {
+      "thread": "01a13f86-47d9-7621-b9a1-22ed5010f7d9",
+      "title": "我发现了 codex 也更新了自动prompt的功能。这个功能是基于什",
+      "cached_tokens": 400,
+      "messages": 11,
+      "archived": false
+    },
+    {
+      "thread": "01a1076b-141f-7f71-8b5e-68c4f4318e6b",
+      "title": "我本地有一个 和codex 对话叫做科研，它经历了什么，为什么迭代的这",
+      "cached_tokens": 391,
+      "messages": 12,
+      "archived": true
+    },
+    {
+      "thread": "01a0fe00-e004-7483-ae4b-5e994f2156df",
+      "title": "# Files mentioned by the user:\n\n## ",
+      "cached_tokens": 294,
+      "messages": 1,
+      "archived": true
+    },
+    {
+      "thread": "01a09afd-fc1d-7803-b9b3-eebc948556d4",
+      "title": "接下来你连接服务器，作为worker。",
+      "cached_tokens": 289,
+      "messages": 11,
+      "archived": true
+    },
+    {
+      "thread": "01a12584-cfdb-71b2-9f0d-b45f900788d3",
+      "title": "# Files mentioned by the user:\n\n## ",
+      "cached_tokens": 240,
+      "messages": 2,
+      "archived": true
+    },
+    {
+      "thread": "01a07a04-da9b-7f90-8b2f-50479e742f9d",
+      "title": "我现在让你连接我的服务器，你知道连接哪一个吗？",
+      "cached_tokens": 228,
+      "messages": 4,
+      "archived": false
+    },
+    {
+      "thread": "019dbd8b-c9c9-7f52-aa21-54d8c9b7fda8",
+      "title": "添加 AGENTS.md",
+      "cached_tokens": 220,
+      "messages": 8,
+      "archived": true
+    }
+  ]
+}
