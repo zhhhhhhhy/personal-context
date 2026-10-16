@@ -137,7 +137,7 @@ def render_entry(item):
             lines.append(f"- {field}: {item[field]}")
     lines += ["", "## Evidence pointers", ""]
     lines += [f"- {ev['ref']}: `{ev['thread_id']}` / `{ev['location']}` — {ev['support']}" for ev in item["evidence"]]
-    lines += ["", "- candidates: " + ", ".join(item.get("source_candidates", [])), ""]
+    lines += ["", "- candidates: " + (", ".join(item.get("source_candidates", [])) or "none"), ""]
     if item["status"] in RETIRED:
         lines.insert(2, "> Historical record. Excluded from active retrieval; do not apply as an instruction.\n")
     return "\n".join(lines).encode("utf-8")

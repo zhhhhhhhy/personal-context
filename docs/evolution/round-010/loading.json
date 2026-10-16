@@ -1,0 +1,32 @@
+{
+  "tokenizer": "o200k_base",
+  "actual_material_payloads": {
+    "source_extraction": 16993,
+    "targeted_review": 12495,
+    "repair_lookup_and_retrieval": 4621
+  },
+  "actual_material_total": 34109,
+  "same_batch_whole_review_estimate": 14979,
+  "actual_targeted_review": 12495,
+  "review_saving_tokens": 2484,
+  "review_saving_percent": 16.58,
+  "same_batch_material_total_with_whole_review_estimate": 36593,
+  "whole_review_estimate_limit": "mechanical input reconstruction only; no full review model run and no measured full-review recall",
+  "reviewed_messages": 69,
+  "unchecked_second_pass": 22,
+  "source_messages": 91,
+  "first_pass_issue_records": 5,
+  "repaired_observations": 6,
+  "outside_audit_messages": 3,
+  "outside_audit_findings": 0,
+  "duplicate_messages_from_prior_batches": 0,
+  "duplicate_messages_at_least_100_tokens": 0,
+  "all_tool_return_snapshot": {
+    "protocol": "o200k_base, actual tool output text in local active task journal since this request. Includes setup, scripts/metadata output, errors/truncation text, source, review, lookup and status outputs. Excludes system/developer prompts, prior conversation already in context, user input, assistant reasoning/generated scripts and generation/billing. Snapshot excludes its own in-flight tool response and later delivery calls.",
+    "request_timestamp": "2026-10-16T01:56:30.849Z",
+    "cutoff_timestamp": "2026-10-16T02:25:23.725Z",
+    "responses": 39,
+    "tokens": 76413
+  },
+  "interpretation": "Material accounting is not all task input. All-tool snapshot additionally includes measured preparation overhead and is not total session usage or billing. Same-agent targeted review is not independent or a semantic recall estimate."
+}

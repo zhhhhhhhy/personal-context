@@ -1,0 +1,23 @@
+{
+  "frozen_on": "2026-10-16",
+  "classification": [
+    "reusable_preference",
+    "working_method",
+    "project_material"
+  ],
+  "rules": {
+    "docs/evolution/POLICY.md": "f67509ccb0b98f4465a78fcab25592fcea669c58c2bf80b01372b5bf4923bbc8",
+    "references/skills/personal-context-observation.md": "731b5aefbe511573344c97e9293da2eeb206f59264b46d050ffb66c588579efb",
+    "references/skills/personal-context-review.md": "7e1b01ac8332059694bf93ecdca7f4769d238812a7b4c919e6fe385c55e8cca8",
+    "references/skills/personal-context-memory.md": "73a812b815c66a43351840c80ffbaa81f0970b52d9582c8ccb79d8e20c7e492b",
+    "scripts/context-evolution.py": "e27dbe96fa4d86c8e63722e477bfec368d4afeb595c73dbb9b06e36efd9cb061",
+    "scripts/context-coverage.py": "ee6df895a692302de14d0744ec5107571fce928891c51b91472f232137805e78",
+    "scripts/context-review.py": "1a2c97f34322d6a11d8fc25afdfd3d52d191c237e53f26248c8307dc080b9ff3",
+    "scripts/context_review_v2.py": "fd282cce8014d136a121a83168cc47a765e4c3a5075592af36bc416882882b1f",
+    "scripts/context_memory.py": "2e0326bc6f314266c33879f1639e9fb73bc021360366b2cf2c2a4f08878a217d",
+    "scripts/context-meter.py": "3bc5233f3ba8e9cc8b351a6fb8faf4854bb6a0f63d7dc33b875ee0612da0b702"
+  },
+  "review": "Current frozen v2 concentrated review; same-class follow-up and bounded outside audit. No full independent inventory or fresh response A/B. Any 80-percent whole fallback is reported and not silently accepted.",
+  "model_roles": "One session; Observer, Reflector and targeted semantic recheck, not an independent reviewer.",
+  "selection": "Three previously unselected direct-user families; one separate reserved retrieval case. Fresh means absent from this repo previous selections/evidence, not never seen by the user or other systems."
+}

@@ -1,12 +1,14 @@
 # Core200：人审证据待补
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.core200-open-evidence`
 - kind: project
-- status: active
+- status: superseded
 - scope: 对应Core200证据缺口；不得据此断言从未用于开发或诊断
 - verification: claims_pending_source_verification
 - validity: project
-- updated_at: 2026-10-16T01:41:42+00:00
+- updated_at: 2026-10-16T02:20:00+00:00
 
 200题固定评测、开发集调参是用户要求；全部200题人审、两人独立/第三人裁决/无模型建议仍是待核过程陈述。原始逐题记录与ID未完全对应，部分答案评分有模型辅助记录；核实前不得写成已证实。
 
@@ -18,6 +20,7 @@
 - 只用于核对身份后的对应项目；日期到期只提示复核，不自动判失效。
 - review_after: 2026-11-16
 - target: references/projects/contract-research.md
+- replaced_by: project.core200-provenance-v2
 
 ## Evidence pointers
 

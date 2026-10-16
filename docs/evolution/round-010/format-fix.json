@@ -1,0 +1,7 @@
+{
+  "file": "scripts/context_memory.py",
+  "before_sha256": "2e0326bc6f314266c33879f1639e9fb73bc021360366b2cf2c2a4f08878a217d",
+  "after_sha256": "0bf9c4ae8d1e66838bb1718a3ef387e7cef310aa07694c8590161b40486b2b38",
+  "scope": "Formatting only: new records without legacy candidate IDs previously emitted trailing whitespace; emit candidates: none. No change to selection, semantic classification, review sampling, permissions or lifecycle transitions.",
+  "validation": "Actual new empty-candidate record renders without trailing whitespace; AST parses. Existing semantic review was not rerun."
+}

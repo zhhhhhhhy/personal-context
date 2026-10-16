@@ -67,4 +67,4 @@ Skill 的完整说明仍按目录独立维护。需要让本机 Codex 使用最�
 
 `docs/evolution/POLICY.md` 定义观察、反思、维护、校验应用和评估。`scripts/context-evolution.py prepare` 提供增量证据准备；`scripts/context-memory.py` 负责可用记忆、合并、替代、归档、舍弃和受保护回滚。单次明确的项目约定可以先使用，通用规则另需独立重复支持。原始日志、完整证据和敏感主题只留本地；没有后台定时任务。
 
-例如：`python -X utf8 scripts/context-memory.py search --query "人工审核"`，再用 `show --id research.chinese-item-review` 读取命中条目。继续 Core200 时先核对项目，再用 `search --project contract-research --query "Core200 人审"` 和 `show --id project.core200-open-evidence`。项目资料退出默认关键词检索；入口见 `references/projects/index.md`。现有19条整理结果见 `docs/memory-refinement/REPORT.md`。维护时先运行 `maintain` 查看复核提醒与明确到期的临时记忆。
+例如：`python -X utf8 scripts/context-memory.py search --query "人工审核"`，再用 `show --id research.chinese-item-review` 读取命中条目。继续 Core200 时先核对项目，再用 `search --project contract-research --query "Core200 人审"` 和 `show --id project.core200-provenance-v2`。项目资料退出默认关键词检索；入口见 `references/projects/index.md`。现有19条整理结果见 `docs/memory-refinement/REPORT.md`。维护时先运行 `maintain` 查看复核提醒与明确到期的临时记忆。

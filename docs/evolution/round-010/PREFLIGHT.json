@@ -1,0 +1,47 @@
+{
+  "status": "ready",
+  "scope": "new bounded extraction, existing framework unchanged",
+  "checks": [
+    {
+      "id": "source",
+      "status": "passed",
+      "detail": "Three new train families and one separate evaluation family; exact sources locally copied without modification of originals."
+    },
+    {
+      "id": "runtime",
+      "status": "passed",
+      "detail": "Python, zstandard, tokenizer, existing guarded memory writer available."
+    },
+    {
+      "id": "privacy",
+      "status": "passed",
+      "detail": "Raw evidence remains local; sensitive observations cannot enter public memory."
+    }
+  ],
+  "selection_stats": [
+    {
+      "id": "01a134f8-4858-77f0-9b71-6e9c7a96f06c",
+      "direct_messages": 75,
+      "direct_tokens": 2433,
+      "archived": 0
+    },
+    {
+      "id": "01a12610-58b1-7752-82c3-7c1ddb82f21a",
+      "direct_messages": 5,
+      "direct_tokens": 801,
+      "archived": 1
+    },
+    {
+      "id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+      "direct_messages": 11,
+      "direct_tokens": 686,
+      "archived": 0
+    },
+    {
+      "id": "01a0e6b6-2820-78d2-92a3-0e1bcb990961",
+      "direct_messages": 17,
+      "direct_tokens": 473,
+      "archived": 1
+    }
+  ]
+}

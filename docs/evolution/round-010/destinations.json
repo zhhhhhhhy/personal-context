@@ -1,0 +1,18 @@
+{
+  "added_working_methods": [
+    "research.reuse-predictions-before-rerun",
+    "documents.resolve-language-version"
+  ],
+  "added_project_material": [
+    "project.contractfill-zh-positioning",
+    "project.opening-report-20261010"
+  ],
+  "refined_project": "project.core200-provenance-v2",
+  "new_personal_preferences": 0,
+  "new_global_rules": 0,
+  "observation_dispositions": {
+    "memories": 68,
+    "covered": 5,
+    "rejected": 27
+  }
+}

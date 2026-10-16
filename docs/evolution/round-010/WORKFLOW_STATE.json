@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "state_version": 13,
+  "transaction_id": "TX-a00adfc33144",
+  "objective": "Distill new unprocessed conversations using reusable preference, method and project categories",
+  "scope": "Bounded new cohort; no framework optimization or full independent review",
+  "status": "completed",
+  "phase": "report",
+  "owner": "agent",
+  "next_action": "User assesses new methods and project scope; no automatic new cohort",
+  "constraints": [],
+  "blockers": [],
+  "acceptance": [
+    {
+      "id": "AC-1",
+      "condition": "Source-linked categorized additions without scope inflation",
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-010/validation.json",
+        "docs/evolution/round-010/REPORT.md"
+      ],
+      "note": "Bounded extraction and honest measurement complete; no claim of independent review, total recall or low total task cost."
+    },
+    {
+      "id": "AC-2",
+      "condition": "Actual payload accounting and bounded omission evidence",
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-010/validation.json",
+        "docs/evolution/round-010/REPORT.md"
+      ],
+      "note": "Bounded extraction and honest measurement complete; no claim of independent review, total recall or low total task cost."
+    },
+    {
+      "id": "AC-3",
+      "condition": "Privacy protected edits retrieval and budget",
+      "status": "passed",
+      "evidence": [
+        "docs/evolution/round-010/validation.json",
+        "docs/evolution/round-010/REPORT.md"
+      ],
+      "note": "Bounded extraction and honest measurement complete; no claim of independent review, total recall or low total task cost."
+    }
+  ],
+  "preflight": {
+    "status": "ready",
+    "evidence": "docs/evolution/round-010/PREFLIGHT.json",
+    "detail": "Source copies, exclusion history, frozen categories and protected hashes checked; only local extraction and bounded memory writes.",
+    "checked_at": "2026-10-16T02:02:30+00:00"
+  },
+  "gates": {
+    "route": "2026-10-16T02:02:31+00:00",
+    "execute": "2026-10-16T02:02:31+00:00",
+    "verify": "2026-10-16T02:28:56+00:00",
+    "report": "2026-10-16T02:28:57+00:00"
+  },
+  "attempts": [
+    {
+      "id": "A-001",
+      "time": "2026-10-16T02:02:31+00:00",
+      "phase": "execute",
+      "action": "Extract and classify the frozen new cohort with targeted review",
+      "expected_effect": "Useful concise preferences, method coverage or scoped project material with measured inputs and preserved uncertainty",
+      "owner": "agent",
+      "result": "Source-linked classified additions saved; five known issues repaired, 22 messages explicitly unreviewed; actual material and tool-return loading reported with limits.",
+      "outcome": "passed",
+      "evidence": [
+        "docs/evolution/round-010/validation.json",
+        "docs/evolution/round-010/loading.json"
+      ],
+      "failure_cause": "",
+      "finished_at": "2026-10-16T02:28:56+00:00"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "EV-6f13455fbac6",
+      "time": "2026-10-16T02:02:30+00:00",
+      "type": "initialized",
+      "phase": "frame",
+      "status": "planned",
+      "detail": {
+        "actor": "agent"
+      }
+    },
+    {
+      "event_id": "EV-05636463cc56",
+      "time": "2026-10-16T02:02:30+00:00",
+      "type": "preflight_recorded",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "status": "ready",
+        "evidence": "docs/evolution/round-010/PREFLIGHT.json"
+      }
+    },
+    {
+      "event_id": "EV-46c44e8f54a6",
+      "time": "2026-10-16T02:02:31+00:00",
+      "type": "gate_passed",
+      "phase": "preflight",
+      "status": "preflight",
+      "detail": {
+        "stage": "route"
+      }
+    },
+    {
+      "event_id": "EV-fb5c21911cb7",
+      "time": "2026-10-16T02:02:31+00:00",
+      "type": "checkpoint",
+      "phase": "route",
+      "status": "in_progress",
+      "detail": {
+        "note": "Allocation and bounded review in PLAN.md; no sub-agents or new framework changes."
+      }
+    },
+    {
+      "event_id": "EV-b7381af56271",
+      "time": "2026-10-16T02:02:31+00:00",
+      "type": "gate_passed",
+      "phase": "route",
+      "status": "in_progress",
+      "detail": {
+        "stage": "execute"
+      }
+    },
+    {
+      "event_id": "EV-901b97767a9c",
+      "time": "2026-10-16T02:02:31+00:00",
+      "type": "attempt_started",
+      "phase": "execute",
+      "status": "in_progress",
+      "detail": {
+        "attempt_id": "A-001"
+      }
+    },
+    {
+      "event_id": "EV-60c8301ef6b6",
+      "time": "2026-10-16T02:28:56+00:00",
+      "type": "attempt_finished",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "attempt_id": "A-001",
+        "outcome": "passed"
+      }
+    },
+    {
+      "event_id": "EV-1902e251c190",
+      "time": "2026-10-16T02:28:56+00:00",
+      "type": "gate_passed",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "stage": "verify"
+      }
+    },
+    {
+      "event_id": "EV-fc3ee1567ee6",
+      "time": "2026-10-16T02:28:57+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-1",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-d35e269cf9c1",
+      "time": "2026-10-16T02:28:57+00:00",
+      "type": "acceptance_verified",
+      "phase": "verify",
+      "status": "verifying",
+      "detail": {
+        "criterion": "AC-2",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-6d26370eb286",
+      "time": "2026-10-16T02:28:57+00:00",
+      "type": "acceptance_verified",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "criterion": "AC-3",
+        "result": "passed"
+      }
+    },
+    {
+      "event_id": "EV-5f6bfe001e51",
+      "time": "2026-10-16T02:28:57+00:00",
+      "type": "gate_passed",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "stage": "report"
+      }
+    },
+    {
+      "event_id": "EV-a963f074fa6e",
+      "time": "2026-10-16T02:28:57+00:00",
+      "type": "checkpoint",
+      "phase": "report",
+      "status": "completed",
+      "detail": {
+        "note": "Low total loading cost only partially achieved; all requirements and limits in REPORT.md."
+      }
+    }
+  ],
+  "artifacts": [],
+  "created_at": "2026-10-16T02:02:30+00:00",
+  "updated_at": "2026-10-16T02:28:57+00:00",
+  "decisions": [
+    {
+      "time": "2026-10-16T02:02:31+00:00",
+      "note": "Allocation and bounded review in PLAN.md; no sub-agents or new framework changes."
+    },
+    {
+      "time": "2026-10-16T02:28:57+00:00",
+      "note": "Low total loading cost only partially achieved; all requirements and limits in REPORT.md."
+    }
+  ]
+}

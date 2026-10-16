@@ -1,0 +1,179 @@
+{
+  "status": "passed",
+  "checks": [
+    {
+      "id": "active categories",
+      "status": "passed"
+    },
+    {
+      "id": "old scoped record replaced",
+      "status": "passed"
+    },
+    {
+      "id": "pending human review remains pending",
+      "status": "passed"
+    },
+    {
+      "id": "protected rules/SOUL.md",
+      "status": "passed"
+    },
+    {
+      "id": "protected profile.md",
+      "status": "passed"
+    },
+    {
+      "id": "protected habits/communication.md",
+      "status": "passed"
+    },
+    {
+      "id": "protected INDEX.md",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol docs/evolution/POLICY.md",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol references/skills/personal-context-observation.md",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol references/skills/personal-context-review.md",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol references/skills/personal-context-memory.md",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol scripts/context-evolution.py",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol scripts/context-coverage.py",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol scripts/context-review.py",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol scripts/context_review_v2.py",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol scripts/context_memory.py",
+      "status": "passed"
+    },
+    {
+      "id": "frozen protocol scripts/context-meter.py",
+      "status": "passed"
+    },
+    {
+      "id": "record wording research.reuse-predictions-before-rerun",
+      "status": "passed"
+    },
+    {
+      "id": "record formatting research.reuse-predictions-before-rerun",
+      "status": "passed"
+    },
+    {
+      "id": "record wording documents.resolve-language-version",
+      "status": "passed"
+    },
+    {
+      "id": "record formatting documents.resolve-language-version",
+      "status": "passed"
+    },
+    {
+      "id": "record wording project.contractfill-zh-positioning",
+      "status": "passed"
+    },
+    {
+      "id": "record formatting project.contractfill-zh-positioning",
+      "status": "passed"
+    },
+    {
+      "id": "record wording project.opening-report-20261010",
+      "status": "passed"
+    },
+    {
+      "id": "record formatting project.opening-report-20261010",
+      "status": "passed"
+    },
+    {
+      "id": "record wording project.core200-provenance-v2",
+      "status": "passed"
+    },
+    {
+      "id": "record formatting project.core200-provenance-v2",
+      "status": "passed"
+    },
+    {
+      "id": "rescore method retrieval",
+      "status": "passed"
+    },
+    {
+      "id": "language version retrieval",
+      "status": "passed"
+    },
+    {
+      "id": "known project retrieval",
+      "status": "passed"
+    },
+    {
+      "id": "project excluded by default",
+      "status": "passed"
+    },
+    {
+      "id": "wrong project excluded",
+      "status": "passed"
+    },
+    {
+      "id": "opening scoped retrieval",
+      "status": "passed"
+    },
+    {
+      "id": "personal preferences survive project query",
+      "status": "passed"
+    },
+    {
+      "id": "private excluded",
+      "status": "passed"
+    },
+    {
+      "id": "all historical destinations active or archived",
+      "status": "passed"
+    },
+    {
+      "id": "framework semantics unchanged",
+      "status": "passed"
+    },
+    {
+      "id": "entry budgets",
+      "status": "passed"
+    },
+    {
+      "id": "first observation freeze preserved",
+      "status": "passed"
+    },
+    {
+      "id": "observation destinations",
+      "status": "passed"
+    }
+  ],
+  "source_messages": 91,
+  "observations": 100,
+  "known_issue_records": 5,
+  "repaired_observations": 6,
+  "second_check_messages": 69,
+  "not_second_checked": 22,
+  "new_personal_preferences": 0,
+  "new_methods": 2,
+  "new_project_records": 2,
+  "refined_project_records": 1,
+  "new_global_rules": 0,
+  "reserved_evaluation": "Separate Orca family remains unread; no A/B or held-out generalization claim.",
+  "independence": "Same-session targeted semantic recheck, not independent review. Three parent threads are related contract research; not three independent project supports.",
+  "user_acceptance": "pending"
+}
