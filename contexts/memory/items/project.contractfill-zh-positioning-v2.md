@@ -1,12 +1,14 @@
 # ContractFill：中文稿版本入口与贡献边界
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.contractfill-zh-positioning-v2`
 - kind: project
-- status: active
+- status: superseded
 - scope: 指定icml_chinese中文稿；不覆盖其它副本或后续新定位
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T06:33:13+00:00
+- updated_at: 2026-10-16T14:55:54+00:00
 
 指定icml_chinese稿件按中英文索引确认目标，已有记录以paper_zh为中文入口。2026-10-12版本采用Benchmark/Evaluation定位，JEV-A gate是诊断案例；这些属于该版写作决定，不覆盖以后重新定位。
 
@@ -17,6 +19,7 @@
 - 2026-10-16此次仅整理已有Context，未重新核验项目状态；保留详细来源版本约定，不撤销仍适用的条件。
 - review_after: 2026-11-16
 - target: references/projects/contractfill-zh-20261012.md
+- replaced_by: project.contractfill-zh-positioning-v3
 
 ## Evidence pointers
 

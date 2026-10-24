@@ -1,12 +1,14 @@
 # 实验复评：先判断能否复用预测
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.reuse-predictions-before-rerun-v2`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 已有实验因标签或评分口径变化而复评
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-16T06:51:20+00:00
+- updated_at: 2026-10-23T09:11:58+00:00
 
 标签或评分口径变化时，先核对已保存的逐题预测及对应输入、模型和协议，区分可重新评分与必须重跑，再安排执行。
 
@@ -15,6 +17,7 @@
 - 输入、模型或流程改变时，不能假定旧预测代表新实验。
 - 原项目路径、批次数量和旧实验授权不作为当前事实或默认值。
 - review_after: 2027-01-16
+- replaced_by: research.reuse-predictions-before-rerun-v3
 
 ## Evidence pointers
 

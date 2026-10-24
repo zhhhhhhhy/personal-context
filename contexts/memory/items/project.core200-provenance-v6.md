@@ -1,12 +1,14 @@
 # Core200：标签与结果版本入口
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.core200-provenance-v6`
 - kind: project
-- status: active
+- status: superseded
 - scope: contract-research 的Core200：2026-10-16本地正式冻结标签及实验一动作/关联结果；不代表远端镜像、论文副本同步或候选V/M/C完成
 - verification: local_official_freeze_and_manifest_hashes_verified; remote_mirror_not_synced; human_gold_false; content_scoring_not_performed
 - validity: project
-- updated_at: 2026-10-16T06:33:13+00:00
+- updated_at: 2026-10-16T14:55:54+00:00
 
 按已有Context区分历史73/127、旧快照88/112与本地正式版89/111，使用同版本标签、结果和来源指针。保存的2026-10-16快照记录本地标签/实验一冻结、远端未同步、human_gold=false及未做候选内容评分等边界；具体统计按需追溯。
 
@@ -18,6 +20,7 @@
 - 2026-10-16此次仅整理已有Context，未重新核验项目状态；保留详细来源版本约定，不撤销仍适用的条件。
 - review_after: 2026-11-16
 - target: references/projects/core200-provenance.md
+- replaced_by: project.core200-provenance-v7
 
 ## Evidence pointers
 

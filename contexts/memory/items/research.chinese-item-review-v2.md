@@ -1,12 +1,14 @@
 # 本人样本审核：中文展示并避免重复
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.chinese-item-review-v2`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 用户亲自参与的研究样本人工审核
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-16T06:51:20+00:00
+- updated_at: 2026-10-22T10:08:37+00:00
 
 需要用户本人逐项判定研究样本时，用中文逐题展示，并核对已审清单避免重复。
 
@@ -15,6 +17,7 @@
 - 不要求所有研究都逐题人工审核，也不因中文展示而改变原始样本。
 - 审核进度取当前台账；旧10/20题批次不是默认值。
 - review_after: 2027-01-16
+- replaced_by: research.chinese-item-review-v3
 
 ## Evidence pointers
 

@@ -1,12 +1,14 @@
 # RAGSystem：权威契约定位入口
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.rag-contract-v2`
 - kind: project
-- status: active
+- status: superseded
 - scope: 2026-10-04提供的契约；当前根目录与commit待核
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T06:33:13+00:00
+- updated_at: 2026-10-21T10:28:10+00:00
 
 历史权威根目录为/workspace/zhy/RAGSystem，续接先定位对应版本的docs/autofill_contract契约，以当前项目文件为准；该任务约定技术材料英文、用户汇报中文，不导入其他AutoFill任务的模型和数据设置。
 
@@ -17,6 +19,7 @@
 - 2026-10-16此次仅整理已有Context，未重新核验项目状态；保留详细来源版本约定，不撤销仍适用的条件。
 - review_after: 2026-11-16
 - target: references/projects/rag-system.md
+- replaced_by: project.rag-contract-v3
 
 ## Evidence pointers
 

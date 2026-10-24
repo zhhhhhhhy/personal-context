@@ -22,7 +22,7 @@
 - overlap: reinforces existing RAGSystem and browser-channel guidance
 - status: resolved
 - disposition: project / scope_project_material
-- destination: project.rag-contract-v2
+- destination: project.rag-contract-v3
 
 ## C-20261014-021
 

@@ -70,7 +70,9 @@ Skill 的完整说明仍按目录独立维护。需要让本机 Codex 使用最�
 
 例如：`python -X utf8 scripts/context-memory.py search --query "文档 风格"`，再用 `show --id documents.preserve-style` 读取命中条目。继续 Core200 时先核对项目，再用 `search --project contract-research --query "Core200 人审"` 和 `show --id project.core200-provenance-v6`。项目资料退出默认关键词检索；项目键见 `references/projects/index.md`。
 
-有值得保存的新内容时才读 `references/skills/personal-context-memory.md`，复用现有 `snapshot`、本地来源清单与变更计划、`validate/apply` 和受保护回滚。无需批量 prepare、观察账本、评测分区、全量复核或每次全库 maintain。原始日志和敏感证据只留本地；敏感摘要未经明确确认不推送 GitHub；不保存凭据，没有后台定时任务。
+有值得保存的新内容时才读 `references/skills/personal-context-memory.md`，复用现有 `snapshot`、本地来源清单与变更计划、`validate/apply` 和受保护回滚。无需批量 prepare、观察账本、评测分区、全量复核或每次全库 maintain。原始日志、处理进度和敏感证据只留本地；敏感摘要未经明确确认不推送 GitHub；不保存凭据。
+
+已有 Codex 每日任务 `context` 在北京时间18:00增量整理新对话和旧对话新增消息。2026-10-24 用户授权维护完成后，将审查过的非敏感仓库更新提交并推送到本仓库 `origin/main`；无变化不空提交，待推送提交可重试。提炼进度与推送状态分别记录在 `.local/context-memory/`，推送失败不重复提炼；不强推或覆盖远端冲突。本仓库不另建后台同步程序。
 
 重复内容合并；新约定明确替代旧约定时保留版本；失效项目约定归档并退出默认检索，仍有效的条件先保存到对应项目。稳定偏好不因年龄自动删除，复核日期只提醒，只有明确有效期的临时记忆才会过期。平时只维护相关条目；全库 `maintain` 仅在明确要求维护时使用。
 

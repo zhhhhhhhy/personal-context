@@ -10,6 +10,10 @@ Read this only when saving/changing memory or diagnosing retrieval. Ordinary use
 4. Validate and apply that plan with the commands below. Reread changed entries and check one relevant retrieval. Reuse the transaction ID if a guarded rollback is needed. Do not add a full review, token report or new experiment round.
 5. Report the useful memory applied, actual change and pending facts when relevant. Maintain unrelated records only when the user asks or they become relevant in a later task.
 
+For task knowledge, follow the policy's task decomposition/workflow/module-experience section. Reuse `kind=memory`, `claim`, `scope` and `tags`; describe only the observed stages, their inputs/outputs and decision gates, or a specific problem/diagnosis/action/result. Mark adopted workflows, verified practices, failed attempts/process corrections and unverified proposals distinctly in the claim. Prefer replacing or supplementing the matching record over creating one record per stage; use a separate entry only when it has a distinct retrieval trigger. Reference an existing Skill rather than duplicating its default workflow.
+
+The writer still requires verified direct human-parent evidence for new evidence pointers. Such evidence supports the user's workflow or method agreement; separately label any adjacent assistant/tool execution locations and what they actually establish. Do not relabel execution as user speech or treat approval of a proposal as evidence of its technical success. Execution-only material that cannot meet the current contract stays local and pending. This does not expand writer permissions or require new fields.
+
 ## Meaning and use
 
 - `memory`: a concise reusable scenario preference or working method with evidence and scope. Old task quantities stay in its history unless still needed for reuse.

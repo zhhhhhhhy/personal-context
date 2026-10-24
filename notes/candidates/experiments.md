@@ -48,7 +48,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: memory / concise_reusable
-- destination: research.chinese-item-review-v2
+- destination: research.chinese-item-review-v3
 
 ## C-20261014-033
 
@@ -60,7 +60,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: project / scope_project_material
-- destination: project.core200-provenance-v6
+- destination: project.core200-provenance-v7
 
 ## C-20261014-034
 
@@ -72,7 +72,7 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: project / scope_project_material
-- destination: project.jev-comparison-v2
+- destination: project.jev-comparison-v3
 
 ## C-20261014-039
 

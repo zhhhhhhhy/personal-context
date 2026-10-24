@@ -1,12 +1,14 @@
 # 合同研究：比较边界与任务约束入口
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.jev-comparison-v2`
 - kind: project
-- status: active
+- status: superseded
 - scope: 2026-10-06～10实验讨论；论文及启动任务版本分别列在项目页
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T06:33:13+00:00
+- updated_at: 2026-10-17T17:00:52+00:00
 
 对应合同研究版本区分Direct、JEV-A、JEV-B 0.6B及组合，区分答案盲的前置判断与可见候选的支持判断；按匹配任务保留工程/论文分离、稿件范围及定向外部编辑的确认条件。旧开发集提议和零散分数不作当前协议。
 
@@ -18,6 +20,7 @@
 - 2026-10-16此次仅整理已有Context，未重新核验项目状态；保留详细来源版本约定，不撤销仍适用的条件。
 - review_after: 2026-11-16
 - target: references/projects/contract-research.md
+- replaced_by: project.jev-comparison-v3
 
 ## Evidence pointers
 
