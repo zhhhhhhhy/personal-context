@@ -1,0 +1,6 @@
+interface:
+  display_name: "论文评审 Agent"
+  short_description: "在结论确定、主线实改和重要版本交付前，派遣独立论文评审子智能体"
+  default_prompt: "使用 $paper-review-agent，根据当前论文材料派遣独立评审子智能体，并把关键意见和处理建议返回主智能体。"
+policy:
+  allow_implicit_invocation: true

@@ -11661,10 +11661,96 @@
       ],
       "project": "contract-research",
       "target": "references/projects/contractfill-zh-20261012.md",
-      "status": "active",
-      "updated_at": "2026-10-16T14:55:54+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-25T10:16:07+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "project.contractfill-zh-positioning-v3",
+          "title": "ContractFill中文稿：历史定位与重新立题分开",
+          "claim": "对应Desktop/icml_chinese稿件先确认中文入口；2026-10-12的Benchmark/Evaluation定位保留为历史起点。后续用户要求保留填表与小模型背景，并重新比较可行研究定位；没有新的最终定位采纳证据时，不把旧定位当永久决定。",
+          "scope": "继续同一Desktop/icml_chinese中文稿的定位讨论时；区分2026-10-12稿件约定与2026-10-15～16重新立题要求",
+          "exceptions": [
+            "没有核查正文或科研进度，也没有证据说明已经采纳新的最终framing。",
+            "保留填表/小模型背景是叙事要求，不证明大模型已解决问题或小模型存在普遍机制缺陷。",
+            "不自动修改论文或启动实验；审稿、协作立题和文字润色按当前请求区分。"
+          ],
+          "tags": [
+            "ContractFill",
+            "中文稿",
+            "研究定位",
+            "小模型",
+            "填表",
+            "framing"
+          ],
+          "kind": "project",
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "project",
+          "verification": "historical_user_instruction",
+          "source_candidates": [],
+          "memory_class": "project_material",
+          "evidence": [
+            {
+              "ref": "R010-M088",
+              "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+              "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L627",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "d40e9dbb905e5e27c847cba5a53720f2c3e8d8b92a2c55865288fa9303dc93fa",
+              "message_timestamp": "2026-10-12T04:45:27.984Z",
+              "support": "用户明确认可基准论文定位、贡献顺序和结论边界。"
+            },
+            {
+              "ref": "R010-M087",
+              "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+              "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L421",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "1ed39af30be12f14dae160d1e96899b6bd3fc22d4c06490cb5dec745f703564c",
+              "message_timestamp": "2026-10-12T04:30:01.658Z",
+              "support": "原任务只改指定目录中文摘要。"
+            },
+            {
+              "ref": "R010-M090",
+              "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+              "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L903",
+              "source_kind": "user_authored",
+              "family_id": "contract-research",
+              "text_sha256": "91a82ce054757f422e63ac3fe6edf310535d289ffedd649546aed2f8d31fb786",
+              "message_timestamp": "2026-10-12T05:08:30.159Z",
+              "support": "先建立中英文稿索引，随后评中文稿。"
+            },
+            {
+              "ref": "HB01774",
+              "thread_id": "01a1354b-26e4-7733-8d7e-c7cc8e79461f",
+              "location": "rollout-2026-10-15T19-47-21-01a1354b-26e4-7733-8d7e-c7cc8e79461f_01a13f63-675b-7783-9cba-0cc5db378217.jsonl:L662",
+              "family_id": "01a1354b-26e4-7733-8d7e-c7cc8e79461f",
+              "source_kind": "user_authored",
+              "text_sha256": "f676fa39307e105457622f3083b3e7442d6148f4d272e9910dae0c9b80027b1e",
+              "message_timestamp": "2026-10-15T13:02:47.607Z",
+              "support": "直接用户表达；仅在本条限定场景使用，不证明所请求的事实或工作已完成。"
+            },
+            {
+              "ref": "HB01793",
+              "thread_id": "01a1354b-26e4-7733-8d7e-c7cc8e79461f",
+              "location": "rollout-2026-10-15T21-46-17-01a1354b-26e4-7733-8d7e-c7cc8e79461f_01a13fd0-49aa-7140-83c4-fe494a93addd.jsonl:L574",
+              "family_id": "01a1354b-26e4-7733-8d7e-c7cc8e79461f",
+              "source_kind": "user_authored",
+              "text_sha256": "223073d2865d5f99d6cec60271046ae2101f4f397c8e6cc6cd94465cd151eae3",
+              "message_timestamp": "2026-10-16T01:34:48.192Z",
+              "support": "直接用户表达；仅在本条限定场景使用，不证明所请求的事实或工作已完成。"
+            }
+          ],
+          "project": "contract-research",
+          "target": "references/projects/contractfill-zh-20261012.md",
+          "status": "active",
+          "updated_at": "2026-10-16T14:55:54+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "project.contractfill-zh-positioning-v4",
+      "last_reason": "同一稿件新增长期续接所需的语种协作约定；保留旧版及原定位边界，避免下次误判中文/英文权威方向。"
     },
     {
       "id": "project.core200-provenance-v7",
@@ -13431,6 +13517,119 @@
       "updated_at": "2026-10-23T10:11:25+00:00",
       "revision": 1,
       "history": []
+    },
+    {
+      "title": "ContractFill稿件：历史定位与中英同步边界",
+      "claim": "对应Desktop/icml_chinese稿件先确认中文入口；2026-10-12的Benchmark/Evaluation定位保留为历史起点。后续用户要求保留填表与小模型背景，并重新比较可行研究定位；没有新的最终定位采纳证据时，不把旧定位当永久决定。\n\n2026-10-25的中英同步约定：用户指定C:/Users/郑惠宇/OneDrive/Desktop/icml_chinese的中文版为本人正在修改的源稿，英文版应跟随中文版；随后要求每小时检查，未发生更改时不执行同步。这是该目录的单向中文到英文协作约定，不推广为所有论文的默认自动翻译。\n\n知识状态：已采纳的项目要求，来源为真人父对话。本次只核对会话，没有重新打开论文、核对中英当前一致性、编译或检查定时任务实时运行；助手此前自称同步完成不当作本次验证。继续编辑时仍须核对目标语种、文件版本、依赖与当前授权。",
+      "scope": "继续同一Desktop/icml_chinese稿件的定位、语种识别或中英版本同步时；保留各日期约定的范围",
+      "exceptions": [
+        "没有核查正文或科研进度，也没有证据说明已经采纳新的最终framing。",
+        "保留填表/小模型背景是叙事要求，不证明大模型已解决问题或小模型存在普遍机制缺陷。",
+        "不自动修改论文或启动实验；审稿、协作立题和文字润色按当前请求区分。",
+        "每小时检查仅属于指定稿件的同步任务；不改变个人Context每日任务，也不在记忆维护时执行论文同步或科研工作。",
+        "旧定位和版本来源仍保留；用户要求英文跟随中文不证明当前两份稿件或PDF已经一致。"
+      ],
+      "tags": [
+        "ContractFill",
+        "中文稿",
+        "研究定位",
+        "小模型",
+        "填表",
+        "framing",
+        "论文",
+        "中文源稿",
+        "英文",
+        "中英同步",
+        "版本",
+        "每小时",
+        "变更检查"
+      ],
+      "kind": "project",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "historical_user_instruction_and_language_sync_agreement_no_document_revalidation",
+      "source_candidates": [],
+      "memory_class": "project_material",
+      "evidence": [
+        {
+          "ref": "R010-M088",
+          "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+          "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L627",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "d40e9dbb905e5e27c847cba5a53720f2c3e8d8b92a2c55865288fa9303dc93fa",
+          "message_timestamp": "2026-10-12T04:45:27.984Z",
+          "support": "用户明确认可基准论文定位、贡献顺序和结论边界。"
+        },
+        {
+          "ref": "R010-M087",
+          "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+          "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L421",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "1ed39af30be12f14dae160d1e96899b6bd3fc22d4c06490cb5dec745f703564c",
+          "message_timestamp": "2026-10-12T04:30:01.658Z",
+          "support": "原任务只改指定目录中文摘要。"
+        },
+        {
+          "ref": "R010-M090",
+          "thread_id": "01a12dfc-1aab-7101-bf6d-c2758be02026",
+          "location": "rollout-2026-10-12T10-40-59-01a12dfc-1aab-7101-bf6d-c2758be02026.jsonl:L903",
+          "source_kind": "user_authored",
+          "family_id": "contract-research",
+          "text_sha256": "91a82ce054757f422e63ac3fe6edf310535d289ffedd649546aed2f8d31fb786",
+          "message_timestamp": "2026-10-12T05:08:30.159Z",
+          "support": "先建立中英文稿索引，随后评中文稿。"
+        },
+        {
+          "ref": "HB01774",
+          "thread_id": "01a1354b-26e4-7733-8d7e-c7cc8e79461f",
+          "location": "rollout-2026-10-15T19-47-21-01a1354b-26e4-7733-8d7e-c7cc8e79461f_01a13f63-675b-7783-9cba-0cc5db378217.jsonl:L662",
+          "family_id": "01a1354b-26e4-7733-8d7e-c7cc8e79461f",
+          "source_kind": "user_authored",
+          "text_sha256": "f676fa39307e105457622f3083b3e7442d6148f4d272e9910dae0c9b80027b1e",
+          "message_timestamp": "2026-10-15T13:02:47.607Z",
+          "support": "直接用户表达；仅在本条限定场景使用，不证明所请求的事实或工作已完成。"
+        },
+        {
+          "ref": "HB01793",
+          "thread_id": "01a1354b-26e4-7733-8d7e-c7cc8e79461f",
+          "location": "rollout-2026-10-15T21-46-17-01a1354b-26e4-7733-8d7e-c7cc8e79461f_01a13fd0-49aa-7140-83c4-fe494a93addd.jsonl:L574",
+          "family_id": "01a1354b-26e4-7733-8d7e-c7cc8e79461f",
+          "source_kind": "user_authored",
+          "text_sha256": "223073d2865d5f99d6cec60271046ae2101f4f397c8e6cc6cd94465cd151eae3",
+          "message_timestamp": "2026-10-16T01:34:48.192Z",
+          "support": "直接用户表达；仅在本条限定场景使用，不证明所请求的事实或工作已完成。"
+        },
+        {
+          "ref": "D20261025-053",
+          "thread_id": "01a17197-527f-7453-ae4a-63fff6269158",
+          "location": "rollout-2026-10-25T13-45-04-01a17197-527f-7453-ae4a-63fff6269158.jsonl:L16",
+          "family_id": "contract-research",
+          "source_kind": "user_authored",
+          "text_sha256": "cb29b0f086ded3916f5f55895b18ec006882442f02e5b87a761341ac29cc5b3d",
+          "message_timestamp": "2026-10-25T05:45:08.403Z",
+          "support": "指定Desktop/icml_chinese的中文稿为本人编辑源、英文稿跟随同步。"
+        },
+        {
+          "ref": "D20261025-068",
+          "thread_id": "01a17197-527f-7453-ae4a-63fff6269158",
+          "location": "rollout-2026-10-25T13-45-04-01a17197-527f-7453-ae4a-63fff6269158.jsonl:L327",
+          "family_id": "contract-research",
+          "source_kind": "user_authored",
+          "text_sha256": "f2eb5a46dafab99048cd9c6e95fb20f1bbd4fa90a801cdcdd91cf499a1058b04",
+          "message_timestamp": "2026-10-25T09:04:53.151Z",
+          "support": "对该中英同步任务明确要求每小时检查；没有更改则不执行。"
+        }
+      ],
+      "project": "contract-research",
+      "target": "references/projects/contractfill-zh-20261012.md",
+      "id": "project.contractfill-zh-positioning-v4",
+      "status": "active",
+      "updated_at": "2026-10-25T10:16:07+00:00",
+      "revision": 1,
+      "history": []
     }
   ],
   "decisions": [
@@ -13844,5 +14043,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     }
   ],
-  "updated_at": "2026-10-23T10:11:25+00:00"
+  "updated_at": "2026-10-25T10:16:07+00:00"
 }

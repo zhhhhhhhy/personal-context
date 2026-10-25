@@ -1,12 +1,14 @@
 # ContractFill中文稿：历史定位与重新立题分开
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.contractfill-zh-positioning-v3`
 - kind: project
-- status: active
+- status: superseded
 - scope: 继续同一Desktop/icml_chinese中文稿的定位讨论时；区分2026-10-12稿件约定与2026-10-15～16重新立题要求
 - verification: historical_user_instruction
 - validity: project
-- updated_at: 2026-10-16T14:55:54+00:00
+- updated_at: 2026-10-25T10:16:07+00:00
 
 对应Desktop/icml_chinese稿件先确认中文入口；2026-10-12的Benchmark/Evaluation定位保留为历史起点。后续用户要求保留填表与小模型背景，并重新比较可行研究定位；没有新的最终定位采纳证据时，不把旧定位当永久决定。
 
@@ -16,6 +18,7 @@
 - 保留填表/小模型背景是叙事要求，不证明大模型已解决问题或小模型存在普遍机制缺陷。
 - 不自动修改论文或启动实验；审稿、协作立题和文字润色按当前请求区分。
 - target: references/projects/contractfill-zh-20261012.md
+- replaced_by: project.contractfill-zh-positioning-v4
 
 ## Evidence pointers
 
