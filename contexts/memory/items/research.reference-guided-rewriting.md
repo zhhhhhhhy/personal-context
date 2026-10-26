@@ -1,12 +1,14 @@
 # 论文改写：按近邻范文的组织方式先做蓝图
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.reference-guided-rewriting`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 已有benchmark或实证论文的整理、范文对照与局部章节改写，尤其实验部分
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-22T10:08:37+00:00
+- updated_at: 2026-10-26T10:29:48+00:00
 
 已有论文进入整理或局部改写时，用户偏好先选一篇能指导当前章节写作的相近论文，拆解句段与实验各自的作用，再对照本人已有材料形成改写蓝图：每节回答什么、用哪些结果、放什么图表、能支撑什么结论、确实还缺什么。借鉴论证和实验组织方式，而不只把范文当作相关工作或novelty对照；按当前批准范围推进。
 
@@ -15,6 +17,7 @@
 - 范文的具体句子、数据和结论不能代替本人证据；逐句功能和相近篇幅是原任务的示例方式，不自动成为以后固定字数模板。
 - 是否补实验取决于本人的研究问题和证据缺口，不盲目照搬范文实验数量；执行仍需当前授权，先给蓝图不等于获准改文件或运行实验。
 - Sufficient Context是原任务选择的参考，不固定为所有研究的默认范文；被冻结或指定的其他章节保持其当前范围。
+- replaced_by: research.reference-guided-rewriting-v2
 
 ## Evidence pointers
 

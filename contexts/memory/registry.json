@@ -12792,10 +12792,77 @@
         }
       ],
       "source_candidates": [],
-      "status": "active",
-      "updated_at": "2026-10-22T10:08:37+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-26T10:29:48+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "research.reference-guided-rewriting",
+          "title": "论文改写：按近邻范文的组织方式先做蓝图",
+          "kind": "memory",
+          "claim": "已有论文进入整理或局部改写时，用户偏好先选一篇能指导当前章节写作的相近论文，拆解句段与实验各自的作用，再对照本人已有材料形成改写蓝图：每节回答什么、用哪些结果、放什么图表、能支撑什么结论、确实还缺什么。借鉴论证和实验组织方式，而不只把范文当作相关工作或novelty对照；按当前批准范围推进。",
+          "scope": "已有benchmark或实证论文的整理、范文对照与局部章节改写，尤其实验部分",
+          "exceptions": [
+            "范文的具体句子、数据和结论不能代替本人证据；逐句功能和相近篇幅是原任务的示例方式，不自动成为以后固定字数模板。",
+            "是否补实验取决于本人的研究问题和证据缺口，不盲目照搬范文实验数量；执行仍需当前授权，先给蓝图不等于获准改文件或运行实验。",
+            "Sufficient Context是原任务选择的参考，不固定为所有研究的默认范文；被冻结或指定的其他章节保持其当前范围。"
+          ],
+          "tags": [
+            "科研",
+            "论文",
+            "写作",
+            "范文",
+            "模仿",
+            "改写",
+            "实验部分",
+            "蓝图",
+            "参考论文",
+            "段落功能"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "historical_user_instruction",
+          "evidence": [
+            {
+              "ref": "D20261022-075",
+              "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+              "location": "rollout-2026-10-19T12-53-23-01a14adf-6784-7aa3-a298-642a66b25eff_01a15281-d7cd-7af2-98ca-60aa006dd5e7.jsonl:L1812",
+              "family_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+              "source_kind": "user_authored",
+              "text_sha256": "31edbc69464780726c577c1812cd4e692f7d2c31b57b4c35b4151336c250670a",
+              "message_timestamp": "2026-10-19T12:11:27.815Z",
+              "support": "用户明确希望按相近论文句段的表达功能借鉴写法，并遵守当前修改范围。"
+            },
+            {
+              "ref": "D20261022-120",
+              "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+              "location": "rollout-2026-10-22T12-28-52-01a14adf-6784-7aa3-a298-642a66b25eff_01a161de-7afb-7ca1-b8e7-60c56767d5f0.jsonl:L166",
+              "family_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+              "source_kind": "user_authored",
+              "text_sha256": "0b2fb15d96e03911847eba351e65071b26a98fe2b28ca74c011fad67f5c0a479",
+              "message_timestamp": "2026-10-22T05:56:58.682Z",
+              "support": "用户澄清当前目标是学习并模仿相近论文的写作与实验组织，而不是只找内容或novelty相关文献。"
+            },
+            {
+              "ref": "D20261022-126",
+              "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+              "location": "rollout-2026-10-22T14-12-58-01a14adf-6784-7aa3-a298-642a66b25eff_01a1623d-c880-7842-9932-cd7bcc59fd19.jsonl:L91",
+              "family_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+              "source_kind": "user_authored",
+              "text_sha256": "0b3caf3a250fc967bc1e43122955ef78f31704b96030aa41344d73665a6fbe04",
+              "message_timestamp": "2026-10-22T06:28:00.912Z",
+              "support": "用户要求先给实验部分改写蓝图，逐节映射已有结果、图表、结论及确缺评分，先审查而不执行。"
+            }
+          ],
+          "source_candidates": [],
+          "status": "active",
+          "updated_at": "2026-10-22T10:08:37+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "research.reference-guided-rewriting-v2",
+      "last_reason": "补充重要设计先交代限制和引入理由的具体检查方式，保留原范文蓝图。"
     },
     {
       "id": "research.idea-development-novelty-v2",
@@ -13438,10 +13505,54 @@
         "定位用于解释当前工作，不授权执行下一阶段或重新启动历史任务；当前用户格式要求优先。"
       ],
       "source_candidates": [],
-      "status": "active",
-      "updated_at": "2026-10-23T10:11:25+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-26T10:29:48+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "communication.locate-task-before-reporting",
+          "title": "复杂项目汇报：先定位当前任务在整体流程中的位置",
+          "kind": "memory",
+          "claim": "在复杂工程或科研项目中，汇报进展或提出下一步方案前，先用一句简短的话说明当前任务处在整体流程的哪一环节、这一步解决什么问题，再报告结果、缺口和方案。必要时展示很短的流程链并标出当前节点，帮助用户保持对项目的把控。\n\n涉及多个Agent或多次判定时，说明正在做原始评分、分歧处理还是事后复核，避免把不同阶段都笼统称为“复核”。沿用已有简洁汇报方式，不为定位任务添加长篇项目背景或固定大表。\n\n这是用户明确要求今后记住的沟通方式；不证明任何研究或工程步骤已完成。",
+          "scope": "复杂工程或科研项目的进展汇报、子任务说明，以及用户需要判断下一步方案时。",
+          "verification": "historical_user_instruction",
+          "validity": "stable",
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "tags": [
+            "通用工作方法",
+            "个人偏好",
+            "进展汇报",
+            "任务定位",
+            "当前环节",
+            "整体流程",
+            "复杂项目"
+          ],
+          "evidence": [
+            {
+              "ref": "D20261023-076",
+              "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+              "family_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+              "location": "rollout-2026-10-23T17-33-24-01a14adf-6784-7aa3-a298-642a66b25eff_01a1681b-a353-7172-98c7-8d7c3c05ae0f.jsonl:L8",
+              "source_kind": "user_authored",
+              "text_sha256": "1e41741699de961da5f30fab062fed2086698622abfb3ca0c55f8a4f4111f6a9",
+              "message_timestamp": "2026-10-23T09:33:29.156Z",
+              "support": "用户明确要求记住：尤其在复杂工程项目中，先汇报当前任务处在整体项目哪一部分，再继续汇报；一次明确未来要求足以支持此范围内偏好。"
+            }
+          ],
+          "exceptions": [
+            "简单问答或独立小修改不要求补画完整流程，也不强制每条回复都复述背景。",
+            "如果整体流程尚未核实，仅说明已知定位及不确定性，不编造完整任务图或当前进度。",
+            "定位用于解释当前工作，不授权执行下一阶段或重新启动历史任务；当前用户格式要求优先。"
+          ],
+          "source_candidates": [],
+          "status": "active",
+          "updated_at": "2026-10-23T10:11:25+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "communication.locate-task-before-reporting-v2",
+      "last_reason": "补充科研阶段性汇报精简重点但保留完整代表案例，保留原任务定位要求。"
     },
     {
       "id": "research.pipeline-semantic-checkpoints",
@@ -13628,6 +13739,179 @@
       "id": "project.contractfill-zh-positioning-v4",
       "status": "active",
       "updated_at": "2026-10-25T10:16:07+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "research.reference-guided-rewriting-v2",
+      "title": "论文改写：借鉴范文，并交代新设计为何需要引入",
+      "kind": "memory",
+      "claim": "已有论文进入整理或局部改写时，用户偏好先选一篇能指导当前章节写作的相近论文，拆解句段与实验各自的作用，再对照本人已有材料形成改写蓝图：每节回答什么、用哪些结果、放什么图表、能支撑什么结论、确实还缺什么。借鉴论证和实验组织方式，而不只把范文当作相关工作或novelty对照；按当前批准范围推进。\n\n在2026-10-25的论文核查与后续修改要求中，用户采纳的具体检查方式是：重要的新设计或实验不要只介绍定义和做法，要先指出当前任务中已有处理的具体限制或未回答的问题，再解释对应设计为何需要引入、解决哪一缺口。逐段检查这种承接关系，而不只在引言交代总动机；先借范文核实表达功能，再对照本人材料提出局部修改。\n\n知识状态：已采纳的写作检查方法；本次仅核对真实会话要求，未重新核验论文修改质量或任何实验结论，后续使用效果待观察。",
+      "scope": "已有benchmark或实证论文的范文对照、论证整理和局部章节改写，尤其涉及重要设计或实验引入时",
+      "exceptions": [
+        "范文的具体句子、数据和结论不能代替本人证据；逐句功能和相近篇幅是原任务的示例方式，不自动成为以后固定字数模板。",
+        "是否补实验取决于本人的研究问题和证据缺口，不盲目照搬范文实验数量；执行仍需当前授权，先给蓝图不等于获准改文件或运行实验。",
+        "Sufficient Context是原任务选择的参考，不固定为所有研究的默认范文；被冻结或指定的其他章节保持其当前范围。",
+        "该写法用于有真实问题依据的重要设计与实验，不把每个实现细节都写成现有方法失效，也不为制造必要性编造缺陷或新实验。",
+        "用户最初转述的外部建议不能单独证明偏好；本次依据其随后要求实际核查并修改的表达。当前讨论、修改范围和事实证据优先。"
+      ],
+      "tags": [
+        "科研",
+        "论文",
+        "写作",
+        "范文",
+        "模仿",
+        "改写",
+        "实验部分",
+        "蓝图",
+        "参考论文",
+        "段落功能",
+        "设计引入",
+        "必要性",
+        "动机",
+        "问题驱动",
+        "论证衔接"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "historical_user_instruction_and_adopted_writing_check_no_outcome_revalidation",
+      "evidence": [
+        {
+          "ref": "D20261022-075",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-10-19T12-53-23-01a14adf-6784-7aa3-a298-642a66b25eff_01a15281-d7cd-7af2-98ca-60aa006dd5e7.jsonl:L1812",
+          "family_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "source_kind": "user_authored",
+          "text_sha256": "31edbc69464780726c577c1812cd4e692f7d2c31b57b4c35b4151336c250670a",
+          "message_timestamp": "2026-10-19T12:11:27.815Z",
+          "support": "用户明确希望按相近论文句段的表达功能借鉴写法，并遵守当前修改范围。"
+        },
+        {
+          "ref": "D20261022-120",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-10-22T12-28-52-01a14adf-6784-7aa3-a298-642a66b25eff_01a161de-7afb-7ca1-b8e7-60c56767d5f0.jsonl:L166",
+          "family_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "source_kind": "user_authored",
+          "text_sha256": "0b2fb15d96e03911847eba351e65071b26a98fe2b28ca74c011fad67f5c0a479",
+          "message_timestamp": "2026-10-22T05:56:58.682Z",
+          "support": "用户澄清当前目标是学习并模仿相近论文的写作与实验组织，而不是只找内容或novelty相关文献。"
+        },
+        {
+          "ref": "D20261022-126",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-10-22T14-12-58-01a14adf-6784-7aa3-a298-642a66b25eff_01a1623d-c880-7842-9932-cd7bcc59fd19.jsonl:L91",
+          "family_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "source_kind": "user_authored",
+          "text_sha256": "0b3caf3a250fc967bc1e43122955ef78f31704b96030aa41344d73665a6fbe04",
+          "message_timestamp": "2026-10-22T06:28:00.912Z",
+          "support": "用户要求先给实验部分改写蓝图，逐节映射已有结果、图表、结论及确缺评分，先审查而不执行。"
+        },
+        {
+          "ref": "D20261026-011",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-10-25T17-06-49-01a14adf-6784-7aa3-a298-642a66b25eff_01a17250-0713-71b1-9dda-ac613a115eff.jsonl:L438",
+          "family_id": "contract-research",
+          "source_kind": "user_authored",
+          "text_sha256": "abd592159305ec4e611c2d44a59cadc85c5d4f6b3dc1188c98a66b2b5244873a",
+          "message_timestamp": "2026-10-25T10:53:18.625Z",
+          "support": "用户明确要求对照范文检查本人论文是否先说明现有问题再引出设计。"
+        },
+        {
+          "ref": "D20261026-013",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-10-25T19-17-40-01a14adf-6784-7aa3-a298-642a66b25eff_01a172c7-d179-71f3-a0c3-cc2c97e635ab.jsonl:L8",
+          "family_id": "contract-research",
+          "source_kind": "user_authored",
+          "text_sha256": "b155e84ae74441dd964dd3296aabd7640b208b42d202b32a291ae255c9029d2a",
+          "message_timestamp": "2026-10-25T11:17:44.703Z",
+          "support": "核查后要求修改论文并使用论文相关技能，支持将前述检查用于当前论文改写。"
+        }
+      ],
+      "source_candidates": [],
+      "status": "active",
+      "updated_at": "2026-10-26T10:29:48+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "communication.locate-task-before-reporting-v2",
+      "title": "复杂项目汇报：先定位任务；科研汇报精简重点并保留完整案例",
+      "kind": "memory",
+      "claim": "在复杂工程或科研项目中，汇报进展或提出下一步方案前，先用一句简短的话说明当前任务处在整体流程的哪一环节、这一步解决什么问题，再报告结果、缺口和方案。必要时展示很短的流程链并标出当前节点，帮助用户保持对项目的把控。\n\n涉及多个Agent或多次判定时，说明正在做原始评分、分歧处理还是事后复核，避免把不同阶段都笼统称为“复核”。沿用已有简洁汇报方式，不为定位任务添加长篇项目背景或固定大表。\n\n这是用户明确要求今后记住的沟通方式；不证明任何研究或工程步骤已完成。\n\n论文阶段性汇报的额外要求：先讲清为什么需要这项评测，再用精简的展示串起实验设计、关键结果、结果说明了什么以及新增认识；避免把大量过程文字平铺到汇报中。2026-10-26用户要求像PPT一样突出核心，同时明确“例子还是要全”。压缩说明文字时，保留支撑判断所需的完整代表案例和关键条件，不能只留口号或把所有案例删掉。\n\n知识状态：真实用户明确给出的汇报组织与纠正要求。相邻助手展示过“字段要求→可见信息→应有行为→实际输出与判定”的案例结构，可作组织参考；本次未重新核验文档内容或科学结论，不据此证明效果已改善。",
+      "scope": "复杂工程或科研项目的进展汇报、子任务说明，以及用户需要判断下一步方案时。",
+      "verification": "historical_user_instruction_and_scoped_reporting_correction_no_outcome_revalidation",
+      "validity": "stable",
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "tags": [
+        "通用工作方法",
+        "个人偏好",
+        "进展汇报",
+        "任务定位",
+        "当前环节",
+        "整体流程",
+        "复杂项目",
+        "论文",
+        "科研汇报",
+        "PPT",
+        "精简",
+        "完整案例",
+        "研究动机"
+      ],
+      "evidence": [
+        {
+          "ref": "D20261023-076",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "family_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-10-23T17-33-24-01a14adf-6784-7aa3-a298-642a66b25eff_01a1681b-a353-7172-98c7-8d7c3c05ae0f.jsonl:L8",
+          "source_kind": "user_authored",
+          "text_sha256": "1e41741699de961da5f30fab062fed2086698622abfb3ca0c55f8a4f4111f6a9",
+          "message_timestamp": "2026-10-23T09:33:29.156Z",
+          "support": "用户明确要求记住：尤其在复杂工程项目中，先汇报当前任务处在整体项目哪一部分，再继续汇报；一次明确未来要求足以支持此范围内偏好。"
+        },
+        {
+          "ref": "D20261026-017",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-10-25T19-17-40-01a14adf-6784-7aa3-a298-642a66b25eff_01a172c7-d179-71f3-a0c3-cc2c97e635ab.jsonl:L578",
+          "family_id": "contract-research",
+          "source_kind": "user_authored",
+          "text_sha256": "a0f642572031ce75bfc5eb23e2714570799116a61ffaae35a4b199ee914ae5a6",
+          "message_timestamp": "2026-10-25T15:47:39.227Z",
+          "support": "用户指出科研总结未讲清为什么要bench，并要求补充研究动机。"
+        },
+        {
+          "ref": "D20261026-037",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-10-26T10-09-34-01a175f8-61b2-7572-9c05-5e761e63772f.jsonl:L279",
+          "family_id": "contract-research",
+          "source_kind": "user_authored",
+          "text_sha256": "2f76cf698632f824379ea5ca4e810b0253fad6dce921a9ff82742f106bbbde20",
+          "message_timestamp": "2026-10-26T02:56:54.478Z",
+          "support": "用户明确要求科研汇报像PPT一样精简，仅保留核心重点。"
+        },
+        {
+          "ref": "D20261026-039",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-10-26T10-09-34-01a175f8-61b2-7572-9c05-5e761e63772f.jsonl:L354",
+          "family_id": "contract-research",
+          "source_kind": "user_authored",
+          "text_sha256": "860c7f9cc67d4b7c18021ca297260a0fdf827e88b19ef65efae22f2ef7f2054a",
+          "message_timestamp": "2026-10-26T03:06:37.556Z",
+          "support": "紧接精简要求，用户明确要求例子仍需完整，不能以精简为由删掉必要案例。"
+        }
+      ],
+      "exceptions": [
+        "简单问答或独立小修改不要求补画完整流程，也不强制每条回复都复述背景。",
+        "如果整体流程尚未核实，仅说明已知定位及不确定性，不编造完整任务图或当前进度。",
+        "定位用于解释当前工作，不授权执行下一阶段或重新启动历史任务；当前用户格式要求优先。",
+        "PPT式精简与完整案例的组合仅用于论文/科研阶段性汇报，不要求论文正文、详细审计或所有日常回复一律按PPT组织。",
+        "保留完整代表案例不等于默认全量列出所有样本；案例应足以支撑当前判断，具体篇幅以当前任务为准。",
+        "汇报展示顺序不能倒写为真实研究时间顺序，动机实验与主实验的事实和作用仍按原材料区分。"
+      ],
+      "source_candidates": [],
+      "status": "active",
+      "updated_at": "2026-10-26T10:29:48+00:00",
       "revision": 1,
       "history": []
     }
@@ -14043,5 +14327,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     }
   ],
-  "updated_at": "2026-10-25T10:16:07+00:00"
+  "updated_at": "2026-10-26T10:29:48+00:00"
 }

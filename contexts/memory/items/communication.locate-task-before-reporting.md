@@ -1,12 +1,14 @@
 # 复杂项目汇报：先定位当前任务在整体流程中的位置
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `communication.locate-task-before-reporting`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 复杂工程或科研项目的进展汇报、子任务说明，以及用户需要判断下一步方案时。
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-23T10:11:25+00:00
+- updated_at: 2026-10-26T10:29:48+00:00
 
 在复杂工程或科研项目中，汇报进展或提出下一步方案前，先用一句简短的话说明当前任务处在整体流程的哪一环节、这一步解决什么问题，再报告结果、缺口和方案。必要时展示很短的流程链并标出当前节点，帮助用户保持对项目的把控。
 
@@ -19,6 +21,7 @@
 - 简单问答或独立小修改不要求补画完整流程，也不强制每条回复都复述背景。
 - 如果整体流程尚未核实，仅说明已知定位及不确定性，不编造完整任务图或当前进度。
 - 定位用于解释当前工作，不授权执行下一阶段或重新启动历史任务；当前用户格式要求优先。
+- replaced_by: communication.locate-task-before-reporting-v2
 
 ## Evidence pointers
 
