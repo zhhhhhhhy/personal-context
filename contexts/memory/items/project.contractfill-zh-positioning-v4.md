@@ -1,12 +1,14 @@
 # ContractFill稿件：历史定位与中英同步边界
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.contractfill-zh-positioning-v4`
 - kind: project
-- status: active
+- status: superseded
 - scope: 继续同一Desktop/icml_chinese稿件的定位、语种识别或中英版本同步时；保留各日期约定的范围
 - verification: historical_user_instruction_and_language_sync_agreement_no_document_revalidation
 - validity: project
-- updated_at: 2026-10-25T10:16:07+00:00
+- updated_at: 2026-10-27T10:01:22+00:00
 
 对应Desktop/icml_chinese稿件先确认中文入口；2026-10-12的Benchmark/Evaluation定位保留为历史起点。后续用户要求保留填表与小模型背景，并重新比较可行研究定位；没有新的最终定位采纳证据时，不把旧定位当永久决定。
 
@@ -22,6 +24,7 @@
 - 每小时检查仅属于指定稿件的同步任务；不改变个人Context每日任务，也不在记忆维护时执行论文同步或科研工作。
 - 旧定位和版本来源仍保留；用户要求英文跟随中文不证明当前两份稿件或PDF已经一致。
 - target: references/projects/contractfill-zh-20261012.md
+- replaced_by: project.contractfill-zh-positioning-v5
 
 ## Evidence pointers
 
