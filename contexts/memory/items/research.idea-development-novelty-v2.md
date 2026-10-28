@@ -1,12 +1,14 @@
 # 科研 idea 与贡献判断：优先发展，沿用明确标准
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.idea-development-novelty-v2`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 科研 idea 构思、novelty 核查，以及已有论文贡献定位、写作与审核之间的衔接；按当前任务读取对应内容。
 - verification: historical_user_instruction
 - validity: stable
-- updated_at: 2026-10-23T06:26:57+00:00
+- updated_at: 2026-10-28T10:08:54+00:00
 
 实际使用：
 在已有论文贡献定位、写作与审核衔接时，先明确当前目标和已采用的贡献标准，区分任务、数据、方法与实证贡献；写作与审核沿用同一标准，不把“有意义的增量”悄悄换成“必须提出新评分原理”。明确说明新增了什么、价值在哪里、证据支撑到哪；换名称本身不算新增贡献。改变结论时，说明是新增证据、目标变化，还是发现前次判断错误；不能把同一依据下的反复包装和撤回当作研究进展。
@@ -25,6 +27,7 @@
 - 这是用户明确采纳的科研合作偏好，不证明某个具体idea已经新颖或任何科研任务已获执行授权。
 - 有意义的增量是否足以支撑当前论文，仍按用户当前的培养目标或投稿目标判断；本条不降低事实、证据或所选目标的要求。
 - 新证据、目标变化或发现前次推理错误时可以并应修正判断，说明改变了什么；保持标准不等于维护错误结论。
+- replaced_by: research.idea-development-novelty-v3
 
 ## Evidence pointers
 

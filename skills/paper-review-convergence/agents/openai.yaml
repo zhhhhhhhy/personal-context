@@ -1,0 +1,6 @@
+interface:
+  display_name: "论文审查收敛"
+  short_description: "让审稿与构思收敛，固定问题、强基线和证据，判断何时停止修改或等待验证"
+  default_prompt: "使用 $paper-review-convergence，识别当前审稿或构思阶段，固定问题、强基线与贡献标准，复核已有争点，说明保留、撤回、未决项及本轮停止条件。"
+policy:
+  allow_implicit_invocation: true

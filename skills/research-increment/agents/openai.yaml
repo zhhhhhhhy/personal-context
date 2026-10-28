@@ -1,0 +1,6 @@
+interface:
+  display_name: "研究增量探索"
+  short_description: "从现有论文与证据筛选研究假设，核查近邻、强基线和可证伪的实质增量"
+  default_prompt: "用 $research-increment 基于现有科研资产筛选值得验证的研究增量，说明近邻差异、强基线和最小核查，并遵守当前执行范围。"
+policy:
+  allow_implicit_invocation: true

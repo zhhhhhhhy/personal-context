@@ -11,6 +11,7 @@
 | 文献调研 | [deep-research](../../skills/deep-research/SKILL.md) | 按其路由读取必要方法与来源，不默认加载写作和实验执行流程 |
 | 实验设计、结果解释与证据核查 | 匹配当前可用的科研Skill；论文写作中的证据与因果边界见[学术写作入口](../../contexts/memory/items/skill.academic-writing-entry.md) | 涉及具体数据、标签或协议时再核对对应版本；设计讨论不自动授权实验 |
 | 核心结论准备确定、主线实质修改后、重要版本交付前 | [论文评审 Agent](../../skills/paper-review-agent/SKILL.md) | 主智能体在给出最终判断或交付前主动匹配；命中且有可定位材料时按 Skill 派遣真实子智能体，无需用户提及审稿或委派；同材料同问题复用已有意见，普通文字处理不触发 |
+| 开始论文评审、按上轮意见复核、反复改稿、构思中反复出方案又否决或判断何时停止 | [论文审查收敛](../../skills/paper-review-convergence/SKILL.md) | 审稿追踪主张与问题验收；构思固定阶段、强基线、实际增量与判断变化，停止同证据下换名重提；不增加评审轮次或委派，普通润色、翻译、排版不单独触发 |
 | 标签/评分改变后的复评 | [版本对齐→有效预测盘点→分层重评](../../contexts/memory/items/research.reuse-predictions-before-rerun-v3.md) | 区分行数、唯一题数、有效回答和加载错误；机械重算与语义重审分别安排，不把旧预测或盘点完成当作新复评结果 |
 | 模型或判别模块的效率比较 | [对齐被测任务和计时阶段](../../contexts/memory/items/evaluation.match-measurement-stage.md) | 仅用于该条范围内的速度问题，不把旧测量当当前结果 |
 | 本人逐项审查研究样本 | [说明对象、工作量和收益](../../contexts/memory/items/research.chinese-item-review-v3.md) | 需要本人参与时适用；不自动要求所有研究都人工审核 |
