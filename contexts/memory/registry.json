@@ -13316,10 +13316,94 @@
       "id": "research.problem-first-proposals-v2",
       "title": "论文方法构思工作流：问题、多方案、自评、取舍与拆分交付",
       "claim": "知识状态：已采纳的科研构思与交付流程；候选算法效果未验证。按当前阶段读取和使用，阶段可局部补齐，不强制每次走完。\n\n| 阶段/模块 | 输入 → 产出 | 关键判断 |\n|---|---|---|\n| 问题凝练 | 当前论文目标、已有材料与具体失败 → 清楚的问题及应改善的行为 | 从材料出发，不预设复杂机制或把个别案例当作主导原因 |\n| 多方案构造 | 问题、可借用的已有方法 → 多个有实质区别的技术路线 | 可以组合或改造算法，讲清各部分作用及具体新增，不反复包装同一个缺乏依据的方向 |\n| 推荐前自评 | 候选、最接近的方法及具体案例 → 差异、必要性、证据缺口 | 用案例讲清实质改动和与简单方法的差别；未验证效果保持假设，不预设简单方法必然失败 |\n| 比较与取舍 | 自评结果 → 可行性、工作量、风险、待验证点及有理由的推荐 | 以共同解决问题的科研合作者方式交付；让用户作当前需要的选择，不把所有候选都实施 |\n| 选后拆分交付 | 用户选定的路线与当前授权 → 模块职责、输入输出、依赖、验证安排或大纲草图 | 构建或训练安排仍是计划；写入大纲不等于算法完成，构思本身不授权实验或论文修改 |\n\n下次仅需构思时使用前三至四个阶段；已选定方案才进入对应拆分。已有研究定位或novelty条目仍按各自触发条件使用。需要论证复杂机制为何必要时，再读[具体检查方法](research.mechanism-necessity-check.md)。",
-      "status": "active",
-      "updated_at": "2026-10-23T08:35:34+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-30T10:10:44+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "kind": "memory",
+          "scope": "论文科研中构思、比较或修正方法方案，以及将用户选定的候选整理为模块草图或大纲；只执行当前授权的阶段。",
+          "exceptions": [
+            "这是科研构思阶段的合作方式；固定范围的润色、审稿或状态查询不自动扩展成重新设计方案。",
+            "多个方案应有实质区别，数量按问题需要；当次三条路线不是固定配额。组合已有算法是可选手段，不要求每次拼接算法，也不把组合本身当作创新。",
+            "用户对当次联合选择方案的否定不等于禁止所有联合选择方法；应判断其针对当前问题的必要性与证据。",
+            "候选方案的可能效果、近邻差异与工作量在未核查或验证时保留待核状态；遵循既有优先发展但不强造novelty的边界。",
+            "本次方案一的选择、第三章内容与既有案例属于当次项目，不固化为通用路线；构思建议不授权启动实验、训练或修改论文。",
+            "这是本会话支持的构思到大纲交付片段，不是论文全生命周期；既有Skill提供的默认流程不在本条复制，未出现的阶段不补造。"
+          ],
+          "tags": [
+            "论文",
+            "科研",
+            "方法设计",
+            "方案构思",
+            "工作流",
+            "任务拆分",
+            "模块拆分",
+            "输入输出",
+            "问题凝练",
+            "多个方案",
+            "算法组合",
+            "方案自评",
+            "技术路线",
+            "大纲交付"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "user_adopted_workflow_effects_unverified",
+          "evidence": [
+            {
+              "ref": "OUTLINE-20261023-L10226",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-11T17-41-51-01a11266-18ff-7b92-bdec-81772b1c0b18_01a12a57-0fb9-73d3-b53e-6e4e6904013c.jsonl:L10226",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "source_kind": "user_authored",
+              "text_sha256": "dcc95ff03e28510176a8687cc3a4dc6d4a507a7091e4b546fb178f82f192a496",
+              "message_timestamp": "2026-10-23T06:04:40.108Z",
+              "support": "用户允许组合已有算法，要求先对照最接近的方法自评，并用具体案例说明实质改动和可能作用；当次专硕目标不泛化为所有投稿标准。"
+            },
+            {
+              "ref": "OUTLINE-20261023-L10458",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-11T17-41-51-01a11266-18ff-7b92-bdec-81772b1c0b18_01a12a57-0fb9-73d3-b53e-6e4e6904013c.jsonl:L10458",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "source_kind": "user_authored",
+              "text_sha256": "fc41150d5fa0dca7e360673377255ccb62435c4194897140780d1cd9520aa9e7",
+              "message_timestamp": "2026-10-23T06:40:14.905Z",
+              "support": "用户要求用已有具体案例检查复杂方案的必要性；材料不能显示差异时应直说，不预设简单方法必然失败。"
+            },
+            {
+              "ref": "OUTLINE-20261023-L10526",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-11T17-41-51-01a11266-18ff-7b92-bdec-81772b1c0b18_01a12a57-0fb9-73d3-b53e-6e4e6904013c.jsonl:L10526",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "source_kind": "user_authored",
+              "text_sha256": "7c1b223a5ce173ec4cc280d9fa99d1930a92af338810f161bff95f603ebdad94",
+              "message_timestamp": "2026-10-23T06:49:43.735Z",
+              "support": "用户明确要求以科研合作者方式先凝练当前问题，再提出多个技术方案；算法组合是可选路径，不是机械拼接或固定技术路线。"
+            },
+            {
+              "ref": "OUTLINE-20261023-L10679",
+              "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "location": "rollout-2026-10-11T17-41-51-01a11266-18ff-7b92-bdec-81772b1c0b18_01a12a57-0fb9-73d3-b53e-6e4e6904013c.jsonl:L10679",
+              "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+              "source_kind": "user_authored",
+              "text_sha256": "53bbd784cf9b766d1d9980311e4e9349d53193e4b2fef65334c2e3f2d8c3fe85",
+              "message_timestamp": "2026-10-23T07:13:41.512Z",
+              "support": "用户明确肯定先凝练问题、再给出多个不同技术方案的方式；当次选择方案一及写入大纲是限定任务决定，不转成通用方案或完成事实。"
+            }
+          ],
+          "source_candidates": [],
+          "id": "research.problem-first-proposals-v2",
+          "title": "论文方法构思工作流：问题、多方案、自评、取舍与拆分交付",
+          "claim": "知识状态：已采纳的科研构思与交付流程；候选算法效果未验证。按当前阶段读取和使用，阶段可局部补齐，不强制每次走完。\n\n| 阶段/模块 | 输入 → 产出 | 关键判断 |\n|---|---|---|\n| 问题凝练 | 当前论文目标、已有材料与具体失败 → 清楚的问题及应改善的行为 | 从材料出发，不预设复杂机制或把个别案例当作主导原因 |\n| 多方案构造 | 问题、可借用的已有方法 → 多个有实质区别的技术路线 | 可以组合或改造算法，讲清各部分作用及具体新增，不反复包装同一个缺乏依据的方向 |\n| 推荐前自评 | 候选、最接近的方法及具体案例 → 差异、必要性、证据缺口 | 用案例讲清实质改动和与简单方法的差别；未验证效果保持假设，不预设简单方法必然失败 |\n| 比较与取舍 | 自评结果 → 可行性、工作量、风险、待验证点及有理由的推荐 | 以共同解决问题的科研合作者方式交付；让用户作当前需要的选择，不把所有候选都实施 |\n| 选后拆分交付 | 用户选定的路线与当前授权 → 模块职责、输入输出、依赖、验证安排或大纲草图 | 构建或训练安排仍是计划；写入大纲不等于算法完成，构思本身不授权实验或论文修改 |\n\n下次仅需构思时使用前三至四个阶段；已选定方案才进入对应拆分。已有研究定位或novelty条目仍按各自触发条件使用。需要论证复杂机制为何必要时，再读[具体检查方法](research.mechanism-necessity-check.md)。",
+          "status": "active",
+          "updated_at": "2026-10-23T08:35:34+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "research.problem-first-proposals-v3",
+      "last_reason": "在原科研构思工作流内补充用户连续纠正的架构借鉴交付粒度，不保存未经复验的论文断言，不复制默认调研Skill。"
     },
     {
       "id": "research.mechanism-necessity-check",
@@ -14320,10 +14404,101 @@
           "support": "要求参考其他页配色，明确先改图片，再处理PPT。"
         }
       ],
-      "status": "active",
-      "updated_at": "2026-10-27T10:01:22+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-10-30T10:10:44+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "documents.slide-image-editable-workflow",
+          "title": "PPT单页重制：先定图片方案，再核对可编辑稿的差异",
+          "kind": "memory",
+          "claim": "知识状态：已采纳的限定工作流与用户指出的转换问题；本次未重新打开或验收实际PPT，最终画质、文字完整性和可编辑性不据助手汇报视为已验证。\n\n适用于已有PPT中单页重制、且当前任务已选择图片先行的流程。先区分内容依据与视觉依据：页面备注可给大致思路，事实内容仍对照指定报告；样稿好看不等于内容已溯源，按当前请求分开检查。制作、渲染和常规验收复用当前可用的演示文稿、图像和转换/审图Skill，不复制其默认流程。\n\n当用户当前只要求图片样稿时，先完成图片阶段；图片方向获采纳并要求可编辑PPT后，再转为文字和必要图形可编辑的稿件。已确认的内容和图片作为对照，转换后仍须检查实际PPT中的漏字、错位、箭头路径和视觉差异。此案例中用户已认可图片，随后仍指出可编辑稿右侧箭头有问题；因此不能把图片认可直接当成PPT验收。对明确的局部缺陷按当前范围最小修正，保留历史版本。\n\n配色、平面/立体程度与素材选择以当前整套PPT及其参考页为准。用户后来要求先改图片再处理PPT时，先更新图样再同步可编辑稿，避免两个版本分别漂移。",
+          "scope": "已有演示文稿的单页视觉重制，采用图片样稿先行、再转可编辑PPT并按确认图核对时；不作为所有PPT的强制流程",
+          "exceptions": [
+            "用户已经明确要求直接制作或编辑PPT时，不另加图片先行、逐阶段确认或新审批环节。",
+            "该案例的具体配色、偏平面组件、现场实拍照片以及单页编号仅属于原稿，不能泛化为用户所有演示文稿的永久审美。",
+            "普通文档风格沿用documents.preserve-style-v2；这里只补充图片稿与可编辑稿之间的转换及版本衔接经验，不重复Skill的通用渲染验收。",
+            "用户认可某版视觉方向不证明报告中的事实已核实，也不证明后续可编辑版本已满足全部检查；只做检查的请求仍不授权改动。",
+            "来源中某一轮同时出现只检查与最小修改表达，具体执行范围须看当前请求，不将其解释为以后检查一律可改文件。"
+          ],
+          "tags": [
+            "通用工作方法",
+            "PPT",
+            "单页重制",
+            "图片样稿",
+            "可编辑",
+            "内容溯源",
+            "备注",
+            "报告",
+            "审图",
+            "箭头",
+            "版本对照",
+            "先图后PPT"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "human_adopted_scoped_workflow_and_reported_conversion_issue_no_artifact_recheck",
+          "source_candidates": [],
+          "evidence": [
+            {
+              "ref": "D20261027-016",
+              "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+              "location": "rollout-2026-10-26T20-52-17-01a17844-cf67-75a1-9f83-85d38c5dc7b5.jsonl:L687",
+              "family_id": "slide-redesign",
+              "source_kind": "user_authored",
+              "text_sha256": "96d3af4b628f7b0217468f2b7094f6ba9023bd41d8522e855de7bb4e1c551320",
+              "message_timestamp": "2026-10-26T13:46:18.997Z",
+              "support": "用户明确本阶段按审图Skill生成图片，不提前制作PPT。"
+            },
+            {
+              "ref": "D20261027-018",
+              "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+              "location": "rollout-2026-10-26T20-52-17-01a17844-cf67-75a1-9f83-85d38c5dc7b5.jsonl:L864",
+              "family_id": "slide-redesign",
+              "source_kind": "user_authored",
+              "text_sha256": "45bdffc786de619c6c797b256aa099c667e8244a196ff8ebf946ae7a682ffeb2",
+              "message_timestamp": "2026-10-27T02:38:45.756Z",
+              "support": "认可图样后仍要求单独核对页面备注和可行性报告的内容依据。"
+            },
+            {
+              "ref": "D20261027-020",
+              "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+              "location": "rollout-2026-10-26T20-52-17-01a17844-cf67-75a1-9f83-85d38c5dc7b5.jsonl:L928",
+              "family_id": "slide-redesign",
+              "source_kind": "user_authored",
+              "text_sha256": "2c55cd2b98766ce0c5164ca440fee69690d1ea6496b177b3e9e71741d327aeb1",
+              "message_timestamp": "2026-10-27T02:48:07.849Z",
+              "support": "认可图片方向后明确要求依据图片制作可编辑PPT。"
+            },
+            {
+              "ref": "D20261027-023",
+              "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+              "location": "rollout-2026-10-26T20-52-17-01a17844-cf67-75a1-9f83-85d38c5dc7b5.jsonl:L1243",
+              "family_id": "slide-redesign",
+              "source_kind": "user_authored",
+              "text_sha256": "1f3709cc362d94b5daa657148cb6966243270b4c0872c994be537b6cdac11437",
+              "message_timestamp": "2026-10-27T03:18:26.303Z",
+              "support": "用户指出转换后右侧箭头问题，要求对照确认图查漏字、错位和视觉差异，并保留历史版本、限定最小修改。"
+            },
+            {
+              "ref": "D20261027-038",
+              "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+              "location": "rollout-2026-10-27T13-28-08-01a17844-cf67-75a1-9f83-85d38c5dc7b5_01a17bd4-86a8-7ca2-bd37-e1db1544f6ae.jsonl:L17",
+              "family_id": "slide-redesign",
+              "source_kind": "user_authored",
+              "text_sha256": "d83fbadf053d38847cea150f2ab54a9781fc4bd0ce1132ba954210a7c564c619",
+              "message_timestamp": "2026-10-27T05:30:40.179Z",
+              "support": "要求参考其他页配色，明确先改图片，再处理PPT。"
+            }
+          ],
+          "status": "active",
+          "updated_at": "2026-10-27T10:01:22+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "documents.slide-image-editable-workflow-v2",
+      "last_reason": "在原图片到可编辑稿流程中补充材料到文字设计稿及内容/视觉纠正；保留旧来源、范围和待核状态，不增加PPT固定模板或审核开销。"
     },
     {
       "id": "research.idea-development-novelty-v3",
@@ -14469,6 +14644,297 @@
       ],
       "status": "active",
       "updated_at": "2026-10-29T10:04:40+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "documents.slide-image-editable-workflow-v2",
+      "title": "PPT单页重制：材料与叙事先行，图样到可编辑稿逐版核对",
+      "kind": "memory",
+      "claim": "知识状态：已采纳的限定工作流与用户指出的转换问题；本次未重新打开或验收实际PPT，最终画质、文字完整性和可编辑性不据助手汇报视为已验证。\n\n适用于已有PPT中单页重制、且当前任务已选择图片先行的流程。先区分内容依据与视觉依据：页面备注可给大致思路，事实内容仍对照指定报告；样稿好看不等于内容已溯源，按当前请求分开检查。制作、渲染和常规验收复用当前可用的演示文稿、图像和转换/审图Skill，不复制其默认流程。\n\n当用户当前只要求图片样稿时，先完成图片阶段；图片方向获采纳并要求可编辑PPT后，再转为文字和必要图形可编辑的稿件。已确认的内容和图片作为对照，转换后仍须检查实际PPT中的漏字、错位、箭头路径和视觉差异。此案例中用户已认可图片，随后仍指出可编辑稿右侧箭头有问题；因此不能把图片认可直接当成PPT验收。对明确的局部缺陷按当前范围最小修正，保留历史版本。\n\n配色、平面/立体程度与素材选择以当前整套PPT及其参考页为准。用户后来要求先改图片再处理PPT时，先更新图样再同步可编辑稿，避免两个版本分别漂移。\n\n后续材料与视觉纠正（2026-10-29至30）：\n在当前已采用图片先行的单页任务中，先从指定材料提取可支持的内容，再看相邻页明确本页要补充的叙事，形成文字结构和待填内容后生成图样。不能只画结合后的结果、漏掉组成部分本身的能力及结合如何带来变化；也不能把前页已讲清的问题再铺一遍。这里保存的是先讲清构成与增量的检查方法，不把本案例的SOP或左右结构设为所有PPT模板。\n\n本次实际发生的过程偏差是：为降低AI味而连同有意义的图标一起删掉，用户随即指出缺少图标；后续又指出纯分点与信息量不足。因此，减少装饰性AI元素不等于去掉语义图解。内容审核通过，也不能代替视觉审核；逐块看图文是否表达了核心关系，避免仅换成更多文字或更多装饰。风格核对除颜色外，还看邻页的文字、图标尺度与页脚比例，不能仅凭生成或审图助手声称通过就认定一致。\n\n当前任务已明确选择创作和审图Skill时，后续局部迭代沿用该流程，无需等用户每轮重申。审核角色、轮数与停止条件沿用当前请求，不在本条另加固定人数或循环。正文只记录用户采纳的限定流程及纠正；相邻助手汇报仅证明它报告过重画和审图，本轮未复验图片、视觉一致性、可编辑稿或质量提升。",
+      "scope": "已有演示文稿的单页视觉重制，采用图片样稿先行、再转可编辑PPT并按确认图核对时；不作为所有PPT的强制流程",
+      "exceptions": [
+        "用户已经明确要求直接制作或编辑PPT时，不另加图片先行、逐阶段确认或新审批环节。",
+        "该案例的具体配色、偏平面组件、现场实拍照片以及单页编号仅属于原稿，不能泛化为用户所有演示文稿的永久审美。",
+        "普通文档风格沿用documents.preserve-style-v2；这里只补充图片稿与可编辑稿之间的转换及版本衔接经验，不重复Skill的通用渲染验收。",
+        "用户认可某版视觉方向不证明报告中的事实已核实，也不证明后续可编辑版本已满足全部检查；只做检查的请求仍不授权改动。",
+        "来源中某一轮同时出现只检查与最小修改表达，具体执行范围须看当前请求，不将其解释为以后检查一律可改文件。",
+        "左右结构、是否保留底部示例、某页应呈现的具体能力、三轮审核上限及版式参数属于当次材料和版本，不泛化为永久偏好。",
+        "降低AI味需要结合当前严肃程度与视觉参考判断，不等于所有页面必须有图标；纯文字是明确设计选择时不强加装饰。",
+        "后续继续使用已选Skill只适用于同一任务仍有效的流程；新任务依当前要求和可用Skill路由，不自动复制原项目的审核人数、预算或权限。"
+      ],
+      "tags": [
+        "通用工作方法",
+        "PPT",
+        "单页重制",
+        "图片样稿",
+        "可编辑",
+        "内容溯源",
+        "备注",
+        "报告",
+        "审图",
+        "箭头",
+        "版本对照",
+        "先图后PPT",
+        "材料到设计稿",
+        "叙事衔接",
+        "语义图标",
+        "减少AI味",
+        "内容与视觉审核",
+        "图标大小",
+        "文字大小"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "human_adopted_scoped_workflow_with_content_and_visual_corrections_artifacts_not_rechecked",
+      "source_candidates": [],
+      "evidence": [
+        {
+          "ref": "D20261027-016",
+          "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+          "location": "rollout-2026-10-26T20-52-17-01a17844-cf67-75a1-9f83-85d38c5dc7b5.jsonl:L687",
+          "family_id": "slide-redesign",
+          "source_kind": "user_authored",
+          "text_sha256": "96d3af4b628f7b0217468f2b7094f6ba9023bd41d8522e855de7bb4e1c551320",
+          "message_timestamp": "2026-10-26T13:46:18.997Z",
+          "support": "用户明确本阶段按审图Skill生成图片，不提前制作PPT。"
+        },
+        {
+          "ref": "D20261027-018",
+          "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+          "location": "rollout-2026-10-26T20-52-17-01a17844-cf67-75a1-9f83-85d38c5dc7b5.jsonl:L864",
+          "family_id": "slide-redesign",
+          "source_kind": "user_authored",
+          "text_sha256": "45bdffc786de619c6c797b256aa099c667e8244a196ff8ebf946ae7a682ffeb2",
+          "message_timestamp": "2026-10-27T02:38:45.756Z",
+          "support": "认可图样后仍要求单独核对页面备注和可行性报告的内容依据。"
+        },
+        {
+          "ref": "D20261027-020",
+          "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+          "location": "rollout-2026-10-26T20-52-17-01a17844-cf67-75a1-9f83-85d38c5dc7b5.jsonl:L928",
+          "family_id": "slide-redesign",
+          "source_kind": "user_authored",
+          "text_sha256": "2c55cd2b98766ce0c5164ca440fee69690d1ea6496b177b3e9e71741d327aeb1",
+          "message_timestamp": "2026-10-27T02:48:07.849Z",
+          "support": "认可图片方向后明确要求依据图片制作可编辑PPT。"
+        },
+        {
+          "ref": "D20261027-023",
+          "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+          "location": "rollout-2026-10-26T20-52-17-01a17844-cf67-75a1-9f83-85d38c5dc7b5.jsonl:L1243",
+          "family_id": "slide-redesign",
+          "source_kind": "user_authored",
+          "text_sha256": "1f3709cc362d94b5daa657148cb6966243270b4c0872c994be537b6cdac11437",
+          "message_timestamp": "2026-10-27T03:18:26.303Z",
+          "support": "用户指出转换后右侧箭头问题，要求对照确认图查漏字、错位和视觉差异，并保留历史版本、限定最小修改。"
+        },
+        {
+          "ref": "D20261027-038",
+          "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+          "location": "rollout-2026-10-27T13-28-08-01a17844-cf67-75a1-9f83-85d38c5dc7b5_01a17bd4-86a8-7ca2-bd37-e1db1544f6ae.jsonl:L17",
+          "family_id": "slide-redesign",
+          "source_kind": "user_authored",
+          "text_sha256": "d83fbadf053d38847cea150f2ab54a9781fc4bd0ce1132ba954210a7c564c619",
+          "message_timestamp": "2026-10-27T05:30:40.179Z",
+          "support": "要求参考其他页配色，明确先改图片，再处理PPT。"
+        },
+        {
+          "ref": "D20261030-019",
+          "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+          "location": "rollout-2026-10-27T13-28-08-01a17844-cf67-75a1-9f83-85d38c5dc7b5_01a17bd4-86a8-7ca2-bd37-e1db1544f6ae.jsonl:L493",
+          "source_kind": "user_authored",
+          "family_id": "slide-image-redesign",
+          "text_sha256": "d6faa6e6850ba82c921e899120ed22213ae31e2e152c7ee9cf1ab8ca8ff2951e",
+          "message_timestamp": "2026-10-29T16:41:36.577Z",
+          "support": "用户要求减少AI感、采用本页选定结构并对齐其他页面风格；当次布局和示例去留保留原稿范围。"
+        },
+        {
+          "ref": "D20261030-021",
+          "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+          "location": "rollout-2026-10-27T13-28-08-01a17844-cf67-75a1-9f83-85d38c5dc7b5_01a17bd4-86a8-7ca2-bd37-e1db1544f6ae.jsonl:L629",
+          "source_kind": "user_authored",
+          "family_id": "slide-image-redesign",
+          "text_sha256": "8dcf2fc76eb177a55d0771cff02b0c2fc06006b462c23208c67d63b5926e8a8c",
+          "message_timestamp": "2026-10-29T17:08:08.773Z",
+          "support": "在图标被移除后用户指出缺少图标，反证降低AI味不能被理解为一律去掉语义图示。"
+        },
+        {
+          "ref": "D20261030-047",
+          "thread_id": "01a18bc3-ce94-7da0-b1e8-9d956f526445",
+          "location": "rollout-2026-10-30T15-43-47-01a18bc3-ce94-7da0-b1e8-9d956f526445.jsonl:L143",
+          "source_kind": "user_authored",
+          "family_id": "slide-image-redesign",
+          "text_sha256": "b6dc4e97c292a58e99c9d58b4a789fc4a02e6164084cdf9bd8ba02e0614edf3c",
+          "message_timestamp": "2026-10-30T08:18:35.711Z",
+          "support": "用户明确材料搜集、文字设计稿、图样生成和审核的顺序，要求结合前后页并核对图标和文字尺度。"
+        },
+        {
+          "ref": "D20261030-051",
+          "thread_id": "01a18bc3-ce94-7da0-b1e8-9d956f526445",
+          "location": "rollout-2026-10-30T15-43-47-01a18bc3-ce94-7da0-b1e8-9d956f526445.jsonl:L424",
+          "source_kind": "user_authored",
+          "family_id": "slide-image-redesign",
+          "text_sha256": "5222f90e7933be52d1359c0c454fcb9cffacbfa80f88968df8b5accaec674881",
+          "message_timestamp": "2026-10-30T09:09:01.827Z",
+          "support": "用户接受大框架后要求分别优化两块内容，指出信息量不足及纯分点难以充分表达；不把去掉当次底部示例泛化。"
+        },
+        {
+          "ref": "D20261030-052",
+          "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+          "location": "rollout-2026-10-27T13-28-08-01a17844-cf67-75a1-9f83-85d38c5dc7b5_01a17bd4-86a8-7ca2-bd37-e1db1544f6ae.jsonl:L995",
+          "source_kind": "user_authored",
+          "family_id": "slide-image-redesign",
+          "text_sha256": "ba8135b68deb6eade7609658426beaa936c40a1f8bc77389dfa362086146d8c7",
+          "message_timestamp": "2026-10-30T09:14:15.593Z",
+          "support": "用户要求先讲组成部分的能力、再讲结合增量，避免重复局限，并结合最新稿相邻页丰富内容。"
+        },
+        {
+          "ref": "D20261030-055",
+          "thread_id": "01a17844-cf67-75a1-9f83-85d38c5dc7b5",
+          "location": "rollout-2026-10-27T13-28-08-01a17844-cf67-75a1-9f83-85d38c5dc7b5_01a17bd4-86a8-7ca2-bd37-e1db1544f6ae.jsonl:L1284",
+          "source_kind": "user_authored",
+          "family_id": "slide-image-redesign",
+          "text_sha256": "2423a5b91dad90f6f827884d5a332c44d30ca158c3eb957058c36f7eff2279de",
+          "message_timestamp": "2026-10-30T09:30:00.637Z",
+          "support": "用户再次指出局部信息不足，并明确已确定的Skill创作与评审流程在后续迭代仍应继续，不必每轮提醒。"
+        }
+      ],
+      "status": "active",
+      "updated_at": "2026-10-30T10:10:44+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "kind": "memory",
+      "scope": "论文科研中构思、比较或修正方法方案，以及将用户选定的候选整理为模块草图或大纲；只执行当前授权的阶段。 涉及从相关文献借鉴组件时，按需补充实际使用关系、贡献角色及架构改动的说明。",
+      "exceptions": [
+        "这是科研构思阶段的合作方式；固定范围的润色、审稿或状态查询不自动扩展成重新设计方案。",
+        "多个方案应有实质区别，数量按问题需要；当次三条路线不是固定配额。组合已有算法是可选手段，不要求每次拼接算法，也不把组合本身当作创新。",
+        "用户对当次联合选择方案的否定不等于禁止所有联合选择方法；应判断其针对当前问题的必要性与证据。",
+        "候选方案的可能效果、近邻差异与工作量在未核查或验证时保留待核状态；遵循既有优先发展但不强造novelty的边界。",
+        "本次方案一的选择、第三章内容与既有案例属于当次项目，不固化为通用路线；构思建议不授权启动实验、训练或修改论文。",
+        "这是本会话支持的构思到大纲交付片段，不是论文全生命周期；既有Skill提供的默认流程不在本条复制，未出现的阶段不补造。",
+        "技术借鉴检查按当前问题使用，不要求每次构思都开展一轮完整文献调研；状态查询或普通写作不自动扩展为架构研究。",
+        "官方模型、独立实现、同类范式与邻近技术应分开归因；这一区分不能将用户针对模型家族的提问收窄成只查官方API调用。",
+        "调研中判断其他工作是否以该模块为核心，需要核对真实方法与贡献，不能仅凭题名、助手旧汇报或新模块名称认定；具体论文和算法结论不在本条预设。"
+      ],
+      "tags": [
+        "论文",
+        "科研",
+        "方法设计",
+        "方案构思",
+        "工作流",
+        "任务拆分",
+        "模块拆分",
+        "输入输出",
+        "问题凝练",
+        "多个方案",
+        "算法组合",
+        "方案自评",
+        "技术路线",
+        "大纲交付",
+        "文献借鉴",
+        "架构改进",
+        "核心贡献",
+        "模块连接",
+        "独立实现",
+        "模型家族",
+        "调研交付"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "user_adopted_workflow_with_architecture_research_corrections_technical_claims_unverified",
+      "evidence": [
+        {
+          "ref": "OUTLINE-20261023-L10226",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-11T17-41-51-01a11266-18ff-7b92-bdec-81772b1c0b18_01a12a57-0fb9-73d3-b53e-6e4e6904013c.jsonl:L10226",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "source_kind": "user_authored",
+          "text_sha256": "dcc95ff03e28510176a8687cc3a4dc6d4a507a7091e4b546fb178f82f192a496",
+          "message_timestamp": "2026-10-23T06:04:40.108Z",
+          "support": "用户允许组合已有算法，要求先对照最接近的方法自评，并用具体案例说明实质改动和可能作用；当次专硕目标不泛化为所有投稿标准。"
+        },
+        {
+          "ref": "OUTLINE-20261023-L10458",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-11T17-41-51-01a11266-18ff-7b92-bdec-81772b1c0b18_01a12a57-0fb9-73d3-b53e-6e4e6904013c.jsonl:L10458",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "source_kind": "user_authored",
+          "text_sha256": "fc41150d5fa0dca7e360673377255ccb62435c4194897140780d1cd9520aa9e7",
+          "message_timestamp": "2026-10-23T06:40:14.905Z",
+          "support": "用户要求用已有具体案例检查复杂方案的必要性；材料不能显示差异时应直说，不预设简单方法必然失败。"
+        },
+        {
+          "ref": "OUTLINE-20261023-L10526",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-11T17-41-51-01a11266-18ff-7b92-bdec-81772b1c0b18_01a12a57-0fb9-73d3-b53e-6e4e6904013c.jsonl:L10526",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "source_kind": "user_authored",
+          "text_sha256": "7c1b223a5ce173ec4cc280d9fa99d1930a92af338810f161bff95f603ebdad94",
+          "message_timestamp": "2026-10-23T06:49:43.735Z",
+          "support": "用户明确要求以科研合作者方式先凝练当前问题，再提出多个技术方案；算法组合是可选路径，不是机械拼接或固定技术路线。"
+        },
+        {
+          "ref": "OUTLINE-20261023-L10679",
+          "thread_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "location": "rollout-2026-10-11T17-41-51-01a11266-18ff-7b92-bdec-81772b1c0b18_01a12a57-0fb9-73d3-b53e-6e4e6904013c.jsonl:L10679",
+          "family_id": "01a11266-18ff-7b92-bdec-81772b1c0b18",
+          "source_kind": "user_authored",
+          "text_sha256": "53bbd784cf9b766d1d9980311e4e9349d53193e4b2fef65334c2e3f2d8c3fe85",
+          "message_timestamp": "2026-10-23T07:13:41.512Z",
+          "support": "用户明确肯定先凝练问题、再给出多个不同技术方案的方式；当次选择方案一及写入大纲是限定任务决定，不转成通用方案或完成事实。"
+        },
+        {
+          "ref": "D20261030-035",
+          "thread_id": "01a17df8-7c37-7f52-b71b-73599b55aa9c",
+          "location": "rollout-2026-10-29T14-32-41-01a17df8-7c37-7f52-b71b-73599b55aa9c_01a1865c-5832-7e80-a540-bb6027c292d6.jsonl:L4387",
+          "source_kind": "user_authored",
+          "family_id": "research-method-transfer",
+          "text_sha256": "60ea723ee73b072b1b78dd8bd37197bf60c9451f28b3c9804f79ee62aa7772f3",
+          "message_timestamp": "2026-10-30T04:40:03.399Z",
+          "support": "用户明确先回答相关工作是否使用目标组件、是否为核心功能、具体如何使用。"
+        },
+        {
+          "ref": "D20261030-040",
+          "thread_id": "01a17df8-7c37-7f52-b71b-73599b55aa9c",
+          "location": "rollout-2026-10-29T14-32-41-01a17df8-7c37-7f52-b71b-73599b55aa9c_01a1865c-5832-7e80-a540-bb6027c292d6.jsonl:L4494",
+          "source_kind": "user_authored",
+          "family_id": "research-method-transfer",
+          "text_sha256": "f8139d12fa2412f8b35272e13bb5a214369d40a1569971f8ca7b9951ebb891fd",
+          "message_timestamp": "2026-10-30T05:26:19.891Z",
+          "support": "用户澄清关注的是包括独立实现的同类架构如何升级，反对只停留于官方模型闭源这一解释。"
+        },
+        {
+          "ref": "D20261030-041",
+          "thread_id": "01a17df8-7c37-7f52-b71b-73599b55aa9c",
+          "location": "rollout-2026-10-29T14-32-41-01a17df8-7c37-7f52-b71b-73599b55aa9c_01a1865c-5832-7e80-a540-bb6027c292d6.jsonl:L4623",
+          "source_kind": "user_authored",
+          "family_id": "research-method-transfer",
+          "text_sha256": "ce1963a132148c6b0e30ea58af2be5cc9b3c5a79a2972a406ab729a35e350225",
+          "message_timestamp": "2026-10-30T05:48:26.540Z",
+          "support": "用户要求从技术架构说明具体如何添加模块，并核查该部分是否构成论文核心贡献。"
+        },
+        {
+          "ref": "D20261030-042",
+          "thread_id": "01a17df8-7c37-7f52-b71b-73599b55aa9c",
+          "location": "rollout-2026-10-29T14-32-41-01a17df8-7c37-7f52-b71b-73599b55aa9c_01a1865c-5832-7e80-a540-bb6027c292d6.jsonl:L4708",
+          "source_kind": "user_authored",
+          "family_id": "research-method-transfer",
+          "text_sha256": "7027a3e8e4b067948f70e231ce878f86561a96ffffbd9baa292adb8b48f6b269",
+          "message_timestamp": "2026-10-30T06:23:18.413Z",
+          "support": "用户进一步要求把其他文章的实际改进经验与自己的当前项目对应，而非止于论文罗列。"
+        }
+      ],
+      "source_candidates": [],
+      "id": "research.problem-first-proposals-v3",
+      "title": "论文方法构思：问题、多方案与具体架构借鉴",
+      "claim": "知识状态：已采纳的科研构思与交付流程；候选算法效果未验证。按当前阶段读取和使用，阶段可局部补齐，不强制每次走完。\n\n| 阶段/模块 | 输入 → 产出 | 关键判断 |\n|---|---|---|\n| 问题凝练 | 当前论文目标、已有材料与具体失败 → 清楚的问题及应改善的行为 | 从材料出发，不预设复杂机制或把个别案例当作主导原因 |\n| 多方案构造 | 问题、可借用的已有方法 → 多个有实质区别的技术路线 | 可以组合或改造算法，讲清各部分作用及具体新增，不反复包装同一个缺乏依据的方向 |\n| 推荐前自评 | 候选、最接近的方法及具体案例 → 差异、必要性、证据缺口 | 用案例讲清实质改动和与简单方法的差别；未验证效果保持假设，不预设简单方法必然失败 |\n| 比较与取舍 | 自评结果 → 可行性、工作量、风险、待验证点及有理由的推荐 | 以共同解决问题的科研合作者方式交付；让用户作当前需要的选择，不把所有候选都实施 |\n| 选后拆分交付 | 用户选定的路线与当前授权 → 模块职责、输入输出、依赖、验证安排或大纲草图 | 构建或训练安排仍是计划；写入大纲不等于算法完成，构思本身不授权实验或论文修改 |\n\n下次仅需构思时使用前三至四个阶段；已选定方案才进入对应拆分。已有研究定位或novelty条目仍按各自触发条件使用。需要论证复杂机制为何必要时，再读[具体检查方法](research.mechanism-necessity-check.md)。\n\n在借鉴相关论文改进已有模块的阶段，先把调研结果讲成可检查的技术关系：①是否真的使用目标模型/组件，还是同一范式的独立实现或邻近方法；②该部分是论文核心贡献、辅助组件还是比较基线；③具体改动在输入表示、模块连接、监督/训练目标、推理流程还是使用位置。对架构问题，说明输入经过哪些模块、增加或替换哪里、输出如何用于后续步骤，不能只给论文名单或泛称“优化了判别器”。再回到当前模型及任务比较已有能力与真正新增，说明可借鉴什么、需要的条件和待验证点。\n\n过程纠正：源对话先把官方模型、独立实现和邻近技术混讲，之后又把用户问的模型家族升级误收窄为“能否修改闭源官方权重”，用户连续要求澄清实际使用关系、核心贡献及具体技术接法。下次先区分这些身份，但不据此排除用户真正要找的同类架构研究；当前参考模型已有的模块，也不能算借鉴后的新增贡献。调研默认使用现有deep-research/research-increment流程，本条只补充这项交付粒度与解释顺序。\n\n知识状态：真实用户在研究构思任务中反复修正并采纳的局部工作方式；本轮没有复查源助手引用的具体论文或代码，文献技术断言、候选收益和具体模型能力仍须在真正使用时核查。未因此运行研究复核或实验。",
+      "status": "active",
+      "updated_at": "2026-10-30T10:10:44+00:00",
       "revision": 1,
       "history": []
     }
@@ -14884,5 +15350,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     }
   ],
-  "updated_at": "2026-10-29T10:04:40+00:00"
+  "updated_at": "2026-10-30T10:10:44+00:00"
 }

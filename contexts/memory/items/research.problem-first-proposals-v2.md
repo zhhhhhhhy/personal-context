@@ -1,12 +1,14 @@
 # 论文方法构思工作流：问题、多方案、自评、取舍与拆分交付
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.problem-first-proposals-v2`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 论文科研中构思、比较或修正方法方案，以及将用户选定的候选整理为模块草图或大纲；只执行当前授权的阶段。
 - verification: user_adopted_workflow_effects_unverified
 - validity: stable
-- updated_at: 2026-10-23T08:35:34+00:00
+- updated_at: 2026-10-30T10:10:44+00:00
 
 知识状态：已采纳的科研构思与交付流程；候选算法效果未验证。按当前阶段读取和使用，阶段可局部补齐，不强制每次走完。
 
@@ -28,6 +30,7 @@
 - 候选方案的可能效果、近邻差异与工作量在未核查或验证时保留待核状态；遵循既有优先发展但不强造novelty的边界。
 - 本次方案一的选择、第三章内容与既有案例属于当次项目，不固化为通用路线；构思建议不授权启动实验、训练或修改论文。
 - 这是本会话支持的构思到大纲交付片段，不是论文全生命周期；既有Skill提供的默认流程不在本条复制，未出现的阶段不补造。
+- replaced_by: research.problem-first-proposals-v3
 
 ## Evidence pointers
 

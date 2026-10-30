@@ -1,12 +1,14 @@
 # PPT单页重制：先定图片方案，再核对可编辑稿的差异
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `documents.slide-image-editable-workflow`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 已有演示文稿的单页视觉重制，采用图片样稿先行、再转可编辑PPT并按确认图核对时；不作为所有PPT的强制流程
 - verification: human_adopted_scoped_workflow_and_reported_conversion_issue_no_artifact_recheck
 - validity: stable
-- updated_at: 2026-10-27T10:01:22+00:00
+- updated_at: 2026-10-30T10:10:44+00:00
 
 知识状态：已采纳的限定工作流与用户指出的转换问题；本次未重新打开或验收实际PPT，最终画质、文字完整性和可编辑性不据助手汇报视为已验证。
 
@@ -23,6 +25,7 @@
 - 普通文档风格沿用documents.preserve-style-v2；这里只补充图片稿与可编辑稿之间的转换及版本衔接经验，不重复Skill的通用渲染验收。
 - 用户认可某版视觉方向不证明报告中的事实已核实，也不证明后续可编辑版本已满足全部检查；只做检查的请求仍不授权改动。
 - 来源中某一轮同时出现只检查与最小修改表达，具体执行范围须看当前请求，不将其解释为以后检查一律可改文件。
+- replaced_by: documents.slide-image-editable-workflow-v2
 
 ## Evidence pointers
 
