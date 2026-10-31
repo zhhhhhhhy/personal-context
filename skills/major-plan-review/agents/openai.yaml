@@ -1,0 +1,6 @@
+interface:
+  display_name: "大版本总体方案评审"
+  short_description: "结合整体进展形成完整版本，委派独立子智能体审核，至多三轮并明确停止边界"
+  default_prompt: "使用 $major-plan-review，基于当前整体进展提出下一版总体方案，委派子智能体审核并在最多三轮内收敛。"
+policy:
+  allow_implicit_invocation: true

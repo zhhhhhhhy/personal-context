@@ -5,6 +5,7 @@
 | 当前任务 | 经验或工作流入口 | 适用边界 |
 |---|---|---|
 | 需求澄清、PRD、模块设计与任务规划 | 匹配当前可用规划/设计Skill；实质多步骤工程使用[已有工程工作流](../../skills/engineering-project-workflow/SKILL.md) | 作为任务信号，不新增阶段目录或强制PRD模板；普通讨论不自动变成实施任务 |
+| 提出或实质修订大版本总体方案 | [总体规划与评审](../../skills/major-plan-review/SKILL.md) | 结合整体进展，先成总体草案再由一名真实子智能体评审，最多三轮；小任务豁免，已有论文评审合并处理，不另起循环 |
 | 修复反复出现的流程/路由问题 | [通用机制修复](../../contexts/memory/items/engineering.general-mechanism-fixes.md) | 在该条工程修复范围内使用，不凭单个样例宣称问题普遍解决 |
 | 验证、回归和约定验收 | [最小充分检查与约定验收](../../contexts/memory/items/validation.scoped-acceptance.md) | 保留明确验收要求，不把“最小”解释为跳过已约定检查 |
 | 工程项目介绍、README与进展交接 | [README中的进展与修复历史](../../contexts/memory/items/engineering.readme-progress-history.md) | 仅在该范围使用；当前进度仍需当前项目材料支持，不用历史摘要替代事实 |
