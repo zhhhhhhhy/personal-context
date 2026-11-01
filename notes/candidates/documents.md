@@ -66,4 +66,4 @@
 - privacy: safe_to_sync
 - status: resolved
 - disposition: memory / concise_reusable
-- destination: local.verify-project-materials-v3
+- destination: local.verify-project-materials-v4

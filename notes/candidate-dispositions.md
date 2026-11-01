@@ -29,7 +29,7 @@
 | 023 | Skill | merge_existing_method | [学术写作：层级、因果链与证据入口](../contexts/memory/items/skill.academic-writing-entry.md) | 通用方法由已有Skill负责；具体项目约定保留原范围。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。 |
 | 024 | 归档 | archive_duplicate_receipt | [已有沟通规则覆盖](../contexts/memory/items/core.communication.md) | 与011/035/046合并到已有沟通规则。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。 |
 | 025 | 舍弃 | discarded | — | 原候选含矛盾和敏感来源，不选择性拼成稳定偏好；原始证据保留本地。 |
-| 026 | 可用记忆 | concise_reusable | `local.verify-project-materials-v3`（仅本地） | 精简保留可复用部分；原数量与执行条件留历史。 |
+| 026 | 可用记忆 | concise_reusable | `local.verify-project-materials-v4`（仅本地） | 精简保留可复用部分；原数量与执行条件留历史。 |
 | 027 | 舍弃 | discarded | — | 三个来源均为自动exec模板，不能作为三次独立个人偏好；项目要求由021的直接来源保留。 |
 | 028 | 可用记忆 | concise_reusable | [题库整理：按知识点归并](../contexts/memory/items/learning.deduplicate-by-knowledge-v2.md) | 精简保留可复用部分；原数量与执行条件留历史。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。 |
 | 029 | 可用记忆 | concise_reusable | [目录迁移：核对后再按授权清理](../contexts/memory/items/migration.verify-before-cleanup-v2.md) | 精简保留可复用部分；原数量与执行条件留历史。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。 |
