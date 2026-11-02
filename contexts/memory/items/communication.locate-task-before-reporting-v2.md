@@ -1,12 +1,14 @@
 # 复杂项目汇报：先定位任务；科研汇报精简重点并保留完整案例
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `communication.locate-task-before-reporting-v2`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 复杂工程或科研项目的进展汇报、子任务说明，以及用户需要判断下一步方案时。
 - verification: historical_user_instruction_and_scoped_reporting_correction_no_outcome_revalidation
 - validity: stable
-- updated_at: 2026-10-26T10:29:48+00:00
+- updated_at: 2026-11-02T14:31:57+00:00
 
 在复杂工程或科研项目中，汇报进展或提出下一步方案前，先用一句简短的话说明当前任务处在整体流程的哪一环节、这一步解决什么问题，再报告结果、缺口和方案。必要时展示很短的流程链并标出当前节点，帮助用户保持对项目的把控。
 
@@ -26,6 +28,7 @@
 - PPT式精简与完整案例的组合仅用于论文/科研阶段性汇报，不要求论文正文、详细审计或所有日常回复一律按PPT组织。
 - 保留完整代表案例不等于默认全量列出所有样本；案例应足以支撑当前判断，具体篇幅以当前任务为准。
 - 汇报展示顺序不能倒写为真实研究时间顺序，动机实验与主实验的事实和作用仍按原材料区分。
+- replaced_by: communication.locate-task-before-reporting-v3
 
 ## Evidence pointers
 

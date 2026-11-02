@@ -1,12 +1,14 @@
 # ContractFill稿件：源稿、快照与中英同步边界
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.contractfill-zh-positioning-v5`
 - kind: project
-- status: active
+- status: superseded
 - scope: 继续同一Desktop/icml_chinese稿件的定位、主稿/备份身份识别、中文快照或中英版本同步时；按消息日期区分约定
 - verification: historical_user_language_sync_and_snapshot_agreements_no_document_revalidation
 - validity: project
-- updated_at: 2026-10-27T10:01:22+00:00
+- updated_at: 2026-11-02T14:31:57+00:00
 
 对应Desktop/icml_chinese稿件先确认中文入口；2026-10-12的Benchmark/Evaluation定位保留为历史起点。后续用户要求保留填表与小模型背景，并重新比较可行研究定位；没有新的最终定位采纳证据时，不把旧定位当永久决定。
 
@@ -26,6 +28,7 @@
 - 中文快照的用途是保存历史，不成为新的主稿；每小时备份/翻译仍仅对应指定稿件的既有任务，不授权本维护执行备份、翻译或调整编辑入口。
 - 本次只保存真人明确约定；相邻助手称已生成快照、同步英文或测试无变化跳过，不等于本次验证了这些执行结果。
 - target: references/projects/contractfill-zh-20261012.md
+- replaced_by: project.contractfill-zh-positioning-v6
 
 ## Evidence pointers
 
