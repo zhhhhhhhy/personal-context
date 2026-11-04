@@ -1,12 +1,14 @@
 # 论文数据图：代码可重绘，并检查真实论文视觉效果
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.editable-data-figures`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 论文实验数据图的制作与迭代，特别是数据可能继续更新、需要可编辑重绘及科研视觉审阅时
 - verification: human_requested_workflow_with_scoped_historical_evidence_no_current_revalidation
 - validity: stable
-- updated_at: 2026-11-02T14:31:57+00:00
+- updated_at: 2026-11-04T04:03:22+00:00
 
 知识状态：用户已明确采纳的数据绘图方式，并纠正过“工程可维护但不像科研图”的交付；不是对既有图样质量的本次验收。
 
@@ -23,6 +25,7 @@
 - 不是所有科研示意图都强制使用绘图代码；概念图、架构图等按实际工具和当前要求处理。
 - 当前用户允许的图形审查不扩大为无限评审或自动实验；论文科学结论评审与图形视觉检查须按目标协调，避免重复循环。
 - 不把原项目图号、配色、布局、数据数值、投稿年份或固定三轮要求当全局偏好。
+- replaced_by: research.editable-data-figures-v2
 
 ## Evidence pointers
 

@@ -1,12 +1,14 @@
 # 模型扩参/变体比较：对齐训练阶段，先检查原任务再看泛化
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.matched-model-comparison`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 论文/模型研究中评估扩参或模型变体，尤其需要区分原训练阶段、后续适配、原任务保持与新增来源泛化时
 - verification: human_requested_workflow_with_scoped_historical_evidence_no_current_revalidation
 - validity: stable
-- updated_at: 2026-11-02T14:31:57+00:00
+- updated_at: 2026-11-04T04:03:22+00:00
 
 知识状态：来自用户对一次扩参任务跑偏的直接纠正与后续比较顺序要求；保存的是对照方法，不是该次训练完成、原任务保持或泛化收益的验证结论。
 
@@ -23,6 +25,7 @@
 - 源任务的模型大小、题量、训练步数、GPU约束和运行授权不推广为默认值；本条不授权训练、补评或查询实验进度。
 - 多因素一起改变时如实标明比较局限；数据规模相同不证明逐样本、标签或配方相同。
 - 这是评估和汇报顺序，不要求隐瞒未达原任务保持要求时已经得到的泛化结果，也不预断扩参一定有益。
+- replaced_by: research.matched-model-comparison-v2
 
 ## Evidence pointers
 

@@ -1,12 +1,14 @@
 # 论文改写：借鉴范文，并交代新设计为何需要引入
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.reference-guided-rewriting-v2`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 已有benchmark或实证论文的范文对照、论证整理和局部章节改写，尤其涉及重要设计或实验引入时
 - verification: historical_user_instruction_and_adopted_writing_check_no_outcome_revalidation
 - validity: stable
-- updated_at: 2026-10-26T10:29:48+00:00
+- updated_at: 2026-11-04T04:03:22+00:00
 
 已有论文进入整理或局部改写时，用户偏好先选一篇能指导当前章节写作的相近论文，拆解句段与实验各自的作用，再对照本人已有材料形成改写蓝图：每节回答什么、用哪些结果、放什么图表、能支撑什么结论、确实还缺什么。借鉴论证和实验组织方式，而不只把范文当作相关工作或novelty对照；按当前批准范围推进。
 
@@ -21,6 +23,7 @@
 - Sufficient Context是原任务选择的参考，不固定为所有研究的默认范文；被冻结或指定的其他章节保持其当前范围。
 - 该写法用于有真实问题依据的重要设计与实验，不把每个实现细节都写成现有方法失效，也不为制造必要性编造缺陷或新实验。
 - 用户最初转述的外部建议不能单独证明偏好；本次依据其随后要求实际核查并修改的表达。当前讨论、修改范围和事实证据优先。
+- replaced_by: research.reference-guided-rewriting-v3
 
 ## Evidence pointers
 

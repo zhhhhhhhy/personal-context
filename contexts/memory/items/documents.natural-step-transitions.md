@@ -1,12 +1,14 @@
 # 技术流程写作：保留步骤结构，用自然语言衔接
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `documents.natural-step-transitions`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 已有技术文档或专利说明书的步骤段落，当前要求保留步骤组织、改善行文与前后连贯关系时
 - verification: explicit_user_future_instruction_with_later_scope_clarification
 - validity: stable
-- updated_at: 2026-10-29T10:04:40+00:00
+- updated_at: 2026-11-04T04:03:22+00:00
 
 在已有技术说明或专利说明书中改进步骤连贯性时，保留当前要求的步骤结构，用具体对象、处理动作、条件和结果自然承接；不要为了展示依赖关系，反复写“以步骤一的产出为输入”“读取步骤三的结果”一类机械的编号串联。技术依赖和必要输入输出仍应说清，但不把行文改成接口契约或项目流程台账。
 
@@ -20,6 +22,7 @@
 - 接口规范、工程设计或算法交接需要显式输入输出契约时，不用本条删除这些必要信息。
 - 不机械引用步骤编号不等于禁止所有必要的交叉引用；必须保持技术依赖、条件和例外准确，不以自然表达为由省掉关键内容。
 - 原稿题目、具体技术方案、公式、修订基准及本次编辑数量不在本条泛化；原始与敏感材料继续仅本地。
+- replaced_by: documents.natural-step-transitions-v2
 
 ## Evidence pointers
 

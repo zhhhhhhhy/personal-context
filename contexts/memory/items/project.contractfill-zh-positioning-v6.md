@@ -1,12 +1,14 @@
 # ContractFill稿件：主稿/快照、中英同步与精炼删除边界
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `project.contractfill-zh-positioning-v6`
 - kind: project
-- status: active
+- status: superseded
 - scope: 继续同一Desktop/icml_chinese稿件的定位、主稿/备份身份识别、中文快照或中英版本同步时；按消息日期区分约定；2026-11-02同稿件投稿精炼中涉及移至附录或实质删除时
 - verification: human_scoped_manuscript_sync_snapshot_and_condensation_permissions_no_document_revalidation
 - validity: project
-- updated_at: 2026-11-02T14:31:57+00:00
+- updated_at: 2026-11-04T04:03:22+00:00
 
 对应Desktop/icml_chinese稿件先确认中文入口；2026-10-12的Benchmark/Evaluation定位保留为历史起点。后续用户要求保留填表与小模型背景，并重新比较可行研究定位；没有新的最终定位采纳证据时，不把旧定位当永久决定。
 
@@ -32,6 +34,7 @@
 - 内容移至附录与实质删除分别处理；后一操作须在当前编辑任务落实具体确认，已明确授权的同范围替换不重复请示。
 - 原任务的页数、图号、审图轮数、投稿年份和结果样本数量不作为当前事实；不能用维护记忆授权继续改论文。
 - target: references/projects/contractfill-zh-20261012.md
+- replaced_by: project.contractfill-zh-positioning-v7
 
 ## Evidence pointers
 
