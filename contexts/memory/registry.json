@@ -16511,10 +16511,124 @@
         }
       ],
       "id": "documents.natural-step-transitions-v2",
-      "status": "active",
-      "updated_at": "2026-11-04T04:03:22+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-11-06T04:16:37+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "title": "技术步骤与批注修订：自然衔接，把澄清融入正文",
+          "kind": "memory",
+          "claim": "在已有技术说明或专利说明书中改进步骤连贯性时，保留当前要求的步骤结构，用具体对象、处理动作、条件和结果自然承接；不要为了展示依赖关系，反复写“以步骤一的产出为输入”“读取步骤三的结果”一类机械的编号串联。技术依赖和必要输入输出仍应说清，但不把行文改成接口契约或项目流程台账。\n\n触发的过程纠正：用户先要求上下步骤关系更清楚，助手过度强化显式输入输出；用户明确要求记住不要机械衔接，后来助手又改成连续段落。用户随后澄清仍须按步骤写，只是步骤之间用自然语言连接。因此，“自然表述”不能自动解释为删除步骤编号、改掉已认可结构或扩大整篇改写。\n\n下次仅对当前表达问题局部修正，核对原有步骤组织和技术条件仍被保留。通用的风格保留与文档修订验收继续使用documents.preserve-style-v2及当前文档Skill；本条只补充这项行文纠正。知识状态：明确未来要求及其后续范围澄清；本轮未重新检查实际文档或判断交付质量。\n\n2026-11-02/03同类修订的补充纠正：解决批注提出的疑问时，把答案融入面向文档读者的正常行文，不把正文写成专门回答批注的问题。保留当前要求的步骤编号，使用已介绍的术语自然说明分支条件和处理关系；出现突兀名称时先核对前文定义，不能仅为回答一个批注新增一套术语。\n\n解释公式时优先说清整个量/结果的含义，并与前文名称一致，按当前文档需要保留必要条件；不默认逐个解释上标、下标或堆重复单位。公式显示异常与技术含义不清分别处理：批注要求重排完整公式并用图片替换时，先定位实际显示问题，不能用一段“指示函数是什么”的解释替代显示修复。替代文本与实际正文也应分开核对，避免把图片说明串读成正文。\n\n这些是局部行文与问题定位的纠正，不是法律意见或所有公式都改为图片的偏好；必要的符号定义、计量单位和技术依赖仍须保留。本轮只核对表达来源，未打开或修改Word。",
+          "scope": "已有技术文档或专利说明书的步骤段落及相关批注修订，要求保留步骤结构、改善连贯或解释技术含义时",
+          "exceptions": [
+            "当前用户明确要求连续段落、重组结构或其他格式时，以当前要求为准，不强制所有文档都有步骤编号。",
+            "接口规范、工程设计或算法交接需要显式输入输出契约时，不用本条删除这些必要信息。",
+            "不机械引用步骤编号不等于禁止所有必要的交叉引用；必须保持技术依赖、条件和例外准确，不以自然表达为由省掉关键内容。",
+            "原稿题目、具体技术方案、公式、修订基准及本次编辑数量不在本条泛化；原始与敏感材料继续仅本地。",
+            "正文自然说明与给律师/用户的批注回复是不同交付位置；用户明确要求逐条回复时仍逐条回复，不以本条取消原批注。",
+            "不概括为所有公式都删单位、删符号说明或截图；精确协议、算法接口和计量定义保留必要信息，显示修复按当前格式要求。"
+          ],
+          "tags": [
+            "通用工作方法",
+            "技术文档",
+            "专利说明书",
+            "步骤",
+            "自然衔接",
+            "步骤编号",
+            "输入输出",
+            "局部改写",
+            "避免过度改写",
+            "批注处理",
+            "自然行文",
+            "术语一致",
+            "公式含义",
+            "显示修复"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "human_writing_and_comment_resolution_corrections_no_document_revalidation",
+          "source_candidates": [],
+          "evidence": [
+            {
+              "ref": "D20261029-034",
+              "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+              "location": "rollout-2026-10-28T21-25-25-01a180ad-9462-7ef3-a841-fff87348d196_01a182af-dbab-7233-a0d5-0f5fb5bceafa.jsonl:L233",
+              "source_kind": "user_authored",
+              "family_id": "document-procedure-editing",
+              "text_sha256": "997adb287e404e226163267ed134adde8633f8482b639c79f1a14900e133e10c",
+              "message_timestamp": "2026-10-28T13:49:43.628Z",
+              "support": "用户明确要求记住：流程说明不要机械写“以步骤一的……”或为强化局部逻辑而过度改写。"
+            },
+            {
+              "ref": "D20261029-050",
+              "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+              "location": "rollout-2026-10-28T21-25-25-01a180ad-9462-7ef3-a841-fff87348d196_01a182af-dbab-7233-a0d5-0f5fb5bceafa.jsonl:L747",
+              "source_kind": "user_authored",
+              "family_id": "document-procedure-editing",
+              "text_sha256": "d580ab0c2d4bdca102a598a6a8f939878dab2b3bf82b4b761141a4018a723e3b",
+              "message_timestamp": "2026-10-28T15:49:08.777Z",
+              "support": "用户随后明确纠正：仍须保留步骤组织，只把步骤间连贯关系改为自然语言，不能误解为删除步骤结构。"
+            },
+            {
+              "ref": "D20261103-016",
+              "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+              "location": "rollout-2026-10-29T14-05-38-01a180ad-9462-7ef3-a841-fff87348d196_01a18643-938f-7f41-a257-3218a4734e64.jsonl:L1805",
+              "source_kind": "user_authored",
+              "family_id": "technical-prose-comments",
+              "text_sha256": "7fabda521ea135e96c47395959389d355e5283be9a553ab40dfd663a06f72e7b",
+              "message_timestamp": "2026-11-02T14:59:37.715Z",
+              "support": "用户明确要求保留步骤九，并将问题的答案融入正常行文，避免专门问答式修文。"
+            },
+            {
+              "ref": "D20261103-017",
+              "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+              "location": "rollout-2026-10-29T14-05-38-01a180ad-9462-7ef3-a841-fff87348d196_01a18643-938f-7f41-a257-3218a4734e64.jsonl:L1821",
+              "source_kind": "user_authored",
+              "family_id": "technical-prose-comments",
+              "text_sha256": "6e4d03037c19323e2162d6b98b0ff2e547e56f376320a49b5675500465d9b766",
+              "message_timestamp": "2026-11-02T15:01:46.709Z",
+              "support": "用户指出新术语突然出现突兀，要求检查前文衔接。"
+            },
+            {
+              "ref": "D20261103-022",
+              "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+              "location": "rollout-2026-10-29T14-05-38-01a180ad-9462-7ef3-a841-fff87348d196_01a18643-938f-7f41-a257-3218a4734e64.jsonl:L1835",
+              "source_kind": "user_authored",
+              "family_id": "technical-prose-comments",
+              "text_sha256": "114bbf12d1cd26b1a8e34c0c991a31acff1a9bab9c5964ef431071780f133f1b",
+              "message_timestamp": "2026-11-02T15:13:11.935Z",
+              "support": "用户要求符号解释与前文一致，只说明整体含义，不细讲上标下标。"
+            },
+            {
+              "ref": "D20261103-027",
+              "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+              "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L165",
+              "source_kind": "user_authored",
+              "family_id": "technical-prose-comments",
+              "text_sha256": "bcbe57a1d5d53f01dca5b0e0f98e069427a86fafda15fefc2857af74be2dbbb5",
+              "message_timestamp": "2026-11-02T15:37:59.753Z",
+              "support": "用户指出耗时定义段重复且冗余，支持局部精简而非删除所有计量必要信息。"
+            },
+            {
+              "ref": "D20261103-035",
+              "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+              "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L363",
+              "source_kind": "user_authored",
+              "family_id": "technical-prose-comments",
+              "text_sha256": "d3c78caeeca8b7e902f6bcb9d495b9fd8750a4dc73d59124269062bacbcd230f",
+              "message_timestamp": "2026-11-02T15:51:42.636Z",
+              "support": "用户指出原公式批注和修订没有理解，辅助回复区分公式显示问题、术语解释与图片替代文本。"
+            }
+          ],
+          "id": "documents.natural-step-transitions-v2",
+          "status": "active",
+          "updated_at": "2026-11-04T04:03:22+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "documents.natural-step-transitions-v3",
+      "last_reason": "原条目解释整体量仍未防住“解释错对象且远处已有定义就算落实”；补充同类风险的定位与就近释义，保留全部旧要求和来源。"
     },
     {
       "title": "论文整理：按范文功能与科研主线取舍，正文独立自洽",
@@ -17025,6 +17139,218 @@
       "updated_at": "2026-11-04T04:03:22+00:00",
       "revision": 1,
       "history": []
+    },
+    {
+      "title": "技术步骤与批注修订：自然衔接，把澄清融入正文",
+      "kind": "memory",
+      "claim": "在已有技术说明或专利说明书中改进步骤连贯性时，保留当前要求的步骤结构，用具体对象、处理动作、条件和结果自然承接；不要为了展示依赖关系，反复写“以步骤一的产出为输入”“读取步骤三的结果”一类机械的编号串联。技术依赖和必要输入输出仍应说清，但不把行文改成接口契约或项目流程台账。\n\n触发的过程纠正：用户先要求上下步骤关系更清楚，助手过度强化显式输入输出；用户明确要求记住不要机械衔接，后来助手又改成连续段落。用户随后澄清仍须按步骤写，只是步骤之间用自然语言连接。因此，“自然表述”不能自动解释为删除步骤编号、改掉已认可结构或扩大整篇改写。\n\n下次仅对当前表达问题局部修正，核对原有步骤组织和技术条件仍被保留。通用的风格保留与文档修订验收继续使用documents.preserve-style-v2及当前文档Skill；本条只补充这项行文纠正。知识状态：明确未来要求及其后续范围澄清；本轮未重新检查实际文档或判断交付质量。\n\n2026-11-02/03同类修订的补充纠正：解决批注提出的疑问时，把答案融入面向文档读者的正常行文，不把正文写成专门回答批注的问题。保留当前要求的步骤编号，使用已介绍的术语自然说明分支条件和处理关系；出现突兀名称时先核对前文定义，不能仅为回答一个批注新增一套术语。\n\n解释公式时优先说清整个量/结果的含义，并与前文名称一致，按当前文档需要保留必要条件；不默认逐个解释上标、下标或堆重复单位。公式显示异常与技术含义不清分别处理：批注要求重排完整公式并用图片替换时，先定位实际显示问题，不能用一段“指示函数是什么”的解释替代显示修复。替代文本与实际正文也应分开核对，避免把图片说明串读成正文。\n\n这些是局部行文与问题定位的纠正，不是法律意见或所有公式都改为图片的偏好；必要的符号定义、计量单位和技术依赖仍须保留。本轮只核对表达来源，未打开或修改Word。\n\n2026-11-04的公式释义纠正：批注要求“给含义”时，先准确定位其指向的整体符号或结果，不把附近另几个指标的解释当作已经回答。用户指出本处未解释时，在所指公式附近补一句该整体量代表什么、必要时怎样取值，并与前文术语一致；不能只因文档其他位置存在某个定义就判断本条已落实。保持简练，不为补一个整体量重复解释所有上下标、单位或整套指标。\n\n过程依据：同源助手L522原判断三项指标与前文定义已覆盖意见；用户L530指出当前符号在附近没有释义，助手L535承认对象判断不准确，L655报告补入同一Word并保留修订。这里保存的是用户确认的局部释义定位与修订方法；本维护未打开截图或Word、核验实际补入结果。",
+      "scope": "已有技术文档或专利说明书的步骤段落及相关批注修订，要求保留步骤结构、改善连贯或解释技术含义时",
+      "exceptions": [
+        "当前用户明确要求连续段落、重组结构或其他格式时，以当前要求为准，不强制所有文档都有步骤编号。",
+        "接口规范、工程设计或算法交接需要显式输入输出契约时，不用本条删除这些必要信息。",
+        "不机械引用步骤编号不等于禁止所有必要的交叉引用；必须保持技术依赖、条件和例外准确，不以自然表达为由省掉关键内容。",
+        "原稿题目、具体技术方案、公式、修订基准及本次编辑数量不在本条泛化；原始与敏感材料继续仅本地。",
+        "正文自然说明与给律师/用户的批注回复是不同交付位置；用户明确要求逐条回复时仍逐条回复，不以本条取消原批注。",
+        "不概括为所有公式都删单位、删符号说明或截图；精确协议、算法接口和计量定义保留必要信息，显示修复按当前格式要求。",
+        "就近补充针对当前批注明确的阅读缺口，不要求所有符号在每次出现处重复定义；已有局部解释足够时不重复。"
+      ],
+      "tags": [
+        "通用工作方法",
+        "技术文档",
+        "专利说明书",
+        "步骤",
+        "自然衔接",
+        "步骤编号",
+        "输入输出",
+        "局部改写",
+        "避免过度改写",
+        "批注处理",
+        "自然行文",
+        "术语一致",
+        "公式含义",
+        "显示修复",
+        "公式释义",
+        "就近定义",
+        "批注对象定位"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "human_writing_corrections_with_local_formula_meaning_targeting_no_document_revalidation",
+      "source_candidates": [],
+      "evidence": [
+        {
+          "ref": "D20261029-034",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-10-28T21-25-25-01a180ad-9462-7ef3-a841-fff87348d196_01a182af-dbab-7233-a0d5-0f5fb5bceafa.jsonl:L233",
+          "source_kind": "user_authored",
+          "family_id": "document-procedure-editing",
+          "text_sha256": "997adb287e404e226163267ed134adde8633f8482b639c79f1a14900e133e10c",
+          "message_timestamp": "2026-10-28T13:49:43.628Z",
+          "support": "用户明确要求记住：流程说明不要机械写“以步骤一的……”或为强化局部逻辑而过度改写。"
+        },
+        {
+          "ref": "D20261029-050",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-10-28T21-25-25-01a180ad-9462-7ef3-a841-fff87348d196_01a182af-dbab-7233-a0d5-0f5fb5bceafa.jsonl:L747",
+          "source_kind": "user_authored",
+          "family_id": "document-procedure-editing",
+          "text_sha256": "d580ab0c2d4bdca102a598a6a8f939878dab2b3bf82b4b761141a4018a723e3b",
+          "message_timestamp": "2026-10-28T15:49:08.777Z",
+          "support": "用户随后明确纠正：仍须保留步骤组织，只把步骤间连贯关系改为自然语言，不能误解为删除步骤结构。"
+        },
+        {
+          "ref": "D20261103-016",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-10-29T14-05-38-01a180ad-9462-7ef3-a841-fff87348d196_01a18643-938f-7f41-a257-3218a4734e64.jsonl:L1805",
+          "source_kind": "user_authored",
+          "family_id": "technical-prose-comments",
+          "text_sha256": "7fabda521ea135e96c47395959389d355e5283be9a553ab40dfd663a06f72e7b",
+          "message_timestamp": "2026-11-02T14:59:37.715Z",
+          "support": "用户明确要求保留步骤九，并将问题的答案融入正常行文，避免专门问答式修文。"
+        },
+        {
+          "ref": "D20261103-017",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-10-29T14-05-38-01a180ad-9462-7ef3-a841-fff87348d196_01a18643-938f-7f41-a257-3218a4734e64.jsonl:L1821",
+          "source_kind": "user_authored",
+          "family_id": "technical-prose-comments",
+          "text_sha256": "6e4d03037c19323e2162d6b98b0ff2e547e56f376320a49b5675500465d9b766",
+          "message_timestamp": "2026-11-02T15:01:46.709Z",
+          "support": "用户指出新术语突然出现突兀，要求检查前文衔接。"
+        },
+        {
+          "ref": "D20261103-022",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-10-29T14-05-38-01a180ad-9462-7ef3-a841-fff87348d196_01a18643-938f-7f41-a257-3218a4734e64.jsonl:L1835",
+          "source_kind": "user_authored",
+          "family_id": "technical-prose-comments",
+          "text_sha256": "114bbf12d1cd26b1a8e34c0c991a31acff1a9bab9c5964ef431071780f133f1b",
+          "message_timestamp": "2026-11-02T15:13:11.935Z",
+          "support": "用户要求符号解释与前文一致，只说明整体含义，不细讲上标下标。"
+        },
+        {
+          "ref": "D20261103-027",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L165",
+          "source_kind": "user_authored",
+          "family_id": "technical-prose-comments",
+          "text_sha256": "bcbe57a1d5d53f01dca5b0e0f98e069427a86fafda15fefc2857af74be2dbbb5",
+          "message_timestamp": "2026-11-02T15:37:59.753Z",
+          "support": "用户指出耗时定义段重复且冗余，支持局部精简而非删除所有计量必要信息。"
+        },
+        {
+          "ref": "D20261103-035",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L363",
+          "source_kind": "user_authored",
+          "family_id": "technical-prose-comments",
+          "text_sha256": "d3c78caeeca8b7e902f6bcb9d495b9fd8750a4dc73d59124269062bacbcd230f",
+          "message_timestamp": "2026-11-02T15:51:42.636Z",
+          "support": "用户指出原公式批注和修订没有理解，辅助回复区分公式显示问题、术语解释与图片替代文本。"
+        },
+        {
+          "ref": "D20261104-007",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L488",
+          "source_kind": "user_authored",
+          "family_id": "formula-comment-local-definition",
+          "text_sha256": "aeb1d0cf3224e3f12373f8635f80dfc21bef6eba0206060992267ad616fd5296",
+          "message_timestamp": "2026-11-04T04:20:39.942Z",
+          "support": "用户追问“给含义”意见是否落实；相邻助手误把其他指标的说明当成所指整体符号的解释。"
+        },
+        {
+          "ref": "D20261104-008",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L530",
+          "source_kind": "user_authored",
+          "family_id": "formula-comment-local-definition",
+          "text_sha256": "d2fbcf89f4487b0b36f8443520a944486d2063dcf576ce5c0d1a96500989eb4b",
+          "message_timestamp": "2026-11-04T04:26:16.849Z",
+          "support": "用户明确指出所指量在本处附近未解释；辅助回复承认对象定位错误并提出就近补一句整体含义。"
+        },
+        {
+          "ref": "D20261104-009",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L546",
+          "source_kind": "user_authored",
+          "family_id": "formula-comment-local-definition",
+          "text_sha256": "94c389ad417f65b61b1115415025cb959930322962d898373f983155d0dc1158",
+          "message_timestamp": "2026-11-04T04:27:01.029Z",
+          "support": "用户随后要求将这项局部解释补入Word，支持所采纳的修订方式；不证明文件已实际正确写入。"
+        }
+      ],
+      "id": "documents.natural-step-transitions-v3",
+      "status": "active",
+      "updated_at": "2026-11-06T04:16:37+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "documents.review-copy-acceptance",
+      "title": "Word送审版检查：区分意见来源，按修订后正文判断落实",
+      "kind": "memory",
+      "claim": "知识状态：用户在保留修订并交律师继续审阅的任务中，明确追问问题来源、重申送审用途后形成的审查范围纠正。本条保存有条件的工作方法，不是对某份Word完整性或法律质量的认证。\n\n检查需交原审阅者继续审阅的Word时，先确认交付目的是保留修订的送审版还是正式清洁稿。用户要求保留修订时，以修订后的有效正文判断原意见是否落实，同时保留未接受的修改、原批注及历史回复；不能把删除修订中仍可见的旧文字、旧回复直接当作当前正文遗漏，或为了整洁接受全部修订、清除审阅历史。具体修订和批注结构验证沿用匹配的documents Skill，不复制其工具流程。\n\n汇报发现时分别标注原审阅者明确提出的意见、用户在当前聊天中的调整、Agent自行发现的矛盾或进一步完善建议。自查建议不能冒充律师必改项；“最小修改”范围内优先处理原意见漏项和当前明确矛盾，额外扩写/术语补充等单独列为建议或待核。重要技术不一致仍须如实提示，不以限制范围为由隐去。\n\n旧回复与最新正文不一致时，按当前要求在原线程补充澄清，避免抹掉历史；是否需要新回复由实际问题决定，不要求每次正文编辑都新增批注。仅检查未授权修改时只报告，不顺带执行清理、重写或发给审阅者。\n\n辅助来源同一会话L848先报告较大范围问题，用户L855追问是自查还是律师提出，L860承认多数为自查；用户L867重申保留修订交律师，L894随之收紧为送审用途下的必要修正，指出旧删除文字与历史回复不等同当前遗漏。本维护未检查实际Word、评论锚点或修订是否完整。",
+      "scope": "已有Word的批注复核或最小修订，当前明确要求保留修订/原批注并交原审阅者继续审阅时，尤其律师审阅稿",
+      "exceptions": [
+        "用户明确要求清洁定稿、接受修订或重写时，按当前授权处理；不把送审版约定推广为所有文档永远不能清理历史。",
+        "这是意见来源、有效正文与交付范围的核对方法，不替代法律判断，也不默认确认专利文件已充分或可提交。",
+        "原文、具体专利方案、律师身份和文件路径只留原本地来源；本条不授权联系律师、发文件或执行历史修改。"
+      ],
+      "tags": [
+        "通用工作方法",
+        "文档",
+        "Word",
+        "送审版",
+        "修订痕迹",
+        "批注",
+        "意见来源",
+        "最小修改",
+        "有效正文",
+        "历史回复",
+        "律师"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "human_review_purpose_and_attribution_correction_no_docx_revalidation",
+      "evidence": [
+        {
+          "ref": "D20261104-010",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L662",
+          "source_kind": "user_authored",
+          "family_id": "review-copy-scope",
+          "text_sha256": "5cbf94dd8e684281fc97e32b2c9503a31e1a1e183bb4042fc27553100e5dcdf1",
+          "message_timestamp": "2026-11-04T04:42:44.833Z",
+          "support": "用户要求逐段检查遗漏，支持审阅场景；辅助检查列出的自行发现项与原意见需分别标明。"
+        },
+        {
+          "ref": "D20261104-011",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L855",
+          "source_kind": "user_authored",
+          "family_id": "review-copy-scope",
+          "text_sha256": "07dde30f28053baf1aab546a4c8d5618b453b47579576989ebc94db28c068880",
+          "message_timestamp": "2026-11-04T04:51:45.990Z",
+          "support": "用户追问问题是Agent自行发现还是律师提出，支持区分意见来源，不能混报为律师要求。"
+        },
+        {
+          "ref": "D20261104-012",
+          "thread_id": "01a180ad-9462-7ef3-a841-fff87348d196",
+          "location": "rollout-2026-11-02T23-26-38-01a180ad-9462-7ef3-a841-fff87348d196_01a19cde-a03f-79d1-9ac8-c615030a92e4.jsonl:L867",
+          "source_kind": "user_authored",
+          "family_id": "review-copy-scope",
+          "text_sha256": "272f646800994d424d5d05564b1bbb5496f582d4bb6066785dd4f7c32b890e4f",
+          "message_timestamp": "2026-11-04T04:53:58.156Z",
+          "support": "用户明确要求保留修订痕迹并给律师继续审阅，纠正审查应按送审用途和最小范围判断。"
+        }
+      ],
+      "source_candidates": [],
+      "status": "active",
+      "updated_at": "2026-11-06T04:16:37+00:00",
+      "revision": 1,
+      "history": []
     }
   ],
   "decisions": [
@@ -17438,5 +17764,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     }
   ],
-  "updated_at": "2026-11-04T04:03:22+00:00"
+  "updated_at": "2026-11-06T04:16:37+00:00"
 }
