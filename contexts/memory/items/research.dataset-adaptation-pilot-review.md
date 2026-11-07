@@ -1,12 +1,14 @@
 # 跨来源任务数据构造：先还原旧流程，试制评审后再扩量
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.dataset-adaptation-pilot-review`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 论文/Benchmark建设中，把已有任务的数据构造方法适配到多个公开来源，并需要控制任务跑偏与试制扩量质量时
 - verification: human_adopted_dataset_adaptation_workflow_with_matching_turn_completion_no_dataset_revalidation
 - validity: stable
-- updated_at: 2026-11-04T04:03:22+00:00
+- updated_at: 2026-11-07T12:53:12+00:00
 
 知识状态：用户已采纳的跨来源定制数据构造工作流。原请求在上轮仍未完成，本次看到原turn_id对应完成证据后续接；辅助交付报告仅说明曾执行/报告过，不是本维护验证数据合格。
 
@@ -21,6 +23,7 @@
 - 不是所有数据清洗都先做PRD或安排多名监控；按当前任务规模和授权，仅采用需要的阶段。
 - 原项目的来源集合、每来源配额、总题量、私有文档地址及历史执行权限不推广为默认设置。
 - 监控/质量Agent的判断不等于来源独立性、人工标签或模型有效性证明；未完成和不合格来源保持原状态，不为凑覆盖强行通过。
+- replaced_by: research.dataset-adaptation-pilot-review-v2
 
 ## Evidence pointers
 

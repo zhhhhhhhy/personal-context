@@ -1,12 +1,14 @@
 # 模型扩参/变体比较：对齐训练阶段，先检查原任务再看泛化
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `research.matched-model-comparison-v2`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 论文/模型研究中评估扩参或模型变体，尤其需要区分原训练阶段、后续适配、原任务保持与新增来源泛化时
 - verification: human_model_comparison_corrections_for_checkpoint_protocol_and_task_alignment_no_result_revalidation
 - validity: stable
-- updated_at: 2026-11-04T04:03:22+00:00
+- updated_at: 2026-11-07T12:53:12+00:00
 
 知识状态：来自用户对一次扩参任务跑偏的直接纠正与后续比较顺序要求；保存的是对照方法，不是该次训练完成、原任务保持或泛化收益的验证结论。
 
@@ -30,6 +32,7 @@
 - 多因素一起改变时如实标明比较局限；数据规模相同不证明逐样本、标签或配方相同。
 - 这是评估和汇报顺序，不要求隐瞒未达原任务保持要求时已经得到的泛化结果，也不预断扩参一定有益。
 - 统一选点规则与统一最终步数分别回答不同研究问题；具体曝光、验证规则或资源适配须在当前设计明确，不照抄原任务常数。
+- replaced_by: research.matched-model-comparison-v3
 
 ## Evidence pointers
 

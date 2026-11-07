@@ -16918,10 +16918,156 @@
         }
       ],
       "id": "research.matched-model-comparison-v2",
-      "status": "active",
-      "updated_at": "2026-11-04T04:03:22+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-11-07T12:53:12+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "title": "模型扩参/变体比较：对齐训练阶段，先检查原任务再看泛化",
+          "kind": "memory",
+          "claim": "知识状态：来自用户对一次扩参任务跑偏的直接纠正与后续比较顺序要求；保存的是对照方法，不是该次训练完成、原任务保持或泛化收益的验证结论。\n\n扩参或模型变体比较前，先固定用户真正要回答的变化因素、原始基线及训练阶段。核对各模型使用的训练样本/标签、输入处理、采样与训练安排、评测集合及口径；模型大小变化与资源适配须明确，不能暗中追加新领域数据或后训练阶段后，仍称只比较参数量。对后续适配后的各模型“阶段内部一致”，也不能替代用户指定原始模型的主对照。\n\n比较先在同一原任务测试与原指标下判断原能力是否保持，再检查新增数据上的泛化。若只评了原任务子集，应标清覆盖缺口；没有事先明确主要指标与允许波动时，不臆造“不下降”的容忍范围。原任务退步时如实报告取舍，不用泛化集收益抵消它。\n\n未做新领域适配的直接迁移与使用新领域数据适配后的效果分开列。正式训练后的模型、初始化/试跑与仍在训练的状态分开，不用初始化指标代替最终泛化结果；没有匹配结果就保留未完成。主对照错选后先查原阶段checkpoint和已有有效输出，能补评不预设要重训；复评层次沿用research.reuse-predictions-before-rerun-v3，不重写整套流程。\n\n相邻助手在同源L7090承认把后续适配分支当成主比较对象，虽称各规模在同阶段数据一致，仍偏离原始基线；纠正报告称保留原阶段checkpoint。本轮未核查文件、训练数据或模型，因此具体任务数量、阶段产物和收益仅留本地待核。\n\n本窗口的checkpoint比较纠正：训练总预算相同、按同一验证集规则选模、最终评估权重处于相同步数，是不同条件。先明确本次回答的是“相同训练流程下各自选出的最佳模型”还是“控制训练曝光后的规模差异”；对齐并披露选模规则、曝光量与采用权重。需要同预算/同阶段对照时优先检查已保存权重，验证集最佳可以作为不同问题的补充，但不能冒充同一步数对照。也不把同一步数当成跨模型永远唯一公平标准；没有预先约定时说明比较回答了什么与仍缺什么，不在测试集上事后挑点。\n\n结构改动比较要回到原任务可比数据。辅助标注齐全的新来源可用于模块调试，但不能在没有说明的情况下替代与原方案同批任务的主评估；需要适配输入或增加监督时，对普通强基线也核对信息与训练机会，单独标明改变因素。原生模型和专用判别方案对比时，注明输入模板、判别头与后训练是否一起变化，不把整套收益全部归给某个头。\n\n相邻助手对原任务选点规则和对照数据曾作纠正，属于方法来源，本轮未复核各模型训练步数、数据或收益，也未启动补评。",
+          "scope": "论文/模型研究中评估扩参或模型变体，尤其需要区分原训练阶段、后续适配、原任务保持与新增来源泛化时",
+          "exceptions": [
+            "源任务的模型大小、题量、训练步数、GPU约束和运行授权不推广为默认值；本条不授权训练、补评或查询实验进度。",
+            "多因素一起改变时如实标明比较局限；数据规模相同不证明逐样本、标签或配方相同。",
+            "这是评估和汇报顺序，不要求隐瞒未达原任务保持要求时已经得到的泛化结果，也不预断扩参一定有益。",
+            "统一选点规则与统一最终步数分别回答不同研究问题；具体曝光、验证规则或资源适配须在当前设计明确，不照抄原任务常数。"
+          ],
+          "tags": [
+            "论文",
+            "工作方法",
+            "模型比较",
+            "参数扩展",
+            "训练集",
+            "checkpoint",
+            "基线",
+            "原任务",
+            "泛化",
+            "直接迁移",
+            "后训练",
+            "评测口径",
+            "选模",
+            "训练步数",
+            "训练预算",
+            "监督机会",
+            "同批数据",
+            "原生模型"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "human_model_comparison_corrections_for_checkpoint_protocol_and_task_alignment_no_result_revalidation",
+          "source_candidates": [],
+          "evidence": [
+            {
+              "ref": "D20261102-054",
+              "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+              "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L1853",
+              "source_kind": "user_authored",
+              "family_id": "matched-scaling-comparison",
+              "text_sha256": "f9b3927c6a480312598b63f63fcd2b9262565866fdb4d35ffe22add68a742943",
+              "message_timestamp": "2026-11-01T15:57:09.816Z",
+              "support": "用户指出真实目标是前置判别器扩参后的泛化，不应偏到别的训练目标。"
+            },
+            {
+              "ref": "D20261102-056",
+              "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+              "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L2079",
+              "source_kind": "user_authored",
+              "family_id": "matched-scaling-comparison",
+              "text_sha256": "f6b032d0ea58fd679b1bb427dda9b9cdf2d1622d494ade8d79897341e02c6f54",
+              "message_timestamp": "2026-11-01T17:42:11.906Z",
+              "support": "用户要求保留旧基线、核对配方并使用原泛化评估，不重训旧模型。"
+            },
+            {
+              "ref": "D20261102-057",
+              "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+              "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L3627",
+              "source_kind": "user_authored",
+              "family_id": "matched-scaling-comparison",
+              "text_sha256": "415c3689af41406d4212535cc5e3f6f0aa7661dd6f3aba91dbf21f709b0bec01",
+              "message_timestamp": "2026-11-02T01:36:43.131Z",
+              "support": "用户要求正式训练后结果与原基线比较，未完成明确标出，不用初始化指标代替。"
+            },
+            {
+              "ref": "D20261102-094",
+              "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+              "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L5854",
+              "source_kind": "user_authored",
+              "family_id": "matched-scaling-comparison",
+              "text_sha256": "09faa9f2f31580e368baee4d9ab01658201ff984fff64fe77409f8b469716b6d",
+              "message_timestamp": "2026-11-02T05:11:04.163Z",
+              "support": "用户明确要求先在原任务基础上比较保持情况，再看增加的泛化测试数据。"
+            },
+            {
+              "ref": "D20261102-147",
+              "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+              "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L6984",
+              "source_kind": "user_authored",
+              "family_id": "matched-scaling-comparison",
+              "text_sha256": "8ee2ba56791485ed851b8ccefccf65d7e7aad1e049006adfde915647d5f30874",
+              "message_timestamp": "2026-11-02T13:59:42.760Z",
+              "support": "用户再次纠正目标是以原始小模型为起点扩大规模，评估作用与泛化。"
+            },
+            {
+              "ref": "D20261102-149",
+              "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+              "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L6998",
+              "source_kind": "user_authored",
+              "family_id": "matched-scaling-comparison",
+              "text_sha256": "c57bb399f3423a9cc74d911595b89f965de8b0c88ab3d9cb9e1fce03cf21f1aa",
+              "message_timestamp": "2026-11-02T14:06:40.506Z",
+              "support": "用户指出训练集不一致；相邻纠正报告确认主比较对象混入后续适配阶段，须回到原阶段对照。"
+            },
+            {
+              "ref": "D20261103-024",
+              "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+              "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L7678",
+              "source_kind": "user_authored",
+              "family_id": "matched-model-protocol",
+              "text_sha256": "e8d16168459bf5539d6944004d1a91d5cbef934feebef0622910bc34fe17637d",
+              "message_timestamp": "2026-11-02T15:25:02.135Z",
+              "support": "用户追问扩参后变差和采用步数不同，触发区分总训练预算与被评checkpoint。"
+            },
+            {
+              "ref": "D20261103-030",
+              "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+              "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L7721",
+              "source_kind": "user_authored",
+              "family_id": "matched-model-protocol",
+              "text_sha256": "adf1b57fc8ad7ccd86ed9676a54c8a668c2d1f3052fd55cd7c900d0007785352",
+              "message_timestamp": "2026-11-02T15:40:50.077Z",
+              "support": "用户要求解释未统一的理由，辅助回复区分同规则选最佳与同一步数比较，承认主问题未对齐。"
+            },
+            {
+              "ref": "D20261103-061",
+              "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+              "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L9168",
+              "source_kind": "user_authored",
+              "family_id": "matched-model-protocol",
+              "text_sha256": "0b477d2f8637dda80e0a771df2b47b3d6c852d501bb208002eccc15eb6572f87",
+              "message_timestamp": "2026-11-03T05:18:34.795Z",
+              "support": "用户要求原生和专用版本同提示/评估口径并排比较两个规模，不重训；模型大小和题量仅原任务。"
+            },
+            {
+              "ref": "D20261103-062",
+              "thread_id": "01a182bc-c3f3-76e1-b4cf-bf08b41bd1f1",
+              "location": "rollout-2026-11-02T11-47-18-01a182bc-c3f3-76e1-b4cf-bf08b41bd1f1_01a19a5e-6030-75e0-b483-4057b977beaf.jsonl:L5500",
+              "source_kind": "user_authored",
+              "family_id": "matched-model-protocol",
+              "text_sha256": "71035d0ab98f2d62379612ee3d9e72a365c2ffea35b85fc6be07fe346618eded",
+              "message_timestamp": "2026-11-03T05:18:47.620Z",
+              "support": "用户要求检查如何在原合同同批数据上与原方案公平比较，先讨论不训练。"
+            }
+          ],
+          "id": "research.matched-model-comparison-v2",
+          "status": "active",
+          "updated_at": "2026-11-04T04:03:22+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "research.matched-model-comparison-v3",
+      "last_reason": "补充用户采纳的适配配方比较与避免可选重训挤占主任务的纠正，保留原单因素/阶段/泛化比较边界。"
     },
     {
       "id": "research.dataset-adaptation-pilot-review",
@@ -16965,10 +17111,59 @@
         }
       ],
       "source_candidates": [],
-      "status": "active",
-      "updated_at": "2026-11-04T04:03:22+00:00",
-      "revision": 1,
-      "history": []
+      "status": "superseded",
+      "updated_at": "2026-11-07T12:53:12+00:00",
+      "revision": 2,
+      "history": [
+        {
+          "id": "research.dataset-adaptation-pilot-review",
+          "title": "跨来源任务数据构造：先还原旧流程，试制评审后再扩量",
+          "kind": "memory",
+          "claim": "知识状态：用户已采纳的跨来源定制数据构造工作流。原请求在上轮仍未完成，本次看到原turn_id对应完成证据后续接；辅助交付报告仅说明曾执行/报告过，不是本维护验证数据合格。\n\n将一个已有任务扩展到多个公开数据来源时，先核对旧任务数据、实际构造流程、可见输入、参考/标签与输出单位，形成能复用的局部约束。再筛选哪些公开来源可合法映射同样的任务需求，记录合适与不合适的理由；不要把下载数据直接当成已完成任务适配。按本次目标汇总为需求说明/PRD，明确保留什么、改什么、交付什么，防止后续围绕方便获得的字段悄悄改变任务。\n\n各来源先小规模试制，将真实样例、字段映射、证据条件、标签依据与验收标准交给按当前任务委派的专用Agent做质量评审；通过当前试制准入条件后再扩量。任务方向监控与数据质量判断是不同职责；如当前任务确实需要额外监控，交接原目标和验收边界，监控上下文只含必要材料，避免只继承主Agent结论。默认构造、划分和污染控制沿用匹配的benchmark-paper-template等Skill，本条只保存“旧任务还原→来源适配→需求固定→小批评审→扩量”的执行顺序修正，不重复整套建设规范。\n\n按来源区分材料数、字段任务数与证据条件数，保留审核主体和待核状态；Agent评审通过不成为人工金标，不证明数据能提升模型或已经构成独立泛化测试。辅助来源同一原回合L3514报告数据交付与非人工金标边界；本轮未打开数据包、检查标签或运行模型。",
+          "scope": "论文/Benchmark建设中，把已有任务的数据构造方法适配到多个公开来源，并需要控制任务跑偏与试制扩量质量时",
+          "exceptions": [
+            "不是所有数据清洗都先做PRD或安排多名监控；按当前任务规模和授权，仅采用需要的阶段。",
+            "原项目的来源集合、每来源配额、总题量、私有文档地址及历史执行权限不推广为默认设置。",
+            "监控/质量Agent的判断不等于来源独立性、人工标签或模型有效性证明；未完成和不合格来源保持原状态，不为凑覆盖强行通过。"
+          ],
+          "tags": [
+            "论文",
+            "工作方法",
+            "数据构造",
+            "多来源",
+            "公开数据集",
+            "任务适配",
+            "PRD",
+            "小规模",
+            "试制",
+            "质量评审",
+            "扩量",
+            "防跑偏"
+          ],
+          "visibility": "public",
+          "sensitivity": "non_sensitive",
+          "validity": "stable",
+          "verification": "human_adopted_dataset_adaptation_workflow_with_matching_turn_completion_no_dataset_revalidation",
+          "evidence": [
+            {
+              "ref": "D20261103-007",
+              "thread_id": "01a17df8-7c37-7f52-b71b-73599b55aa9c",
+              "location": "rollout-2026-11-02T18-27-02-01a17df8-7c37-7f52-b71b-73599b55aa9c_01a19bcc-5606-7523-89e0-a0398665a19c.jsonl:L336",
+              "source_kind": "user_authored",
+              "family_id": "dataset-adaptation-pilot",
+              "text_sha256": "ecf0fb1bf0a4f54c51f454b9b1f5e3453419ff23165e8fecf2741f3fe40dbec5",
+              "message_timestamp": "2026-11-02T11:09:09.477Z",
+              "support": "用户明确给出旧合同构造盘点、公开来源筛选、固定PRD、小规模专用评审后扩量的顺序；原未完成回合在本次取得完成证据。"
+            }
+          ],
+          "source_candidates": [],
+          "status": "active",
+          "updated_at": "2026-11-04T04:03:22+00:00",
+          "revision": 1
+        }
+      ],
+      "replaced_by": "research.dataset-adaptation-pilot-review-v2",
+      "last_reason": "把已有流程补成先查实际回答/评分缺项、受控和真实样例分层、共同规则与对象核对后再扩量；合并同触发内容不一阶段一条。"
     },
     {
       "title": "ContractFill稿件：主稿/快照、中英同步与新旧材料清理边界",
@@ -17349,6 +17544,392 @@
       "source_candidates": [],
       "status": "active",
       "updated_at": "2026-11-06T04:16:37+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "title": "模型比较：主问题、适配配方与旧模型复用先对齐",
+      "kind": "memory",
+      "claim": "知识状态：来自用户对一次扩参任务跑偏的直接纠正与后续比较顺序要求；保存的是对照方法，不是该次训练完成、原任务保持或泛化收益的验证结论。\n\n扩参或模型变体比较前，先固定用户真正要回答的变化因素、原始基线及训练阶段。核对各模型使用的训练样本/标签、输入处理、采样与训练安排、评测集合及口径；模型大小变化与资源适配须明确，不能暗中追加新领域数据或后训练阶段后，仍称只比较参数量。对后续适配后的各模型“阶段内部一致”，也不能替代用户指定原始模型的主对照。\n\n比较先在同一原任务测试与原指标下判断原能力是否保持，再检查新增数据上的泛化。若只评了原任务子集，应标清覆盖缺口；没有事先明确主要指标与允许波动时，不臆造“不下降”的容忍范围。原任务退步时如实报告取舍，不用泛化集收益抵消它。\n\n未做新领域适配的直接迁移与使用新领域数据适配后的效果分开列。正式训练后的模型、初始化/试跑与仍在训练的状态分开，不用初始化指标代替最终泛化结果；没有匹配结果就保留未完成。主对照错选后先查原阶段checkpoint和已有有效输出，能补评不预设要重训；复评层次沿用research.reuse-predictions-before-rerun-v3，不重写整套流程。\n\n相邻助手在同源L7090承认把后续适配分支当成主比较对象，虽称各规模在同阶段数据一致，仍偏离原始基线；纠正报告称保留原阶段checkpoint。本轮未核查文件、训练数据或模型，因此具体任务数量、阶段产物和收益仅留本地待核。\n\n本窗口的checkpoint比较纠正：训练总预算相同、按同一验证集规则选模、最终评估权重处于相同步数，是不同条件。先明确本次回答的是“相同训练流程下各自选出的最佳模型”还是“控制训练曝光后的规模差异”；对齐并披露选模规则、曝光量与采用权重。需要同预算/同阶段对照时优先检查已保存权重，验证集最佳可以作为不同问题的补充，但不能冒充同一步数对照。也不把同一步数当成跨模型永远唯一公平标准；没有预先约定时说明比较回答了什么与仍缺什么，不在测试集上事后挑点。\n\n结构改动比较要回到原任务可比数据。辅助标注齐全的新来源可用于模块调试，但不能在没有说明的情况下替代与原方案同批任务的主评估；需要适配输入或增加监督时，对普通强基线也核对信息与训练机会，单独标明改变因素。原生模型和专用判别方案对比时，注明输入模板、判别头与后训练是否一起变化，不把整套收益全部归给某个头。\n\n相邻助手对原任务选点规则和对照数据曾作纠正，属于方法来源，本轮未复核各模型训练步数、数据或收益，也未启动补评。\n\n2026-11-07跨家族与资源投入的纠正：先明确比较要证明“可替换性”还是隔离某一因素的因果效果。前者可在相同任务、数据/划分、标签、可见信息与评测标准下，采用各模型有依据的适配方式；分词器、模板、头接口、优化或微调方式不同须披露，开发集选择与搜索机会按当前任务约定冻结。不能因超参数不完全相同就否定实用比较，也不能把整套配置更优直接归因于骨干家族。若需要归因于单一结构，仍须建立对应的受控对照。\n\n启动新增训练前，盘点旧基线的权重、训练/选点来源、输入与标签版本、保存预测是否满足当前主问题。旧模型未失效、可作为明确的历史/固定基线时，优先复用并说明其与新模型的预算/选点差异；开发集调整本身不证明必须重训。额外同预算、多配方或多种子对照是可能加强证据的投入，不能未经必要性判断变成所有任务的前置必做项，更不应挤占目标新模型的执行顺序。确需重训时说清旧产物缺哪项、重训解决什么问题及当前投入边界。\n\n同源助手L11114承认旧基线可用，L11210在用户指出资源浪费后报告停止额外训练；本轮没有核验旧权重、复现结果、停止状态或成本数字。当前任务的模型家族、候选数、种子数和资源权限保留原范围，不作为默认实验配额。",
+      "scope": "论文/模型研究中评估扩参或模型变体，尤其需要区分原训练阶段、后续适配、原任务保持与新增来源泛化时；跨模型家族的可替换性比较与决定是否重训既有基线时",
+      "exceptions": [
+        "源任务的模型大小、题量、训练步数、GPU约束和运行授权不推广为默认值；本条不授权训练、补评或查询实验进度。",
+        "多因素一起改变时如实标明比较局限；数据规模相同不证明逐样本、标签或配方相同。",
+        "这是评估和汇报顺序，不要求隐瞒未达原任务保持要求时已经得到的泛化结果，也不预断扩参一定有益。",
+        "统一选点规则与统一最终步数分别回答不同研究问题；具体曝光、验证规则或资源适配须在当前设计明确，不照抄原任务常数。",
+        "优先复用不等于永不重训；数据、输入、评价问题或权重缺失使旧产物不能代表当前问题时，应如实说明，仍按当前授权和证据缺口安排。"
+      ],
+      "tags": [
+        "论文",
+        "工作方法",
+        "模型比较",
+        "参数扩展",
+        "训练集",
+        "checkpoint",
+        "基线",
+        "原任务",
+        "泛化",
+        "直接迁移",
+        "后训练",
+        "评测口径",
+        "选模",
+        "训练步数",
+        "训练预算",
+        "监督机会",
+        "同批数据",
+        "原生模型",
+        "跨家族",
+        "模型适配",
+        "可替换性",
+        "旧基线",
+        "避免重训",
+        "资源取舍"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "human_adopted_cross_family_comparison_and_reuse_correction_no_model_or_cost_revalidation",
+      "source_candidates": [],
+      "evidence": [
+        {
+          "ref": "D20261102-054",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L1853",
+          "source_kind": "user_authored",
+          "family_id": "matched-scaling-comparison",
+          "text_sha256": "f9b3927c6a480312598b63f63fcd2b9262565866fdb4d35ffe22add68a742943",
+          "message_timestamp": "2026-11-01T15:57:09.816Z",
+          "support": "用户指出真实目标是前置判别器扩参后的泛化，不应偏到别的训练目标。"
+        },
+        {
+          "ref": "D20261102-056",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L2079",
+          "source_kind": "user_authored",
+          "family_id": "matched-scaling-comparison",
+          "text_sha256": "f6b032d0ea58fd679b1bb427dda9b9cdf2d1622d494ade8d79897341e02c6f54",
+          "message_timestamp": "2026-11-01T17:42:11.906Z",
+          "support": "用户要求保留旧基线、核对配方并使用原泛化评估，不重训旧模型。"
+        },
+        {
+          "ref": "D20261102-057",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L3627",
+          "source_kind": "user_authored",
+          "family_id": "matched-scaling-comparison",
+          "text_sha256": "415c3689af41406d4212535cc5e3f6f0aa7661dd6f3aba91dbf21f709b0bec01",
+          "message_timestamp": "2026-11-02T01:36:43.131Z",
+          "support": "用户要求正式训练后结果与原基线比较，未完成明确标出，不用初始化指标代替。"
+        },
+        {
+          "ref": "D20261102-094",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L5854",
+          "source_kind": "user_authored",
+          "family_id": "matched-scaling-comparison",
+          "text_sha256": "09faa9f2f31580e368baee4d9ab01658201ff984fff64fe77409f8b469716b6d",
+          "message_timestamp": "2026-11-02T05:11:04.163Z",
+          "support": "用户明确要求先在原任务基础上比较保持情况，再看增加的泛化测试数据。"
+        },
+        {
+          "ref": "D20261102-147",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L6984",
+          "source_kind": "user_authored",
+          "family_id": "matched-scaling-comparison",
+          "text_sha256": "8ee2ba56791485ed851b8ccefccf65d7e7aad1e049006adfde915647d5f30874",
+          "message_timestamp": "2026-11-02T13:59:42.760Z",
+          "support": "用户再次纠正目标是以原始小模型为起点扩大规模，评估作用与泛化。"
+        },
+        {
+          "ref": "D20261102-149",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L6998",
+          "source_kind": "user_authored",
+          "family_id": "matched-scaling-comparison",
+          "text_sha256": "c57bb399f3423a9cc74d911595b89f965de8b0c88ab3d9cb9e1fce03cf21f1aa",
+          "message_timestamp": "2026-11-02T14:06:40.506Z",
+          "support": "用户指出训练集不一致；相邻纠正报告确认主比较对象混入后续适配阶段，须回到原阶段对照。"
+        },
+        {
+          "ref": "D20261103-024",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L7678",
+          "source_kind": "user_authored",
+          "family_id": "matched-model-protocol",
+          "text_sha256": "e8d16168459bf5539d6944004d1a91d5cbef934feebef0622910bc34fe17637d",
+          "message_timestamp": "2026-11-02T15:25:02.135Z",
+          "support": "用户追问扩参后变差和采用步数不同，触发区分总训练预算与被评checkpoint。"
+        },
+        {
+          "ref": "D20261103-030",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L7721",
+          "source_kind": "user_authored",
+          "family_id": "matched-model-protocol",
+          "text_sha256": "adf1b57fc8ad7ccd86ed9676a54c8a668c2d1f3052fd55cd7c900d0007785352",
+          "message_timestamp": "2026-11-02T15:40:50.077Z",
+          "support": "用户要求解释未统一的理由，辅助回复区分同规则选最佳与同一步数比较，承认主问题未对齐。"
+        },
+        {
+          "ref": "D20261103-061",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L9168",
+          "source_kind": "user_authored",
+          "family_id": "matched-model-protocol",
+          "text_sha256": "0b477d2f8637dda80e0a771df2b47b3d6c852d501bb208002eccc15eb6572f87",
+          "message_timestamp": "2026-11-03T05:18:34.795Z",
+          "support": "用户要求原生和专用版本同提示/评估口径并排比较两个规模，不重训；模型大小和题量仅原任务。"
+        },
+        {
+          "ref": "D20261103-062",
+          "thread_id": "01a182bc-c3f3-76e1-b4cf-bf08b41bd1f1",
+          "location": "rollout-2026-11-02T11-47-18-01a182bc-c3f3-76e1-b4cf-bf08b41bd1f1_01a19a5e-6030-75e0-b483-4057b977beaf.jsonl:L5500",
+          "source_kind": "user_authored",
+          "family_id": "matched-model-protocol",
+          "text_sha256": "71035d0ab98f2d62379612ee3d9e72a365c2ffea35b85fc6be07fe346618eded",
+          "message_timestamp": "2026-11-03T05:18:47.620Z",
+          "support": "用户要求检查如何在原合同同批数据上与原方案公平比较，先讨论不训练。"
+        },
+        {
+          "ref": "D20261107-018",
+          "thread_id": "01a19b85-c0b0-7043-b698-5aa27633f2b6",
+          "location": "rollout-2026-11-07T12-21-18-01a19b85-c0b0-7043-b698-5aa27633f2b6_01a1b43d-4a77-7a52-b114-02998aab0537.jsonl:L132",
+          "source_kind": "user_authored",
+          "family_id": "cross-family-reuse",
+          "text_sha256": "99a4660895545e96e22e4a1b966ff09a35e0dc2f7be25757ba4b97bcae9803c1",
+          "message_timestamp": "2026-11-07T04:37:41.659Z",
+          "support": "用户提出同数据下允许各家族采用适合模型的训练方式，随后接受按此制定任务书。"
+        },
+        {
+          "ref": "D20261107-021",
+          "thread_id": "01a19b85-c0b0-7043-b698-5aa27633f2b6",
+          "location": "rollout-2026-11-07T12-21-18-01a19b85-c0b0-7043-b698-5aa27633f2b6_01a1b43d-4a77-7a52-b114-02998aab0537.jsonl:L202",
+          "source_kind": "user_authored",
+          "family_id": "cross-family-reuse",
+          "text_sha256": "f68141f617dcddb4fc99b465b2474505417ad8756cc838d3a5e53fdf1b5d1fd1",
+          "message_timestamp": "2026-11-07T04:52:05.422Z",
+          "support": "用户明确接受并要求制定跨家族任务书，支持模型适配而非强制所有训练参数相同的本次比较契约。"
+        },
+        {
+          "ref": "D20261107-042",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L11075",
+          "source_kind": "user_authored",
+          "family_id": "cross-family-reuse",
+          "text_sha256": "9ec96b0b122250ee364a11672286a8ad7f80945b49a374d72ba751bfe9c0d19f",
+          "message_timestamp": "2026-11-07T10:26:05.197Z",
+          "support": "用户质疑原模型为何不能复用，辅助回复承认旧基线有效，开发集变化不必然要求重训。"
+        },
+        {
+          "ref": "D20261107-043",
+          "thread_id": "01a175f8-61b2-7572-9c05-5e761e63772f",
+          "location": "rollout-2026-11-01T16-46-15-01a175f8-61b2-7572-9c05-5e761e63772f_01a19649-b5a3-7e72-97b2-a9c7d6f5baa3.jsonl:L11121",
+          "source_kind": "user_authored",
+          "family_id": "cross-family-reuse",
+          "text_sha256": "f19ab2afe1099b7c6467f24dbe3d1d6b4833970fb8bb94aed183269e3a9f7c04",
+          "message_timestamp": "2026-11-07T10:32:01.091Z",
+          "support": "用户指出重训浪费资源，辅助回复承认把可选同预算对照当必做并让它抢占新模型队列。"
+        }
+      ],
+      "id": "research.matched-model-comparison-v3",
+      "status": "active",
+      "updated_at": "2026-11-07T12:53:12+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "title": "跨来源制标：先盘点可复用材料，再用真实回答验证规则后扩量",
+      "kind": "memory",
+      "claim": "知识状态：用户已采纳的跨来源定制数据构造工作流。原请求在上轮仍未完成，本次看到原turn_id对应完成证据后续接；辅助交付报告仅说明曾执行/报告过，不是本维护验证数据合格。\n\n将一个已有任务扩展到多个公开数据来源时，先核对旧任务数据、实际构造流程、可见输入、参考/标签与输出单位，形成能复用的局部约束。再筛选哪些公开来源可合法映射同样的任务需求，记录合适与不合适的理由；不要把下载数据直接当成已完成任务适配。按本次目标汇总为需求说明/PRD，明确保留什么、改什么、交付什么，防止后续围绕方便获得的字段悄悄改变任务。\n\n各来源先小规模试制，将真实样例、字段映射、证据条件、标签依据与验收标准交给按当前任务委派的专用Agent做质量评审；通过当前试制准入条件后再扩量。任务方向监控与数据质量判断是不同职责；如当前任务确实需要额外监控，交接原目标和验收边界，监控上下文只含必要材料，避免只继承主Agent结论。默认构造、划分和污染控制沿用匹配的benchmark-paper-template等Skill，本条只保存“旧任务还原→来源适配→需求固定→小批评审→扩量”的执行顺序修正，不重复整套建设规范。\n\n按来源区分材料数、字段任务数与证据条件数，保留审核主体和待核状态；Agent评审通过不成为人工金标，不证明数据能提升模型或已经构成独立泛化测试。辅助来源同一原回合L3514报告数据交付与非人工金标边界；本轮未打开数据包、检查标签或运行模型。\n\n2026-11-07补充：新建来源/补量方案前，先盘点原始输入、参考/必要内容、实际模型回答及引用、旧质量审核、逐答案分项评分和版本映射，分别判断可以直接复用、只能作素材、需补缺项或待核。已有数据质量通过不证明每个实际回答都已标出正确性、完整性与引用支持；拒填也不能自动当作后置错误答案。前置候选是任务与证据条件，后置还需要当前版本的真实候选回答及其引用。新补数量按盘点缺口估计，不把候选条数等同调用次数，不默认从零制作。\n\n批量制标前，受控/人工设计样例只作规则和接口初检；还需按当前任务用一小批真实模型回答检查漏答、答错与引用不支持，并保留合格答案的反例。已有回答和判断在材料/版本/标准相符时复用，只补未覆盖项；旧问题回归与未参与规则调整的新回答分开。发现分歧，先检查审核Agent和制标模型实际获得的共同规则是否完整、评判对象是否明确，再判断模型能力；相关交接沿用现有agent-review-and-api-evaluation规范，不复制另一套角色协议。\n\n原协议、修订文件、多个主体等对象含混时，从原始材料和已有有效裁定定位目标；无法定案的材料隔离溯源，不强行制标。规则/对象修正保留旧输入、原答案与引用和旧判定，不用改答案制造一致；用未参与调整的新真实回答检验之后，才能按本任务冻结标准决定是否分批扩量。少量全部一致只说明已检查样例的表现，不是总体制标准确率、真人金标或学生模型泛化证明。\n\n用户要逐步审核成果时，把规则、对象、旧问题回归、新回答复查、实际请求/响应与准入结论组织为可分步阅读的入口；每步给明确检查对象和证据，不先让总体分数替代规则与对象判断。完整原文、日志和指纹按需追溯，默认审核展示仍沿用research.chinese-item-review，不制造新的固定审核平台或强制所有任务都做这五步。\n\n辅助来源：同源L741报告现有输入、回答与评分缺口，L1535的受控小样通过后，L2072在真实回答发现规则未完整加载及文书对象未明；L2480报告修正后用回归/新回答复查，L2505给出分步审核建议。这些是过程报告，本维护未打开数据或复验判定；具体数量与得分继续留原项目本地，不作为通用配额。",
+      "scope": "论文/Benchmark建设中，把已有任务的数据构造方法适配到多个公开来源，并需要控制任务跑偏与试制扩量质量时；已有输入/参考、模型回答或评分需要盘点复用，前后置制标准入及用户分步审核时",
+      "exceptions": [
+        "不是所有数据清洗都先做PRD或安排多名监控；按当前任务规模和授权，仅采用需要的阶段。",
+        "原项目的来源集合、每来源配额、总题量、私有文档地址及历史执行权限不推广为默认设置。",
+        "监控/质量Agent的判断不等于来源独立性、人工标签或模型有效性证明；未完成和不合格来源保持原状态，不为凑覆盖强行通过。",
+        "这里保存制标准备和准入检查的工作方法，不自动授权生成新回答、付费调用、改正式评分、训练或批量补数据。",
+        "本次新/旧样例与分歧数量不推广为固定样本量；小批通过不保证未见来源同样可靠。"
+      ],
+      "tags": [
+        "论文",
+        "工作方法",
+        "数据构造",
+        "多来源",
+        "公开数据集",
+        "任务适配",
+        "PRD",
+        "小规模",
+        "试制",
+        "质量评审",
+        "扩量",
+        "防跑偏",
+        "已有材料",
+        "模型回答",
+        "评分缺项",
+        "前置",
+        "后置",
+        "制标",
+        "真实回答",
+        "共同规则",
+        "目标文书",
+        "分步审核"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "stable",
+      "verification": "human_adopted_asset_inventory_and_real_answer_label_pilot_workflow_no_label_or_model_revalidation",
+      "evidence": [
+        {
+          "ref": "D20261103-007",
+          "thread_id": "01a17df8-7c37-7f52-b71b-73599b55aa9c",
+          "location": "rollout-2026-11-02T18-27-02-01a17df8-7c37-7f52-b71b-73599b55aa9c_01a19bcc-5606-7523-89e0-a0398665a19c.jsonl:L336",
+          "source_kind": "user_authored",
+          "family_id": "dataset-adaptation-pilot",
+          "text_sha256": "ecf0fb1bf0a4f54c51f454b9b1f5e3453419ff23165e8fecf2741f3fe40dbec5",
+          "message_timestamp": "2026-11-02T11:09:09.477Z",
+          "support": "用户明确给出旧合同构造盘点、公开来源筛选、固定PRD、小规模专用评审后扩量的顺序；原未完成回合在本次取得完成证据。"
+        },
+        {
+          "ref": "D20261107-032",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-07T13-25-32-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b478-1aff-7cf2-bb95-e964928bc82d.jsonl:L343",
+          "source_kind": "user_authored",
+          "family_id": "data-label-reuse-pilot",
+          "text_sha256": "20ac50f883b24fd64523f3c76b87146c959f82b0a6fd70254863679053aaef3f",
+          "message_timestamp": "2026-11-07T09:13:12.423Z",
+          "support": "用户指出已有数据应先考虑，避免方案默认重新构造。"
+        },
+        {
+          "ref": "D20261107-033",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-07T13-25-32-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b478-1aff-7cf2-bb95-e964928bc82d.jsonl:L363",
+          "source_kind": "user_authored",
+          "family_id": "data-label-reuse-pilot",
+          "text_sha256": "359d3547c27fbb7f767044aa596ce31287a514b50a3456500c17a374a1c49a83",
+          "message_timestamp": "2026-11-07T09:18:42.838Z",
+          "support": "用户要求先盘点已有材料对应的实际模型回答和评分，再决定前后置复用、领域划分及补量。"
+        },
+        {
+          "ref": "D20261107-039",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-07T13-25-32-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b478-1aff-7cf2-bb95-e964928bc82d.jsonl:L988",
+          "source_kind": "user_authored",
+          "family_id": "data-label-reuse-pilot",
+          "text_sha256": "974cac78ddb7976b229bf4274acaa987b1ff6e479ecf2cb2f785385571bfe63b",
+          "message_timestamp": "2026-11-07T10:15:38.397Z",
+          "support": "用户要求小批检查前后置标注规则及制标模型可靠性，旧判断优先复用，展示样例和问题后再扩量。"
+        },
+        {
+          "ref": "D20261107-044",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-07T13-25-32-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b478-1aff-7cf2-bb95-e964928bc82d.jsonl:L1547",
+          "source_kind": "user_authored",
+          "family_id": "data-label-reuse-pilot",
+          "text_sha256": "8e44d1c406021a3875c583effbd0bb4ace9e2189b84377bde36ea347400ce5b2",
+          "message_timestamp": "2026-11-07T10:58:54.597Z",
+          "support": "用户明确追加真实模型回答检查，重点漏答、答错与引用不支持；确认可靠后再批量。"
+        },
+        {
+          "ref": "D20261107-048",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-07T13-25-32-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b478-1aff-7cf2-bb95-e964928bc82d.jsonl:L2117",
+          "source_kind": "user_authored",
+          "family_id": "data-label-reuse-pilot",
+          "text_sha256": "c5b2bbb8b5f68ebf8efdaa864ac3c0de63cc9eb9257e12a5b6a9b11da6a19830",
+          "message_timestamp": "2026-11-07T12:03:41.718Z",
+          "support": "用户要求完整既有规则同时提供审核Agent及制标模型，按原材料明确文书对象，用未参与调整的新回答复查且保留旧记录。"
+        },
+        {
+          "ref": "D20261107-049",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-07T13-25-32-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b478-1aff-7cf2-bb95-e964928bc82d.jsonl:L2488",
+          "source_kind": "user_authored",
+          "family_id": "data-label-reuse-pilot",
+          "text_sha256": "cbb60be618b80bf97c928c5eed3dd4c7f2cef5ffca00a7c3679ba5ed9f2b79eb",
+          "message_timestamp": "2026-11-07T12:46:21.091Z",
+          "support": "用户要求逐步检查工作成果并说明怎样整理，支持在制标场景分步呈现可检查证据。"
+        }
+      ],
+      "source_candidates": [],
+      "id": "research.dataset-adaptation-pilot-review-v2",
+      "status": "active",
+      "updated_at": "2026-11-07T12:53:12+00:00",
+      "revision": 1,
+      "history": []
+    },
+    {
+      "id": "project.discriminator-generalization-goal",
+      "title": "前后置判别器：以跨领域能力为目标，教师规模作为路线选择",
+      "kind": "project",
+      "project": "contract-research",
+      "target": "references/projects/contract-research.md",
+      "claim": "项目目标约定（来源截至2026-11-07）：在idea-novelty-check相关前后置判别器蒸馏/泛化规划任务中，用户起初关注32B以上教师到0.6B学生，随后明确询问不用32B的方案，并重申核心目标是两个判别器在不同场景都有一定能力。0.6B是该研究当前讨论的学生目标；合同是已有应用与资源来源，不能默认把最终验收收窄为只在合同数据上提升。\n\n前置关注给定任务/问题与可见证据是否足以回答；后置关注实际候选是否正确、完整并受引用/材料支持。两种判定对象分开准备材料，不能把内容支持等同完整性，也不把二者当同一个标签任务。用户的“所有场景”是探索目标，尚非已经证明的能力或保证；需要在当前方案中明确实际覆盖、未见场景测试和局限。教师选择应回到实际可提供的可靠监督，初始32B偏好并未排除其后明确允许讨论的较小教师。\n\n多领域少样本、理由辅助、候选教师、留出领域及具体补量在来源中仍属比较/试制方案；没有据本次整理认定最终训练路线、规模、预算或实验已获通过。现有材料应先盘点，按research.dataset-adaptation-pilot-review和matched-model-comparison的当前版本复用，不以目标约定授予任何执行权限。\n\n知识状态：直接用户目标澄清与讨论边界；本维护没有查项目进度、模型/数据现状或独立验证泛化效果。与同一项目其他版本的稿件/训练任务分别使用，不能跨分支取消原约定。",
+      "scope": "继续idea-novelty-check相关0.6B前后置判别器的跨领域蒸馏/制标规划任务时；按2026-11-07的目标澄清使用，不替代其他跨家族实验任务书",
+      "exceptions": [
+        "原始材料与具体数量、文档/服务器路径和训练状态只保留在本地来源，继续任务时核对当前工作区/版本及最新目标。",
+        "目标是跨场景能力探索，不保证任意场景泛化，也不将教师尺寸、学生大小推广为个人永久研究偏好。",
+        "先讨论、不训练、不批量补数据、不改论文/正式评分的限制属于相应原回合；本条不提供新执行授权，也不启动相关工作。"
+      ],
+      "tags": [
+        "论文",
+        "项目资料",
+        "前置判别器",
+        "后置判别器",
+        "跨领域",
+        "泛化目标",
+        "蒸馏",
+        "0.6B",
+        "教师选择"
+      ],
+      "visibility": "public",
+      "sensitivity": "non_sensitive",
+      "validity": "project",
+      "verification": "direct_human_project_goal_clarification_no_scientific_outcome_verification",
+      "source_candidates": [],
+      "evidence": [
+        {
+          "ref": "D20261107-011",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-06T18-33-53-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b06c-0c1b-73d2-9bbe-209389556c8f.jsonl:L149",
+          "source_kind": "user_authored",
+          "family_id": "generalization-goal",
+          "text_sha256": "1b25e91617edc92ee46d23545007f9d3c19c52760f1515e1e7ce5fba0373ec0a",
+          "message_timestamp": "2026-11-07T04:14:41.059Z",
+          "support": "用户要求为前置和后置判别器选择蒸馏方法，限定本次研究对象。"
+        },
+        {
+          "ref": "D20261107-024",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-06T18-33-53-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b06c-0c1b-73d2-9bbe-209389556c8f.jsonl:L543",
+          "source_kind": "user_authored",
+          "family_id": "generalization-goal",
+          "text_sha256": "58a32f8ce0f2abc680c80d11477f011007f8dd510b67197203628559adeb6954",
+          "message_timestamp": "2026-11-07T05:00:12.154Z",
+          "support": "用户询问不用32B教师的其他蒸馏方案，说明教师尺寸不是此后不可改变的硬条件。"
+        },
+        {
+          "ref": "D20261107-025",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-06T18-33-53-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b06c-0c1b-73d2-9bbe-209389556c8f.jsonl:L581",
+          "source_kind": "user_authored",
+          "family_id": "generalization-goal",
+          "text_sha256": "68c18d41b65227eb05adf4d261a34c37b2009481659047311f739984d4d4bd3e",
+          "message_timestamp": "2026-11-07T05:07:12.820Z",
+          "support": "用户明确重申两个判别器应具有跨场景泛化能力，不能只围绕合同场景解释目标。"
+        },
+        {
+          "ref": "D20261107-031",
+          "thread_id": "01a14adf-6784-7aa3-a298-642a66b25eff",
+          "location": "rollout-2026-11-07T13-25-32-01a14adf-6784-7aa3-a298-642a66b25eff_01a1b478-1aff-7cf2-bb95-e964928bc82d.jsonl:L53",
+          "source_kind": "user_authored",
+          "family_id": "generalization-goal",
+          "text_sha256": "2939b8f55d7c0582f0bc47f4e6c11bdd51c8f88145aa336c5189a8d397161532",
+          "message_timestamp": "2026-11-07T08:52:50.534Z",
+          "support": "用户要求先盘可复用公开材料并说明训练/测试领域、前后置数据与数量，暂不实验。"
+        }
+      ],
+      "status": "active",
+      "updated_at": "2026-11-07T12:53:12+00:00",
       "revision": 1,
       "history": []
     }
@@ -17764,5 +18345,5 @@
       "reason": "合并已有简洁汇报规则，删除停止指令这项无关支持。 2026-10-16归档覆盖登记，实际核心规则继续生效；原来源保留。"
     }
   ],
-  "updated_at": "2026-11-06T04:16:37+00:00"
+  "updated_at": "2026-11-07T12:53:12+00:00"
 }
