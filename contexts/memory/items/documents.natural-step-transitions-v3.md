@@ -1,12 +1,14 @@
 # 技术步骤与批注修订：自然衔接，把澄清融入正文
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `documents.natural-step-transitions-v3`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 已有技术文档或专利说明书的步骤段落及相关批注修订，要求保留步骤结构、改善连贯或解释技术含义时
 - verification: human_writing_corrections_with_local_formula_meaning_targeting_no_document_revalidation
 - validity: stable
-- updated_at: 2026-11-06T04:16:37+00:00
+- updated_at: 2026-11-08T10:07:35+00:00
 
 在已有技术说明或专利说明书中改进步骤连贯性时，保留当前要求的步骤结构，用具体对象、处理动作、条件和结果自然承接；不要为了展示依赖关系，反复写“以步骤一的产出为输入”“读取步骤三的结果”一类机械的编号串联。技术依赖和必要输入输出仍应说清，但不把行文改成接口契约或项目流程台账。
 
@@ -33,6 +35,7 @@
 - 正文自然说明与给律师/用户的批注回复是不同交付位置；用户明确要求逐条回复时仍逐条回复，不以本条取消原批注。
 - 不概括为所有公式都删单位、删符号说明或截图；精确协议、算法接口和计量定义保留必要信息，显示修复按当前格式要求。
 - 就近补充针对当前批注明确的阅读缺口，不要求所有符号在每次出现处重复定义；已有局部解释足够时不重复。
+- replaced_by: documents.natural-step-transitions-v4
 
 ## Evidence pointers
 

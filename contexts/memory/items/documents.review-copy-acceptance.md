@@ -1,12 +1,14 @@
 # Word送审版检查：区分意见来源，按修订后正文判断落实
 
+> Historical record. Excluded from active retrieval; do not apply as an instruction.
+
 - id: `documents.review-copy-acceptance`
 - kind: memory
-- status: active
+- status: superseded
 - scope: 已有Word的批注复核或最小修订，当前明确要求保留修订/原批注并交原审阅者继续审阅时，尤其律师审阅稿
 - verification: human_review_purpose_and_attribution_correction_no_docx_revalidation
 - validity: stable
-- updated_at: 2026-11-06T04:16:37+00:00
+- updated_at: 2026-11-08T10:07:35+00:00
 
 知识状态：用户在保留修订并交律师继续审阅的任务中，明确追问问题来源、重申送审用途后形成的审查范围纠正。本条保存有条件的工作方法，不是对某份Word完整性或法律质量的认证。
 
@@ -23,6 +25,7 @@
 - 用户明确要求清洁定稿、接受修订或重写时，按当前授权处理；不把送审版约定推广为所有文档永远不能清理历史。
 - 这是意见来源、有效正文与交付范围的核对方法，不替代法律判断，也不默认确认专利文件已充分或可提交。
 - 原文、具体专利方案、律师身份和文件路径只留原本地来源；本条不授权联系律师、发文件或执行历史修改。
+- replaced_by: documents.review-copy-acceptance-v2
 
 ## Evidence pointers
 
