@@ -8,7 +8,7 @@
 | 002 | 舍弃 | discarded | — | 原线程未定位，且不能把一次先讨论要求变成所有Skill修改都要审批。 |
 | 003 | Skill | already_covered | [专利材料：已有Skill入口](../contexts/memory/items/skill.patent-workflow-v2.md) | 保留专利场景的输入输出与步骤要求；其他材料未逐项支持的泛化不采纳。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。 |
 | 004 | Skill | already_covered | [专利材料：已有Skill入口](../contexts/memory/items/skill.patent-workflow-v2.md) | 模板与本人事实隔离已由专利Skill明确承载。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。 |
-| 005 | 长期规则 | new | [编辑已有材料：保留约定风格](../contexts/memory/items/documents.preserve-style-v2.md) | 不同材料任务均直接纠正风格偏移；仅晋升风格保持，视觉验收仍由对应Skill承载。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。 |
+| 005 | 长期规则 | new | [编辑已有材料：先保留原件，再做限定范围迁移](../contexts/memory/items/documents.preserve-style-v3.md) | 不同材料任务均直接纠正风格偏移；仅晋升风格保持，视觉验收仍由对应Skill承载。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。 |
 | 006 | Skill | already_covered | [学术写作：层级、因果链与证据入口](../contexts/memory/items/skill.academic-writing-entry.md) | 论文类型和贡献层级已被academic-write覆盖；历史章节冻结不作永久规则。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。 |
 | 007 | 可用记忆 | concise_reusable | [个人Skill：按任务匹配](../contexts/memory/items/skills.prefer-passive-routing-v2.md) | 精简保留可复用部分；原数量与执行条件留历史。 2026-10-16按批准方案精简或合并入口，旧来源及历史正文保留。 |
 | 008 | 长期规则 | merge_existing_coverage | [工程验证：最小充分检查与约定验收](../contexts/memory/items/validation.scoped-acceptance.md) | 最小验证Skill已有完整约束，本次纳入统一维护源。 2026-10-16并入既有验收原则入口，详细方法仍在最小验证Skill；不计新增规则。 |

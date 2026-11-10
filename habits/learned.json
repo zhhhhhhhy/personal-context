@@ -2,46 +2,6 @@
   "schema_version": "0.1",
   "items": [
     {
-      "key": "documents.preserve-style-v2",
-      "claim": "修改已有文档时，沿用用户认可的结构和风格；改文字不自动授权重做布局。",
-      "scope": "修改已有简历、专利等已经确定结构或参考模板的材料",
-      "exceptions": [
-        "当前明确要求重做结构或版式时按新要求执行。",
-        "渲染验收由对应文档Skill或项目约定承载，不在这里另设流程。"
-      ],
-      "confidence": "high",
-      "sensitivity": "non_sensitive",
-      "status": "auto_applied",
-      "candidate_audit": {
-        "action": "refine",
-        "related_ids": [
-          "C-20261014-005"
-        ]
-      },
-      "evidence": [
-        {
-          "ref": "E015",
-          "thread_id": "01a1078a-5052-73a2-b38e-5624a193a91f",
-          "location": "rollout-2026-10-04T23-32-27-01a1078a-5052-73a2-b38e-5624a193a91f_01a1078b-8726-7e61-84d0-98deed6961bf.jsonl:L487",
-          "source_kind": "user_authored",
-          "family_id": "existing-resume",
-          "text_sha256": "2f9b10ac495c14c30c027b0666a0bdef727f62759e0dbbb2a86fbdb1e1029d9e",
-          "support": "用户直接纠正简历整体结构和风格被改变。"
-        },
-        {
-          "ref": "E017",
-          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
-          "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L3210",
-          "source_kind": "user_authored",
-          "family_id": "patent-package",
-          "text_sha256": "cf9d070db4fef9944837f22d62d534984c554c3f4ae81ead0d86801c20b02f99",
-          "support": "另一专利任务要求修复生成材料与指定参考格式的偏差。"
-        }
-      ],
-      "updated_at": "2026-10-16T06:51:20+00:00",
-      "source_run": "memory-lifecycle"
-    },
-    {
       "key": "validation.scoped-acceptance",
       "claim": "日常检查按minimal-validation-workflow选择最小充分证据；用户已约定最终验收集合时，按该集合判断完成并说明未覆盖部分。抽样通过只证明抽样范围。",
       "scope": "工程变更的验证；存在指定最终验收集合时同时遵守该集合",
@@ -99,6 +59,57 @@
         }
       ],
       "updated_at": "2026-10-16T06:51:20+00:00",
+      "source_run": "memory-lifecycle"
+    },
+    {
+      "key": "documents.preserve-style-v3",
+      "claim": "修改已有文档时，沿用用户认可的结构和风格；改文字不自动授权重做布局。\n\n当已有原件与一个已修改参考版本并存，需要把修改迁移到原件时，先复制原件再编辑；把参考版本当作修改依据，只迁移用户明确指定的章节或范围，采用增量式修改，不能顺手改动其他区域或直接覆盖唯一原件。迁移前先核对两个版本和目标边界，迁移后按原文档验收要求检查。该流程保存的是来源与范围控制方法，不证明具体文档迁移已经完成。",
+      "scope": "修改已有简历、专利等已经确定结构或参考模板的材料；尤其是从一个已修改版本向原始文档迁移限定章节的增量修订",
+      "exceptions": [
+        "当前明确要求重做结构或版式时按新要求执行。",
+        "渲染验收由对应文档Skill或项目约定承载，不在这里另设流程。",
+        "复制原件与限定迁移是默认保护和范围控制；用户明确要求直接覆盖、全篇重做或扩大范围时，按当前授权处理并保留版本证据。"
+      ],
+      "confidence": "high",
+      "sensitivity": "non_sensitive",
+      "status": "auto_applied",
+      "candidate_audit": {
+        "action": "refine",
+        "related_ids": [
+          "C-20261014-005"
+        ]
+      },
+      "evidence": [
+        {
+          "ref": "E015",
+          "thread_id": "01a1078a-5052-73a2-b38e-5624a193a91f",
+          "location": "rollout-2026-10-04T23-32-27-01a1078a-5052-73a2-b38e-5624a193a91f_01a1078b-8726-7e61-84d0-98deed6961bf.jsonl:L487",
+          "source_kind": "user_authored",
+          "family_id": "existing-resume",
+          "text_sha256": "2f9b10ac495c14c30c027b0666a0bdef727f62759e0dbbb2a86fbdb1e1029d9e",
+          "support": "用户直接纠正简历整体结构和风格被改变。"
+        },
+        {
+          "ref": "E017",
+          "thread_id": "01a0fde7-9236-78c1-9068-6867a4ce6d8e",
+          "location": "rollout-2026-10-03T02-43-13-01a0fde7-9236-78c1-9068-6867a4ce6d8e_01a0fded-77c6-71a2-99f6-a91075ef135d.jsonl:L3210",
+          "source_kind": "user_authored",
+          "family_id": "patent-package",
+          "text_sha256": "cf9d070db4fef9944837f22d62d534984c554c3f4ae81ead0d86801c20b02f99",
+          "support": "另一专利任务要求修复生成材料与指定参考格式的偏差。"
+        },
+        {
+          "ref": "D20261110-082",
+          "thread_id": "01a1c44e-9e0f-78a1-bd2a-ce3f0f9b1969",
+          "location": "rollout-2026-11-10T15-14-09-01a1c44e-9e0f-78a1-bd2a-ce3f0f9b1969.jsonl:L17",
+          "source_kind": "user_authored",
+          "family_id": "bounded-document-migration",
+          "text_sha256": "a24a2da3586b480313af2de38d4a56c4e069d8a074f33fe53e91f7e6e76a6902",
+          "message_timestamp": "2026-11-10T07:14:16.788Z",
+          "support": "用户要求先复制原专利文档，再只把参考版本中具体实施方式之后的修改增量迁移到副本，避免直接改原件或扩大范围。"
+        }
+      ],
+      "updated_at": "2026-11-10T10:06:56+00:00",
       "source_run": "memory-lifecycle"
     }
   ]

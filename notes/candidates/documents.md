@@ -21,7 +21,7 @@
 - overlap: partially covered by `habits/communication.md`
 - status: resolved
 - disposition: rule / new
-- destination: documents.preserve-style-v2
+- destination: documents.preserve-style-v3
 
 ## C-20261014-012
 
